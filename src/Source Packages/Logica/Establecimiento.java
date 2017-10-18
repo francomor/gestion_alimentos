@@ -5,6 +5,9 @@
  * @version 1.0
  * @created 18-oct.-2017 19:44:00
  */
+package Logica;
+
+
 public class Establecimiento {
 
 	private String categoria;

@@ -5,6 +5,8 @@
  * @version 1.0
  * @created 18-oct.-2017 19:43:58
  */
+package Logica;
+
 public class ProductoAlimenticio {
 
 	private int nro_factura;

@@ -5,6 +5,8 @@
  * @version 1.0
  * @created 18-oct.-2017 19:44:07
  */
+package Logica;
+
 public class MateriaPrima {
 
 	private int cantidad;

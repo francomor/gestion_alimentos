@@ -5,6 +5,9 @@
  * @version 1.0
  * @created 18-oct.-2017 19:43:59
  */
+
+package Logica;
+
 public class Empresa {
 
 	private int CUIT;

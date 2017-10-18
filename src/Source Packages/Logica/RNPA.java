@@ -5,6 +5,8 @@
  * @version 1.0
  * @created 18-oct.-2017 19:44:01
  */
+package Logica;
+
 public class RNPA {
 
 	private Date fecha_vencimiento;

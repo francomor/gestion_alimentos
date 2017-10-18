@@ -5,6 +5,7 @@
  * @version 1.0
  * @created 18-oct.-2017 19:43:56
  */
+package Persistencia;
 public class ConexionBD {
 
 	private String database;

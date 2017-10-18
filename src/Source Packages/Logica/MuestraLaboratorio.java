@@ -5,10 +5,13 @@
  * @version 1.0
  * @created 18-oct.-2017 19:44:03
  */
+package Logica;
+
+
 public class MuestraLaboratorio {
 
-	private int Nº acta;
-	private int Nº Protocolo;
+	private int Nï¿½ acta;
+	private int Nï¿½ Protocolo;
 	public ProductoAlimenticio m_ProductoAlimenticio;
 
 	public MuestraLaboratorio(){
