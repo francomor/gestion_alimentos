@@ -6,7 +6,7 @@
  * @created 18-oct.-2017 19:44:01
  */
 package Logica;
-
+import Persistencia.ConexionBD;
 import java.util.Date;
 
 public class RNPA {

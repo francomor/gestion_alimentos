@@ -6,6 +6,8 @@
  * @created 18-oct.-2017 19:44:00
  */
 package Logica;
+import Persistencia.ConexionBD;
+import java.sql.SQLException;
 import java.util.Date;
 
 public class RNE {
@@ -50,7 +52,7 @@ public class RNE {
      *
      * @param rne
      */
-    public boolean guardar(RNE rne) {
-        return false;
+     public boolean guardar(RNE producto) throws SQLException, InstantiationException, IllegalAccessException{
+        return true;
     }
 }//end RNE
