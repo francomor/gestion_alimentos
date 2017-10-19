@@ -6,9 +6,12 @@
  * @created 18-oct.-2017 19:44:06
  */
 package Presentacion;
-public class Principal extends Jframe {
 
-	public CargaProducto m_CargaProducto;
+import javax.swing.JFrame;
+
+public class Principal extends JFrame {
+
+    public CargaProducto m_CargaProducto;
 
 	public Principal(){
 
