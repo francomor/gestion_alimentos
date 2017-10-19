@@ -63,6 +63,10 @@ public class Principal extends javax.swing.JFrame {
         EtiquetaDatosDeLab = new javax.swing.JLabel();
         EtiquetaCargaProdAlimenticio = new javax.swing.JLabel();
         jScrollBar3 = new javax.swing.JScrollBar();
+        EtiquetaNumProtocolo = new javax.swing.JLabel();
+        CampoNumProtocolo = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
         CargaCompsicion = new javax.swing.JPanel();
         CargaDescripcion = new javax.swing.JPanel();
         jMenuBar1 = new javax.swing.JMenuBar();
@@ -151,6 +155,10 @@ public class Principal extends javax.swing.JFrame {
         EtiquetaCargaProdAlimenticio.setFont(new java.awt.Font("Liberation Sans", 1, 14)); // NOI18N
         EtiquetaCargaProdAlimenticio.setText("Carga de Producto Alimenticio");
 
+        EtiquetaNumProtocolo.setText("Numero Protocolo: ");
+
+        jLabel1.setText("Numero de Acta: ");
+
         javax.swing.GroupLayout CargaBasicaLayout = new javax.swing.GroupLayout(CargaBasica);
         CargaBasica.setLayout(CargaBasicaLayout);
         CargaBasicaLayout.setHorizontalGroup(
@@ -227,16 +235,23 @@ public class Principal extends javax.swing.JFrame {
                 .addGap(47, 47, 47))
             .addGroup(CargaBasicaLayout.createSequentialGroup()
                 .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(CargaBasicaLayout.createSequentialGroup()
-                        .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jSeparator1)
-                            .addComponent(SeparadorDatosProducto)
-                            .addComponent(SeparadorRegistroRNPA, javax.swing.GroupLayout.Alignment.TRAILING))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                    .addComponent(jSeparator1)
+                    .addComponent(SeparadorDatosProducto)
+                    .addComponent(SeparadorRegistroRNPA, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(CargaBasicaLayout.createSequentialGroup()
                         .addGap(52, 52, 52)
-                        .addComponent(EtiquetaDatosDeLab)
+                        .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(EtiquetaDatosDeLab)
+                            .addGroup(CargaBasicaLayout.createSequentialGroup()
+                                .addComponent(EtiquetaNumProtocolo)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(CampoNumProtocolo, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(148, 148, 148)
+                        .addComponent(jLabel1)
+                        .addGap(26, 26, 26)
+                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollBar3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         CargaBasicaLayout.setVerticalGroup(
@@ -294,10 +309,16 @@ public class Principal extends javax.swing.JFrame {
                         .addComponent(EtiquetaRotulo)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(EtiquetaDatosDeLab)))
+                        .addComponent(EtiquetaDatosDeLab)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(EtiquetaNumProtocolo)
+                            .addComponent(CampoNumProtocolo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel1)
+                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
@@ -441,6 +462,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JFormattedTextField CampoFechaVencimiento;
     private javax.swing.JTextField CampoNombreEmpresa;
     private javax.swing.JTextField CampoNroFactura;
+    private javax.swing.JTextField CampoNumProtocolo;
     private javax.swing.JTextField CampoRNPA;
     private javax.swing.JTextField CampoRazonSocial;
     private javax.swing.JTextArea CampoRotulo;
@@ -456,6 +478,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel EtiquetaFechaVencimiento;
     private javax.swing.JLabel EtiquetaNombreEmpresa;
     private javax.swing.JLabel EtiquetaNroFactura;
+    private javax.swing.JLabel EtiquetaNumProtocolo;
     private javax.swing.JLabel EtiquetaRNPA;
     private javax.swing.JLabel EtiquetaRazonSocial;
     private javax.swing.JLabel EtiquetaRegistroRNPA;
@@ -471,11 +494,13 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JSeparator SeparadorDatosProducto;
     private javax.swing.JSeparator SeparadorRegistroRNPA;
     private javax.swing.JTextField TextFieldRNE;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JScrollBar jScrollBar3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }
