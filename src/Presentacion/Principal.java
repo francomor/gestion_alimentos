@@ -17,7 +17,7 @@ public class Principal extends javax.swing.JFrame {
     public Principal() {
         initComponents();
         this.setLocationRelativeTo(null);
-        this.jTabbedPane1.setVisible(false);
+        this.PanelCargaPA.setVisible(false);
     }
 
     /**
@@ -29,18 +29,40 @@ public class Principal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jTabbedPane1 = new javax.swing.JTabbedPane();
+        PanelCargaPA = new javax.swing.JTabbedPane();
         CargaBasica = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        NumRNE = new javax.swing.JLabel();
         TextFieldRNE = new javax.swing.JTextField();
         BuscarRNE = new javax.swing.JButton();
+        SeparadorDatosEmpresa = new javax.swing.JSeparator();
+        EtiquetaTituloDatoEmpresa = new javax.swing.JLabel();
+        EtiquetaCUIL = new javax.swing.JLabel();
+        EtiquetaNombreEmpresa = new javax.swing.JLabel();
+        EtiquetaRazonSocial = new javax.swing.JLabel();
+        EtiquetaEmail = new javax.swing.JLabel();
+        EtiquetaTelefono = new javax.swing.JLabel();
+        CampoCUIL = new javax.swing.JTextField();
+        CampoNombreEmpresa = new javax.swing.JTextField();
+        CampoRazonSocial = new javax.swing.JTextField();
+        CampoEmail = new javax.swing.JTextField();
+        CampoTelefono = new javax.swing.JTextField();
+        SeparadorRegistroRNPA = new javax.swing.JSeparator();
+        EtiquetaDatosPA = new javax.swing.JLabel();
+        EtiquetaNroFactura = new javax.swing.JLabel();
+        CampoNroFactura = new javax.swing.JTextField();
+        SeparadorDatosProducto = new javax.swing.JSeparator();
+        EtiquetaRegistroRNPA = new javax.swing.JLabel();
+        EtiquetaRNPA = new javax.swing.JLabel();
+        CampoRNPA = new javax.swing.JTextField();
+        CampoFechaVencimiento = new javax.swing.JFormattedTextField();
+        EtiquetaFechaVencimiento = new javax.swing.JLabel();
+        EtiquetaRotulo = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        CampoRotulo = new javax.swing.JTextArea();
         jSeparator1 = new javax.swing.JSeparator();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
+        EtiquetaDatosDeLab = new javax.swing.JLabel();
+        EtiquetaCargaProdAlimenticio = new javax.swing.JLabel();
+        jScrollBar3 = new javax.swing.JScrollBar();
         CargaCompsicion = new javax.swing.JPanel();
         CargaDescripcion = new javax.swing.JPanel();
         jMenuBar1 = new javax.swing.JMenuBar();
@@ -52,13 +74,13 @@ public class Principal extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jTabbedPane1.addContainerListener(new java.awt.event.ContainerAdapter() {
+        PanelCargaPA.addContainerListener(new java.awt.event.ContainerAdapter() {
             public void componentAdded(java.awt.event.ContainerEvent evt) {
-                jTabbedPane1ComponentAdded(evt);
+                PanelCargaPAComponentAdded(evt);
             }
         });
 
-        jLabel1.setText("Numero RNE: ");
+        NumRNE.setText("Numero RNE: ");
 
         TextFieldRNE.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -73,105 +95,237 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
-        jLabel2.setText("Datos de la empresa");
+        EtiquetaTituloDatoEmpresa.setFont(new java.awt.Font("Liberation Sans", 1, 14)); // NOI18N
+        EtiquetaTituloDatoEmpresa.setText("Datos de la empresa");
 
-        jLabel3.setText("jLabel3");
+        EtiquetaCUIL.setText("CUIT: ");
 
-        jLabel4.setText("jLabel4");
+        EtiquetaNombreEmpresa.setText("Nombre: ");
 
-        jLabel5.setText("jLabel5");
+        EtiquetaRazonSocial.setText("Razon Social: ");
 
-        jLabel6.setText("jLabel6");
+        EtiquetaEmail.setText("Email: ");
 
-        jLabel7.setText("jLabel7");
+        EtiquetaTelefono.setText("Telefono: ");
+
+        CampoCUIL.setEnabled(false);
+
+        CampoNombreEmpresa.setEnabled(false);
+
+        CampoRazonSocial.setEnabled(false);
+
+        CampoEmail.setEnabled(false);
+        CampoEmail.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CampoEmailActionPerformed(evt);
+            }
+        });
+
+        CampoTelefono.setEnabled(false);
+
+        EtiquetaDatosPA.setFont(new java.awt.Font("Liberation Sans", 1, 14)); // NOI18N
+        EtiquetaDatosPA.setText("Datos del producto alimenticio");
+
+        EtiquetaNroFactura.setText("Nro factura: ");
+
+        EtiquetaRegistroRNPA.setFont(new java.awt.Font("Liberation Sans", 1, 14)); // NOI18N
+        EtiquetaRegistroRNPA.setText("Registro numero RNPA");
+
+        EtiquetaRNPA.setText("RNPA: ");
+
+        CampoFechaVencimiento.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(java.text.DateFormat.getDateInstance(java.text.DateFormat.SHORT))));
+
+        EtiquetaFechaVencimiento.setText("Fecha Vencimiento: ");
+
+        EtiquetaRotulo.setText("Rotulo: ");
+
+        CampoRotulo.setColumns(20);
+        CampoRotulo.setRows(5);
+        jScrollPane1.setViewportView(CampoRotulo);
+
+        EtiquetaDatosDeLab.setFont(new java.awt.Font("Liberation Sans", 1, 14)); // NOI18N
+        EtiquetaDatosDeLab.setText("Datos de la muestra de laboratorio");
+
+        EtiquetaCargaProdAlimenticio.setFont(new java.awt.Font("Liberation Sans", 1, 14)); // NOI18N
+        EtiquetaCargaProdAlimenticio.setText("Carga de Producto Alimenticio");
 
         javax.swing.GroupLayout CargaBasicaLayout = new javax.swing.GroupLayout(CargaBasica);
         CargaBasica.setLayout(CargaBasicaLayout);
         CargaBasicaLayout.setHorizontalGroup(
             CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(CargaBasicaLayout.createSequentialGroup()
-                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 537, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(CargaBasicaLayout.createSequentialGroup()
+                        .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(CargaBasicaLayout.createSequentialGroup()
+                                .addGap(74, 74, 74)
+                                .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(EtiquetaCUIL)
+                                    .addComponent(EtiquetaNombreEmpresa)
+                                    .addComponent(EtiquetaRazonSocial))
+                                .addGap(5, 5, 5)
+                                .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(CampoNombreEmpresa, javax.swing.GroupLayout.DEFAULT_SIZE, 122, Short.MAX_VALUE)
+                                    .addComponent(CampoCUIL)
+                                    .addComponent(CampoRazonSocial))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(EtiquetaTelefono, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(EtiquetaEmail, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addGroup(CargaBasicaLayout.createSequentialGroup()
+                                .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(CargaBasicaLayout.createSequentialGroup()
+                                        .addGap(45, 45, 45)
+                                        .addComponent(EtiquetaTituloDatoEmpresa))
+                                    .addGroup(CargaBasicaLayout.createSequentialGroup()
+                                        .addGap(74, 74, 74)
+                                        .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(EtiquetaCargaProdAlimenticio)
+                                            .addGroup(CargaBasicaLayout.createSequentialGroup()
+                                                .addComponent(NumRNE, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(36, 36, 36)
+                                                .addComponent(TextFieldRNE, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(BuscarRNE)))))
+                                .addGap(0, 0, Short.MAX_VALUE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(CampoEmail)
+                            .addComponent(CampoTelefono, javax.swing.GroupLayout.DEFAULT_SIZE, 124, Short.MAX_VALUE)))
+                    .addGroup(CargaBasicaLayout.createSequentialGroup()
+                        .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(CargaBasicaLayout.createSequentialGroup()
+                                .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(CargaBasicaLayout.createSequentialGroup()
+                                        .addGap(45, 45, 45)
+                                        .addComponent(EtiquetaDatosPA))
+                                    .addGroup(CargaBasicaLayout.createSequentialGroup()
+                                        .addGap(45, 45, 45)
+                                        .addComponent(EtiquetaRegistroRNPA))
+                                    .addGroup(CargaBasicaLayout.createSequentialGroup()
+                                        .addGap(74, 74, 74)
+                                        .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(EtiquetaRotulo)
+                                            .addGroup(CargaBasicaLayout.createSequentialGroup()
+                                                .addComponent(EtiquetaNroFactura)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(CampoNroFactura, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 411, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addGap(80, 80, 80))
+                            .addGroup(CargaBasicaLayout.createSequentialGroup()
+                                .addGap(74, 74, 74)
+                                .addComponent(EtiquetaRNPA, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(CampoRNPA, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(EtiquetaFechaVencimiento)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                        .addComponent(CampoFechaVencimiento, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(SeparadorDatosEmpresa))
+                .addGap(47, 47, 47))
             .addGroup(CargaBasicaLayout.createSequentialGroup()
                 .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(CargaBasicaLayout.createSequentialGroup()
-                        .addGap(47, 47, 47)
-                        .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(TextFieldRNE, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(BuscarRNE))
-                    .addGroup(CargaBasicaLayout.createSequentialGroup()
-                        .addGap(46, 46, 46)
-                        .addComponent(jLabel2))
-                    .addGroup(CargaBasicaLayout.createSequentialGroup()
-                        .addGap(74, 74, 74)
                         .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(CargaBasicaLayout.createSequentialGroup()
-                                .addComponent(jLabel4)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel7))
-                            .addGroup(CargaBasicaLayout.createSequentialGroup()
-                                .addComponent(jLabel5)
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addGroup(CargaBasicaLayout.createSequentialGroup()
-                                .addComponent(jLabel3)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel6)))))
-                .addGap(154, 154, 154))
+                            .addComponent(jSeparator1)
+                            .addComponent(SeparadorDatosProducto)
+                            .addComponent(SeparadorRegistroRNPA, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                    .addGroup(CargaBasicaLayout.createSequentialGroup()
+                        .addGap(52, 52, 52)
+                        .addComponent(EtiquetaDatosDeLab)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addComponent(jScrollBar3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         CargaBasicaLayout.setVerticalGroup(
             CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(CargaBasicaLayout.createSequentialGroup()
-                .addGap(11, 11, 11)
-                .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(TextFieldRNE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(BuscarRNE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel6))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(jLabel7))
-                .addGap(18, 18, 18)
-                .addComponent(jLabel5)
-                .addContainerGap(180, Short.MAX_VALUE))
+                .addContainerGap()
+                .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollBar3, javax.swing.GroupLayout.PREFERRED_SIZE, 583, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(CargaBasicaLayout.createSequentialGroup()
+                        .addComponent(EtiquetaCargaProdAlimenticio)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(NumRNE)
+                            .addComponent(TextFieldRNE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(BuscarRNE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(SeparadorDatosEmpresa, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(EtiquetaTituloDatoEmpresa)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(EtiquetaCUIL)
+                            .addComponent(EtiquetaEmail)
+                            .addComponent(CampoCUIL, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(CampoEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(EtiquetaNombreEmpresa)
+                            .addComponent(EtiquetaTelefono)
+                            .addComponent(CampoNombreEmpresa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(CampoTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(EtiquetaRazonSocial)
+                            .addComponent(CampoRazonSocial, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(21, 21, 21)
+                        .addComponent(SeparadorRegistroRNPA, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(EtiquetaRegistroRNPA)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(EtiquetaRNPA)
+                            .addComponent(CampoRNPA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(CampoFechaVencimiento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(EtiquetaFechaVencimiento))
+                        .addGap(24, 24, 24)
+                        .addComponent(SeparadorDatosProducto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(EtiquetaDatosPA)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(CampoNroFactura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(EtiquetaNroFactura))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(EtiquetaRotulo)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(EtiquetaDatosDeLab)))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab("Informacion General", CargaBasica);
+        PanelCargaPA.addTab("Informacion General", CargaBasica);
 
         javax.swing.GroupLayout CargaCompsicionLayout = new javax.swing.GroupLayout(CargaCompsicion);
         CargaCompsicion.setLayout(CargaCompsicionLayout);
         CargaCompsicionLayout.setHorizontalGroup(
             CargaCompsicionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 537, Short.MAX_VALUE)
+            .addGap(0, 734, Short.MAX_VALUE)
         );
         CargaCompsicionLayout.setVerticalGroup(
             CargaCompsicionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 320, Short.MAX_VALUE)
+            .addGap(0, 595, Short.MAX_VALUE)
         );
 
-        jTabbedPane1.addTab("Composicion", CargaCompsicion);
+        PanelCargaPA.addTab("Composicion", CargaCompsicion);
 
         javax.swing.GroupLayout CargaDescripcionLayout = new javax.swing.GroupLayout(CargaDescripcion);
         CargaDescripcion.setLayout(CargaDescripcionLayout);
         CargaDescripcionLayout.setHorizontalGroup(
             CargaDescripcionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 537, Short.MAX_VALUE)
+            .addGap(0, 734, Short.MAX_VALUE)
         );
         CargaDescripcionLayout.setVerticalGroup(
             CargaDescripcionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 320, Short.MAX_VALUE)
+            .addGap(0, 595, Short.MAX_VALUE)
         );
 
-        jTabbedPane1.addTab("Descripcion", CargaDescripcion);
+        PanelCargaPA.addTab("Descripcion", CargaDescripcion);
 
         jMenu1.setText("File");
 
@@ -206,11 +360,11 @@ public class Principal extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1, javax.swing.GroupLayout.Alignment.TRAILING)
+            .addComponent(PanelCargaPA, javax.swing.GroupLayout.Alignment.TRAILING)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1, javax.swing.GroupLayout.Alignment.TRAILING)
+            .addComponent(PanelCargaPA, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 621, Short.MAX_VALUE)
         );
 
         pack();
@@ -223,21 +377,25 @@ public class Principal extends javax.swing.JFrame {
 
     private void MenuItemCargaProductoAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemCargaProductoAActionPerformed
         // TODO add your handling code here:
-        this.jTabbedPane1.setVisible(true);
+        this.PanelCargaPA.setVisible(true);
       
     }//GEN-LAST:event_MenuItemCargaProductoAActionPerformed
 
-    private void jTabbedPane1ComponentAdded(java.awt.event.ContainerEvent evt) {//GEN-FIRST:event_jTabbedPane1ComponentAdded
+    private void PanelCargaPAComponentAdded(java.awt.event.ContainerEvent evt) {//GEN-FIRST:event_PanelCargaPAComponentAdded
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTabbedPane1ComponentAdded
+    }//GEN-LAST:event_PanelCargaPAComponentAdded
 
-    private void TextFieldRNEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextFieldRNEActionPerformed
+    private void CampoEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CampoEmailActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_TextFieldRNEActionPerformed
+    }//GEN-LAST:event_CampoEmailActionPerformed
 
     private void BuscarRNEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BuscarRNEActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_BuscarRNEActionPerformed
+
+    private void TextFieldRNEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextFieldRNEActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TextFieldRNEActionPerformed
 
     /**
      * @param args the command line arguments
@@ -276,24 +434,46 @@ public class Principal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BuscarRNE;
+    private javax.swing.JTextField CampoCUIL;
+    private javax.swing.JTextField CampoEmail;
+    private javax.swing.JFormattedTextField CampoFechaVencimiento;
+    private javax.swing.JTextField CampoNombreEmpresa;
+    private javax.swing.JTextField CampoNroFactura;
+    private javax.swing.JTextField CampoRNPA;
+    private javax.swing.JTextField CampoRazonSocial;
+    private javax.swing.JTextArea CampoRotulo;
+    private javax.swing.JTextField CampoTelefono;
     private javax.swing.JPanel CargaBasica;
     private javax.swing.JPanel CargaCompsicion;
     private javax.swing.JPanel CargaDescripcion;
+    private javax.swing.JLabel EtiquetaCUIL;
+    private javax.swing.JLabel EtiquetaCargaProdAlimenticio;
+    private javax.swing.JLabel EtiquetaDatosDeLab;
+    private javax.swing.JLabel EtiquetaDatosPA;
+    private javax.swing.JLabel EtiquetaEmail;
+    private javax.swing.JLabel EtiquetaFechaVencimiento;
+    private javax.swing.JLabel EtiquetaNombreEmpresa;
+    private javax.swing.JLabel EtiquetaNroFactura;
+    private javax.swing.JLabel EtiquetaRNPA;
+    private javax.swing.JLabel EtiquetaRazonSocial;
+    private javax.swing.JLabel EtiquetaRegistroRNPA;
+    private javax.swing.JLabel EtiquetaRotulo;
+    private javax.swing.JLabel EtiquetaTelefono;
+    private javax.swing.JLabel EtiquetaTituloDatoEmpresa;
     private javax.swing.JMenu MenuCarga;
     private javax.swing.JMenuItem MenuItemCargaProductoA;
     private javax.swing.JMenuItem MenuSalir;
+    private javax.swing.JLabel NumRNE;
+    private javax.swing.JTabbedPane PanelCargaPA;
+    private javax.swing.JSeparator SeparadorDatosEmpresa;
+    private javax.swing.JSeparator SeparadorDatosProducto;
+    private javax.swing.JSeparator SeparadorRegistroRNPA;
     private javax.swing.JTextField TextFieldRNE;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JScrollBar jScrollBar3;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JTabbedPane jTabbedPane1;
     // End of variables declaration//GEN-END:variables
 }
