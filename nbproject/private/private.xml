@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/D:/Proyecto-codigo/gestion_alimentos/src/Logica/Empresa.java</file>
+            <file>file:/D:/Proyecto-codigo/gestion_alimentos/src/Logica/Composicion.java</file>
+            <file>file:/D:/Proyecto-codigo/gestion_alimentos/src/Presentacion/CargaProducto.java</file>
+            <file>file:/D:/Proyecto-codigo/gestion_alimentos/src/Presentacion/Principal.java</file>
+            <file>file:/D:/Proyecto-codigo/gestion_alimentos/src/Persistencia/ConexionBD.java</file>
+        </group>
+    </open-files>
 </project-private>
