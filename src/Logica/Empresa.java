@@ -11,7 +11,7 @@ package Logica;
 public class Empresa {
 
 	private int CUIT;
-	private String e-mail;
+	private String email;
 	private String nombre;
 	private String razon_social;
 	private int telefono;

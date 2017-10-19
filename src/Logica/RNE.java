@@ -6,6 +6,7 @@
  * @created 18-oct.-2017 19:44:00
  */
 package Logica;
+import java.util.Date;
 
 public class RNE {
 

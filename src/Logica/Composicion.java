@@ -5,7 +5,10 @@
  * @version 1.0
  * @created 18-oct.-2017 19:44:02
  */
+
 package Logica;
+
+import java.util.Date;
 
 public class Composicion {
 

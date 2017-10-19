@@ -7,6 +7,8 @@
  */
 package Logica;
 
+import java.util.Date;
+
 public class RNPA {
 
 	private Date fecha_vencimiento;

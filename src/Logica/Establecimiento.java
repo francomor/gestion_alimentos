@@ -7,12 +7,14 @@
  */
 package Logica;
 
+import java.util.Date;
+
 
 public class Establecimiento {
 
 	private String categoria;
 	private String direccion;
-	private Date fecha de carga ;
+	private Date fechaDeCarga ;
 	private String nombre;
 	private int telefono;
 	public Empresa m_Empresa;

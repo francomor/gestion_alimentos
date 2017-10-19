@@ -10,8 +10,8 @@ package Logica;
 
 public class MuestraLaboratorio {
 
-	private int N� acta;
-	private int N� Protocolo;
+	private int numActa;
+	private int numProtocolo;
 	public ProductoAlimenticio m_ProductoAlimenticio;
 
 	public MuestraLaboratorio(){
