@@ -108,6 +108,8 @@ public class Principal extends javax.swing.JFrame {
 
         EtiquetaTelefono.setText("Telefono: ");
 
+        CampoCUIL.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
+        CampoCUIL.setText("2345678");
         CampoCUIL.setEnabled(false);
 
         CampoNombreEmpresa.setEnabled(false);
@@ -364,7 +366,7 @@ public class Principal extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(PanelCargaPA, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 621, Short.MAX_VALUE)
+            .addComponent(PanelCargaPA, javax.swing.GroupLayout.Alignment.TRAILING)
         );
 
         pack();
