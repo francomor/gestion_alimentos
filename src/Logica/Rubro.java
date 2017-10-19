@@ -47,14 +47,14 @@ public class Rubro {
         ConexionBD con= ConexionBD.getConexion();
         
 
-        boolean result=con.insertar("insert into rubro_establecimiento (idRubro_establecimiento,nombre) values (0,'"+rubro.nombre+"')");
+        boolean result=con.insertar("insert into rubro (id,nombre) values (default,'"+rubro.nombre+"')");
         return result; 
     }
      
     public boolean existe(String rubro_name) throws SQLException, InstantiationException, IllegalAccessException{
         
         ConexionBD con= ConexionBD.getConexion();
-        boolean result=con.existe("select exists (select nombre from rubro_establecimiento where nombre='"+rubro_name+"')");
+        boolean result=con.existe("select exists (select nombre from rubro where nombre='"+rubro_name+"')");
         return result; 
     }
 }//end Rubro
