@@ -51,6 +51,17 @@ public class Rubro {
         return result; 
     }
      
+    public static String[] recuperarTodosNombres() throws SQLException, InstantiationException, IllegalAccessException{
+        ConexionBD con= ConexionBD.getConexion();
+        String[][] valores;
+        valores = new String[10][1];
+        valores = con.recuperar(valores,"select nombre from rubro",1);
+        String[] salida = new String[10];
+        for(int i = 0; i<valores.length;i++){
+            salida[i]=valores[i][0];
+        }
+        return salida;
+    }
     public boolean existe(String rubro_name) throws SQLException, InstantiationException, IllegalAccessException{
         
         ConexionBD con= ConexionBD.getConexion();
