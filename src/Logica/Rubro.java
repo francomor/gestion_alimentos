@@ -57,7 +57,10 @@ public class Rubro {
         con.update("UPDATE rubro SET nombre='"+rubro.nombre+"' WHERE nombre='"+aCambiar+"'");
     }
      
-    
+    public void borrar(Rubro rubro) throws SQLException, InstantiationException, IllegalAccessException{
+        ConexionBD con=ConexionBD.getConexion();
+        con.update("DELETE FROM `rubro` WHERE nombre='"+rubro.getNombre()+"';");
+    }
     
     public static Vector<String> recuperarTodosNombres() throws SQLException, InstantiationException, IllegalAccessException{
         ConexionBD con= ConexionBD.getConexion();

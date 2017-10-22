@@ -197,6 +197,13 @@ public class Rubro_prueba extends javax.swing.JFrame {
 
     private void buttonRemoverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonRemoverActionPerformed
         // TODO add your handling code here:
+        Rubro rubro=new Rubro();
+        rubro.setNombre(this.listaNombres.getSelectedValue());
+        try{ 
+            rubro.borrar(rubro);
+        } catch (SQLException | InstantiationException | IllegalAccessException ex) {
+            Logger.getLogger(Rubro_prueba.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_buttonRemoverActionPerformed
 
     /**
