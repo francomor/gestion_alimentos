@@ -6,6 +6,7 @@
 package Prueba;
 import Logica.*;
 import java.sql.SQLException;
+import java.util.Vector;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.DefaultListModel;
@@ -35,10 +36,14 @@ public class Rubro_prueba extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        buttonInsertar = new javax.swing.JButton();
+        buttonCargaLista = new javax.swing.JButton();
+        buttonModificar = new javax.swing.JButton();
+        jTextFieldModifica = new javax.swing.JTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        listaNombreModel = new DefaultListModel();
+        listaNombres = new javax.swing.JList(listaNombreModel);
+        buttonRemover = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -50,23 +55,35 @@ public class Rubro_prueba extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setText("Cargar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        buttonInsertar.setText("Insertar");
+        buttonInsertar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                buttonInsertarActionPerformed(evt);
             }
         });
 
-        jButton2.setText("Cargar lista");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        buttonCargaLista.setText("Cargar lista");
+        buttonCargaLista.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                buttonCargaListaActionPerformed(evt);
             }
         });
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane2.setViewportView(jTextArea1);
+        buttonModificar.setText("Modificar");
+        buttonModificar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonModificarActionPerformed(evt);
+            }
+        });
+
+        jScrollPane1.setViewportView(listaNombres);
+
+        buttonRemover.setText("Remover");
+        buttonRemover.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonRemoverActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -77,12 +94,18 @@ public class Rubro_prueba extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2)
+                    .addComponent(buttonRemover)
+                    .addComponent(buttonCargaLista)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(84, 84, 84)
-                        .addComponent(jButton1)))
+                        .addComponent(buttonInsertar))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(76, 76, 76)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTextFieldModifica, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(buttonModificar))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -92,12 +115,19 @@ public class Rubro_prueba extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1))
+                    .addComponent(buttonInsertar))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
-                .addComponent(jButton2)
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(59, 59, 59))
+                .addComponent(buttonCargaLista)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                        .addComponent(jTextFieldModifica, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(buttonModificar))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(buttonRemover)
+                .addGap(30, 30, 30))
         );
 
         pack();
@@ -107,7 +137,7 @@ public class Rubro_prueba extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void buttonInsertarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonInsertarActionPerformed
         // TODO add your handling code here:
         Rubro rubro=new Rubro();
         Boolean error=false, existe=false;
@@ -118,12 +148,12 @@ public class Rubro_prueba extends javax.swing.JFrame {
             existe=rubro.existe(rubro.getNombre());
             System.out.println("existe="+existe);
             if (existe)
-            {JOptionPane.showMessageDialog(null, "Ya existe un producto con ese nombre.");}
+            {JOptionPane.showMessageDialog(null, "Ya existe un rubro con ese nombre.");}
             else {    
             //guardarlo
             error=rubro.guardar(rubro);
-            if(!error){JOptionPane.showMessageDialog(null, "Producto agregado correctamente.");}
-            else {JOptionPane.showMessageDialog(null, "Hubo un error al agregar el producto");}
+            if(!error){JOptionPane.showMessageDialog(null, "rubro agregado correctamente.");}
+            else {JOptionPane.showMessageDialog(null, "Hubo un error al agregar el rubro");}
             }
         } catch (SQLException ex) {
             Logger.getLogger(Rubro_prueba.class.getName()).log(Level.SEVERE, null, ex);
@@ -133,19 +163,16 @@ public class Rubro_prueba extends javax.swing.JFrame {
             Logger.getLogger(Rubro_prueba.class.getName()).log(Level.SEVERE, null, ex);
         }
        
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_buttonInsertarActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void buttonCargaListaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCargaListaActionPerformed
         // TODO add your handling code here:
         
-       
+       listaNombreModel.removeAllElements();
         try {
-            String[] valores = Rubro.recuperarTodosNombres();
+            Vector<String> valores = Rubro.recuperarTodosNombres();
             for (String valor : valores) {
-                if(!valor.equals("null")){
-                jTextArea1.append(valor);
-                jTextArea1.append("\n");
-                }
+                listaNombreModel.addElement(valor);
             }
             
         } catch (SQLException ex) {
@@ -155,7 +182,22 @@ public class Rubro_prueba extends javax.swing.JFrame {
         } catch (IllegalAccessException ex) {
             Logger.getLogger(Rubro_prueba.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_buttonCargaListaActionPerformed
+
+    private void buttonModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonModificarActionPerformed
+        // TODO add your handling code here:
+        Rubro rubro=new Rubro();
+        rubro.setNombre(jTextFieldModifica.getText());
+        try{ 
+            rubro.update(rubro, this.listaNombres.getSelectedValue());
+        } catch (SQLException | InstantiationException | IllegalAccessException ex) {
+            Logger.getLogger(Rubro_prueba.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_buttonModificarActionPerformed
+
+    private void buttonRemoverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonRemoverActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_buttonRemoverActionPerformed
 
     /**
      * @param args the command line arguments
@@ -186,19 +228,22 @@ public class Rubro_prueba extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Rubro_prueba().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new Rubro_prueba().setVisible(true);
         });
     }
 
+    
+    DefaultListModel listaNombreModel;
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton buttonCargaLista;
+    private javax.swing.JButton buttonInsertar;
+    private javax.swing.JButton buttonModificar;
+    private javax.swing.JButton buttonRemover;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextFieldModifica;
+    private javax.swing.JList<String> listaNombres;
     // End of variables declaration//GEN-END:variables
 }

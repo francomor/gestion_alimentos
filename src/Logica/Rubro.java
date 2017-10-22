@@ -8,6 +8,7 @@
 package Logica;
 import Persistencia.ConexionBD;
 import java.sql.SQLException;
+import java.util.Vector;
 
 public class Rubro {
 
@@ -51,16 +52,27 @@ public class Rubro {
         return result; 
     }
      
-    public static String[] recuperarTodosNombres() throws SQLException, InstantiationException, IllegalAccessException{
+    public void update(Rubro rubro,String aCambiar) throws SQLException, InstantiationException, IllegalAccessException{
+        ConexionBD con=ConexionBD.getConexion();
+        con.update("UPDATE rubro SET nombre='"+rubro.nombre+"' WHERE nombre='"+aCambiar+"'");
+    }
+     
+    
+    
+    public static Vector<String> recuperarTodosNombres() throws SQLException, InstantiationException, IllegalAccessException{
         ConexionBD con= ConexionBD.getConexion();
         String[][] valores;
         valores = new String[10][1];
         valores = con.recuperar(valores,"select nombre from rubro",1);
-        String[] salida = new String[10];
-        for(int i = 0; i<valores.length;i++){
-            salida[i]=valores[i][0];
+        Vector<String> salida = new Vector<String>();
+        for (String[] valore : valores) {
+            if (valore[0]==null) {
+                break;
+            }
+            salida.add(valore[0]);
         }
-        return salida;
+        
+        return (Vector<String>) salida;
     }
     public boolean existe(String rubro_name) throws SQLException, InstantiationException, IllegalAccessException{
         

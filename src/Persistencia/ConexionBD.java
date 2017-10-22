@@ -58,9 +58,6 @@ public void crearConexion() throws InstantiationException, IllegalAccessExceptio
         return error;
     }
     
-    
-    
-    
   public void borrar(String consulta) {
 
         try {
