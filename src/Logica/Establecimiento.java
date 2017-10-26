@@ -9,14 +9,16 @@ package Logica;
 
 import Persistencia.ConexionBD;
 import java.sql.SQLException;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
 
 
 public class Establecimiento {
 
     private String categoria;
     private String direccion;
-    private Date fechaDeCarga;
+    private Calendar fechaDeCarga;
     private String nombre;
     private int telefono;
     private boolean archivos_adjuntos;
@@ -48,14 +50,20 @@ public class Establecimiento {
         this.direccion = direccion;
     }
 
-    public Date getFechaDeCarga() {
+    public Calendar getFechaDeCarga() {
         return fechaDeCarga;
     }
 
-    public void setFechaDeCarga(Date fechaDeCarga) {
+    public void setFechaDeCarga(Calendar fechaDeCarga) {
         this.fechaDeCarga = fechaDeCarga;
     }
-
+    
+    //formato 2017-11-31
+    public void setFechaDeCarga(String fecha) {
+        Calendar cal_aux = GregorianCalendar.getInstance();
+        cal_aux.set(Integer.parseInt(fecha.substring(0,4)), Integer.parseInt(fecha.substring(5,7)), Integer.parseInt(fecha.substring(8,10)));
+        this.fechaDeCarga = cal_aux;
+    }
     public String getNombre() {
         return nombre;
     }
@@ -92,7 +100,7 @@ public class Establecimiento {
         return CUIT_Empresa;
     }
 
-    public void setCUIT_Empresa(int id_Empresa) {
+    public void setCUIT_Empresa(int CUIT_Empresa) {
         this.CUIT_Empresa = CUIT_Empresa;
     }
 
@@ -143,13 +151,14 @@ public class Establecimiento {
         
         Establecimiento estab = new Establecimiento();
         RNE rne = new RNE();
+                
         valores = new String[1][12];
         valores = con.recuperar(valores,"select * from establecimiento where id="+ id +";",12);
        
         if(valores[0][1]!=null)
             estab.setDireccion(valores[0][1]);
         if(valores[0][2]!=null)
-            //estab.setFechaDeCarga(valores[0][2]);
+            estab.setFechaDeCarga(valores[0][2]);
         if(valores[0][3]!=null)
             estab.setNombre(valores[0][3]);
         if(valores[0][4]!=null)
@@ -163,18 +172,18 @@ public class Establecimiento {
         if(valores[0][6]!=null)
             rne.setNumero(Integer.parseInt(valores[0][6]));
         if(valores[0][7]!=null)
-           // rne.setFecha_vencimiento(valores[0][4]);
+            rne.setFecha_vencimiento(valores[0][7]);
         estab.setRne(rne);
         
         if(valores[0][8]!=null)
-            estab.setNro_factura(Integer.parseInt(valores[0][4]));
+            estab.setNro_factura(Integer.parseInt(valores[0][8]));
         if(valores[0][9]!=null)
-            estab.setCUIT_Empresa(Integer.parseInt(valores[0][4]));
-        if(valores[0][9]!=null)
-            estab.setId_Localidad(Integer.parseInt(valores[0][4]));
-        if(valores[0][9]!=null)
-            estab.setId_Categoria(Integer.parseInt(valores[0][4]));
-              
+            estab.setCUIT_Empresa(Integer.parseInt(valores[0][9]));
+        if(valores[0][10]!=null)
+            estab.setId_Localidad(Integer.parseInt(valores[0][10]));
+        if(valores[0][11]!=null)
+            estab.setId_Categoria(Integer.parseInt(valores[0][11]));
+                  
         
         return estab;
     }
@@ -191,7 +200,7 @@ public class Establecimiento {
         if(valores[0][1]!=null)
             estab.setDireccion(valores[0][1]);
         if(valores[0][2]!=null)
-            //estab.setFechaDeCarga(valores[0][2]);
+            estab.setFechaDeCarga(valores[0][2]);
         if(valores[0][3]!=null)
             estab.setNombre(valores[0][3]);
         if(valores[0][4]!=null)
@@ -205,17 +214,17 @@ public class Establecimiento {
         if(valores[0][6]!=null)
             rne.setNumero(Integer.parseInt(valores[0][6]));
         if(valores[0][7]!=null)
-           // rne.setFecha_vencimiento(valores[0][4]);
+            rne.setFecha_vencimiento(valores[0][7]);
         estab.setRne(rne);
         
         if(valores[0][8]!=null)
-            estab.setNro_factura(Integer.parseInt(valores[0][4]));
+            estab.setNro_factura(Integer.parseInt(valores[0][8]));
         if(valores[0][9]!=null)
-            estab.setCUIT_Empresa(Integer.parseInt(valores[0][4]));
-        if(valores[0][9]!=null)
-            estab.setId_Localidad(Integer.parseInt(valores[0][4]));
-        if(valores[0][9]!=null)
-            estab.setId_Categoria(Integer.parseInt(valores[0][4]));
+            estab.setCUIT_Empresa(Integer.parseInt(valores[0][9]));
+        if(valores[0][10]!=null)
+            estab.setId_Localidad(Integer.parseInt(valores[0][10]));
+        if(valores[0][11]!=null)
+            estab.setId_Categoria(Integer.parseInt(valores[0][11]));
               
         
         return estab;

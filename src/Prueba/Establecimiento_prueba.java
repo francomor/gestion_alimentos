@@ -8,6 +8,7 @@ package Prueba;
 import Logica.Establecimiento;
 import Logica.RNE;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -272,7 +273,13 @@ public class Establecimiento_prueba extends javax.swing.JFrame {
             RNE rne = est.getRne();
             //textFieldFechaCarga.setText(est.g());
             
-            //textFieldFechaCarga.setText(est.getFechaDeCarga());
+            SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");    
+            
+            if(est.getFechaDeCarga() != null)
+                textFieldFechaCarga.setText(sdf.format(est.getFechaDeCarga().getTime()));
+            else
+                textFieldFechaCarga.setText("");  
+            
             textFieldId_Categoria.setText(String.valueOf(est.getId_Categoria()));
             textFieldId_Empresa.setText(String.valueOf(est.getCUIT_Empresa()));
             textFieldId_Localidad.setText(String.valueOf(est.getId_Localidad()));
@@ -281,7 +288,10 @@ public class Establecimiento_prueba extends javax.swing.JFrame {
             
             if(rne != null){
                 textFieldNroRNE.setText(String.valueOf(rne.getNumero()));
-                //textFieldFVencimientoRNE.setText(rne.getFecha_vencimiento());
+                if(rne.getFecha_vencimiento() != null)
+                    textFieldFVencimientoRNE.setText(sdf.format(rne.getFecha_vencimiento().getTime()));
+                else
+                    textFieldFVencimientoRNE.setText("");
             }
             if(est.getTelefono()!=0)
                 textFieldTelefono.setText(String.valueOf(est.getTelefono()));
@@ -323,7 +333,12 @@ public class Establecimiento_prueba extends javax.swing.JFrame {
             RNE rne = est.getRne();
             //textFieldFechaCarga.setText(est.g());
             
-            //textFieldFechaCarga.setText(est.getFechaDeCarga());
+            SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");  
+            
+            if(est.getFechaDeCarga() != null)
+                textFieldFechaCarga.setText(sdf.format(est.getFechaDeCarga().getTime()));
+            else
+                textFieldFechaCarga.setText("");  
             textFieldId_Categoria.setText(String.valueOf(est.getId_Categoria()));
             textFieldId_Empresa.setText(String.valueOf(est.getCUIT_Empresa()));
             textFieldId_Localidad.setText(String.valueOf(est.getId_Localidad()));
@@ -332,7 +347,10 @@ public class Establecimiento_prueba extends javax.swing.JFrame {
             
             if(rne != null){
                 textFieldNroRNE.setText(String.valueOf(rne.getNumero()));
-                //textFieldFVencimientoRNE.setText(rne.getFecha_vencimiento());
+                if(rne.getFecha_vencimiento() != null)
+                    textFieldFVencimientoRNE.setText(sdf.format(rne.getFecha_vencimiento().getTime()));
+                else
+                    textFieldFVencimientoRNE.setText("");
             }
             if(est.getTelefono()!=0)
                 textFieldTelefono.setText(String.valueOf(est.getTelefono()));

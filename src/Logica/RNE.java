@@ -8,11 +8,13 @@
 package Logica;
 import Persistencia.ConexionBD;
 import java.sql.SQLException;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
 
 public class RNE {
 
-    private Date fecha_vencimiento;
+    private Calendar fecha_vencimiento;
     private int numero;
     public Establecimiento m_Establecimiento;
 
@@ -24,14 +26,19 @@ public class RNE {
 
     }
 
-    public Date getFecha_vencimiento() {
+    public Calendar getFecha_vencimiento() {
         return fecha_vencimiento;
     }
 
-    public void setFecha_vencimiento(Date fecha_vencimiento) {
+    public void setFecha_vencimiento(Calendar fecha_vencimiento) {
         this.fecha_vencimiento = fecha_vencimiento;
     }
-
+    //formato 2017-11-31
+    public void setFecha_vencimiento(String fecha) {
+        Calendar cal_aux = GregorianCalendar.getInstance();
+        cal_aux.set(Integer.parseInt(fecha.substring(0,4)), Integer.parseInt(fecha.substring(5,7)), Integer.parseInt(fecha.substring(8,10)));
+        this.fecha_vencimiento = cal_aux;
+    }
     public int getNumero() {
         return numero;
     }
