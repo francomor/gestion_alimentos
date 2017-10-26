@@ -178,4 +178,46 @@ public class Establecimiento {
         
         return estab;
     }
+    
+    public static Establecimiento recuperarPorNroRNE(String nro_rne) throws SQLException, InstantiationException, IllegalAccessException{
+        ConexionBD con= ConexionBD.getConexion();
+        String[][] valores;
+        
+        Establecimiento estab = new Establecimiento();
+        RNE rne = new RNE();
+        valores = new String[1][12];
+        valores = con.recuperar(valores,"SELECT * FROM `establecimiento` WHERE `nro_RNE`="+ nro_rne +";",12);
+       
+        if(valores[0][1]!=null)
+            estab.setDireccion(valores[0][1]);
+        if(valores[0][2]!=null)
+            //estab.setFechaDeCarga(valores[0][2]);
+        if(valores[0][3]!=null)
+            estab.setNombre(valores[0][3]);
+        if(valores[0][4]!=null)
+            estab.setTelefono(Integer.parseInt(valores[0][4]));
+        
+        if(valores[0][5]!=null)
+            estab.setArchivos_adjuntos(true);
+        else
+            estab.setArchivos_adjuntos(false);
+        
+        if(valores[0][6]!=null)
+            rne.setNumero(Integer.parseInt(valores[0][6]));
+        if(valores[0][7]!=null)
+           // rne.setFecha_vencimiento(valores[0][4]);
+        estab.setRne(rne);
+        
+        if(valores[0][8]!=null)
+            estab.setNro_factura(Integer.parseInt(valores[0][4]));
+        if(valores[0][9]!=null)
+            estab.setCUIT_Empresa(Integer.parseInt(valores[0][4]));
+        if(valores[0][9]!=null)
+            estab.setId_Localidad(Integer.parseInt(valores[0][4]));
+        if(valores[0][9]!=null)
+            estab.setId_Categoria(Integer.parseInt(valores[0][4]));
+              
+        
+        return estab;
+    }
 }//end Establecimiento

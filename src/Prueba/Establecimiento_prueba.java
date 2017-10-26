@@ -36,7 +36,7 @@ public class Establecimiento_prueba extends javax.swing.JFrame {
         labelTitulo = new javax.swing.JLabel();
         textFieldID = new javax.swing.JTextField();
         labelID = new javax.swing.JLabel();
-        buttonBuscar = new javax.swing.JButton();
+        buttonBuscarID = new javax.swing.JButton();
         labelNombre = new javax.swing.JLabel();
         textFieldNombre = new javax.swing.JTextField();
         labelFechaCarga = new javax.swing.JLabel();
@@ -57,6 +57,9 @@ public class Establecimiento_prueba extends javax.swing.JFrame {
         textFieldNroFactura = new javax.swing.JTextField();
         labelFVencimientoRNE2 = new javax.swing.JLabel();
         textFieldId_Categoria = new javax.swing.JTextField();
+        labelBuscarRNE = new javax.swing.JLabel();
+        textFieldBuscarRNE = new javax.swing.JTextField();
+        buttonBuscarRNE = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -65,10 +68,10 @@ public class Establecimiento_prueba extends javax.swing.JFrame {
 
         labelID.setText("id: ");
 
-        buttonBuscar.setText("Buscar");
-        buttonBuscar.addActionListener(new java.awt.event.ActionListener() {
+        buttonBuscarID.setText("Buscar id");
+        buttonBuscarID.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonBuscarActionPerformed(evt);
+                buttonBuscarIDActionPerformed(evt);
             }
         });
 
@@ -132,78 +135,80 @@ public class Establecimiento_prueba extends javax.swing.JFrame {
 
         textFieldId_Categoria.setEnabled(false);
 
+        labelBuscarRNE.setText("Nro RNE:");
+
+        buttonBuscarRNE.setText("Buscar RNE");
+        buttonBuscarRNE.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonBuscarRNEActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(37, 37, 37)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                            .addComponent(labelNombre)
+                            .addGap(40, 40, 40)
+                            .addComponent(textFieldNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                 .addGroup(layout.createSequentialGroup()
-                                    .addGap(298, 298, 298)
-                                    .addComponent(textFieldTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(labelNombre)
-                                    .addGap(191, 191, 191)
-                                    .addComponent(labelDireccion)
-                                    .addGap(32, 32, 32)
-                                    .addComponent(textFieldDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(textFieldNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGroup(layout.createSequentialGroup()
-                                            .addComponent(labelFechaCarga)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(textFieldFechaCarga, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                    .addGap(42, 42, 42)
-                                    .addComponent(labelTelefono)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(textFieldNroRNE, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(labelNroFactura)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(textFieldNroFactura, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(231, 231, 231)))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(labelNroRNE1)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(textFieldId_Empresa, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(labelFVencimientoRNE1)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(textFieldId_Localidad, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(labelFechaCarga)
+                                        .addComponent(labelNroFactura))
+                                    .addGap(18, 18, 18))
                                 .addGroup(layout.createSequentialGroup()
                                     .addComponent(labelNroRNE)
-                                    .addGap(173, 173, 173)
-                                    .addComponent(labelFVencimientoRNE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(textFieldFVencimientoRNE, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(labelFVencimientoRNE2)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(textFieldId_Categoria, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(270, 270, 270)))
-                        .addGap(73, 73, 73))))
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGap(39, 39, 39)))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(textFieldNroFactura, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(textFieldFechaCarga, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(textFieldNroRNE, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(textFieldId_Empresa, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGap(1, 1, 1)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(130, 130, 130)
-                        .addComponent(labelID)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(textFieldID, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(labelFVencimientoRNE2)
                         .addGap(18, 18, 18)
-                        .addComponent(buttonBuscar))
+                        .addComponent(textFieldId_Categoria, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(213, 213, 213)
-                        .addComponent(labelTitulo)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(labelID)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(textFieldID, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(buttonBuscarID)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(labelBuscarRNE))
+                            .addComponent(labelNroRNE1))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(textFieldBuscarRNE, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(buttonBuscarRNE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(labelFVencimientoRNE1)
+                                    .addComponent(labelDireccion)
+                                    .addComponent(labelTelefono)
+                                    .addComponent(labelFVencimientoRNE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(textFieldDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(textFieldFVencimientoRNE, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(textFieldId_Localidad, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(textFieldTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                .addContainerGap(110, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(213, 213, 213)
+                .addComponent(labelTitulo)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -214,8 +219,11 @@ public class Establecimiento_prueba extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(textFieldID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(buttonBuscar)
-                    .addComponent(labelID))
+                    .addComponent(buttonBuscarID)
+                    .addComponent(labelID)
+                    .addComponent(textFieldBuscarRNE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(buttonBuscarRNE)
+                    .addComponent(labelBuscarRNE))
                 .addGap(33, 33, 33)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelDireccion)
@@ -226,20 +234,20 @@ public class Establecimiento_prueba extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(labelTelefono)
-                        .addComponent(textFieldTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(textFieldFechaCarga, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(labelFechaCarga))
+                        .addComponent(textFieldTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(labelFechaCarga)
+                        .addComponent(textFieldFechaCarga, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelNroFactura)
                     .addComponent(textFieldNroFactura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(20, 20, 20)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(labelNroRNE)
-                        .addComponent(textFieldNroRNE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(11, 11, 11)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(textFieldNroRNE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(textFieldFVencimientoRNE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(labelFVencimientoRNE))
+                    .addComponent(labelFVencimientoRNE)
+                    .addComponent(labelNroRNE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -248,16 +256,16 @@ public class Establecimiento_prueba extends javax.swing.JFrame {
                     .addComponent(textFieldId_Localidad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(labelFVencimientoRNE1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(textFieldId_Categoria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(labelFVencimientoRNE2))
-                .addContainerGap(18, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(labelFVencimientoRNE2)
+                    .addComponent(textFieldId_Categoria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(54, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void buttonBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonBuscarActionPerformed
+    private void buttonBuscarIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonBuscarIDActionPerformed
         // TODO add your handling code here:
         try {
             Establecimiento est = Establecimiento.recuperarPorId(textFieldID.getText());
@@ -286,15 +294,11 @@ public class Establecimiento_prueba extends javax.swing.JFrame {
                 textFieldNroFactura.setText("");
             
 
-        } catch (SQLException ex) {
-            Logger.getLogger(Rubro_prueba.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            Logger.getLogger(Rubro_prueba.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
+        } catch (SQLException | InstantiationException | IllegalAccessException ex) {
             Logger.getLogger(Rubro_prueba.class.getName()).log(Level.SEVERE, null, ex);
         }
 
-    }//GEN-LAST:event_buttonBuscarActionPerformed
+    }//GEN-LAST:event_buttonBuscarIDActionPerformed
 
     private void textFieldDireccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldDireccionActionPerformed
         // TODO add your handling code here:
@@ -311,6 +315,41 @@ public class Establecimiento_prueba extends javax.swing.JFrame {
     private void textFieldNroFacturaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldNroFacturaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_textFieldNroFacturaActionPerformed
+
+    private void buttonBuscarRNEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonBuscarRNEActionPerformed
+        // TODO add your handling code here:
+        try {
+            Establecimiento est = Establecimiento.recuperarPorNroRNE(textFieldBuscarRNE.getText());
+            RNE rne = est.getRne();
+            //textFieldFechaCarga.setText(est.g());
+            
+            //textFieldFechaCarga.setText(est.getFechaDeCarga());
+            textFieldId_Categoria.setText(String.valueOf(est.getId_Categoria()));
+            textFieldId_Empresa.setText(String.valueOf(est.getCUIT_Empresa()));
+            textFieldId_Localidad.setText(String.valueOf(est.getId_Localidad()));
+            textFieldNombre.setText(est.getNombre());
+            textFieldDireccion.setText(est.getDireccion());
+            
+            if(rne != null){
+                textFieldNroRNE.setText(String.valueOf(rne.getNumero()));
+                //textFieldFVencimientoRNE.setText(rne.getFecha_vencimiento());
+            }
+            if(est.getTelefono()!=0)
+                textFieldTelefono.setText(String.valueOf(est.getTelefono()));
+            else
+                textFieldTelefono.setText("");
+            
+            if(est.getTelefono()!=0)
+                textFieldNroFactura.setText(String.valueOf(est.getNro_factura()));
+            else
+                textFieldNroFactura.setText("");
+            
+
+        } catch (SQLException | InstantiationException | IllegalAccessException ex) {
+            Logger.getLogger(Rubro_prueba.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+    }//GEN-LAST:event_buttonBuscarRNEActionPerformed
 
     /**
      * @param args the command line arguments
@@ -348,7 +387,9 @@ public class Establecimiento_prueba extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton buttonBuscar;
+    private javax.swing.JButton buttonBuscarID;
+    private javax.swing.JButton buttonBuscarRNE;
+    private javax.swing.JLabel labelBuscarRNE;
     private javax.swing.JLabel labelDireccion;
     private javax.swing.JLabel labelFVencimientoRNE;
     private javax.swing.JLabel labelFVencimientoRNE1;
@@ -361,6 +402,7 @@ public class Establecimiento_prueba extends javax.swing.JFrame {
     private javax.swing.JLabel labelNroRNE1;
     private javax.swing.JLabel labelTelefono;
     private javax.swing.JLabel labelTitulo;
+    private javax.swing.JTextField textFieldBuscarRNE;
     private javax.swing.JTextField textFieldDireccion;
     private javax.swing.JTextField textFieldFVencimientoRNE;
     private javax.swing.JTextField textFieldFechaCarga;

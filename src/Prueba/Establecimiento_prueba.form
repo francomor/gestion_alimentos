@@ -25,94 +25,84 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="1" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Group type="103" alignment="1" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="298" max="-2" attributes="0"/>
-                                  <Component id="textFieldTelefono" min="-2" pref="124" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" attributes="0">
-                                  <Component id="labelNombre" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="191" max="-2" attributes="0"/>
-                                  <Component id="labelDireccion" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-                                  <Component id="textFieldDireccion" min="-2" pref="124" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Group type="103" groupAlignment="1" attributes="0">
-                                      <Component id="textFieldNombre" min="-2" pref="122" max="-2" attributes="0"/>
-                                      <Group type="102" attributes="0">
-                                          <Component id="labelFechaCarga" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="textFieldFechaCarga" min="-2" pref="122" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                                  <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
-                                  <Component id="labelTelefono" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <Group type="102" alignment="1" attributes="0">
-                              <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="textFieldNroRNE" min="-2" pref="122" max="-2" attributes="0"/>
-                                  <Group type="102" attributes="0">
-                                      <Component id="labelNroFactura" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="textFieldNroFactura" min="-2" pref="122" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <EmptySpace min="-2" pref="231" max="-2" attributes="0"/>
-                          </Group>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="labelNombre" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="textFieldNombre" min="-2" pref="122" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace max="32767" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
+                          <Group type="103" groupAlignment="1" attributes="0">
                               <Group type="102" attributes="0">
-                                  <Component id="labelNroRNE1" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="textFieldId_Empresa" min="-2" pref="122" max="-2" attributes="0"/>
-                                  <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="labelFVencimientoRNE1" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="textFieldId_Localidad" min="-2" pref="124" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="labelFechaCarga" min="-2" max="-2" attributes="0"/>
+                                      <Component id="labelNroFactura" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" attributes="0">
                                   <Component id="labelNroRNE" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="173" max="-2" attributes="0"/>
-                                  <Component id="labelFVencimientoRNE" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="textFieldFVencimientoRNE" min="-2" pref="124" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <Group type="102" alignment="1" attributes="0">
-                              <Component id="labelFVencimientoRNE2" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="textFieldNroFactura" min="-2" pref="122" max="-2" attributes="0"/>
+                              <Component id="textFieldFechaCarga" min="-2" pref="122" max="-2" attributes="0"/>
+                              <Component id="textFieldNroRNE" alignment="0" min="-2" pref="122" max="-2" attributes="0"/>
+                              <Component id="textFieldId_Empresa" alignment="0" min="-2" pref="122" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="labelFVencimientoRNE2" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="textFieldId_Categoria" min="-2" pref="124" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="labelID" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="textFieldId_Categoria" min="-2" pref="124" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="270" max="-2" attributes="0"/>
+                              <Component id="textFieldID" min="-2" pref="165" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="buttonBuscarID" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="labelBuscarRNE" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="labelNroRNE1" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="textFieldBuscarRNE" min="-2" pref="165" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="buttonBuscarRNE" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="labelFVencimientoRNE1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="labelDireccion" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="labelTelefono" min="-2" max="-2" attributes="0"/>
+                                  <Component id="labelFVencimientoRNE" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="textFieldDireccion" min="-2" pref="124" max="-2" attributes="0"/>
+                                  <Component id="textFieldFVencimientoRNE" min="-2" pref="124" max="-2" attributes="0"/>
+                                  <Component id="textFieldId_Localidad" min="-2" pref="124" max="-2" attributes="0"/>
+                                  <Component id="textFieldTelefono" alignment="0" min="-2" pref="124" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
                       </Group>
-                      <EmptySpace min="-2" pref="73" max="-2" attributes="0"/>
                   </Group>
               </Group>
+              <EmptySpace pref="110" max="32767" attributes="0"/>
           </Group>
           <Group type="102" attributes="0">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="130" max="-2" attributes="0"/>
-                      <Component id="labelID" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="textFieldID" min="-2" pref="165" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                      <Component id="buttonBuscar" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="213" max="-2" attributes="0"/>
-                      <Component id="labelTitulo" min="-2" max="-2" attributes="0"/>
-                  </Group>
-              </Group>
+              <EmptySpace min="-2" pref="213" max="-2" attributes="0"/>
+              <Component id="labelTitulo" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
           </Group>
       </Group>
@@ -125,8 +115,11 @@
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="textFieldID" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="buttonBuscar" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="buttonBuscarID" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="labelID" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="textFieldBuscarRNE" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="buttonBuscarRNE" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="labelBuscarRNE" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -140,23 +133,23 @@
                   <Group type="103" alignment="0" groupAlignment="3" attributes="0">
                       <Component id="labelTelefono" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="textFieldTelefono" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                      <Component id="labelFechaCarga" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="textFieldFechaCarga" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <Component id="labelFechaCarga" alignment="0" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="labelNroFactura" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="textFieldNroFactura" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                      <Component id="labelNroRNE" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="textFieldNroRNE" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Component id="textFieldFVencimientoRNE" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="labelFVencimientoRNE" alignment="0" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="textFieldNroRNE" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="textFieldFVencimientoRNE" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="labelFVencimientoRNE" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="labelNroRNE" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
@@ -168,11 +161,11 @@
                   <Component id="labelFVencimientoRNE1" alignment="0" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="textFieldId_Categoria" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="labelFVencimientoRNE2" alignment="0" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="labelFVencimientoRNE2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="textFieldId_Categoria" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="18" max="32767" attributes="0"/>
+              <EmptySpace pref="54" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -193,12 +186,12 @@
         <Property name="text" type="java.lang.String" value="id: "/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="buttonBuscar">
+    <Component class="javax.swing.JButton" name="buttonBuscarID">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Buscar"/>
+        <Property name="text" type="java.lang.String" value="Buscar id"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonBuscarActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonBuscarIDActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="labelNombre">
@@ -312,6 +305,21 @@
       <Properties>
         <Property name="enabled" type="boolean" value="false"/>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="labelBuscarRNE">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Nro RNE:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="textFieldBuscarRNE">
+    </Component>
+    <Component class="javax.swing.JButton" name="buttonBuscarRNE">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Buscar RNE"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonBuscarRNEActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>
