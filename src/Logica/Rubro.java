@@ -1,11 +1,10 @@
-
-
 /**
  * @author Franco
  * @version 1.0
  * @created 18-oct.-2017 19:44:08
  */
 package Logica;
+
 import Persistencia.ConexionBD;
 import java.sql.SQLException;
 import java.util.Vector;
@@ -36,52 +35,86 @@ public class Rubro {
     }
 
     /**
+     * Metodo que guarda un rubro
      *
-     * @param rubro
-     * @return 
+     * @param rubro Rubro
+     * @return boolean Es verdadero si se cargo correctamente
      * @throws java.sql.SQLException
      * @throws java.lang.InstantiationException
      * @throws java.lang.IllegalAccessException
      */
-     public boolean guardar(Rubro rubro) throws SQLException, InstantiationException, IllegalAccessException{
-        
-        ConexionBD con= ConexionBD.getConexion();
-        
+    public boolean guardar(Rubro rubro) throws SQLException, InstantiationException, IllegalAccessException {
 
-        boolean result=con.insertar("insert into rubro (id,nombre) values (default,'"+rubro.nombre+"')");
-        return result; 
+        ConexionBD con = ConexionBD.getConexion();
+        boolean result = con.insertar("insert into rubro (id,nombre) values (default,'" + rubro.nombre + "')");
+        return result;
     }
-     
-    public void update(Rubro rubro,String aCambiar) throws SQLException, InstantiationException, IllegalAccessException{
-        ConexionBD con=ConexionBD.getConexion();
-        con.update("UPDATE rubro SET nombre='"+rubro.nombre+"' WHERE nombre='"+aCambiar+"'");
+
+    /**
+     * Cambia un material
+     *
+     * @param rubro Rubro con el nombre que tomara el valor luego del cambio
+     * @param aCambiar Nombre del rubro que se va a cambiar
+     * @throws java.sql.SQLException
+     * @throws java.lang.InstantiationException
+     * @throws java.lang.IllegalAccessException
+     */
+    public void update(Rubro rubro, String aCambiar) throws SQLException, InstantiationException, IllegalAccessException {
+        ConexionBD con = ConexionBD.getConexion();
+        con.update("UPDATE rubro SET nombre='" + rubro.nombre + "' WHERE nombre='" + aCambiar + "'");
     }
-     
-    public void borrar(Rubro rubro) throws SQLException, InstantiationException, IllegalAccessException{
-        ConexionBD con=ConexionBD.getConexion();
-        con.update("DELETE FROM `rubro` WHERE nombre='"+rubro.getNombre()+"';");
+
+    /**
+     * Borra un rubro
+     *
+     * @param rubro Rubro a borrar
+     * @throws java.sql.SQLException
+     * @throws java.lang.InstantiationException
+     * @throws java.lang.IllegalAccessException
+     */
+    public void borrar(Rubro rubro) throws SQLException, InstantiationException, IllegalAccessException {
+        ConexionBD con = ConexionBD.getConexion();
+        con.update("DELETE FROM `rubro` WHERE nombre='" + rubro.getNombre() + "';");
     }
-    
-    public static Vector<String> recuperarTodosNombres() throws SQLException, InstantiationException, IllegalAccessException{
-        ConexionBD con= ConexionBD.getConexion();
+
+    /**
+     * Recupera todos los rubros
+     *
+     * @return {@code Vector<String>} Un vector de string que contiene los
+     * nombres de todos los rubros
+     * @throws java.sql.SQLException
+     * @throws java.lang.InstantiationException
+     * @throws java.lang.IllegalAccessException
+     */
+    public static Vector<String> recuperarTodosNombres() throws SQLException, InstantiationException, IllegalAccessException {
+        ConexionBD con = ConexionBD.getConexion();
         String[][] valores;
         valores = new String[10][1];
-        valores = con.recuperar(valores,"select nombre from rubro",1);
+        valores = con.recuperar(valores, "select nombre from rubro", 1);
         Vector<String> salida = new Vector<String>();
         for (String[] valore : valores) {
-            if (valore[0]==null) {
+            if (valore[0] == null) {
                 break;
             }
             salida.add(valore[0]);
         }
-        
+
         return (Vector<String>) salida;
     }
-    
-    public boolean existe(String rubro_name) throws SQLException, InstantiationException, IllegalAccessException{
-        
-        ConexionBD con= ConexionBD.getConexion();
-        boolean result=con.existe("select exists (select nombre from rubro where nombre='"+rubro_name+"')");
-        return result; 
+
+    /**
+     * Verifica la existencia de un rubro
+     *
+     * @param rubro_name Nombre del rubro
+     * @return boolean Es verdadero si existe
+     * @throws java.sql.SQLException
+     * @throws java.lang.InstantiationException
+     * @throws java.lang.IllegalAccessException
+     */
+    public boolean existe(String rubro_name) throws SQLException, InstantiationException, IllegalAccessException {
+
+        ConexionBD con = ConexionBD.getConexion();
+        boolean result = con.existe("select exists (select nombre from rubro where nombre='" + rubro_name + "')");
+        return result;
     }
 }//end Rubro

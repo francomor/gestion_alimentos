@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package P_Envase;
+package Prueba;;
 import Logica.*;
 import java.sql.SQLException;
 import java.util.Vector;
@@ -160,11 +160,12 @@ public class Envase_prueba extends javax.swing.JFrame {
                     .addComponent(jLabel6)
                     .addComponent(jLabel4))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(capacidad_textfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(buttonInsertar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(material_selec, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(unidad_selec, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(capacidad_textfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(material_selec, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(unidad_selec, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(material_tf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -186,7 +187,7 @@ public class Envase_prueba extends javax.swing.JFrame {
         
         Envase envase=new Envase();
 
-        Boolean error=false, existe=false,existe1=false,existe2=false;
+        Boolean error=false, existe=false,existe1=false;
         envase.setCapacidad(this.capacidad_textfield.getText());
        
         if(material_tf.isEnabled() && unidad_tf.isEnabled()){
@@ -223,13 +224,12 @@ public class Envase_prueba extends javax.swing.JFrame {
             else {JOptionPane.showMessageDialog(null, "Hubo un error al agregar la unidad");}
             }
            envase.guardar_envase(envase.getCapacidad(),envase.getMaterial(),envase.getUnidad()); 
-        } catch (SQLException ex) {
-            Logger.getLogger(Envase_prueba.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            Logger.getLogger(Envase_prueba.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
+        } catch (SQLException | InstantiationException | IllegalAccessException ex) {
             Logger.getLogger(Envase_prueba.class.getName()).log(Level.SEVERE, null, ex);
         }
+        //////////////////////////////////////////
+        //////////////////////////////////////////
+        
        //////////////////////////////////////////
        //////////////////////////////////////////
        
@@ -253,24 +253,20 @@ public class Envase_prueba extends javax.swing.JFrame {
 
     private void cargar_unidadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cargar_unidadActionPerformed
                 // TODO add your handling code here:
-        Vector<String> mat_uni= new Vector<String>();
-        Vector<String> mat_car= new Vector<String>();
-        Envase envase=new Envase();
+        Vector<String> mat_uni;
+        Vector<String> mat_car;
+        
         try{
-            mat_uni=envase.recuperarTodosUnidades();
+            mat_uni=Envase.recuperarTodosUnidades();
             for(int i=0;i<mat_uni.size();i++){
             unidad_selec.addItem(mat_uni.elementAt(i));
             }
-            mat_car=envase.recuperarTodosMateriales();
+            mat_car=Envase.recuperarTodosMateriales();
             for(int j=0;j<mat_car.size();j++){
             material_selec.addItem(mat_car.elementAt(j));
             }
         }
-        catch (SQLException ex) {
-            Logger.getLogger(Envase_prueba.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            Logger.getLogger(Envase_prueba.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
+        catch (SQLException | InstantiationException | IllegalAccessException ex) {
             Logger.getLogger(Envase_prueba.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_cargar_unidadActionPerformed

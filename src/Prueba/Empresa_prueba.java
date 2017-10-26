@@ -6,9 +6,7 @@
 package Prueba;
 
 import Logica.Empresa;
-import Logica.Rubro;
 import java.sql.SQLException;
-import java.util.Vector;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -168,11 +166,7 @@ public class Empresa_prueba extends javax.swing.JFrame {
             else
                 textFieldTelefono.setText("");  
             
-        } catch (SQLException ex) {
-            Logger.getLogger(Rubro_prueba.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            Logger.getLogger(Rubro_prueba.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
+        } catch (SQLException | InstantiationException | IllegalAccessException ex) {
             Logger.getLogger(Rubro_prueba.class.getName()).log(Level.SEVERE, null, ex);
         }
         
@@ -206,10 +200,8 @@ public class Empresa_prueba extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Empresa_prueba().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new Empresa_prueba().setVisible(true);
         });
     }
 
