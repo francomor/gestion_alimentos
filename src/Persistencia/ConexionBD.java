@@ -81,6 +81,7 @@ public void crearConexion() throws InstantiationException, IllegalAccessExceptio
 
     
 //nro es la cantidad de columnas a recuperar
+//vector[i][j] i es la cantidad de filas y j la cantidad de columnas
 public String[][] recuperar(String[][] vector, String consulta, int nro) {
 
         int i, j = 0;

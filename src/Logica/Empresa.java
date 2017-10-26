@@ -8,6 +8,10 @@
 
 package Logica;
 
+import Persistencia.ConexionBD;
+import java.sql.SQLException;
+import java.util.Vector;
+
 public class Empresa {
 
     private int CUIT;
@@ -70,5 +74,23 @@ public class Empresa {
      */
     public boolean guardar(Empresa empresa) {
         return false;
+    }
+    
+    public static Empresa recuperarPorCuit(String CUIT) throws SQLException, InstantiationException, IllegalAccessException{
+        ConexionBD con= ConexionBD.getConexion();
+        String[][] valores;
+        Empresa salida = new Empresa();
+        valores = new String[10][6];
+        valores = con.recuperar(valores,"select * from empresa where CUIT="+ CUIT +";",6);
+        if(valores[0][1]!=null)
+            salida.setEmail(valores[0][1]);
+        if(valores[0][2]!=null)
+            salida.setNombre(valores[0][2]);
+        if(valores[0][3]!=null)
+            salida.setRazon_social(valores[0][3]);
+        if(valores[0][4]!=null)
+            salida.setTelefono(Integer.parseInt(valores[0][4]));
+        
+        return salida;
     }
 }//end Empresa

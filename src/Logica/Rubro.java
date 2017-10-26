@@ -77,6 +77,7 @@ public class Rubro {
         
         return (Vector<String>) salida;
     }
+    
     public boolean existe(String rubro_name) throws SQLException, InstantiationException, IllegalAccessException{
         
         ConexionBD con= ConexionBD.getConexion();
