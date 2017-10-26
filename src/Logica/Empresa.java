@@ -80,7 +80,7 @@ public class Empresa {
         ConexionBD con= ConexionBD.getConexion();
         String[][] valores;
         Empresa salida = new Empresa();
-        valores = new String[10][6];
+        valores = new String[1][6];
         valores = con.recuperar(valores,"select * from empresa where CUIT="+ CUIT +";",6);
         if(valores[0][1]!=null)
             salida.setEmail(valores[0][1]);
