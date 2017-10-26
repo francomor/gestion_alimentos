@@ -98,25 +98,6 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="74" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="EtiquetaCUIL" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="EtiquetaNombreEmpresa" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="EtiquetaRazonSocial" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                          <Component id="CampoNombreEmpresa" pref="122" max="32767" attributes="0"/>
-                                          <Component id="CampoCUIL" max="32767" attributes="0"/>
-                                          <Component id="CampoRazonSocial" max="32767" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace min="46" max="32767" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="EtiquetaTelefono" max="32767" attributes="0"/>
-                                          <Component id="EtiquetaEmail" max="32767" attributes="0"/>
-                                      </Group>
-                                  </Group>
                                   <Group type="102" attributes="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" attributes="0">
@@ -129,68 +110,85 @@
                                                   <Component id="EtiquetaCargaProdAlimenticio" min="-2" max="-2" attributes="0"/>
                                                   <Group type="102" attributes="0">
                                                       <Component id="NumRNE" min="-2" pref="88" max="-2" attributes="0"/>
-                                                      <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
-                                                      <Component id="TextFieldRNE" min="-2" pref="120" max="-2" attributes="0"/>
-                                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                      <EmptySpace min="-2" pref="174" max="-2" attributes="0"/>
                                                       <Component id="BuscarRNE" min="-2" max="-2" attributes="0"/>
                                                   </Group>
+                                                  <Component id="TextFieldRNE" alignment="0" min="-2" pref="120" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
                                       </Group>
                                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                   </Group>
-                              </Group>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="CampoEmail" max="32767" attributes="0"/>
-                                  <Component id="CampoTelefono" pref="124" max="32767" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" attributes="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
-                                              <Component id="EtiquetaDatosPA" min="-2" max="-2" attributes="0"/>
-                                          </Group>
                                           <Group type="102" attributes="0">
-                                              <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
-                                              <Component id="EtiquetaRegistroRNPA" min="-2" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Group type="102" alignment="0" attributes="0">
+                                                      <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
+                                                      <Component id="EtiquetaDatosPA" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Group type="102" attributes="0">
+                                                      <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
+                                                      <Component id="EtiquetaRegistroRNPA" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Group type="102" alignment="0" attributes="0">
+                                                      <EmptySpace min="-2" pref="74" max="-2" attributes="0"/>
+                                                      <Group type="103" groupAlignment="0" attributes="0">
+                                                          <Component id="EtiquetaRotulo" min="-2" max="-2" attributes="0"/>
+                                                          <Group type="102" attributes="0">
+                                                              <Component id="EtiquetaNroFactura" min="-2" max="-2" attributes="0"/>
+                                                              <EmptySpace max="-2" attributes="0"/>
+                                                              <Component id="CampoNroFactura" min="-2" pref="120" max="-2" attributes="0"/>
+                                                          </Group>
+                                                          <Component id="jScrollPane1" min="-2" pref="411" max="-2" attributes="0"/>
+                                                      </Group>
+                                                  </Group>
+                                              </Group>
+                                              <EmptySpace min="-2" pref="80" max="-2" attributes="0"/>
                                           </Group>
                                           <Group type="102" alignment="0" attributes="0">
                                               <EmptySpace min="-2" pref="74" max="-2" attributes="0"/>
-                                              <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="EtiquetaRotulo" min="-2" max="-2" attributes="0"/>
-                                                  <Group type="102" attributes="0">
-                                                      <Component id="EtiquetaNroFactura" min="-2" max="-2" attributes="0"/>
-                                                      <EmptySpace max="-2" attributes="0"/>
-                                                      <Component id="CampoNroFactura" min="-2" pref="120" max="-2" attributes="0"/>
-                                                  </Group>
-                                                  <Component id="jScrollPane1" min="-2" pref="411" max="-2" attributes="0"/>
-                                              </Group>
+                                              <Component id="EtiquetaRNPA" min="-2" pref="73" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="CampoRNPA" min="-2" pref="120" max="-2" attributes="0"/>
+                                              <EmptySpace max="32767" attributes="0"/>
+                                              <Component id="EtiquetaFechaVencimiento" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
-                                      <EmptySpace min="-2" pref="80" max="-2" attributes="0"/>
+                                      <Component id="CampoFechaVencimiento" min="-2" pref="122" max="-2" attributes="0"/>
                                   </Group>
+                                  <Component id="SeparadorDatosEmpresa" max="32767" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="74" max="-2" attributes="0"/>
-                                      <Component id="EtiquetaRNPA" min="-2" pref="73" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="CampoRNPA" min="-2" pref="120" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="1" attributes="0">
+                                          <Component id="CampoNombreEmpresa" min="-2" pref="122" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="EtiquetaCUIL" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="EtiquetaNombreEmpresa" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="EtiquetaRazonSocial" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="CampoCUIL" min="-2" pref="122" max="-2" attributes="0"/>
+                                              <Component id="CampoRazonSocial" alignment="0" min="-2" pref="122" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
                                       <EmptySpace max="32767" attributes="0"/>
-                                      <Component id="EtiquetaFechaVencimiento" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                          <Group type="102" attributes="0">
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="EtiquetaTelefono" max="32767" attributes="0"/>
+                                                  <Component id="EtiquetaEmail" max="32767" attributes="0"/>
+                                              </Group>
+                                              <EmptySpace min="142" pref="142" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                                              <Component id="CampoTelefono" alignment="1" min="-2" pref="124" max="-2" attributes="0"/>
+                                              <Component id="CampoEmail" min="-2" pref="124" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
                                   </Group>
                               </Group>
-                              <Component id="CampoFechaVencimiento" min="-2" pref="122" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                           </Group>
-                          <Component id="SeparadorDatosEmpresa" max="32767" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jSeparator1" alignment="0" max="32767" attributes="0"/>
                           <Component id="SeparadorDatosProducto" alignment="0" max="32767" attributes="0"/>
                           <Component id="SeparadorRegistroRNPA" alignment="1" max="32767" attributes="0"/>
@@ -208,11 +206,11 @@
                               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                               <Component id="jTextField1" min="-2" pref="116" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jScrollBar3" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -227,9 +225,10 @@
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="NumRNE" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="TextFieldRNE" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="BuscarRNE" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="TextFieldRNE" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="SeparadorDatosEmpresa" min="-2" pref="2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
@@ -238,22 +237,27 @@
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="EtiquetaCUIL" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="EtiquetaEmail" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="CampoCUIL" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="CampoEmail" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="EtiquetaNombreEmpresa" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="EtiquetaTelefono" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="CampoNombreEmpresa" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="CampoTelefono" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="EtiquetaRazonSocial" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="CampoRazonSocial" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="EtiquetaRazonSocial" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="CampoRazonSocial" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Component id="SeparadorRegistroRNPA" min="-2" pref="2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="EtiquetaRegistroRNPA" min="-2" max="-2" attributes="0"/>
@@ -290,7 +294,7 @@
                               </Group>
                           </Group>
                       </Group>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -495,12 +499,12 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="734" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="764" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="595" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="607" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
@@ -517,12 +521,12 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="734" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="764" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="595" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="607" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
