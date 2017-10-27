@@ -33,62 +33,92 @@ public class panelCargaProducto extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        PanelCargaPA = new javax.swing.JTabbedPane();
-        CargaBasicaScroll = new javax.swing.JScrollPane();
         CargaBasica = new javax.swing.JPanel();
-        NumRNE = new javax.swing.JLabel();
-        TextFieldRNE = new javax.swing.JTextField();
+        labelNumRNE = new javax.swing.JLabel();
+        textFieldRNE = new javax.swing.JTextField();
         BuscarRNE = new javax.swing.JButton();
         SeparadorDatosEmpresa = new javax.swing.JSeparator();
-        EtiquetaTituloDatoEmpresa = new javax.swing.JLabel();
-        EtiquetaCUIL = new javax.swing.JLabel();
-        EtiquetaNombreEmpresa = new javax.swing.JLabel();
-        EtiquetaRazonSocial = new javax.swing.JLabel();
-        EtiquetaEmail = new javax.swing.JLabel();
-        EtiquetaTelefono = new javax.swing.JLabel();
-        CampoCUIL = new javax.swing.JTextField();
-        CampoNombreEmpresa = new javax.swing.JTextField();
-        CampoRazonSocial = new javax.swing.JTextField();
-        CampoEmail = new javax.swing.JTextField();
-        CampoTelefono = new javax.swing.JTextField();
+        labelDatoEmpresa = new javax.swing.JLabel();
+        labelEmp_CUIL = new javax.swing.JLabel();
+        labelEmp_NombreEmpresa = new javax.swing.JLabel();
+        labelEmp_RazonSocial = new javax.swing.JLabel();
+        labelEmp_Email = new javax.swing.JLabel();
+        labelEmp_Telefono = new javax.swing.JLabel();
+        textFieldEmp_CUIL = new javax.swing.JTextField();
+        textFieldEmp_Nombre = new javax.swing.JTextField();
+        textFieldEmp_RazonSocial = new javax.swing.JTextField();
+        textFieldEmp_Email = new javax.swing.JTextField();
+        textFieldEmp_Telefono = new javax.swing.JTextField();
         SeparadorRegistroRNPA = new javax.swing.JSeparator();
-        EtiquetaDatosPA = new javax.swing.JLabel();
-        EtiquetaNroFactura = new javax.swing.JLabel();
-        CampoNroFactura = new javax.swing.JTextField();
+        labelComposicion = new javax.swing.JLabel();
+        labelNroFactura = new javax.swing.JLabel();
+        textFieldNroFactura = new javax.swing.JTextField();
         SeparadorDatosProducto = new javax.swing.JSeparator();
-        EtiquetaRegistroRNPA = new javax.swing.JLabel();
-        EtiquetaRNPA = new javax.swing.JLabel();
-        CampoRNPA = new javax.swing.JTextField();
-        CampoFechaVencimiento = new javax.swing.JFormattedTextField();
-        EtiquetaFechaVencimiento = new javax.swing.JLabel();
-        EtiquetaRotulo = new javax.swing.JLabel();
+        labelRegistroRNPA = new javax.swing.JLabel();
+        labelRNPA = new javax.swing.JLabel();
+        textFieldRNPA = new javax.swing.JTextField();
+        textFieldFechaVencimiento = new javax.swing.JFormattedTextField();
+        labelFechaVencimiento = new javax.swing.JLabel();
+        labelRotulo = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        CampoRotulo = new javax.swing.JTextArea();
+        textAreaRotulo = new javax.swing.JTextArea();
         jSeparator1 = new javax.swing.JSeparator();
-        EtiquetaDatosDeLab = new javax.swing.JLabel();
-        EtiquetaCargaProdAlimenticio = new javax.swing.JLabel();
-        EtiquetaNumProtocolo = new javax.swing.JLabel();
-        CampoNumProtocolo = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        CargaComposicionScroll = new javax.swing.JScrollPane();
-        CargaComposicion = new javax.swing.JPanel();
-        CargaDescripcionScroll = new javax.swing.JScrollPane();
-        CargaDescripcion = new javax.swing.JPanel();
+        labelDatosDeLab = new javax.swing.JLabel();
+        labelCargaProdAlimenticio = new javax.swing.JLabel();
+        labelNumProtocolo = new javax.swing.JLabel();
+        textFieldNroProtocolo = new javax.swing.JTextField();
+        labelNroActa = new javax.swing.JLabel();
+        textFieldNroActa = new javax.swing.JTextField();
+        SeparadorRegistroRNPA1 = new javax.swing.JSeparator();
+        labelComp_Nombre = new javax.swing.JLabel();
+        labelComp_Marca = new javax.swing.JLabel();
+        labelComp_Denominacion = new javax.swing.JLabel();
+        labelComp_Contenido = new javax.swing.JLabel();
+        labelComp_FechaDuracion = new javax.swing.JLabel();
+        labelComp_NroTipoMarca = new javax.swing.JLabel();
+        labelComp_CAA = new javax.swing.JLabel();
+        labelComp_MateriasPrimas = new javax.swing.JLabel();
+        textFieldComp_Nombre = new javax.swing.JTextField();
+        textFieldComp_Marca = new javax.swing.JTextField();
+        textFieldComp_Denominacion = new javax.swing.JTextField();
+        textFieldComp_Contenido = new javax.swing.JTextField();
+        textFieldComp_FechaDuracion = new javax.swing.JTextField();
+        textFieldComp_NroTipoMarca = new javax.swing.JTextField();
+        textFieldComp_CAA = new javax.swing.JTextField();
+        SeparadorDatosProducto1 = new javax.swing.JSeparator();
+        labelDatosPA = new javax.swing.JLabel();
+        labelDescripcion = new javax.swing.JLabel();
+        SeparadorDatosProducto3 = new javax.swing.JSeparator();
+        labelDesc_FormaUso = new javax.swing.JLabel();
+        labelDesc_PeridoAptitud = new javax.swing.JLabel();
+        labelDesc_ModoConservacion = new javax.swing.JLabel();
+        labelDesc_DondeVendido = new javax.swing.JLabel();
+        labelDesc_InstruccionPrep = new javax.swing.JLabel();
+        labelDesc_ControlesEspeciales2 = new javax.swing.JLabel();
+        labelDesc_InfoAdicional = new javax.swing.JLabel();
+        labelDesc_CaracteristicasEnvase = new javax.swing.JLabel();
+        textFieldDesc_FormaUso = new javax.swing.JTextField();
+        textFieldDesc_PeriodoAptitud = new javax.swing.JTextField();
+        textFieldDesc_ModoConservacion = new javax.swing.JTextField();
+        textFieldDesc_DondeVendido = new javax.swing.JTextField();
+        textFieldDesc_InstruccionPrep = new javax.swing.JTextField();
+        textFieldDesc_ControlesEspeciales = new javax.swing.JTextField();
+        textFieldDesc_InfoAdicional = new javax.swing.JTextField();
+        labelDesc_AQuienDirigido = new javax.swing.JLabel();
+        labelDesc_ControlesEspeciales1 = new javax.swing.JLabel();
+        textFieldDesc_AQuienDirigido = new javax.swing.JTextField();
 
-        PanelCargaPA.addContainerListener(new java.awt.event.ContainerAdapter() {
-            public void componentAdded(java.awt.event.ContainerEvent evt) {
-                PanelCargaPAComponentAdded(evt);
-            }
-        });
+        CargaBasica.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        NumRNE.setText("Numero RNE: ");
+        labelNumRNE.setText("Numero RNE: ");
+        CargaBasica.add(labelNumRNE, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 50, 88, 20));
 
-        TextFieldRNE.addActionListener(new java.awt.event.ActionListener() {
+        textFieldRNE.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                TextFieldRNEActionPerformed(evt);
+                textFieldRNEActionPerformed(evt);
             }
         });
+        CargaBasica.add(textFieldRNE, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 50, 171, -1));
 
         BuscarRNE.setText("Buscar");
         BuscarRNE.addActionListener(new java.awt.event.ActionListener() {
@@ -96,288 +126,223 @@ public class panelCargaProducto extends javax.swing.JPanel {
                 BuscarRNEActionPerformed(evt);
             }
         });
+        CargaBasica.add(BuscarRNE, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 50, -1, -1));
+        CargaBasica.add(SeparadorDatosEmpresa, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 96, 620, 0));
 
-        EtiquetaTituloDatoEmpresa.setFont(new java.awt.Font("Liberation Sans", 1, 14)); // NOI18N
-        EtiquetaTituloDatoEmpresa.setText("Datos de la empresa");
+        labelDatoEmpresa.setFont(new java.awt.Font("Liberation Sans", 1, 14)); // NOI18N
+        labelDatoEmpresa.setText("Datos de la empresa");
+        CargaBasica.add(labelDatoEmpresa, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 100, -1, -1));
 
-        EtiquetaCUIL.setText("CUIT: ");
+        labelEmp_CUIL.setText("CUIT: ");
+        CargaBasica.add(labelEmp_CUIL, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 130, -1, 20));
 
-        EtiquetaNombreEmpresa.setText("Nombre: ");
+        labelEmp_NombreEmpresa.setText("Nombre: ");
+        CargaBasica.add(labelEmp_NombreEmpresa, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 160, -1, 20));
 
-        EtiquetaRazonSocial.setText("Razon Social: ");
+        labelEmp_RazonSocial.setText("Razon Social: ");
+        CargaBasica.add(labelEmp_RazonSocial, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 190, -1, 20));
 
-        EtiquetaEmail.setText("Email: ");
+        labelEmp_Email.setText("Email: ");
+        CargaBasica.add(labelEmp_Email, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 130, 49, 20));
 
-        EtiquetaTelefono.setText("Telefono: ");
+        labelEmp_Telefono.setText("Telefono: ");
+        CargaBasica.add(labelEmp_Telefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 160, -1, 20));
 
-        CampoCUIL.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
-        CampoCUIL.setText("2345678");
-        CampoCUIL.setEnabled(false);
+        textFieldEmp_CUIL.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
+        textFieldEmp_CUIL.setText("2345678");
+        textFieldEmp_CUIL.setEnabled(false);
+        CargaBasica.add(textFieldEmp_CUIL, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 130, 122, -1));
 
-        CampoNombreEmpresa.setEnabled(false);
+        textFieldEmp_Nombre.setEnabled(false);
+        CargaBasica.add(textFieldEmp_Nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 160, 122, -1));
 
-        CampoRazonSocial.setEnabled(false);
+        textFieldEmp_RazonSocial.setEnabled(false);
+        CargaBasica.add(textFieldEmp_RazonSocial, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 190, 122, -1));
 
-        CampoEmail.setEnabled(false);
-        CampoEmail.addActionListener(new java.awt.event.ActionListener() {
+        textFieldEmp_Email.setEnabled(false);
+        textFieldEmp_Email.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CampoEmailActionPerformed(evt);
+                textFieldEmp_EmailActionPerformed(evt);
             }
         });
+        CargaBasica.add(textFieldEmp_Email, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 130, 124, -1));
 
-        CampoTelefono.setEnabled(false);
+        textFieldEmp_Telefono.setEnabled(false);
+        CargaBasica.add(textFieldEmp_Telefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 160, 124, -1));
+        CargaBasica.add(SeparadorRegistroRNPA, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 220, 690, 10));
 
-        EtiquetaDatosPA.setFont(new java.awt.Font("Liberation Sans", 1, 14)); // NOI18N
-        EtiquetaDatosPA.setText("Datos del producto alimenticio");
+        labelComposicion.setFont(new java.awt.Font("Liberation Sans", 1, 12)); // NOI18N
+        labelComposicion.setText("Composicion");
+        CargaBasica.add(labelComposicion, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 470, -1, 20));
 
-        EtiquetaNroFactura.setText("Nro factura: ");
+        labelNroFactura.setText("Nro factura: ");
+        CargaBasica.add(labelNroFactura, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 340, -1, 20));
+        CargaBasica.add(textFieldNroFactura, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 340, 120, -1));
+        CargaBasica.add(SeparadorDatosProducto, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 500, 670, 10));
 
-        EtiquetaRegistroRNPA.setFont(new java.awt.Font("Liberation Sans", 1, 14)); // NOI18N
-        EtiquetaRegistroRNPA.setText("Registro numero RNPA");
+        labelRegistroRNPA.setFont(new java.awt.Font("Liberation Sans", 1, 14)); // NOI18N
+        labelRegistroRNPA.setText("Registro numero RNPA");
+        CargaBasica.add(labelRegistroRNPA, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 230, -1, -1));
 
-        EtiquetaRNPA.setText("RNPA: ");
+        labelRNPA.setText("RNPA: ");
+        CargaBasica.add(labelRNPA, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 260, 50, 20));
+        CargaBasica.add(textFieldRNPA, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 260, 120, -1));
 
-        CampoFechaVencimiento.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(java.text.DateFormat.getDateInstance(java.text.DateFormat.SHORT))));
+        textFieldFechaVencimiento.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(java.text.DateFormat.getDateInstance(java.text.DateFormat.SHORT))));
+        CargaBasica.add(textFieldFechaVencimiento, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 260, 122, -1));
 
-        EtiquetaFechaVencimiento.setText("Fecha Vencimiento: ");
+        labelFechaVencimiento.setText("Fecha Vencimiento: ");
+        CargaBasica.add(labelFechaVencimiento, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 260, -1, 20));
 
-        EtiquetaRotulo.setText("Rotulo: ");
+        labelRotulo.setText("Rotulo: ");
+        CargaBasica.add(labelRotulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 370, -1, -1));
 
-        CampoRotulo.setColumns(20);
-        CampoRotulo.setRows(5);
-        jScrollPane1.setViewportView(CampoRotulo);
+        textAreaRotulo.setColumns(20);
+        textAreaRotulo.setRows(5);
+        jScrollPane1.setViewportView(textAreaRotulo);
 
-        EtiquetaDatosDeLab.setFont(new java.awt.Font("Liberation Sans", 1, 14)); // NOI18N
-        EtiquetaDatosDeLab.setText("Datos de la muestra de laboratorio");
+        CargaBasica.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 390, 560, 70));
+        CargaBasica.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 1180, 690, 10));
 
-        EtiquetaCargaProdAlimenticio.setFont(new java.awt.Font("Liberation Sans", 1, 14)); // NOI18N
-        EtiquetaCargaProdAlimenticio.setText("Carga de Producto Alimenticio");
+        labelDatosDeLab.setFont(new java.awt.Font("Liberation Sans", 1, 14)); // NOI18N
+        labelDatosDeLab.setText("Datos de la muestra de laboratorio");
+        CargaBasica.add(labelDatosDeLab, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 1200, -1, -1));
 
-        EtiquetaNumProtocolo.setText("Numero Protocolo: ");
+        labelCargaProdAlimenticio.setFont(new java.awt.Font("Liberation Sans", 1, 14)); // NOI18N
+        labelCargaProdAlimenticio.setText("Carga de Producto Alimenticio");
+        CargaBasica.add(labelCargaProdAlimenticio, new org.netbeans.lib.awtextra.AbsoluteConstraints(46, 11, -1, -1));
 
-        jLabel1.setText("Numero de Acta: ");
+        labelNumProtocolo.setText("Numero Protocolo: ");
+        CargaBasica.add(labelNumProtocolo, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 1230, -1, 20));
+        CargaBasica.add(textFieldNroProtocolo, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 1230, 110, -1));
 
-        javax.swing.GroupLayout CargaBasicaLayout = new javax.swing.GroupLayout(CargaBasica);
-        CargaBasica.setLayout(CargaBasicaLayout);
-        CargaBasicaLayout.setHorizontalGroup(
-            CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(CargaBasicaLayout.createSequentialGroup()
-                .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(CargaBasicaLayout.createSequentialGroup()
-                        .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(CargaBasicaLayout.createSequentialGroup()
-                                .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(CargaBasicaLayout.createSequentialGroup()
-                                        .addGap(45, 45, 45)
-                                        .addComponent(EtiquetaTituloDatoEmpresa))
-                                    .addGroup(CargaBasicaLayout.createSequentialGroup()
-                                        .addGap(74, 74, 74)
-                                        .addComponent(NumRNE, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(TextFieldRNE, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(BuscarRNE)))
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addGroup(CargaBasicaLayout.createSequentialGroup()
-                                .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(CargaBasicaLayout.createSequentialGroup()
-                                        .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(CargaBasicaLayout.createSequentialGroup()
-                                                .addGap(45, 45, 45)
-                                                .addComponent(EtiquetaDatosPA))
-                                            .addGroup(CargaBasicaLayout.createSequentialGroup()
-                                                .addGap(45, 45, 45)
-                                                .addComponent(EtiquetaRegistroRNPA))
-                                            .addGroup(CargaBasicaLayout.createSequentialGroup()
-                                                .addGap(74, 74, 74)
-                                                .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addComponent(EtiquetaRotulo)
-                                                    .addGroup(CargaBasicaLayout.createSequentialGroup()
-                                                        .addComponent(EtiquetaNroFactura)
-                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                        .addComponent(CampoNroFactura, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 411, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                        .addGap(80, 80, 80))
-                                    .addGroup(CargaBasicaLayout.createSequentialGroup()
-                                        .addGap(74, 74, 74)
-                                        .addComponent(EtiquetaRNPA, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(CampoRNPA, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(EtiquetaFechaVencimiento)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
-                                .addComponent(CampoFechaVencimiento, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(SeparadorDatosEmpresa)
-                            .addGroup(CargaBasicaLayout.createSequentialGroup()
-                                .addGap(74, 74, 74)
-                                .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(CampoNombreEmpresa, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(EtiquetaCUIL)
-                                        .addComponent(EtiquetaNombreEmpresa)
-                                        .addComponent(EtiquetaRazonSocial)
-                                        .addComponent(CampoCUIL, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(CampoRazonSocial, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addGroup(CargaBasicaLayout.createSequentialGroup()
-                                        .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(EtiquetaTelefono, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(EtiquetaEmail, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                        .addGap(142, 142, 142))
-                                    .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(CampoTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(CampoEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                        .addGap(30, 30, 30))
-                    .addComponent(jSeparator1)
-                    .addComponent(SeparadorDatosProducto)
-                    .addComponent(SeparadorRegistroRNPA, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(CargaBasicaLayout.createSequentialGroup()
-                        .addGap(52, 52, 52)
-                        .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(EtiquetaDatosDeLab)
-                            .addGroup(CargaBasicaLayout.createSequentialGroup()
-                                .addComponent(EtiquetaNumProtocolo)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(CampoNumProtocolo, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(148, 148, 148)
-                        .addComponent(jLabel1)
-                        .addGap(26, 26, 26)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(45, 45, 45))
-            .addGroup(CargaBasicaLayout.createSequentialGroup()
-                .addGap(46, 46, 46)
-                .addComponent(EtiquetaCargaProdAlimenticio)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        CargaBasicaLayout.setVerticalGroup(
-            CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(CargaBasicaLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(EtiquetaCargaProdAlimenticio)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(NumRNE)
-                    .addComponent(BuscarRNE)
-                    .addComponent(TextFieldRNE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(32, 32, 32)
-                .addComponent(SeparadorDatosEmpresa, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(EtiquetaTituloDatoEmpresa)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(EtiquetaCUIL)
-                    .addComponent(EtiquetaEmail))
-                .addGap(5, 5, 5)
-                .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(CampoCUIL, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(CampoEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(EtiquetaNombreEmpresa)
-                    .addComponent(EtiquetaTelefono))
-                .addGap(4, 4, 4)
-                .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(CampoNombreEmpresa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(CampoTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(EtiquetaRazonSocial)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(CampoRazonSocial, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(SeparadorRegistroRNPA, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(EtiquetaRegistroRNPA)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(EtiquetaRNPA)
-                    .addComponent(CampoRNPA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(CampoFechaVencimiento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(EtiquetaFechaVencimiento))
-                .addGap(24, 24, 24)
-                .addComponent(SeparadorDatosProducto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(EtiquetaDatosPA)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(CampoNroFactura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(EtiquetaNroFactura))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(EtiquetaRotulo)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(EtiquetaDatosDeLab)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(EtiquetaNumProtocolo)
-                    .addComponent(CampoNumProtocolo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(22, Short.MAX_VALUE))
-        );
+        labelNroActa.setText("Numero de Acta: ");
+        CargaBasica.add(labelNroActa, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 1230, -1, 20));
+        CargaBasica.add(textFieldNroActa, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 1230, 116, -1));
+        CargaBasica.add(SeparadorRegistroRNPA1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 690, 10));
 
-        CargaBasicaScroll.setViewportView(CargaBasica);
+        labelComp_Nombre.setText("Nombre comercial:");
+        CargaBasica.add(labelComp_Nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 520, -1, 20));
 
-        PanelCargaPA.addTab("Informacion General", CargaBasicaScroll);
+        labelComp_Marca.setText("Marca:");
+        CargaBasica.add(labelComp_Marca, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 550, -1, 20));
 
-        javax.swing.GroupLayout CargaComposicionLayout = new javax.swing.GroupLayout(CargaComposicion);
-        CargaComposicion.setLayout(CargaComposicionLayout);
-        CargaComposicionLayout.setHorizontalGroup(
-            CargaComposicionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 793, Short.MAX_VALUE)
-        );
-        CargaComposicionLayout.setVerticalGroup(
-            CargaComposicionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 588, Short.MAX_VALUE)
-        );
+        labelComp_Denominacion.setText("Denominacion:");
+        CargaBasica.add(labelComp_Denominacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 580, -1, 20));
 
-        CargaComposicionScroll.setViewportView(CargaComposicion);
+        labelComp_Contenido.setText("Contenido:");
+        CargaBasica.add(labelComp_Contenido, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 610, -1, 20));
 
-        PanelCargaPA.addTab("Composicion", CargaComposicionScroll);
+        labelComp_FechaDuracion.setText("Fecha de duracion:");
+        CargaBasica.add(labelComp_FechaDuracion, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 640, -1, 20));
 
-        javax.swing.GroupLayout CargaDescripcionLayout = new javax.swing.GroupLayout(CargaDescripcion);
-        CargaDescripcion.setLayout(CargaDescripcionLayout);
-        CargaDescripcionLayout.setHorizontalGroup(
-            CargaDescripcionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 793, Short.MAX_VALUE)
-        );
-        CargaDescripcionLayout.setVerticalGroup(
-            CargaDescripcionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 588, Short.MAX_VALUE)
-        );
+        labelComp_NroTipoMarca.setText("N° y tipo de registro de marca:");
+        CargaBasica.add(labelComp_NroTipoMarca, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 520, -1, 20));
 
-        CargaDescripcionScroll.setViewportView(CargaDescripcion);
+        labelComp_CAA.setText("CAA Articulo N°:");
+        CargaBasica.add(labelComp_CAA, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 550, -1, 20));
 
-        PanelCargaPA.addTab("Descripcion", CargaDescripcionScroll);
+        labelComp_MateriasPrimas.setText("Materias Primas");
+        CargaBasica.add(labelComp_MateriasPrimas, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 670, -1, 20));
+
+        textFieldComp_Nombre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                textFieldComp_NombreActionPerformed(evt);
+            }
+        });
+        CargaBasica.add(textFieldComp_Nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 520, 160, -1));
+        CargaBasica.add(textFieldComp_Marca, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 550, 160, -1));
+        CargaBasica.add(textFieldComp_Denominacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 580, 160, -1));
+        CargaBasica.add(textFieldComp_Contenido, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 610, 160, 20));
+        CargaBasica.add(textFieldComp_FechaDuracion, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 640, 160, -1));
+        CargaBasica.add(textFieldComp_NroTipoMarca, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 520, 160, -1));
+        CargaBasica.add(textFieldComp_CAA, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 550, 160, -1));
+        CargaBasica.add(SeparadorDatosProducto1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 300, 690, 10));
+
+        labelDatosPA.setFont(new java.awt.Font("Liberation Sans", 1, 14)); // NOI18N
+        labelDatosPA.setText("Datos del producto alimenticio");
+        CargaBasica.add(labelDatosPA, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 310, -1, -1));
+
+        labelDescripcion.setFont(new java.awt.Font("Liberation Sans", 1, 12)); // NOI18N
+        labelDescripcion.setText("Descripcion");
+        CargaBasica.add(labelDescripcion, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 760, -1, 20));
+        CargaBasica.add(SeparadorDatosProducto3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 790, 670, 10));
+
+        labelDesc_FormaUso.setText("Forma de uso del producto:");
+        CargaBasica.add(labelDesc_FormaUso, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 810, -1, 20));
+
+        labelDesc_PeridoAptitud.setText("Periodo de aptitud:");
+        CargaBasica.add(labelDesc_PeridoAptitud, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 840, -1, 20));
+
+        labelDesc_ModoConservacion.setText("Modo de conservacion:");
+        CargaBasica.add(labelDesc_ModoConservacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 870, -1, 20));
+
+        labelDesc_DondeVendido.setText("Donde será vendido el producto:");
+        CargaBasica.add(labelDesc_DondeVendido, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 900, -1, 20));
+
+        labelDesc_InstruccionPrep.setText("Instrucciones de preparación:");
+        CargaBasica.add(labelDesc_InstruccionPrep, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 930, -1, 20));
+
+        labelDesc_ControlesEspeciales2.setText("durante la distribución y la comercialización:");
+        CargaBasica.add(labelDesc_ControlesEspeciales2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 980, 230, 20));
+
+        labelDesc_InfoAdicional.setText("Información adicional:");
+        CargaBasica.add(labelDesc_InfoAdicional, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 1040, -1, 20));
+
+        labelDesc_CaracteristicasEnvase.setText("Caracteristicas del envase");
+        CargaBasica.add(labelDesc_CaracteristicasEnvase, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 1080, -1, 20));
+
+        textFieldDesc_FormaUso.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                textFieldDesc_FormaUsoActionPerformed(evt);
+            }
+        });
+        CargaBasica.add(textFieldDesc_FormaUso, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 810, 410, -1));
+        CargaBasica.add(textFieldDesc_PeriodoAptitud, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 840, 410, -1));
+        CargaBasica.add(textFieldDesc_ModoConservacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 870, 410, -1));
+        CargaBasica.add(textFieldDesc_DondeVendido, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 900, 410, 20));
+        CargaBasica.add(textFieldDesc_InstruccionPrep, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 930, 410, -1));
+        CargaBasica.add(textFieldDesc_ControlesEspeciales, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 960, 410, 40));
+        CargaBasica.add(textFieldDesc_InfoAdicional, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 1040, 410, -1));
+
+        labelDesc_AQuienDirigido.setText("A quien va dirigido el producto:");
+        CargaBasica.add(labelDesc_AQuienDirigido, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 1010, -1, 20));
+
+        labelDesc_ControlesEspeciales1.setText("Controles y cuidados especiales");
+        CargaBasica.add(labelDesc_ControlesEspeciales1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 960, 230, 20));
+        CargaBasica.add(textFieldDesc_AQuienDirigido, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 1010, 410, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(PanelCargaPA, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 767, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(0, 1, Short.MAX_VALUE)
+                .addComponent(CargaBasica, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 1, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(PanelCargaPA, javax.swing.GroupLayout.Alignment.TRAILING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(0, 1, Short.MAX_VALUE)
+                .addComponent(CargaBasica, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 1, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void TextFieldRNEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextFieldRNEActionPerformed
+    private void textFieldRNEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldRNEActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_TextFieldRNEActionPerformed
+    }//GEN-LAST:event_textFieldRNEActionPerformed
 
     private void BuscarRNEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BuscarRNEActionPerformed
         try {
-            Empresa empresa = recuperarDatosEmpresa(TextFieldRNE.getText());
+            Empresa empresa = recuperarDatosEmpresa(textFieldRNE.getText());
             if (empresa != null) {
-                CampoCUIL.setText(String.valueOf(empresa.getCUIT()));
-                CampoNombreEmpresa.setText(empresa.getNombre());
-                CampoRazonSocial.setText(empresa.getRazon_social());
-                CampoEmail.setText(empresa.getEmail());
-                CampoTelefono.setText(String.valueOf(empresa.getTelefono()));
+                textFieldEmp_CUIL.setText(String.valueOf(empresa.getCUIT()));
+                textFieldEmp_Nombre.setText(empresa.getNombre());
+                textFieldEmp_RazonSocial.setText(empresa.getRazon_social());
+                textFieldEmp_Email.setText(empresa.getEmail());
+                textFieldEmp_Telefono.setText(String.valueOf(empresa.getTelefono()));
             } else {
                 JOptionPane.showMessageDialog(null, "Numero RNE no encontrado.");
             }
@@ -386,13 +351,17 @@ public class panelCargaProducto extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_BuscarRNEActionPerformed
 
-    private void CampoEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CampoEmailActionPerformed
+    private void textFieldEmp_EmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldEmp_EmailActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_CampoEmailActionPerformed
+    }//GEN-LAST:event_textFieldEmp_EmailActionPerformed
 
-    private void PanelCargaPAComponentAdded(java.awt.event.ContainerEvent evt) {//GEN-FIRST:event_PanelCargaPAComponentAdded
+    private void textFieldComp_NombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldComp_NombreActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_PanelCargaPAComponentAdded
+    }//GEN-LAST:event_textFieldComp_NombreActionPerformed
+
+    private void textFieldDesc_FormaUsoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldDesc_FormaUsoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textFieldDesc_FormaUsoActionPerformed
 
     private Empresa recuperarDatosEmpresa(String nro_rne) throws SQLException, InstantiationException, IllegalAccessException {
         Empresa empresa_salida = null;
@@ -411,46 +380,78 @@ public class panelCargaProducto extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BuscarRNE;
-    private javax.swing.JTextField CampoCUIL;
-    private javax.swing.JTextField CampoEmail;
-    private javax.swing.JFormattedTextField CampoFechaVencimiento;
-    private javax.swing.JTextField CampoNombreEmpresa;
-    private javax.swing.JTextField CampoNroFactura;
-    private javax.swing.JTextField CampoNumProtocolo;
-    private javax.swing.JTextField CampoRNPA;
-    private javax.swing.JTextField CampoRazonSocial;
-    private javax.swing.JTextArea CampoRotulo;
-    private javax.swing.JTextField CampoTelefono;
     private javax.swing.JPanel CargaBasica;
-    private javax.swing.JScrollPane CargaBasicaScroll;
-    private javax.swing.JPanel CargaComposicion;
-    private javax.swing.JScrollPane CargaComposicionScroll;
-    private javax.swing.JPanel CargaDescripcion;
-    private javax.swing.JScrollPane CargaDescripcionScroll;
-    private javax.swing.JLabel EtiquetaCUIL;
-    private javax.swing.JLabel EtiquetaCargaProdAlimenticio;
-    private javax.swing.JLabel EtiquetaDatosDeLab;
-    private javax.swing.JLabel EtiquetaDatosPA;
-    private javax.swing.JLabel EtiquetaEmail;
-    private javax.swing.JLabel EtiquetaFechaVencimiento;
-    private javax.swing.JLabel EtiquetaNombreEmpresa;
-    private javax.swing.JLabel EtiquetaNroFactura;
-    private javax.swing.JLabel EtiquetaNumProtocolo;
-    private javax.swing.JLabel EtiquetaRNPA;
-    private javax.swing.JLabel EtiquetaRazonSocial;
-    private javax.swing.JLabel EtiquetaRegistroRNPA;
-    private javax.swing.JLabel EtiquetaRotulo;
-    private javax.swing.JLabel EtiquetaTelefono;
-    private javax.swing.JLabel EtiquetaTituloDatoEmpresa;
-    private javax.swing.JLabel NumRNE;
-    private javax.swing.JTabbedPane PanelCargaPA;
     private javax.swing.JSeparator SeparadorDatosEmpresa;
     private javax.swing.JSeparator SeparadorDatosProducto;
+    private javax.swing.JSeparator SeparadorDatosProducto1;
+    private javax.swing.JSeparator SeparadorDatosProducto3;
     private javax.swing.JSeparator SeparadorRegistroRNPA;
-    private javax.swing.JTextField TextFieldRNE;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JSeparator SeparadorRegistroRNPA1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JLabel labelCargaProdAlimenticio;
+    private javax.swing.JLabel labelComp_CAA;
+    private javax.swing.JLabel labelComp_Contenido;
+    private javax.swing.JLabel labelComp_Denominacion;
+    private javax.swing.JLabel labelComp_FechaDuracion;
+    private javax.swing.JLabel labelComp_Marca;
+    private javax.swing.JLabel labelComp_MateriasPrimas;
+    private javax.swing.JLabel labelComp_Nombre;
+    private javax.swing.JLabel labelComp_NroTipoMarca;
+    private javax.swing.JLabel labelComposicion;
+    private javax.swing.JLabel labelDatoEmpresa;
+    private javax.swing.JLabel labelDatosDeLab;
+    private javax.swing.JLabel labelDatosPA;
+    private javax.swing.JLabel labelDesc_AQuienDirigido;
+    private javax.swing.JLabel labelDesc_CaracteristicasEnvase;
+    private javax.swing.JLabel labelDesc_ControlesEspeciales1;
+    private javax.swing.JLabel labelDesc_ControlesEspeciales2;
+    private javax.swing.JLabel labelDesc_DondeVendido;
+    private javax.swing.JLabel labelDesc_FormaUso;
+    private javax.swing.JLabel labelDesc_InfoAdicional;
+    private javax.swing.JLabel labelDesc_InstruccionPrep;
+    private javax.swing.JLabel labelDesc_ModoConservacion;
+    private javax.swing.JLabel labelDesc_PeridoAptitud;
+    private javax.swing.JLabel labelDescripcion;
+    private javax.swing.JLabel labelEmp_CUIL;
+    private javax.swing.JLabel labelEmp_Email;
+    private javax.swing.JLabel labelEmp_NombreEmpresa;
+    private javax.swing.JLabel labelEmp_RazonSocial;
+    private javax.swing.JLabel labelEmp_Telefono;
+    private javax.swing.JLabel labelFechaVencimiento;
+    private javax.swing.JLabel labelNroActa;
+    private javax.swing.JLabel labelNroFactura;
+    private javax.swing.JLabel labelNumProtocolo;
+    private javax.swing.JLabel labelNumRNE;
+    private javax.swing.JLabel labelRNPA;
+    private javax.swing.JLabel labelRegistroRNPA;
+    private javax.swing.JLabel labelRotulo;
+    private javax.swing.JTextArea textAreaRotulo;
+    private javax.swing.JTextField textFieldComp_CAA;
+    private javax.swing.JTextField textFieldComp_Contenido;
+    private javax.swing.JTextField textFieldComp_Denominacion;
+    private javax.swing.JTextField textFieldComp_FechaDuracion;
+    private javax.swing.JTextField textFieldComp_Marca;
+    private javax.swing.JTextField textFieldComp_Nombre;
+    private javax.swing.JTextField textFieldComp_NroTipoMarca;
+    private javax.swing.JTextField textFieldDesc_AQuienDirigido;
+    private javax.swing.JTextField textFieldDesc_ControlesEspeciales;
+    private javax.swing.JTextField textFieldDesc_DondeVendido;
+    private javax.swing.JTextField textFieldDesc_FormaUso;
+    private javax.swing.JTextField textFieldDesc_InfoAdicional;
+    private javax.swing.JTextField textFieldDesc_InstruccionPrep;
+    private javax.swing.JTextField textFieldDesc_ModoConservacion;
+    private javax.swing.JTextField textFieldDesc_PeriodoAptitud;
+    private javax.swing.JTextField textFieldEmp_CUIL;
+    private javax.swing.JTextField textFieldEmp_Email;
+    private javax.swing.JTextField textFieldEmp_Nombre;
+    private javax.swing.JTextField textFieldEmp_RazonSocial;
+    private javax.swing.JTextField textFieldEmp_Telefono;
+    private javax.swing.JFormattedTextField textFieldFechaVencimiento;
+    private javax.swing.JTextField textFieldNroActa;
+    private javax.swing.JTextField textFieldNroFactura;
+    private javax.swing.JTextField textFieldNroProtocolo;
+    private javax.swing.JTextField textFieldRNE;
+    private javax.swing.JTextField textFieldRNPA;
     // End of variables declaration//GEN-END:variables
 }

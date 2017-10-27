@@ -29,7 +29,8 @@ public class formPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        cargaProducto1 = new Presentacion.panelCargaProducto();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        panelCargaProducto2 = new Presentacion.panelCargaProducto();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         MenuSalir = new javax.swing.JMenuItem();
@@ -38,6 +39,8 @@ public class formPrincipal extends javax.swing.JFrame {
         MenuItemCargaProductoA = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jScrollPane1.setViewportView(panelCargaProducto2);
 
         jMenu1.setText("File");
 
@@ -72,11 +75,11 @@ public class formPrincipal extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(cargaProducto1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 777, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 761, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(cargaProducto1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 644, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 428, Short.MAX_VALUE)
         );
 
         pack();
@@ -131,9 +134,10 @@ public class formPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenu MenuCarga;
     private javax.swing.JMenuItem MenuItemCargaProductoA;
     private javax.swing.JMenuItem MenuSalir;
-    private Presentacion.panelCargaProducto cargaProducto1;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private Presentacion.panelCargaProducto panelCargaProducto2;
     // End of variables declaration//GEN-END:variables
 }
