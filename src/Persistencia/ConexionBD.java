@@ -1,24 +1,23 @@
 package Persistencia;
 
-
 import java.sql.*;
 
 public final class ConexionBD {
 
- private final String url = "jdbc:mysql://localhost/";
- private final String bd = "uresa";
- private final String usuario = "root";
- private final String password="admin"; 
- private Connection conn;
- private Statement s;
+    private final String url = "jdbc:mysql://localhost/";
+    private final String bd = "uresa";
+    private final String usuario = "root";
+    private final String password = "admin";
+    private Connection conn;
+    private Statement s;
 
- private static ConexionBD instanciaBD = null;
+    private static ConexionBD instanciaBD = null;
 
- public ConexionBD() throws InstantiationException, IllegalAccessException {
+    public ConexionBD() throws InstantiationException, IllegalAccessException {
         crearConexion();
     }
 
-public void crearConexion() throws InstantiationException, IllegalAccessException {
+    public void crearConexion() throws InstantiationException, IllegalAccessException {
 
         try {
             Class.forName("com.mysql.jdbc.Driver").newInstance();
@@ -43,22 +42,22 @@ public void crearConexion() throws InstantiationException, IllegalAccessExceptio
     }
 
     public boolean insertar(String consulta) {
-        boolean error=false;
+        boolean error = false;
         try {
             s.executeUpdate(consulta);
         } catch (SQLException e) {
 
-            System.out.println("Error al Insertar Code="+e.getErrorCode());
+            System.out.println("Error al Insertar Code=" + e.getErrorCode());
             e.printStackTrace();
-            if (e.getErrorCode()==1062){
-                error=true;
-            
+            if (e.getErrorCode() == 1062) {
+                error = true;
+
             }
         }
         return error;
     }
-    
-  public void borrar(String consulta) {
+
+    public void borrar(String consulta) {
 
         try {
             s.executeUpdate(consulta);
@@ -79,9 +78,9 @@ public void crearConexion() throws InstantiationException, IllegalAccessExceptio
         }
     }
 
-    
 //nro es la cantidad de columnas a recuperar
-public String[][] recuperar(String[][] vector, String consulta, int nro) {
+//vector[i][j] i es la cantidad de filas y j la cantidad de columnas
+    public String[][] recuperar(String[][] vector, String consulta, int nro) {
 
         int i, j = 0;
 
@@ -132,16 +131,15 @@ public String[][] recuperar(String[][] vector, String consulta, int nro) {
             e.printStackTrace();
         }
     }
-    
-    public boolean existe (String consulta) throws SQLException{
-             ResultSet rs = s.executeQuery(consulta);
-            try{
+
+    public boolean existe(String consulta) throws SQLException {
+        ResultSet rs = s.executeQuery(consulta);
+        try {
             rs.next();                // move to the first row
             return rs.getBoolean(1);  // first column is 1
-            }
-            finally{
-             rs.close();
-            }
-       }
-    
+        } finally {
+            rs.close();
+        }
+    }
+
 }

@@ -1,12 +1,13 @@
-
-
 /**
  * @author Franco
  * @version 1.0
  * @created 18-oct.-2017 19:43:59
  */
-
 package Logica;
+
+import Persistencia.ConexionBD;
+import java.sql.SQLException;
+import java.util.Vector;
 
 public class Empresa {
 
@@ -17,10 +18,6 @@ public class Empresa {
     private int telefono;
 
     public Empresa() {
-
-    }
-
-    public void finalize() throws Throwable {
 
     }
 
@@ -65,10 +62,34 @@ public class Empresa {
     }
 
     /**
+     * Recupera una empresa por su CUIT
      *
-     * @param empresa
+     * @param CUIT CUIT de la empresa
+     * @return Empresa Empresa con todos sus valores cargados, en caso que no se
+     * encuentre los valores son null
+     * @throws java.sql.SQLException
+     * @throws java.lang.InstantiationException
+     * @throws java.lang.IllegalAccessException
      */
-    public boolean guardar(Empresa empresa) {
-        return false;
+    public static Empresa recuperarPorCuit(String CUIT) throws SQLException, InstantiationException, IllegalAccessException {
+        ConexionBD con = ConexionBD.getConexion();
+        String[][] valores;
+        Empresa salida = new Empresa();
+        valores = new String[1][6];
+        valores = con.recuperar(valores, "select * from empresa where CUIT=" + CUIT + ";", 6);
+        if (valores[0][1] != null) {
+            salida.setEmail(valores[0][1]);
+        }
+        if (valores[0][2] != null) {
+            salida.setNombre(valores[0][2]);
+        }
+        if (valores[0][3] != null) {
+            salida.setRazon_social(valores[0][3]);
+        }
+        if (valores[0][4] != null) {
+            salida.setTelefono(Integer.parseInt(valores[0][4]));
+        }
+
+        return salida;
     }
 }//end Empresa
