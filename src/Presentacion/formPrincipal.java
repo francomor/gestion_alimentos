@@ -9,12 +9,12 @@ package Presentacion;
  *
  * @author mauri
  */
-public class Principal extends javax.swing.JFrame {
+public class formPrincipal extends javax.swing.JFrame {
 
     /**
      * Creates new form Principal
      */
-    public Principal() {
+    public formPrincipal() {
         initComponents();
         this.setLocationRelativeTo(null);
 
@@ -29,7 +29,7 @@ public class Principal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        cargaProducto1 = new Presentacion.CargaProducto();
+        cargaProducto1 = new Presentacion.panelCargaProducto();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         MenuSalir = new javax.swing.JMenuItem();
@@ -110,19 +110,20 @@ public class Principal extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(formPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(formPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(formPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(formPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> {
-            new Principal().setVisible(true);
+            new formPrincipal().setVisible(true);
         });
     }
 
@@ -130,7 +131,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JMenu MenuCarga;
     private javax.swing.JMenuItem MenuItemCargaProductoA;
     private javax.swing.JMenuItem MenuSalir;
-    private Presentacion.CargaProducto cargaProducto1;
+    private Presentacion.panelCargaProducto cargaProducto1;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;

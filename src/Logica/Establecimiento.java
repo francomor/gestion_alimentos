@@ -166,55 +166,54 @@ public class Establecimiento {
         valores = new String[1][12];
         valores = con.recuperar(valores, "select * from establecimiento where id=" + id + ";", 12);
 
-        if (valores[0][0] != null) {
+        //si es null es porque no lo encontro
+        if (valores[0][0] == null) {
+            estab = null;
+        } else {
             estab.setId(Integer.parseInt(valores[0][0]));
-        }
-        if (valores[0][1] != null) {
-            estab.setDireccion(valores[0][1]);
-        }
-        if (valores[0][2] != null) {
-            estab.setFechaDeCarga(valores[0][2]);
-        }
-        if (valores[0][3] != null) {
-            estab.setNombre(valores[0][3]);
-        }
-        if (valores[0][4] != null) {
-            estab.setTelefono(Integer.parseInt(valores[0][4]));
+            if (valores[0][1] != null) {
+                estab.setDireccion(valores[0][1]);
+            }
+            if (valores[0][2] != null) {
+                estab.setFechaDeCarga(valores[0][2]);
+            }
+            if (valores[0][3] != null) {
+                estab.setNombre(valores[0][3]);
+            }
+            if (valores[0][4] != null) {
+                estab.setTelefono(Integer.parseInt(valores[0][4]));
+            }
+
+            if (valores[0][5] != null) {
+                estab.setArchivos_adjuntos(true);
+            } else {
+                estab.setArchivos_adjuntos(false);
+            }
+
+            if (valores[0][6] != null) {
+                rne.setNumero(Integer.parseInt(valores[0][6]));
+            }
+            if (valores[0][7] != null) {
+                rne.setFecha_vencimiento(valores[0][7]);
+            }
+            estab.setRne(rne);
+
+            if (valores[0][8] != null) {
+                estab.setNro_factura(Integer.parseInt(valores[0][8]));
+            }
+            if (valores[0][9] != null) {
+                estab.setCUIT_Empresa(Integer.parseInt(valores[0][9]));
+            }
+            if (valores[0][10] != null) {
+                estab.setId_Localidad(Integer.parseInt(valores[0][10]));
+            }
+            if (valores[0][11] != null) {
+                estab.setId_Categoria(Integer.parseInt(valores[0][11]));
+            }
         }
 
-        if (valores[0][5] != null) {
-            estab.setArchivos_adjuntos(true);
-        } else {
-            estab.setArchivos_adjuntos(false);
-        }
+        return estab;
 
-        if (valores[0][6] != null) {
-            rne.setNumero(Integer.parseInt(valores[0][6]));
-        }
-        if (valores[0][7] != null) {
-            rne.setFecha_vencimiento(valores[0][7]);
-        }
-        estab.setRne(rne);
-
-        if (valores[0][8] != null) {
-            estab.setNro_factura(Integer.parseInt(valores[0][8]));
-        }
-        if (valores[0][9] != null) {
-            estab.setCUIT_Empresa(Integer.parseInt(valores[0][9]));
-        }
-        if (valores[0][10] != null) {
-            estab.setId_Localidad(Integer.parseInt(valores[0][10]));
-        }
-        if (valores[0][11] != null) {
-            estab.setId_Categoria(Integer.parseInt(valores[0][11]));
-        }
-
-        //si es 0 es porque no lo encontro pues siempre el autoincremental arranca en 1
-        if (estab.getId() != 0) {
-            return estab;
-        } else {
-            return null;
-        }
     }
 
     /**
@@ -236,54 +235,53 @@ public class Establecimiento {
         valores = new String[1][12];
         valores = con.recuperar(valores, "SELECT * FROM `establecimiento` WHERE `nro_RNE`=" + nro_rne + ";", 12);
 
-        if (valores[0][0] != null) {
+        //si es null es porque no lo encontro
+        if (valores[0][0] == null) {
+            estab = null;
+        } else {
             estab.setId(Integer.parseInt(valores[0][0]));
-        }
-        if (valores[0][1] != null) {
-            estab.setDireccion(valores[0][1]);
-        }
-        if (valores[0][2] != null) {
-            estab.setFechaDeCarga(valores[0][2]);
-        }
-        if (valores[0][3] != null) {
-            estab.setNombre(valores[0][3]);
-        }
-        if (valores[0][4] != null) {
-            estab.setTelefono(Integer.parseInt(valores[0][4]));
-        }
+            if (valores[0][1] != null) {
+                estab.setDireccion(valores[0][1]);
+            }
+            if (valores[0][2] != null) {
+                estab.setFechaDeCarga(valores[0][2]);
+            }
+            if (valores[0][3] != null) {
+                estab.setNombre(valores[0][3]);
+            }
+            if (valores[0][4] != null) {
+                estab.setTelefono(Integer.parseInt(valores[0][4]));
+            }
 
-        if (valores[0][5] != null) {
-            estab.setArchivos_adjuntos(true);
-        } else {
-            estab.setArchivos_adjuntos(false);
-        }
+            if (valores[0][5] != null) {
+                estab.setArchivos_adjuntos(true);
+            } else {
+                estab.setArchivos_adjuntos(false);
+            }
 
-        if (valores[0][6] != null) {
-            rne.setNumero(Integer.parseInt(valores[0][6]));
-        }
-        if (valores[0][7] != null) {
-            rne.setFecha_vencimiento(valores[0][7]);
-        }
-        estab.setRne(rne);
+            if (valores[0][6] != null) {
+                rne.setNumero(Integer.parseInt(valores[0][6]));
+            }
+            if (valores[0][7] != null) {
+                rne.setFecha_vencimiento(valores[0][7]);
+            }
+            estab.setRne(rne);
 
-        if (valores[0][8] != null) {
-            estab.setNro_factura(Integer.parseInt(valores[0][8]));
+            if (valores[0][8] != null) {
+                estab.setNro_factura(Integer.parseInt(valores[0][8]));
+            }
+            if (valores[0][9] != null) {
+                estab.setCUIT_Empresa(Integer.parseInt(valores[0][9]));
+            }
+            if (valores[0][10] != null) {
+                estab.setId_Localidad(Integer.parseInt(valores[0][10]));
+            }
+            if (valores[0][11] != null) {
+                estab.setId_Categoria(Integer.parseInt(valores[0][11]));
+            }
         }
-        if (valores[0][9] != null) {
-            estab.setCUIT_Empresa(Integer.parseInt(valores[0][9]));
-        }
-        if (valores[0][10] != null) {
-            estab.setId_Localidad(Integer.parseInt(valores[0][10]));
-        }
-        if (valores[0][11] != null) {
-            estab.setId_Categoria(Integer.parseInt(valores[0][11]));
-        }
-
         //si es 0 es porque no lo encontro pues siempre el autoincremental arranca en 1
-        if (estab.getId() != 0) {
-            return estab;
-        } else {
-            return null;
-        }
+        return estab;
+
     }
 }//end Establecimiento

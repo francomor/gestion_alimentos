@@ -15,12 +15,12 @@ import javax.swing.JOptionPane;
  *
  * @author Franco
  */
-public class CargaProducto extends javax.swing.JPanel {
+public class panelCargaProducto extends javax.swing.JPanel {
 
     /**
      * Creates new form CargaProducto
      */
-    public CargaProducto() {
+    public panelCargaProducto() {
         initComponents();
     }
 
@@ -382,7 +382,7 @@ public class CargaProducto extends javax.swing.JPanel {
                 JOptionPane.showMessageDialog(null, "Numero RNE no encontrado.");
             }
         } catch (SQLException | InstantiationException | IllegalAccessException ex) {
-            Logger.getLogger(CargaProducto.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(panelCargaProducto.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_BuscarRNEActionPerformed
 

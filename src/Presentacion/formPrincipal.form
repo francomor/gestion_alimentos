@@ -75,7 +75,7 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="Presentacion.CargaProducto" name="cargaProducto1">
+    <Component class="Presentacion.panelCargaProducto" name="cargaProducto1">
     </Component>
   </SubComponents>
 </Form>
