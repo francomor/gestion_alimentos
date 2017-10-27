@@ -9,6 +9,7 @@ import Logica.Empresa;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -158,16 +159,22 @@ public class Empresa_prueba extends javax.swing.JFrame {
         // TODO add your handling code here:
         try {
             Empresa emp = Empresa.recuperarPorCuit(textFieldCUIT.getText());
-            textFieldEmail.setText(emp.getEmail());
-            textFieldNombre.setText(emp.getNombre());
-            textFieldRS.setText(emp.getRazon_social());
-            if(emp.getTelefono()!=0)
-                textFieldTelefono.setText(String.valueOf(emp.getTelefono()));
+            if(emp!=null){
+                textFieldEmail.setText(emp.getEmail());
+                textFieldNombre.setText(emp.getNombre());
+                textFieldRS.setText(emp.getRazon_social());
+                if(emp.getTelefono()!=0)
+                    textFieldTelefono.setText(String.valueOf(emp.getTelefono()));
+                else
+                    textFieldTelefono.setText("");  
+            }
             else
-                textFieldTelefono.setText("");  
+            {
+                JOptionPane.showMessageDialog(null, "CUIT no encontrado.");
+            }
             
         } catch (SQLException | InstantiationException | IllegalAccessException ex) {
-            Logger.getLogger(Rubro_prueba.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Empresa.class.getName()).log(Level.SEVERE, null, ex);
         }
         
     }//GEN-LAST:event_buttonBuscarActionPerformed

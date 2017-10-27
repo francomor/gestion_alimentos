@@ -11,6 +11,7 @@ import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -270,42 +271,49 @@ public class Establecimiento_prueba extends javax.swing.JFrame {
         // TODO add your handling code here:
         try {
             Establecimiento est = Establecimiento.recuperarPorId(textFieldID.getText());
-            RNE rne = est.getRne();
-            //textFieldFechaCarga.setText(est.g());
-            
-            SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");    
-            
-            if(est.getFechaDeCarga() != null)
-                textFieldFechaCarga.setText(sdf.format(est.getFechaDeCarga().getTime()));
-            else
-                textFieldFechaCarga.setText("");  
-            
-            textFieldId_Categoria.setText(String.valueOf(est.getId_Categoria()));
-            textFieldId_Empresa.setText(String.valueOf(est.getCUIT_Empresa()));
-            textFieldId_Localidad.setText(String.valueOf(est.getId_Localidad()));
-            textFieldNombre.setText(est.getNombre());
-            textFieldDireccion.setText(est.getDireccion());
-            
-            if(rne != null){
-                textFieldNroRNE.setText(String.valueOf(rne.getNumero()));
-                if(rne.getFecha_vencimiento() != null)
-                    textFieldFVencimientoRNE.setText(sdf.format(rne.getFecha_vencimiento().getTime()));
-                else
-                    textFieldFVencimientoRNE.setText("");
+
+            if (est == null) {
+                JOptionPane.showMessageDialog(null, "Id no encontrado.");
+            } else {
+                RNE rne = est.getRne();
+
+                SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+
+                if (est.getFechaDeCarga() != null) {
+                    textFieldFechaCarga.setText(sdf.format(est.getFechaDeCarga().getTime()));
+                } else {
+                    textFieldFechaCarga.setText("");
+                }
+
+                textFieldId_Categoria.setText(String.valueOf(est.getId_Categoria()));
+                textFieldId_Empresa.setText(String.valueOf(est.getCUIT_Empresa()));
+                textFieldId_Localidad.setText(String.valueOf(est.getId_Localidad()));
+                textFieldNombre.setText(est.getNombre());
+                textFieldDireccion.setText(est.getDireccion());
+
+                if (rne != null) {
+                    textFieldNroRNE.setText(String.valueOf(rne.getNumero()));
+                    if (rne.getFecha_vencimiento() != null) {
+                        textFieldFVencimientoRNE.setText(sdf.format(rne.getFecha_vencimiento().getTime()));
+                    } else {
+                        textFieldFVencimientoRNE.setText("");
+                    }
+                }
+                if (est.getTelefono() != 0) {
+                    textFieldTelefono.setText(String.valueOf(est.getTelefono()));
+                } else {
+                    textFieldTelefono.setText("");
+                }
+
+                if (est.getTelefono() != 0) {
+                    textFieldNroFactura.setText(String.valueOf(est.getNro_factura()));
+                } else {
+                    textFieldNroFactura.setText("");
+                }
             }
-            if(est.getTelefono()!=0)
-                textFieldTelefono.setText(String.valueOf(est.getTelefono()));
-            else
-                textFieldTelefono.setText("");
-            
-            if(est.getTelefono()!=0)
-                textFieldNroFactura.setText(String.valueOf(est.getNro_factura()));
-            else
-                textFieldNroFactura.setText("");
-            
 
         } catch (SQLException | InstantiationException | IllegalAccessException ex) {
-            Logger.getLogger(Rubro_prueba.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Establecimiento.class.getName()).log(Level.SEVERE, null, ex);
         }
 
     }//GEN-LAST:event_buttonBuscarIDActionPerformed
@@ -330,41 +338,49 @@ public class Establecimiento_prueba extends javax.swing.JFrame {
         // TODO add your handling code here:
         try {
             Establecimiento est = Establecimiento.recuperarPorNroRNE(textFieldBuscarRNE.getText());
-            RNE rne = est.getRne();
-            //textFieldFechaCarga.setText(est.g());
-            
-            SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");  
-            
-            if(est.getFechaDeCarga() != null)
-                textFieldFechaCarga.setText(sdf.format(est.getFechaDeCarga().getTime()));
-            else
-                textFieldFechaCarga.setText("");  
-            textFieldId_Categoria.setText(String.valueOf(est.getId_Categoria()));
-            textFieldId_Empresa.setText(String.valueOf(est.getCUIT_Empresa()));
-            textFieldId_Localidad.setText(String.valueOf(est.getId_Localidad()));
-            textFieldNombre.setText(est.getNombre());
-            textFieldDireccion.setText(est.getDireccion());
-            
-            if(rne != null){
-                textFieldNroRNE.setText(String.valueOf(rne.getNumero()));
-                if(rne.getFecha_vencimiento() != null)
-                    textFieldFVencimientoRNE.setText(sdf.format(rne.getFecha_vencimiento().getTime()));
-                else
-                    textFieldFVencimientoRNE.setText("");
+
+            if (est == null) {
+                JOptionPane.showMessageDialog(null, "RNE no encontrado.");
+            } else {
+                RNE rne = est.getRne();
+                //textFieldFechaCarga.setText(est.g());
+
+                SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+
+                if (est.getFechaDeCarga() != null) {
+                    textFieldFechaCarga.setText(sdf.format(est.getFechaDeCarga().getTime()));
+                } else {
+                    textFieldFechaCarga.setText("");
+                }
+                textFieldId_Categoria.setText(String.valueOf(est.getId_Categoria()));
+                textFieldId_Empresa.setText(String.valueOf(est.getCUIT_Empresa()));
+                textFieldId_Localidad.setText(String.valueOf(est.getId_Localidad()));
+                textFieldNombre.setText(est.getNombre());
+                textFieldDireccion.setText(est.getDireccion());
+
+                if (rne != null) {
+                    textFieldNroRNE.setText(String.valueOf(rne.getNumero()));
+                    if (rne.getFecha_vencimiento() != null) {
+                        textFieldFVencimientoRNE.setText(sdf.format(rne.getFecha_vencimiento().getTime()));
+                    } else {
+                        textFieldFVencimientoRNE.setText("");
+                    }
+                }
+                if (est.getTelefono() != 0) {
+                    textFieldTelefono.setText(String.valueOf(est.getTelefono()));
+                } else {
+                    textFieldTelefono.setText("");
+                }
+
+                if (est.getTelefono() != 0) {
+                    textFieldNroFactura.setText(String.valueOf(est.getNro_factura()));
+                } else {
+                    textFieldNroFactura.setText("");
+                }
             }
-            if(est.getTelefono()!=0)
-                textFieldTelefono.setText(String.valueOf(est.getTelefono()));
-            else
-                textFieldTelefono.setText("");
-            
-            if(est.getTelefono()!=0)
-                textFieldNroFactura.setText(String.valueOf(est.getNro_factura()));
-            else
-                textFieldNroFactura.setText("");
-            
 
         } catch (SQLException | InstantiationException | IllegalAccessException ex) {
-            Logger.getLogger(Rubro_prueba.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Establecimiento.class.getName()).log(Level.SEVERE, null, ex);
         }
 
     }//GEN-LAST:event_buttonBuscarRNEActionPerformed
@@ -397,10 +413,8 @@ public class Establecimiento_prueba extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Establecimiento_prueba().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new Establecimiento_prueba().setVisible(true);
         });
     }
 

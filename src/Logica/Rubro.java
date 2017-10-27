@@ -80,7 +80,7 @@ public class Rubro {
     /**
      * Recupera todos los rubros
      *
-     * @return {@code Vector<String>} Un vector de string que contiene los
+     * @return {@code Vector<String>} que contiene los
      * nombres de todos los rubros
      * @throws java.sql.SQLException
      * @throws java.lang.InstantiationException

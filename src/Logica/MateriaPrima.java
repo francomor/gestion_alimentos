@@ -94,7 +94,7 @@ public class MateriaPrima {
     /**
      * Recupera todos los materiales
      *
-     * @return {@code Vector<String>} Un vector de string que contiene los
+     * @return {@code Vector<String>} que contiene los
      * nombres de todos los materiales
      * @throws java.sql.SQLException
      * @throws java.lang.InstantiationException

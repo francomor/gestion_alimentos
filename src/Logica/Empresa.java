@@ -65,8 +65,8 @@ public class Empresa {
      * Recupera una empresa por su CUIT
      *
      * @param CUIT CUIT de la empresa
-     * @return Empresa Empresa con todos sus valores cargados, en caso que no se
-     * encuentre los valores son null
+     * @return Empresa con todos sus valores cargados, en caso que no se
+     * encuentre se devuelve null
      * @throws java.sql.SQLException
      * @throws java.lang.InstantiationException
      * @throws java.lang.IllegalAccessException
@@ -77,6 +77,9 @@ public class Empresa {
         Empresa salida = new Empresa();
         valores = new String[1][6];
         valores = con.recuperar(valores, "select * from empresa where CUIT=" + CUIT + ";", 6);
+        if (valores[0][0] != null) {
+            salida.setCUIT(Integer.parseInt(valores[0][0]));
+        }
         if (valores[0][1] != null) {
             salida.setEmail(valores[0][1]);
         }
@@ -90,6 +93,10 @@ public class Empresa {
             salida.setTelefono(Integer.parseInt(valores[0][4]));
         }
 
-        return salida;
+        if (salida.getCUIT() != 0) {
+            return salida;
+        } else {
+            return null;
+        }
     }
 }//end Empresa

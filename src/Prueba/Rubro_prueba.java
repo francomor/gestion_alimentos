@@ -170,11 +170,7 @@ public class Rubro_prueba extends javax.swing.JFrame {
             if(!error){JOptionPane.showMessageDialog(null, "rubro agregado correctamente.");}
             else {JOptionPane.showMessageDialog(null, "Hubo un error al agregar el rubro");}
             }
-        } catch (SQLException ex) {
-            Logger.getLogger(Rubro_prueba.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            Logger.getLogger(Rubro_prueba.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
+        } catch (SQLException | InstantiationException | IllegalAccessException ex) {
             Logger.getLogger(Rubro_prueba.class.getName()).log(Level.SEVERE, null, ex);
         }
        
@@ -190,11 +186,7 @@ public class Rubro_prueba extends javax.swing.JFrame {
                 listaNombreModel.addElement(valor);
             }
             
-        } catch (SQLException ex) {
-            Logger.getLogger(Rubro_prueba.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            Logger.getLogger(Rubro_prueba.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
+        } catch (SQLException | InstantiationException | IllegalAccessException ex) {
             Logger.getLogger(Rubro_prueba.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_buttonCargaListaActionPerformed

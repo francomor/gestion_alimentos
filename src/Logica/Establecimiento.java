@@ -12,6 +12,7 @@ import java.util.GregorianCalendar;
 
 public class Establecimiento {
 
+    private int id;
     private String categoria;
     private String direccion;
     private Calendar fechaDeCarga;
@@ -28,6 +29,14 @@ public class Establecimiento {
 
     public Establecimiento() {
 
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getCategoria() {
@@ -141,8 +150,8 @@ public class Establecimiento {
      * Recupera una empresa por su id
      *
      * @param id id de la empresa
-     * @return Establecimiento Establecimiento con todos sus valores cargados,
-     * en caso que no se encuentre los valores son null
+     * @return Establecimiento con todos sus valores cargados, en caso que no se
+     * encuentre devuelve null
      * @throws java.sql.SQLException
      * @throws java.lang.InstantiationException
      * @throws java.lang.IllegalAccessException
@@ -157,6 +166,9 @@ public class Establecimiento {
         valores = new String[1][12];
         valores = con.recuperar(valores, "select * from establecimiento where id=" + id + ";", 12);
 
+        if (valores[0][0] != null) {
+            estab.setId(Integer.parseInt(valores[0][0]));
+        }
         if (valores[0][1] != null) {
             estab.setDireccion(valores[0][1]);
         }
@@ -197,15 +209,20 @@ public class Establecimiento {
             estab.setId_Categoria(Integer.parseInt(valores[0][11]));
         }
 
-        return estab;
+        //si es 0 es porque no lo encontro pues siempre el autoincremental arranca en 1
+        if (estab.getId() != 0) {
+            return estab;
+        } else {
+            return null;
+        }
     }
 
     /**
      * Recupera una empresa por su numero de RNE
      *
      * @param nro_rne nro_rne de la empresa
-     * @return Establecimiento Establecimiento con todos sus valores cargados,
-     * en caso que no se encuentre los valores son null
+     * @return Establecimiento con todos sus valores cargados, en caso que no se
+     * encuentre devuelve null
      * @throws java.sql.SQLException
      * @throws java.lang.InstantiationException
      * @throws java.lang.IllegalAccessException
@@ -219,6 +236,9 @@ public class Establecimiento {
         valores = new String[1][12];
         valores = con.recuperar(valores, "SELECT * FROM `establecimiento` WHERE `nro_RNE`=" + nro_rne + ";", 12);
 
+        if (valores[0][0] != null) {
+            estab.setId(Integer.parseInt(valores[0][0]));
+        }
         if (valores[0][1] != null) {
             estab.setDireccion(valores[0][1]);
         }
@@ -259,6 +279,11 @@ public class Establecimiento {
             estab.setId_Categoria(Integer.parseInt(valores[0][11]));
         }
 
-        return estab;
+        //si es 0 es porque no lo encontro pues siempre el autoincremental arranca en 1
+        if (estab.getId() != 0) {
+            return estab;
+        } else {
+            return null;
+        }
     }
 }//end Establecimiento

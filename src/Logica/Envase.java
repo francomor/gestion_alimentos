@@ -55,7 +55,7 @@ public class Envase {
     /**
      * Recupera todos los materiales
      *
-     * @return {@code Vector<String>} Un vector de string que contiene los
+     * @return {@code Vector<String>} que contiene los
      * nombres de todos los materiales
      * @throws java.sql.SQLException
      * @throws java.lang.InstantiationException
@@ -80,7 +80,7 @@ public class Envase {
     /**
      * Recupera todas las unidades
      *
-     * @return {@code Vector<String>} Un vector de string que contiene los
+     * @return {@code Vector<String>} que contiene los
      * nombres de todas las unidades
      * @throws java.sql.SQLException
      * @throws java.lang.InstantiationException
