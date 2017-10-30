@@ -21,10 +21,6 @@ public class MuestraLaboratorio {
 
     }
 
-    public void finalize() throws Throwable {
-
-    }
-
     public int getNumActa() {
         return numActa;
     }

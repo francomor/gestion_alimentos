@@ -7,6 +7,7 @@ package Presentacion;
 
 import Logica.*;
 import java.sql.SQLException;
+import java.util.Calendar;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
@@ -196,6 +197,7 @@ public class panelCargaProducto extends javax.swing.JPanel {
         CargaBasica.add(textFieldRNPA, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 260, 120, -1));
 
         textFieldFechaVencimiento.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(java.text.DateFormat.getDateInstance(java.text.DateFormat.SHORT))));
+        textFieldFechaVencimiento.setText("2017-11-31");
         CargaBasica.add(textFieldFechaVencimiento, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 260, 122, -1));
 
         labelFechaVencimiento.setText("Fecha Vencimiento: ");
@@ -222,10 +224,14 @@ public class panelCargaProducto extends javax.swing.JPanel {
 
         labelNumProtocolo.setText("Numero Protocolo: ");
         CargaBasica.add(labelNumProtocolo, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 1230, -1, 20));
+
+        textFieldNroProtocolo.setText("123456");
         CargaBasica.add(textFieldNroProtocolo, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 1230, 110, -1));
 
         labelNroActa.setText("Numero de Acta: ");
         CargaBasica.add(labelNroActa, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 1230, -1, 20));
+
+        textFieldNroActa.setText("654321");
         CargaBasica.add(textFieldNroActa, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 1230, 116, -1));
         CargaBasica.add(SeparadorRegistroRNPA1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 690, 10));
 
@@ -269,6 +275,8 @@ public class panelCargaProducto extends javax.swing.JPanel {
 
         textFieldComp_Contenido.setText("contenido");
         CargaBasica.add(textFieldComp_Contenido, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 610, 160, 20));
+
+        textFieldComp_FechaDuracion.setText("2017-11-31");
         CargaBasica.add(textFieldComp_FechaDuracion, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 640, 160, -1));
 
         textFieldComp_NroTipoMarca.setText("tipomarca");
@@ -417,6 +425,7 @@ public class panelCargaProducto extends javax.swing.JPanel {
             Composicion composicion = new Composicion();
             Descripcion descripcion = new Descripcion();
             RNPA rnpa = new RNPA();
+            MuestraLaboratorio muestra_lab = new MuestraLaboratorio();
             
             producto.setNro_factura(Integer.valueOf(textFieldNroFactura.getText()));
             producto.setRotulo(textAreaRotulo.getText());
@@ -424,11 +433,12 @@ public class panelCargaProducto extends javax.swing.JPanel {
             composicion.setCAA(textFieldComp_CAA.getText());
             composicion.setContenido(textFieldComp_Contenido.getText());
             composicion.setDenominacion(textFieldComp_Denominacion.getText());
-            //composicion.setFecha_duracion(textFieldComp_FechaDuracion.getText());
+            composicion.setFecha_duracion(textFieldComp_FechaDuracion.getText());
             composicion.setMarca(textFieldComp_Marca.getText());
             composicion.setNombre_comercial(textFieldComp_Nombre.getText());
             composicion.setNroytipo_registro_marca(textFieldComp_NroTipoMarca.getText());
             producto.setComposicion(composicion);
+            composicion.setM_ProductoAlimenticio(producto);
             
             descripcion.setControlesycuidados(textFieldDesc_ControlesEspeciales.getText());
             descripcion.setDestino_producto(textFieldDesc_AQuienDirigido.getText());
@@ -439,15 +449,24 @@ public class panelCargaProducto extends javax.swing.JPanel {
             descripcion.setModo_conservacion(textFieldDesc_ModoConservacion.getText());
             descripcion.setPeriodo_aptitud(textFieldDesc_PeriodoAptitud.getText());
             producto.setDescripcion(descripcion);
+            descripcion.setM_ProductoAlimenticio(producto);
             
             rnpa.setNumero(Integer.valueOf(textFieldRNPA.getText()));
-            //rnpa.setFecha_vencimiento(fecha_vencimiento);
+            rnpa.setFecha_vencimiento(textFieldFechaVencimiento.getText());
             producto.setRnpa(rnpa);
+            rnpa.setM_ProductoAlimenticio(producto);
+            
+            muestra_lab.setNumActa(Integer.valueOf(textFieldNroActa.getText()));
+            muestra_lab.setNumProtocolo(Integer.valueOf(textFieldNroProtocolo.getText()));
+            producto.setMuestraLaboratorio(muestra_lab);
+            muestra_lab.setM_ProductoAlimenticio(producto);
+            
+            //fecha de hoy
+            producto.setFecha_carga_solicitud(Calendar.getInstance());
             //if estab_aCargar es null no tiene que dejar cargar
             producto.setEstablecimiento(estab_aCargar);
             
-            //boolean result = producto.guardar();
-            boolean result = producto.guardarTODOJUNTO();
+            boolean result = producto.guardar();
             if (result == true){
                 JOptionPane.showMessageDialog(null, "correcto.");
             }else{

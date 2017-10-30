@@ -10,14 +10,15 @@ package Logica;
 
 import Persistencia.ConexionBD;
 import java.sql.SQLException;
-import java.util.Date;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 
 public class Composicion {
 
     private String CAA;
     private String contenido;
     private String denominacion;
-    private Date fecha_duracion;
+    private Calendar fecha_duracion;
     private String marca;
     private String nombre_comercial;
     private String nroytipo_registro_marca;
@@ -51,12 +52,22 @@ public class Composicion {
         this.denominacion = denominacion;
     }
 
-    public Date getFecha_duracion() {
+    public Calendar getFecha_duracion() {
         return fecha_duracion;
     }
 
-    public void setFecha_duracion(Date fecha_duracion) {
+    public void setFecha_duracion(Calendar fecha_duracion) {
         this.fecha_duracion = fecha_duracion;
+    }
+    /**
+     * Set fecha_duracion
+     *
+     * @param fecha String con formato 2017-11-31
+     */
+    public void setFecha_duracion(String fecha) {
+        Calendar cal_aux = GregorianCalendar.getInstance();
+        cal_aux.set(Integer.parseInt(fecha.substring(0, 4)), Integer.parseInt(fecha.substring(5, 7)), Integer.parseInt(fecha.substring(8, 10)));
+        this.fecha_duracion = cal_aux;
     }
 
     public String getMarca() {
@@ -93,13 +104,13 @@ public class Composicion {
 
 
     /**
-     * Metodo que guarda Composicion en la BD. Require que el producto alimenticio halla sido cargado
+     * Metodo que actualiza Composicion en la BD. Require que el producto alimenticio halla sido cargado
      *
      * @throws java.sql.SQLException
      * @throws java.lang.InstantiationException
      * @throws java.lang.IllegalAccessException
      */
-    public void guardar() throws SQLException, InstantiationException, IllegalAccessException {
+    public void update() throws SQLException, InstantiationException, IllegalAccessException {
 
         ConexionBD con = ConexionBD.getConexion();
         String update;
