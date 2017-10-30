@@ -5,6 +5,8 @@
  */
 package Logica;
 
+import Persistencia.ConexionBD;
+import java.sql.SQLException;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
@@ -44,6 +46,8 @@ public class RNE {
     public void setNumero(int numero) {
         this.numero = numero;
     }
+    
+    
 
     public Establecimiento getM_Establecimiento() {
         return m_Establecimiento;
@@ -52,5 +56,6 @@ public class RNE {
     public void setM_Establecimiento(Establecimiento m_Establecimiento) {
         this.m_Establecimiento = m_Establecimiento;
     }
+    
 
 }//end RNE
