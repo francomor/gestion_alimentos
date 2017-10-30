@@ -8,6 +8,8 @@
 
 package Logica;
 
+import Persistencia.ConexionBD;
+import java.sql.SQLException;
 import java.util.Date;
 
 public class Composicion {
@@ -19,13 +21,9 @@ public class Composicion {
     private String marca;
     private String nombre_comercial;
     private String nroytipo_registro_marca;
-    public ProductoAlimenticio m_ProductoAlimenticio;
+    private ProductoAlimenticio m_ProductoAlimenticio;
 
     public Composicion() {
-
-    }
-
-    public void finalize() throws Throwable {
 
     }
     
@@ -95,10 +93,29 @@ public class Composicion {
 
 
     /**
+     * Metodo que guarda Composicion en la BD. Require que el producto alimenticio halla sido cargado
      *
-     * @param Composicion
+     * @throws java.sql.SQLException
+     * @throws java.lang.InstantiationException
+     * @throws java.lang.IllegalAccessException
      */
-    public boolean guardar(Composicion Composicion) {
-        return false;
+    public void guardar() throws SQLException, InstantiationException, IllegalAccessException {
+
+        ConexionBD con = ConexionBD.getConexion();
+        String insert;
+        if(m_ProductoAlimenticio != null){
+            insert = "UPDATE `producto_alimenticio` SET ";
+            insert += "`CAA`='" + CAA   +"',";
+            insert += "`contenido`='" + contenido   +"',";
+            insert += "`denominacion`='" + denominacion   +"',";
+            //insert += "`fecha_duracion`='" + fecha_duracion   +"',";
+            insert += "`marca`='" + marca   +"',";
+            insert += "`nombre_comercial`='" + nombre_comercial   +"',";
+            insert += "`num_y_tipo_reg_marca`='" + nroytipo_registro_marca +"' "; ;
+            insert += "WHERE id='" + m_ProductoAlimenticio.getId() + "';";
+
+            con.update(insert);
+        }
+        
     }
 }//end Composicion

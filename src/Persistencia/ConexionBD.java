@@ -56,16 +56,25 @@ public final class ConexionBD {
         }
         return error;
     }
-
-    public void borrar(String consulta) {
-
+    
+    /**
+     * Recupera el ultimo id de una tabla
+     * @param nombre_tabla nombre de la tabla
+     * @return int ultimo id
+     */
+    public int recuperarUltimoIdIngresado(String nombre_tabla){
+        int salida = 0;
         try {
-            s.executeUpdate(consulta);
+            ResultSet res = s.executeQuery("SELECT MAX(id) AS id FROM "+ nombre_tabla);
+            res.next();
+            salida = res.getInt(1);
+            
         } catch (Exception e) {
 
-            System.out.println("Error al Eliminar");
+            System.out.println("Error Base de Datos" + e.getLocalizedMessage());
             e.printStackTrace();
         }
+        return salida;
     }
 
     public void update(String consulta) {
