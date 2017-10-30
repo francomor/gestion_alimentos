@@ -107,12 +107,15 @@ public class panelCargaProducto extends javax.swing.JPanel {
         labelDesc_AQuienDirigido = new javax.swing.JLabel();
         labelDesc_ControlesEspeciales1 = new javax.swing.JLabel();
         textFieldDesc_AQuienDirigido = new javax.swing.JTextField();
+        botonGuardar = new javax.swing.JButton();
 
         CargaBasica.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         labelNumRNE.setText("Numero RNE: ");
         CargaBasica.add(labelNumRNE, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 50, 88, 20));
 
+        textFieldRNE.setText("32132132");
+        textFieldRNE.setToolTipText("");
         textFieldRNE.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 textFieldRNEActionPerformed(evt);
@@ -177,6 +180,8 @@ public class panelCargaProducto extends javax.swing.JPanel {
 
         labelNroFactura.setText("Nro factura: ");
         CargaBasica.add(labelNroFactura, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 340, -1, 20));
+
+        textFieldNroFactura.setText("123");
         CargaBasica.add(textFieldNroFactura, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 340, 120, -1));
         CargaBasica.add(SeparadorDatosProducto, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 500, 670, 10));
 
@@ -186,6 +191,8 @@ public class panelCargaProducto extends javax.swing.JPanel {
 
         labelRNPA.setText("RNPA: ");
         CargaBasica.add(labelRNPA, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 260, 50, 20));
+
+        textFieldRNPA.setText("123456");
         CargaBasica.add(textFieldRNPA, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 260, 120, -1));
 
         textFieldFechaVencimiento.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(java.text.DateFormat.getDateInstance(java.text.DateFormat.SHORT))));
@@ -199,6 +206,7 @@ public class panelCargaProducto extends javax.swing.JPanel {
 
         textAreaRotulo.setColumns(20);
         textAreaRotulo.setRows(5);
+        textAreaRotulo.setText("rotulo");
         jScrollPane1.setViewportView(textAreaRotulo);
 
         CargaBasica.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 390, 560, 70));
@@ -245,17 +253,29 @@ public class panelCargaProducto extends javax.swing.JPanel {
         labelComp_MateriasPrimas.setText("Materias Primas");
         CargaBasica.add(labelComp_MateriasPrimas, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 670, -1, 20));
 
+        textFieldComp_Nombre.setText("nombre");
         textFieldComp_Nombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 textFieldComp_NombreActionPerformed(evt);
             }
         });
         CargaBasica.add(textFieldComp_Nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 520, 160, -1));
+
+        textFieldComp_Marca.setText("marca");
         CargaBasica.add(textFieldComp_Marca, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 550, 160, -1));
+
+        textFieldComp_Denominacion.setText("denominacion");
         CargaBasica.add(textFieldComp_Denominacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 580, 160, -1));
+
+        textFieldComp_Contenido.setText("contenido");
         CargaBasica.add(textFieldComp_Contenido, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 610, 160, 20));
         CargaBasica.add(textFieldComp_FechaDuracion, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 640, 160, -1));
+
+        textFieldComp_NroTipoMarca.setText("tipomarca");
         CargaBasica.add(textFieldComp_NroTipoMarca, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 520, 160, -1));
+
+        textFieldComp_CAA.setText("caa");
+        textFieldComp_CAA.setToolTipText("");
         CargaBasica.add(textFieldComp_CAA, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 550, 160, -1));
         CargaBasica.add(SeparadorDatosProducto1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 300, 690, 10));
 
@@ -292,17 +312,30 @@ public class panelCargaProducto extends javax.swing.JPanel {
         labelDesc_CaracteristicasEnvase.setText("Caracteristicas del envase");
         CargaBasica.add(labelDesc_CaracteristicasEnvase, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 1080, -1, 20));
 
+        textFieldDesc_FormaUso.setText("formauso");
         textFieldDesc_FormaUso.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 textFieldDesc_FormaUsoActionPerformed(evt);
             }
         });
         CargaBasica.add(textFieldDesc_FormaUso, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 810, 410, -1));
+
+        textFieldDesc_PeriodoAptitud.setText("aptitud");
         CargaBasica.add(textFieldDesc_PeriodoAptitud, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 840, 410, -1));
+
+        textFieldDesc_ModoConservacion.setText("conservacion");
         CargaBasica.add(textFieldDesc_ModoConservacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 870, 410, -1));
+
+        textFieldDesc_DondeVendido.setText("donde");
         CargaBasica.add(textFieldDesc_DondeVendido, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 900, 410, 20));
+
+        textFieldDesc_InstruccionPrep.setText("prepa");
         CargaBasica.add(textFieldDesc_InstruccionPrep, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 930, 410, -1));
+
+        textFieldDesc_ControlesEspeciales.setText("cuidado");
         CargaBasica.add(textFieldDesc_ControlesEspeciales, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 960, 410, 40));
+
+        textFieldDesc_InfoAdicional.setText("infoad");
         CargaBasica.add(textFieldDesc_InfoAdicional, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 1040, 410, -1));
 
         labelDesc_AQuienDirigido.setText("A quien va dirigido el producto:");
@@ -310,7 +343,16 @@ public class panelCargaProducto extends javax.swing.JPanel {
 
         labelDesc_ControlesEspeciales1.setText("Controles y cuidados especiales");
         CargaBasica.add(labelDesc_ControlesEspeciales1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 960, 230, 20));
+
+        textFieldDesc_AQuienDirigido.setText("aquein");
         CargaBasica.add(textFieldDesc_AQuienDirigido, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 1010, 410, -1));
+
+        botonGuardar.setText("Guardar");
+        botonGuardar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonGuardarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -320,13 +362,19 @@ public class panelCargaProducto extends javax.swing.JPanel {
                 .addGap(0, 1, Short.MAX_VALUE)
                 .addComponent(CargaBasica, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 1, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(54, 54, 54)
+                .addComponent(botonGuardar)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(0, 1, Short.MAX_VALUE)
+                .addGap(0, 73, Short.MAX_VALUE)
                 .addComponent(CargaBasica, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 1, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
+                .addComponent(botonGuardar)
+                .addGap(22, 22, 22))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -336,7 +384,7 @@ public class panelCargaProducto extends javax.swing.JPanel {
 
     private void BuscarRNEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BuscarRNEActionPerformed
         try {
-            Empresa empresa = recuperarDatosEmpresa(textFieldRNE.getText());
+            Empresa empresa = this.recuperarDatosEmpresa(textFieldRNE.getText());
             if (empresa != null) {
                 textFieldEmp_CUIL.setText(String.valueOf(empresa.getCUIT()));
                 textFieldEmp_Nombre.setText(empresa.getNombre());
@@ -363,12 +411,59 @@ public class panelCargaProducto extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_textFieldDesc_FormaUsoActionPerformed
 
+    private void botonGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonGuardarActionPerformed
+        try {
+            ProductoAlimenticio producto = new ProductoAlimenticio();
+            Composicion composicion = new Composicion();
+            Descripcion descripcion = new Descripcion();
+            RNPA rnpa = new RNPA();
+            
+            producto.setNro_factura(Integer.valueOf(textFieldNroFactura.getText()));
+            producto.setRotulo(textAreaRotulo.getText());
+            
+            composicion.setCAA(textFieldComp_CAA.getText());
+            composicion.setContenido(textFieldComp_Contenido.getText());
+            composicion.setDenominacion(textFieldComp_Denominacion.getText());
+            //composicion.setFecha_duracion(textFieldComp_FechaDuracion.getText());
+            composicion.setMarca(textFieldComp_Marca.getText());
+            composicion.setNombre_comercial(textFieldComp_Nombre.getText());
+            composicion.setNroytipo_registro_marca(textFieldComp_NroTipoMarca.getText());
+            producto.setComposicion(composicion);
+            
+            descripcion.setControlesycuidados(textFieldDesc_ControlesEspeciales.getText());
+            descripcion.setDestino_producto(textFieldDesc_AQuienDirigido.getText());
+            descripcion.setForma_uso_producto(textFieldDesc_FormaUso.getText());
+            descripcion.setInformacion_adicional(textFieldDesc_InfoAdicional.getText());
+            descripcion.setIntrucciones_preparacion(textFieldDesc_InstruccionPrep.getText());
+            descripcion.setLugar_venta(textFieldDesc_DondeVendido.getText());
+            descripcion.setModo_conservacion(textFieldDesc_ModoConservacion.getText());
+            descripcion.setPeriodo_aptitud(textFieldDesc_PeriodoAptitud.getText());
+            producto.setDescripcion(descripcion);
+            
+            rnpa.setNumero(Integer.valueOf(textFieldRNPA.getText()));
+            //rnpa.setFecha_vencimiento(fecha_vencimiento);
+            producto.setRnpa(rnpa);
+            //if estab_aCargar es null no tiene que dejar cargar
+            producto.setEstablecimiento(estab_aCargar);
+            
+            boolean result = producto.guardar();
+            if (result == true){
+                JOptionPane.showMessageDialog(null, "correcto.");
+            }else{
+                JOptionPane.showMessageDialog(null, "error");
+            }
+            
+        } catch (SQLException | InstantiationException | IllegalAccessException ex) {
+            Logger.getLogger(panelCargaProducto.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_botonGuardarActionPerformed
+
     private Empresa recuperarDatosEmpresa(String nro_rne) throws SQLException, InstantiationException, IllegalAccessException {
         Empresa empresa_salida = null;
         try {
-            Establecimiento estab = Establecimiento.recuperarPorNroRNE(nro_rne);
-            if (estab != null) {
-                empresa_salida = Empresa.recuperarPorCuit(String.valueOf(estab.getCUIT_Empresa()));
+            estab_aCargar = Establecimiento.recuperarPorNroRNE(nro_rne);
+            if (estab_aCargar != null) {
+                empresa_salida = estab_aCargar.getM_Empresa();
             }
 
         } catch (SQLException | InstantiationException | IllegalAccessException ex) {
@@ -378,6 +473,8 @@ public class panelCargaProducto extends javax.swing.JPanel {
     }
 
 
+    private Establecimiento estab_aCargar;
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BuscarRNE;
     private javax.swing.JPanel CargaBasica;
@@ -387,6 +484,7 @@ public class panelCargaProducto extends javax.swing.JPanel {
     private javax.swing.JSeparator SeparadorDatosProducto3;
     private javax.swing.JSeparator SeparadorRegistroRNPA;
     private javax.swing.JSeparator SeparadorRegistroRNPA1;
+    private javax.swing.JButton botonGuardar;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JLabel labelCargaProdAlimenticio;

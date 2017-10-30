@@ -5,8 +5,8 @@ INSERT INTO `provincia`(`id`, `nombre`) VALUES (NULL,"Rio Negro");
 INSERT INTO `localidad`(`id`, `nombre`, `provincia_id`) VALUES (NULL,"Bariloche",1);
 
 INSERT INTO `empresa`(`CUIT`, `email`, `nombre`, `razon_social`, `telefono`, `Localidad_id`) VALUES (123,"franco@gmail.com","franco","rs","telefono",1);
-INSERT INTO `empresa`(`CUIT`, `email`, `nombre`, `razon_social`, `telefono`, `Localidad_id`) VALUES (123,"mauri@gmail.com","mauri","rs","telefono",1);
-INSERT INTO `empresa`(`CUIT`, `email`, `nombre`, `razon_social`, `telefono`, `Localidad_id`) VALUES (123,"francisco@gmail.com","francisco","rs","telefono",1);
+INSERT INTO `empresa`(`CUIT`, `email`, `nombre`, `razon_social`, `telefono`, `Localidad_id`) VALUES (124,"mauri@gmail.com","mauri","rs","telefono",1);
+INSERT INTO `empresa`(`CUIT`, `email`, `nombre`, `razon_social`, `telefono`, `Localidad_id`) VALUES (125,"francisco@gmail.com","francisco","rs","telefono",1);
 
 
 INSERT INTO `categoria`(`id`, `nombre`) VALUES (null,"cat");

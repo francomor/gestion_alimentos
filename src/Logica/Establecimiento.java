@@ -24,7 +24,6 @@ public class Establecimiento {
     private int id_Categoria;
     private int id_Localidad;
     private RNE rne;
-
     private Empresa m_Empresa;
 
     public Establecimiento() {
@@ -90,8 +89,15 @@ public class Establecimiento {
         this.telefono = telefono;
     }
 
-    public Empresa getM_Empresa() {
-        return m_Empresa;
+    /**
+     * getEmpresa asociada
+     * @return Empresa asociada al establecimiento
+     * @throws SQLException
+     * @throws InstantiationException
+     * @throws IllegalAccessException
+     */
+    public Empresa getM_Empresa() throws SQLException, InstantiationException, IllegalAccessException {
+        return Empresa.recuperarPorCuit(String.valueOf(CUIT_Empresa));
     }
 
     public void setM_Empresa(Empresa m_Empresa) {
@@ -284,4 +290,6 @@ public class Establecimiento {
         return estab;
 
     }
+    
+    
 }//end Establecimiento

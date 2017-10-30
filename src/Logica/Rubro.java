@@ -47,7 +47,7 @@ public class Rubro {
 
         ConexionBD con = ConexionBD.getConexion();
         boolean result = con.insertar("insert into rubro (id,nombre) values (default,'" + rubro.nombre + "')");
-        return result;
+        return !result;
     }
 
     /**
