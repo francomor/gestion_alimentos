@@ -446,7 +446,8 @@ public class panelCargaProducto extends javax.swing.JPanel {
             //if estab_aCargar es null no tiene que dejar cargar
             producto.setEstablecimiento(estab_aCargar);
             
-            boolean result = producto.guardar();
+            //boolean result = producto.guardar();
+            boolean result = producto.guardarTODOJUNTO();
             if (result == true){
                 JOptionPane.showMessageDialog(null, "correcto.");
             }else{
