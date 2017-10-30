@@ -154,7 +154,8 @@ public class ProductoAlimenticio {
             descripcion.guardar();
             composicion.setM_ProductoAlimenticio(this);
             composicion.guardar();
-            
+            rnpa.setM_ProductoAlimenticio(this);
+            rnpa.guardar();
             return !result;
     }
 

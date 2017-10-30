@@ -102,19 +102,19 @@ public class Composicion {
     public void guardar() throws SQLException, InstantiationException, IllegalAccessException {
 
         ConexionBD con = ConexionBD.getConexion();
-        String insert;
+        String update;
         if(m_ProductoAlimenticio != null){
-            insert = "UPDATE `producto_alimenticio` SET ";
-            insert += "`CAA`='" + CAA   +"',";
-            insert += "`contenido`='" + contenido   +"',";
-            insert += "`denominacion`='" + denominacion   +"',";
+            update = "UPDATE `producto_alimenticio` SET ";
+            update += "`CAA`='" + CAA   +"',";
+            update += "`contenido`='" + contenido   +"',";
+            update += "`denominacion`='" + denominacion   +"',";
             //insert += "`fecha_duracion`='" + fecha_duracion   +"',";
-            insert += "`marca`='" + marca   +"',";
-            insert += "`nombre_comercial`='" + nombre_comercial   +"',";
-            insert += "`num_y_tipo_reg_marca`='" + nroytipo_registro_marca +"' "; ;
-            insert += "WHERE id='" + m_ProductoAlimenticio.getId() + "';";
+            update += "`marca`='" + marca   +"',";
+            update += "`nombre_comercial`='" + nombre_comercial   +"',";
+            update += "`num_y_tipo_reg_marca`='" + nroytipo_registro_marca +"' "; ;
+            update += "WHERE id='" + m_ProductoAlimenticio.getId() + "';";
 
-            con.update(insert);
+            con.update(update);
         }
         
     }

@@ -191,6 +191,8 @@ public class panelCargaProducto extends javax.swing.JPanel {
 
         labelRNPA.setText("RNPA: ");
         CargaBasica.add(labelRNPA, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 260, 50, 20));
+
+        textFieldRNPA.setText("123456");
         CargaBasica.add(textFieldRNPA, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 260, 120, -1));
 
         textFieldFechaVencimiento.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(java.text.DateFormat.getDateInstance(java.text.DateFormat.SHORT))));
@@ -414,6 +416,8 @@ public class panelCargaProducto extends javax.swing.JPanel {
             ProductoAlimenticio producto = new ProductoAlimenticio();
             Composicion composicion = new Composicion();
             Descripcion descripcion = new Descripcion();
+            RNPA rnpa = new RNPA();
+            
             producto.setNro_factura(Integer.valueOf(textFieldNroFactura.getText()));
             producto.setRotulo(textAreaRotulo.getText());
             
@@ -436,6 +440,9 @@ public class panelCargaProducto extends javax.swing.JPanel {
             descripcion.setPeriodo_aptitud(textFieldDesc_PeriodoAptitud.getText());
             producto.setDescripcion(descripcion);
             
+            rnpa.setNumero(Integer.valueOf(textFieldRNPA.getText()));
+            //rnpa.setFecha_vencimiento(fecha_vencimiento);
+            producto.setRnpa(rnpa);
             //if estab_aCargar es null no tiene que dejar cargar
             producto.setEstablecimiento(estab_aCargar);
             

@@ -113,21 +113,21 @@ public class Descripcion {
     public void guardar() throws SQLException, InstantiationException, IllegalAccessException {
 
         ConexionBD con = ConexionBD.getConexion();
-        String insert;
+        String update;
         
         if(m_ProductoAlimenticio != null){
-            insert = "UPDATE `producto_alimenticio` SET ";
-            insert += "`Controles_y_cuidados`='" + controlesycuidados   +"',";
-            insert += "`destino_prod`='" + destino_producto   +"',";
-            insert += "`forma_uso`='" + forma_uso_producto   +"',";
-            insert += "`info_adicional`='" + informacion_adicional   +"',";
-            insert += "`instrucciones_preparacion`='" + intrucciones_preparacion   +"',";
-            insert += "`lugar_venta`='" + lugar_venta   +"',";
-            insert += "`modo_conservacion`='" + modo_conservacion   +"',";
-            insert += "`periodo_aptitud`='" + periodo_aptitud +"' ";
-            insert += "WHERE id='" + m_ProductoAlimenticio.getId() + "';";
+            update = "UPDATE `producto_alimenticio` SET ";
+            update += "`Controles_y_cuidados`='" + controlesycuidados   +"',";
+            update += "`destino_prod`='" + destino_producto   +"',";
+            update += "`forma_uso`='" + forma_uso_producto   +"',";
+            update += "`info_adicional`='" + informacion_adicional   +"',";
+            update += "`instrucciones_preparacion`='" + intrucciones_preparacion   +"',";
+            update += "`lugar_venta`='" + lugar_venta   +"',";
+            update += "`modo_conservacion`='" + modo_conservacion   +"',";
+            update += "`periodo_aptitud`='" + periodo_aptitud +"' ";
+            update += "WHERE id='" + m_ProductoAlimenticio.getId() + "';";
 
-            con.update(insert);
+            con.update(update);
         }
         
     }

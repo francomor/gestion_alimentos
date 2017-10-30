@@ -7,6 +7,7 @@
  */
 package Logica;
 import Persistencia.ConexionBD;
+import java.sql.SQLException;
 import java.util.Date;
 
 public class RNPA {
@@ -47,11 +48,25 @@ public class RNPA {
         this.m_ProductoAlimenticio = m_ProductoAlimenticio;
     }
 
-    /**
+     /**
+     * Metodo que guarda RNPA en la BD. Require que el producto alimenticio halla sido cargado
      *
-     * @param RNPA
+     * @throws java.sql.SQLException
+     * @throws java.lang.InstantiationException
+     * @throws java.lang.IllegalAccessException
      */
-    public boolean guardar(RNPA RNPA) {
-        return false;
+    public void guardar() throws SQLException, InstantiationException, IllegalAccessException {
+
+        ConexionBD con = ConexionBD.getConexion();
+        String update;
+        if(m_ProductoAlimenticio != null){
+            update = "UPDATE `producto_alimenticio` SET ";
+            update += "`nro_RNPA`='" + numero ;
+            //update += "`Vencimiento_RNPA`='" + fecha_vencimiento;
+            update += "' WHERE id='" + m_ProductoAlimenticio.getId() + "';";
+            
+            con.update(update);
+        }
+        
     }
 }//end RNPA

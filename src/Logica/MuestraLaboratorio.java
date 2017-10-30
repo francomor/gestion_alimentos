@@ -7,6 +7,9 @@
  */
 package Logica;
 
+import Persistencia.ConexionBD;
+import java.sql.SQLException;
+
 
 public class MuestraLaboratorio {
 
@@ -46,11 +49,5 @@ public class MuestraLaboratorio {
         this.m_ProductoAlimenticio = m_ProductoAlimenticio;
     }
 
-    /**
-     *
-     * @param MuestraLaboratorio
-     */
-    public boolean guardar(MuestraLaboratorio MuestraLaboratorio) {
-        return false;
-    }
+    
 }//end MuestraLaboratorio
