@@ -104,13 +104,13 @@ public class Descripcion {
     }
 
     /**
-     * Metodo que guarda Descripcion en la BD. Require que el producto alimenticio halla sido cargado
+     * Metodo que actualiza Descripcion en la BD. Require que el producto alimenticio halla sido cargado
      *
      * @throws java.sql.SQLException
      * @throws java.lang.InstantiationException
      * @throws java.lang.IllegalAccessException
      */
-    public void guardar() throws SQLException, InstantiationException, IllegalAccessException {
+    public void update() throws SQLException, InstantiationException, IllegalAccessException {
 
         ConexionBD con = ConexionBD.getConexion();
         String update;

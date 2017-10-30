@@ -8,11 +8,13 @@
 package Logica;
 import Persistencia.ConexionBD;
 import java.sql.SQLException;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
 
 public class RNPA {
 
-    private Date fecha_vencimiento;
+    private Calendar fecha_vencimiento;
     private int numero;
     public ProductoAlimenticio m_ProductoAlimenticio;
 
@@ -24,12 +26,23 @@ public class RNPA {
 
     }
 
-    public Date getFecha_vencimiento() {
+    public Calendar getFecha_vencimiento() {
         return fecha_vencimiento;
     }
 
-    public void setFecha_vencimiento(Date fecha_vencimiento) {
+    public void setFecha_vencimiento(Calendar fecha_vencimiento) {
         this.fecha_vencimiento = fecha_vencimiento;
+    }
+    
+    /**
+     * Set fecha_vencimiento
+     *
+     * @param fecha String con formato 2017-11-31
+     */
+    public void setFecha_vencimiento(String fecha) {
+        Calendar cal_aux = GregorianCalendar.getInstance();
+        cal_aux.set(Integer.parseInt(fecha.substring(0, 4)), Integer.parseInt(fecha.substring(5, 7)), Integer.parseInt(fecha.substring(8, 10)));
+        this.fecha_vencimiento = cal_aux;
     }
 
     public int getNumero() {
@@ -49,13 +62,13 @@ public class RNPA {
     }
 
      /**
-     * Metodo que guarda RNPA en la BD. Require que el producto alimenticio halla sido cargado
+     * Metodo que actualiza RNPA en la BD. Require que el producto alimenticio halla sido cargado
      *
      * @throws java.sql.SQLException
      * @throws java.lang.InstantiationException
      * @throws java.lang.IllegalAccessException
      */
-    public void guardar() throws SQLException, InstantiationException, IllegalAccessException {
+    public void update() throws SQLException, InstantiationException, IllegalAccessException {
 
         ConexionBD con = ConexionBD.getConexion();
         String update;

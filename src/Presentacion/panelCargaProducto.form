@@ -296,6 +296,7 @@
             <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor">
               <Format subtype="1" type="1"/>
             </Property>
+            <Property name="text" type="java.lang.String" value="2017-11-31"/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -388,6 +389,9 @@
           </Constraints>
         </Component>
         <Component class="javax.swing.JTextField" name="textFieldNroProtocolo">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="123456"/>
+          </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="170" y="1230" width="110" height="-1"/>
@@ -405,6 +409,9 @@
           </Constraints>
         </Component>
         <Component class="javax.swing.JTextField" name="textFieldNroActa">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="654321"/>
+          </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="500" y="1230" width="116" height="-1"/>
@@ -542,6 +549,9 @@
           </Constraints>
         </Component>
         <Component class="javax.swing.JTextField" name="textFieldComp_FechaDuracion">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="2017-11-31"/>
+          </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="180" y="640" width="160" height="-1"/>
