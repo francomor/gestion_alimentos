@@ -11,6 +11,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.DefaultListModel;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -34,6 +35,8 @@ public class Envase_prueba extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
         capacidad_textfield = new javax.swing.JTextField();
         buttonInsertar = new javax.swing.JButton();
@@ -45,6 +48,24 @@ public class Envase_prueba extends javax.swing.JFrame {
         material_selec = new javax.swing.JComboBox<>();
         unidad_selec = new javax.swing.JComboBox<>();
         cargar_unidad = new javax.swing.JButton();
+        boton_cargaEnTabla_envase = new javax.swing.JButton();
+        boton_borrar_envase = new javax.swing.JButton();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        envases = new javax.swing.JTable();
+        jLabel2 = new javax.swing.JLabel();
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane2.setViewportView(jTable1);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -104,6 +125,44 @@ public class Envase_prueba extends javax.swing.JFrame {
             }
         });
 
+        boton_cargaEnTabla_envase.setText("cargar");
+        boton_cargaEnTabla_envase.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boton_cargaEnTabla_envaseActionPerformed(evt);
+            }
+        });
+
+        boton_borrar_envase.setText("borrar seleccionado");
+        boton_borrar_envase.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boton_borrar_envaseActionPerformed(evt);
+            }
+        });
+
+        envases.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "id", "material", "capacidad", "unidad"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        jScrollPane3.setViewportView(envases);
+
+        jLabel2.setText("seleccione el id que quiera borrar y luego pulse el boton");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -111,42 +170,51 @@ public class Envase_prueba extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(134, 134, 134)
-                        .addComponent(material_tf, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
+                        .addContainerGap()
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(boton_cargaEnTabla_envase))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(56, 56, 56)
-                                .addComponent(capacidad_textfield, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel1)
-                                .addGap(32, 32, 32)
-                                .addComponent(jLabel5)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel6)
-                            .addComponent(material_selec, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(51, 51, 51)
-                                .addComponent(jLabel4)
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(37, 37, 37)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(unidad_selec, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
-                                        .addComponent(buttonInsertar))
+                                        .addGap(56, 56, 56)
+                                        .addComponent(capacidad_textfield, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(unidad_tf, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(0, 0, Short.MAX_VALUE)))))))
+                                        .addComponent(jLabel1)
+                                        .addGap(32, 32, 32)
+                                        .addComponent(jLabel5)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel6)
+                                    .addComponent(material_selec, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(51, 51, 51)
+                                        .addComponent(jLabel4))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(37, 37, 37)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(unidad_selec, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(40, 40, 40)
+                                                .addComponent(buttonInsertar))
+                                            .addComponent(unidad_tf, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(134, 134, 134)
+                                .addComponent(material_tf, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(170, 170, 170)
+                                .addComponent(cargar_unidad, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(boton_borrar_envase))
+                            .addGroup(layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel2)))
+                        .addGap(0, 14, Short.MAX_VALUE)))
                 .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
-                .addGap(170, 170, 170)
-                .addComponent(cargar_unidad, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -160,17 +228,27 @@ public class Envase_prueba extends javax.swing.JFrame {
                     .addComponent(jLabel6)
                     .addComponent(jLabel4))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(buttonInsertar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(capacidad_textfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(material_selec, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(unidad_selec, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(capacidad_textfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(material_selec, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(unidad_selec, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(buttonInsertar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(material_tf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(unidad_tf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(184, 184, 184))
+                .addGap(25, 25, 25)
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(boton_cargaEnTabla_envase)
+                        .addGap(50, 50, 50)))
+                .addComponent(boton_borrar_envase)
+                .addGap(14, 14, 14))
         );
 
         pack();
@@ -188,42 +266,76 @@ public class Envase_prueba extends javax.swing.JFrame {
         Envase envase=new Envase();
 
         Boolean error=false, existe=false,existe1=false;
+        
         envase.setCapacidad(this.capacidad_textfield.getText());
        
         if(material_tf.isEnabled() && unidad_tf.isEnabled()){
+            
         envase.setMaterial(this.material_tf.getText());
         envase.setUnidad(this.unidad_tf.getText());
        }
+        
        if(material_tf.isEnabled() && !unidad_tf.isEnabled()){ 
+
         envase.setMaterial(this.material_tf.getText());
         envase.setUnidad(this.unidad_selec.getSelectedItem().toString());
        }
        if(!material_tf.isEnabled() && unidad_tf.isEnabled()){    
+      
+        envase.setMaterial(this.material_selec.getSelectedItem().toString());
+        envase.setUnidad(this.unidad_tf.getText());
+       }
+       
+       if(!material_tf.isEnabled() && !unidad_tf.isEnabled()){    
+      
         envase.setMaterial(this.material_selec.getSelectedItem().toString());
         envase.setUnidad(this.unidad_selec.getSelectedItem().toString());
        }
+       
 
         try {
-           //verificar existencia y guardar (en caso de no existir) materia y unidad.
-            existe=envase.existe_material(envase.getMaterial());
-            existe1=envase.existe_unidad(envase.getUnidad());
-            if (existe)
+            String unidad=envase.getUnidad();
+            String material=envase.getMaterial();
+            String capacidad=envase.getCapacidad();
+        if(!(material.equals("null") || material.equals("")) && !(unidad.equals("null")|| unidad.equals("")) && !(capacidad.equals("null")|| capacidad.equals(""))){
+                
+            //material    
+
+            if(envase.existe_material(material))
             {JOptionPane.showMessageDialog(null, "Ya existe un material con ese nombre.");}
-            else {    
-            //guardarlo
-            error=envase.guardar_material(envase.getMaterial());
-            if(!error){JOptionPane.showMessageDialog(null, "material agregado correctamente.");}
-            else {JOptionPane.showMessageDialog(null, "Hubo un error al agregar el material");}
-            }
-            if (existe1)
+                else {    
+                    //guardarlo
+                    error=envase.guardar_material(material);
+                    if(!error){JOptionPane.showMessageDialog(null, "material agregado correctamente.");}
+                    else {JOptionPane.showMessageDialog(null, "Hubo un error al agregar el material");}
+                    }
+            
+
+            //unidad
+            
+            if(envase.existe_unidad(unidad))
             {JOptionPane.showMessageDialog(null, "Ya existe una unidad con ese nombre.");}
-            else {    
-            //guardarlo
-            error=envase.guardar_unidad(envase.getUnidad());
-            if(!error){JOptionPane.showMessageDialog(null, "unidad agregado correctamente.");}
-            else {JOptionPane.showMessageDialog(null, "Hubo un error al agregar la unidad");}
-            }
-           envase.guardar_envase(envase.getCapacidad(),envase.getMaterial(),envase.getUnidad()); 
+                else {    
+                    //guardarlo
+                    error=envase.guardar_unidad(unidad);
+                    if(!error){JOptionPane.showMessageDialog(null, "unidad agregado correctamente.");}
+                    else {JOptionPane.showMessageDialog(null, "Hubo un error al agregar la unidad");}
+                    }
+            
+            //envase EXISTE ENVASE
+            
+             /*if(envase.existe_envase(capacidad,material,unidad))
+            {JOptionPane.showMessageDialog(null, "Ya existe un envase con esas características");}
+                else {  
+                    //guardarlo*/
+                    error=envase.guardar_envase(capacidad,material,unidad);
+                   /* if(!error){JOptionPane.showMessageDialog(null, "envase agregado correctamente.");}
+                    else {JOptionPane.showMessageDialog(null, "Hubo un error al agregar el envase");}
+                    }*/
+                    
+        }
+            else {JOptionPane.showMessageDialog(null, "Ningún campo debe ser vacío");}
+            
         } catch (SQLException | InstantiationException | IllegalAccessException ex) {
             Logger.getLogger(Envase_prueba.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -244,7 +356,10 @@ public class Envase_prueba extends javax.swing.JFrame {
         if (material_selec.getSelectedItem()=="otro..."){
             material_tf.setEnabled(true);
         }
-        else{material_tf.setEnabled(false);}
+        else{
+            material_tf.setEnabled(false);
+            material_tf.setText("");
+        }
     }//GEN-LAST:event_material_selecActionPerformed
 
     private void unidad_tfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_unidad_tfActionPerformed
@@ -274,10 +389,59 @@ public class Envase_prueba extends javax.swing.JFrame {
     private void unidad_selecActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_unidad_selecActionPerformed
         
         if (unidad_selec.getSelectedItem()=="otro..."){
+
             unidad_tf.setEnabled(true);
         }
-        else{unidad_tf.setEnabled(false);}
+        else{
+            unidad_tf.setText("");
+            unidad_tf.setEnabled(false);
+        }
     }//GEN-LAST:event_unidad_selecActionPerformed
+
+    private void boton_cargaEnTabla_envaseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton_cargaEnTabla_envaseActionPerformed
+        int i=0;
+        Object []object = new Object[4]; 
+        tablaModel = new DefaultTableModel();
+        envases.setModel(tablaModel);
+        tablaModel.addColumn("id");
+        tablaModel.addColumn("material");
+        tablaModel.addColumn("capacidad");
+        tablaModel.addColumn("unidad");
+        try {
+            Vector<String> valores = Envase.recuperarTodosEnvases();
+            for(String valore : valores){
+                object[i]=valore;
+                ++i;
+                if(i==4){
+                i=0;
+                tablaModel.addRow(object);
+                }
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(Envase_prueba.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            Logger.getLogger(Envase_prueba.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            Logger.getLogger(Envase_prueba.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_boton_cargaEnTabla_envaseActionPerformed
+
+    private void boton_borrar_envaseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton_borrar_envaseActionPerformed
+        
+        Envase envase=new Envase();
+        int i;
+        i=envases.getSelectedRow();
+        envase.setCapacidad((String) envases.getValueAt(i,1));
+        envase.setMaterial((String) envases.getValueAt(i,2));
+        envase.setUnidad((String) envases.getValueAt(i,3));
+        
+        try{ 
+            envase.borrar(envase);
+        } catch (SQLException | InstantiationException | IllegalAccessException ex) {
+            Logger.getLogger(Envase_prueba.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+    }//GEN-LAST:event_boton_borrar_envaseActionPerformed
 
     /**
      * @param args the command line arguments
@@ -316,16 +480,23 @@ public class Envase_prueba extends javax.swing.JFrame {
     }
     
     
-    
+    DefaultTableModel tablaModel;
     DefaultListModel listaNombreModel;
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton boton_borrar_envase;
+    private javax.swing.JButton boton_cargaEnTabla_envase;
     private javax.swing.JButton buttonInsertar;
     private javax.swing.JTextField capacidad_textfield;
     private javax.swing.JButton cargar_unidad;
+    private javax.swing.JTable envases;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JTable jTable1;
     private javax.swing.JComboBox<String> material_selec;
     private javax.swing.JTextField material_tf;
     private javax.swing.JComboBox<String> unidad_selec;
