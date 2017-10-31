@@ -6,11 +6,15 @@
 package Presentacion;
 
 import Logica.*;
+import java.awt.Dimension;
 import java.sql.SQLException;
 import java.util.Calendar;
+import java.util.Vector;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
+import javax.swing.JTextField;
 
 /**
  *
@@ -23,6 +27,13 @@ public class panelCargaProducto extends javax.swing.JPanel {
      */
     public panelCargaProducto() {
         initComponents();
+        panelCargaEnvase pCEnv = new panelCargaEnvase();
+        pCEnv.setPreferredSize(new Dimension(520, 30));
+        vectorpanelesCargaEnvase = new Vector();
+        vectorpanelesCargaEnvase.add(pCEnv);
+        panelEnvase.add(pCEnv);
+        panelEnvase.revalidate();
+        panelEnvase.repaint();
     }
 
     /**
@@ -34,6 +45,7 @@ public class panelCargaProducto extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jButton1 = new javax.swing.JButton();
         CargaBasica = new javax.swing.JPanel();
         labelNumRNE = new javax.swing.JLabel();
         textFieldRNE = new javax.swing.JTextField();
@@ -109,15 +121,11 @@ public class panelCargaProducto extends javax.swing.JPanel {
         labelDesc_ControlesEspeciales1 = new javax.swing.JLabel();
         textFieldDesc_AQuienDirigido = new javax.swing.JTextField();
         botonGuardar = new javax.swing.JButton();
-        capacidad_textfield = new javax.swing.JTextField();
-        material_selec = new javax.swing.JComboBox<>();
-        unidad_selec = new javax.swing.JComboBox<>();
-        material_tf = new javax.swing.JTextField();
-        unidad_tf = new javax.swing.JTextField();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        buttonInsertar = new javax.swing.JButton();
+        panelEnvase = new javax.swing.JPanel();
+        buttonAddEnvase = new javax.swing.JButton();
+        buttonRemoveEnvase = new javax.swing.JButton();
+
+        jButton1.setText("jButton1");
 
         CargaBasica.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -221,27 +229,27 @@ public class panelCargaProducto extends javax.swing.JPanel {
         jScrollPane1.setViewportView(textAreaRotulo);
 
         CargaBasica.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 390, 560, 70));
-        CargaBasica.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 1180, 690, 10));
+        CargaBasica.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 1230, 690, 10));
 
         labelDatosDeLab.setFont(new java.awt.Font("Liberation Sans", 1, 14)); // NOI18N
         labelDatosDeLab.setText("Datos de la muestra de laboratorio");
-        CargaBasica.add(labelDatosDeLab, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 1200, -1, -1));
+        CargaBasica.add(labelDatosDeLab, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 1250, -1, -1));
 
         labelCargaProdAlimenticio.setFont(new java.awt.Font("Liberation Sans", 1, 14)); // NOI18N
         labelCargaProdAlimenticio.setText("Carga de Producto Alimenticio");
         CargaBasica.add(labelCargaProdAlimenticio, new org.netbeans.lib.awtextra.AbsoluteConstraints(46, 11, -1, -1));
 
         labelNumProtocolo.setText("Numero Protocolo: ");
-        CargaBasica.add(labelNumProtocolo, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 1230, -1, 20));
+        CargaBasica.add(labelNumProtocolo, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 1280, -1, 20));
 
         textFieldNroProtocolo.setText("123456");
-        CargaBasica.add(textFieldNroProtocolo, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 1230, 110, -1));
+        CargaBasica.add(textFieldNroProtocolo, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 1280, 110, -1));
 
         labelNroActa.setText("Numero de Acta: ");
-        CargaBasica.add(labelNroActa, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 1230, -1, 20));
+        CargaBasica.add(labelNroActa, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 1280, -1, 20));
 
         textFieldNroActa.setText("654321");
-        CargaBasica.add(textFieldNroActa, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 1230, 116, -1));
+        CargaBasica.add(textFieldNroActa, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 1280, 116, -1));
         CargaBasica.add(SeparadorRegistroRNPA1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 690, 10));
 
         labelComp_Nombre.setText("Nombre comercial:");
@@ -370,61 +378,24 @@ public class panelCargaProducto extends javax.swing.JPanel {
                 botonGuardarActionPerformed(evt);
             }
         });
-        CargaBasica.add(botonGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 1290, -1, -1));
+        CargaBasica.add(botonGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 1340, -1, -1));
+        CargaBasica.add(panelEnvase, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 1110, 620, 90));
 
-        capacidad_textfield.addActionListener(new java.awt.event.ActionListener() {
+        buttonAddEnvase.setText("+");
+        buttonAddEnvase.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                capacidad_textfieldActionPerformed(evt);
+                buttonAddEnvaseActionPerformed(evt);
             }
         });
-        CargaBasica.add(capacidad_textfield, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 1150, 100, -1));
+        CargaBasica.add(buttonAddEnvase, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 1080, 40, -1));
 
-        material_selec.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "otro..." }));
-        material_selec.addActionListener(new java.awt.event.ActionListener() {
+        buttonRemoveEnvase.setText("-");
+        buttonRemoveEnvase.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                material_selecActionPerformed(evt);
+                buttonRemoveEnvaseActionPerformed(evt);
             }
         });
-        CargaBasica.add(material_selec, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 1130, 80, -1));
-
-        unidad_selec.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "otro..." }));
-        unidad_selec.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                unidad_selecActionPerformed(evt);
-            }
-        });
-        CargaBasica.add(unidad_selec, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 1130, 100, 20));
-
-        material_tf.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                material_tfActionPerformed(evt);
-            }
-        });
-        CargaBasica.add(material_tf, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 1150, 80, -1));
-
-        unidad_tf.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                unidad_tfActionPerformed(evt);
-            }
-        });
-        CargaBasica.add(unidad_tf, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 1130, 100, -1));
-
-        jLabel5.setText("capacidad");
-        CargaBasica.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 1110, -1, -1));
-
-        jLabel6.setText("material");
-        CargaBasica.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 1110, -1, -1));
-
-        jLabel4.setText("unidad");
-        CargaBasica.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 1110, -1, -1));
-
-        buttonInsertar.setText("Insertar");
-        buttonInsertar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonInsertarActionPerformed(evt);
-            }
-        });
-        CargaBasica.add(buttonInsertar, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 1130, -1, -1));
+        CargaBasica.add(buttonRemoveEnvase, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 1080, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -482,11 +453,12 @@ public class panelCargaProducto extends javax.swing.JPanel {
             Composicion composicion = new Composicion();
             Descripcion descripcion = new Descripcion();
             RNPA rnpa = new RNPA();
+            Envase envase_aux;
             MuestraLaboratorio muestra_lab = new MuestraLaboratorio();
-            
+
             producto.setNro_factura(Integer.valueOf(textFieldNroFactura.getText()));
             producto.setRotulo(textAreaRotulo.getText());
-            
+
             composicion.setCAA(textFieldComp_CAA.getText());
             composicion.setContenido(textFieldComp_Contenido.getText());
             composicion.setDenominacion(textFieldComp_Denominacion.getText());
@@ -496,7 +468,7 @@ public class panelCargaProducto extends javax.swing.JPanel {
             composicion.setNroytipo_registro_marca(textFieldComp_NroTipoMarca.getText());
             producto.setComposicion(composicion);
             composicion.setM_ProductoAlimenticio(producto);
-            
+
             descripcion.setControlesycuidados(textFieldDesc_ControlesEspeciales.getText());
             descripcion.setDestino_producto(textFieldDesc_AQuienDirigido.getText());
             descripcion.setForma_uso_producto(textFieldDesc_FormaUso.getText());
@@ -507,116 +479,63 @@ public class panelCargaProducto extends javax.swing.JPanel {
             descripcion.setPeriodo_aptitud(textFieldDesc_PeriodoAptitud.getText());
             producto.setDescripcion(descripcion);
             descripcion.setM_ProductoAlimenticio(producto);
-            
+
             rnpa.setNumero(Integer.valueOf(textFieldRNPA.getText()));
             rnpa.setFecha_vencimiento(textFieldFechaVencimiento.getText());
             producto.setRnpa(rnpa);
             rnpa.setM_ProductoAlimenticio(producto);
-            
+
+            for (panelCargaEnvase pCE : vectorpanelesCargaEnvase) {
+                envase_aux = new Envase();
+                JTextField cap = (JTextField) pCE.getComponentByName("textFieldCapacidad");
+                JComboBox<String> material = (JComboBox<String>) pCE.getComponentByName("comboBoxMaterial");
+                JComboBox<String> unidad = (JComboBox<String>) pCE.getComponentByName("comboBoxUnidad");
+                envase_aux.setCapacidad(cap.getText());
+                envase_aux.setMaterial((String) material.getSelectedItem());
+                envase_aux.setUnidad((String) unidad.getSelectedItem());
+                producto.addEnvase(envase_aux);
+            }
+
             muestra_lab.setNumActa(Integer.valueOf(textFieldNroActa.getText()));
             muestra_lab.setNumProtocolo(Integer.valueOf(textFieldNroProtocolo.getText()));
             producto.setMuestraLaboratorio(muestra_lab);
             muestra_lab.setM_ProductoAlimenticio(producto);
-            
+
             //fecha de hoy
             producto.setFecha_carga_solicitud(Calendar.getInstance());
             //if estab_aCargar es null no tiene que dejar cargar
             producto.setEstablecimiento(estab_aCargar);
-            
+
             boolean result = producto.guardar();
-            if (result == true){
+            if (result == true) {
                 JOptionPane.showMessageDialog(null, "correcto.");
-            }else{
+            } else {
                 JOptionPane.showMessageDialog(null, "error");
             }
-            
+
         } catch (SQLException | InstantiationException | IllegalAccessException ex) {
             Logger.getLogger(panelCargaProducto.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_botonGuardarActionPerformed
 
-    private void capacidad_textfieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_capacidad_textfieldActionPerformed
+    private void buttonAddEnvaseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAddEnvaseActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_capacidad_textfieldActionPerformed
+        panelCargaEnvase pCEnv = new panelCargaEnvase();
+        pCEnv.setPreferredSize(new Dimension(520, 30));
+        vectorpanelesCargaEnvase.add(pCEnv);
+        panelEnvase.add(pCEnv);
+        panelEnvase.revalidate();
+        panelEnvase.repaint();
+    }//GEN-LAST:event_buttonAddEnvaseActionPerformed
 
-    private void material_selecActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_material_selecActionPerformed
-
-        if (material_selec.getSelectedItem()=="otro..."){
-            material_tf.setEnabled(true);
-        }
-        else{material_tf.setEnabled(false);}
-    }//GEN-LAST:event_material_selecActionPerformed
-
-    private void unidad_selecActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_unidad_selecActionPerformed
-
-        if (unidad_selec.getSelectedItem()=="otro..."){
-            unidad_tf.setEnabled(true);
-        }
-        else{unidad_tf.setEnabled(false);}
-    }//GEN-LAST:event_unidad_selecActionPerformed
-
-    private void material_tfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_material_tfActionPerformed
+    private void buttonRemoveEnvaseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonRemoveEnvaseActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_material_tfActionPerformed
-
-    private void unidad_tfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_unidad_tfActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_unidad_tfActionPerformed
-
-    private void buttonInsertarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonInsertarActionPerformed
-        // TODO add your handling code here:
-        /*Vector<String> mat_car= new Vector<String>();
-        Vector<String> uni_car= new Vector<String>();*/
-
-        Envase envase=new Envase();
-
-        Boolean error=false, existe=false,existe1=false;
-        envase.setCapacidad(this.capacidad_textfield.getText());
-
-        if(material_tf.isEnabled() && unidad_tf.isEnabled()){
-            envase.setMaterial(this.material_tf.getText());
-            envase.setUnidad(this.unidad_tf.getText());
-        }
-        if(material_tf.isEnabled() && !unidad_tf.isEnabled()){
-            envase.setMaterial(this.material_tf.getText());
-            envase.setUnidad(this.unidad_selec.getSelectedItem().toString());
-        }
-        if(!material_tf.isEnabled() && unidad_tf.isEnabled()){
-            envase.setMaterial(this.material_selec.getSelectedItem().toString());
-            envase.setUnidad(this.unidad_selec.getSelectedItem().toString());
-        }
-
-        try {
-            //verificar existencia y guardar (en caso de no existir) materia y unidad.
-            existe=envase.existe_material(envase.getMaterial());
-            existe1=envase.existe_unidad(envase.getUnidad());
-            if (existe)
-            {JOptionPane.showMessageDialog(null, "Ya existe un material con ese nombre.");}
-            else {
-                //guardarlo
-                error=envase.guardar_material(envase.getMaterial());
-                if(!error){JOptionPane.showMessageDialog(null, "material agregado correctamente.");}
-                else {JOptionPane.showMessageDialog(null, "Hubo un error al agregar el material");}
-            }
-            if (existe1)
-            {JOptionPane.showMessageDialog(null, "Ya existe una unidad con ese nombre.");}
-            else {
-                //guardarlo
-                error=envase.guardar_unidad(envase.getUnidad());
-                if(!error){JOptionPane.showMessageDialog(null, "unidad agregado correctamente.");}
-                else {JOptionPane.showMessageDialog(null, "Hubo un error al agregar la unidad");}
-            }
-            envase.guardar_envase(envase.getCapacidad(),envase.getMaterial(),envase.getUnidad());
-        } catch (SQLException | InstantiationException | IllegalAccessException ex) {
-            Logger.getLogger(Envase_prueba.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        //////////////////////////////////////////
-        //////////////////////////////////////////
-
-        //////////////////////////////////////////
-        //////////////////////////////////////////
-
-    }//GEN-LAST:event_buttonInsertarActionPerformed
+        panelCargaEnvase pCEnv = vectorpanelesCargaEnvase.lastElement();
+        panelEnvase.remove(pCEnv);
+        vectorpanelesCargaEnvase.remove(pCEnv);
+        panelEnvase.revalidate();
+        panelEnvase.repaint();
+    }//GEN-LAST:event_buttonRemoveEnvaseActionPerformed
 
     private Empresa recuperarDatosEmpresa(String nro_rne) throws SQLException, InstantiationException, IllegalAccessException {
         Empresa empresa_salida = null;
@@ -632,9 +551,9 @@ public class panelCargaProducto extends javax.swing.JPanel {
         return empresa_salida;
     }
 
-
     private Establecimiento estab_aCargar;
-    
+    private Vector<panelCargaEnvase> vectorpanelesCargaEnvase;
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BuscarRNE;
     private javax.swing.JPanel CargaBasica;
@@ -645,11 +564,9 @@ public class panelCargaProducto extends javax.swing.JPanel {
     private javax.swing.JSeparator SeparadorRegistroRNPA;
     private javax.swing.JSeparator SeparadorRegistroRNPA1;
     private javax.swing.JButton botonGuardar;
-    private javax.swing.JButton buttonInsertar;
-    private javax.swing.JTextField capacidad_textfield;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
+    private javax.swing.JButton buttonAddEnvase;
+    private javax.swing.JButton buttonRemoveEnvase;
+    private javax.swing.JButton jButton1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JLabel labelCargaProdAlimenticio;
@@ -689,8 +606,7 @@ public class panelCargaProducto extends javax.swing.JPanel {
     private javax.swing.JLabel labelRNPA;
     private javax.swing.JLabel labelRegistroRNPA;
     private javax.swing.JLabel labelRotulo;
-    private javax.swing.JComboBox<String> material_selec;
-    private javax.swing.JTextField material_tf;
+    private javax.swing.JPanel panelEnvase;
     private javax.swing.JTextArea textAreaRotulo;
     private javax.swing.JTextField textFieldComp_CAA;
     private javax.swing.JTextField textFieldComp_Contenido;
@@ -718,7 +634,5 @@ public class panelCargaProducto extends javax.swing.JPanel {
     private javax.swing.JTextField textFieldNroProtocolo;
     private javax.swing.JTextField textFieldRNE;
     private javax.swing.JTextField textFieldRNPA;
-    private javax.swing.JComboBox<String> unidad_selec;
-    private javax.swing.JTextField unidad_tf;
     // End of variables declaration//GEN-END:variables
 }

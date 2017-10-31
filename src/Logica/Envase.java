@@ -52,45 +52,44 @@ public class Envase {
         this.m_ProductoAlimenticio = m_ProductoAlimenticio;
     }
 
-    
     public String get_id_mat(String mat) throws SQLException, InstantiationException, IllegalAccessException {
         ConexionBD con = ConexionBD.getConexion();
         String[][] material;
         material = new String[1][1];
         material = con.recuperar(material, "select id from material where nombre='" + mat + "'", 1);
-        return(material[0][0]);
+        return (material[0][0]);
 
     }
-    
-     public String get_id_uni(String uni) throws SQLException, InstantiationException, IllegalAccessException {
+
+    public String get_id_uni(String uni) throws SQLException, InstantiationException, IllegalAccessException {
         ConexionBD con = ConexionBD.getConexion();
         String[][] unidad;
         unidad = new String[1][1];
         unidad = con.recuperar(unidad, "select id from unidad where nombre='" + uni + "'", 1);
-        return(unidad[0][0]);
-     }
-     
-     public static String get_nom_mat(String id_mat) throws SQLException, InstantiationException, IllegalAccessException {
+        return (unidad[0][0]);
+    }
+
+    public static String get_nom_mat(String id_mat) throws SQLException, InstantiationException, IllegalAccessException {
         ConexionBD con = ConexionBD.getConexion();
         String[][] material;
         material = new String[1][1];
         material = con.recuperar(material, "select nombre from material where id=" + id_mat, 1);
-        return(material[0][0]);
-     }
-     
-     public static String get_nom_uni(String id_uni) throws SQLException, InstantiationException, IllegalAccessException {
+        return (material[0][0]);
+    }
+
+    public static String get_nom_uni(String id_uni) throws SQLException, InstantiationException, IllegalAccessException {
         ConexionBD con = ConexionBD.getConexion();
         String[][] unidad;
         unidad = new String[1][1];
         unidad = con.recuperar(unidad, "select nombre from unidad where id=" + id_uni, 1);
-        return(unidad[0][0]);
-     }
-     
+        return (unidad[0][0]);
+    }
+
     /**
      * Recupera todos los materiales
      *
-     * @return {@code Vector<String>} que contiene los
-     * nombres de todos los materiales
+     * @return {@code Vector<String>} que contiene los nombres de todos los
+     * materiales
      * @throws java.sql.SQLException
      * @throws java.lang.InstantiationException
      * @throws java.lang.IllegalAccessException
@@ -110,17 +109,17 @@ public class Envase {
 
         return (Vector<String>) salida;
     }
-    
+
     /**
      * Recupera todas los envases
      *
-     * @return {@code Vector<String>} que contiene los
-     * nombres de todos los envases
+     * @return {@code Vector<String>} que contiene los nombres de todos los
+     * envases
      * @throws java.sql.SQLException
      * @throws java.lang.InstantiationException
      * @throws java.lang.IllegalAccessException
      */
-      public static Vector<String> recuperarTodosEnvases() throws SQLException, InstantiationException, IllegalAccessException {
+    public static Vector<String> recuperarTodosEnvases() throws SQLException, InstantiationException, IllegalAccessException {
         ConexionBD con = ConexionBD.getConexion();
         String[][] valores;
         valores = new String[10][4];
@@ -134,17 +133,17 @@ public class Envase {
             salida.add(valore[1]);
             salida.add(get_nom_mat(valore[2]));
             salida.add(get_nom_uni(valore[3]));
-            
+
         }
 
         return (Vector<String>) salida;
     }
-      
+
     /**
      * Recupera todas las unidades
      *
-     * @return {@code Vector<String>} que contiene los
-     * nombres de todas las unidades
+     * @return {@code Vector<String>} que contiene los nombres de todas las
+     * unidades
      * @throws java.sql.SQLException
      * @throws java.lang.InstantiationException
      * @throws java.lang.IllegalAccessException
@@ -164,7 +163,7 @@ public class Envase {
 
         return (Vector<String>) salida;
     }
-    
+
     /**
      * Borra un envase
      *
@@ -175,7 +174,7 @@ public class Envase {
      */
     public void borrar(Envase envase) throws SQLException, InstantiationException, IllegalAccessException {
         ConexionBD con = ConexionBD.getConexion();
-        con.update("DELETE FROM `envase` WHERE (capacidad='" + envase.getCapacidad() +"','"+ get_id_mat(envase.getMaterial()) +"','" +get_id_uni(envase.getUnidad()) +"')");
+        con.update("DELETE FROM `envase` WHERE (capacidad='" + envase.getCapacidad() + "','" + get_id_mat(envase.getMaterial()) + "','" + get_id_uni(envase.getUnidad()) + "')");
     }
 
     /**
@@ -209,8 +208,8 @@ public class Envase {
         boolean result = con.existe("select exists (select nombre from unidad where nombre='" + nom_uni + "')");
         return result;
     }
-    
-     /**
+
+    /**
      * Verifica la existencia de un envase
      *
      * @param cap Capacidad
@@ -222,12 +221,12 @@ public class Envase {
      * @throws java.lang.IllegalAccessException
      */
     //FALTA CORREGIR
-      public boolean existe_envase(String cap, String nom_mat, String nom_uni) throws SQLException, InstantiationException, IllegalAccessException {
+    public boolean existe_envase(String cap, String nom_mat, String nom_uni) throws SQLException, InstantiationException, IllegalAccessException {
         ConexionBD con = ConexionBD.getConexion();
         System.out.println(get_id_mat(nom_mat));
         System.out.println(get_id_uni(nom_uni));
-        boolean result=con.existe("select exists (select * from envase where capacidad='" + cap + "', Material_id='" + get_id_mat(nom_mat) + "', Unidad_id='" + get_id_uni(nom_uni) + "')");
-        
+        boolean result = con.existe("select exists (select * from envase where capacidad='" + cap + "', Material_id='" + get_id_mat(nom_mat) + "', Unidad_id='" + get_id_uni(nom_uni) + "')");
+
         return result;
     }
 
@@ -247,7 +246,7 @@ public class Envase {
         boolean result = con.insertar("insert into material (id,nombre) values (default,'" + nom_mat + "')");
         return result;
     }
-    
+
     /**
      * Metodo que guarda una unidad
      *
@@ -280,7 +279,7 @@ public class Envase {
         ConexionBD con = ConexionBD.getConexion();
         //insertar en envase los valores obtenidos.
         System.out.println("guardar envase");
-        
+
         boolean result = con.insertar("insert into envase (id,capacidad,Material_id,Unidad_id) values (default,'" + cap + "','" + get_id_mat(mat) + "','" + get_id_uni(uni) + "')");
         return result;
     }

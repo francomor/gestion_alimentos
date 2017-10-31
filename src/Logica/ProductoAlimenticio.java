@@ -1,5 +1,3 @@
-
-
 /**
  * @author Franco
  * @version 1.0
@@ -12,7 +10,7 @@ import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
-import java.util.List;
+import java.util.Vector;
 
 public class ProductoAlimenticio {
 
@@ -23,13 +21,14 @@ public class ProductoAlimenticio {
     private Descripcion descripcion;
     private Composicion composicion;
     private MuestraLaboratorio muestraLaboratorio;
-    private List<MateriaPrima> materiasPrimas;
-    private List<Envase> Envases;
+    private Vector<MateriaPrima> materiasPrimas;
+    private Vector<Envase> Envases;
     private RNPA rnpa;
     private Establecimiento establecimiento;
 
     public ProductoAlimenticio() {
-
+        materiasPrimas = new Vector();
+        Envases = new Vector();
     }
 
     public Calendar getFecha_carga_solicitud() {
@@ -50,7 +49,7 @@ public class ProductoAlimenticio {
         cal_aux.set(Integer.parseInt(fecha.substring(0, 4)), Integer.parseInt(fecha.substring(5, 7)), Integer.parseInt(fecha.substring(8, 10)));
         this.fecha_carga_solicitud = cal_aux;
     }
-    
+
     public int getId() {
         return id;
     }
@@ -58,7 +57,6 @@ public class ProductoAlimenticio {
     public void setId(int id) {
         this.id = id;
     }
-
 
     public int getNro_factura() {
         return nro_factura;
@@ -76,53 +74,47 @@ public class ProductoAlimenticio {
         this.rotulo = rotulo;
     }
 
-    public
-    Descripcion getDescripcion() {
+    public Descripcion getDescripcion() {
         return descripcion;
     }
 
-    public
-    void setDescripcion(Descripcion descripcion) {
+    public void setDescripcion(Descripcion descripcion) {
         this.descripcion = descripcion;
     }
 
-    public
-    Composicion getComposicion() {
+    public Composicion getComposicion() {
         return composicion;
     }
 
-    public
-    void setComposicion(Composicion composicion) {
+    public void setComposicion(Composicion composicion) {
         this.composicion = composicion;
     }
 
-    public
-    MuestraLaboratorio getMuestraLaboratorio() {
+    public MuestraLaboratorio getMuestraLaboratorio() {
         return muestraLaboratorio;
     }
 
-    public
-    void setMuestraLaboratorio(MuestraLaboratorio muestraLaboratorio) {
+    public void setMuestraLaboratorio(MuestraLaboratorio muestraLaboratorio) {
         this.muestraLaboratorio = muestraLaboratorio;
     }
 
-    public
-    List<MateriaPrima> getMateriasPrimas() {
+    public Vector<MateriaPrima> getMateriasPrimas() {
         return materiasPrimas;
     }
 
-    public
-    void setMateriasPrimas(List<MateriaPrima> materiasPrimas) {
+    public void setMateriasPrimas(Vector<MateriaPrima> materiasPrimas) {
         this.materiasPrimas = materiasPrimas;
     }
 
-    public
-    List<Envase> getEnvases() {
+    public void addEnvase(Envase envase) {
+        Envases.add(envase);
+    }
+
+    public Vector<Envase> getEnvases() {
         return Envases;
     }
 
-    public
-    void setEnvases(List<Envase> Envases) {
+    public void setEnvases(Vector<Envase> Envases) {
         this.Envases = Envases;
     }
 
@@ -150,67 +142,94 @@ public class ProductoAlimenticio {
      * @throws java.lang.InstantiationException
      * @throws java.lang.IllegalAccessException
      */
-    public boolean guardar()throws SQLException, InstantiationException, IllegalAccessException {
-        
-            ConexionBD con= ConexionBD.getConexion();
-            String insert;
-            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss"); 
-            //guardarEnvasexProducto();
-            //guardarMateriaPrimaxProducto();
-            
-            insert = "INSERT INTO `producto_alimenticio`(`id`, `nro_factura`, `nro_RNPA`, `rotulo`, `CAA`,"
-                    + " `contenido`, `denominacion`, "
-                    + "`fecha_duracion`, "
-                    + "`marca`, `nombre_comercial`, `num_y_tipo_reg_marca`,"
-                    + " `fecha_carga_solicitud`, "
-                    + "`Controles_y_cuidados`, `destino_prod`, `forma_uso`, `info_adicional`, "
-                    + "`instrucciones_preparacion`, `lugar_venta`, `modo_conservacion`, `periodo_aptitud`, "
-                    + "`Vencimiento_RNPA`, "
-                    + "`ml_nroActa`, `ml_nroProtocolo`, "
-                    + "`Establecimiento_idEstablecimiento`) VALUES (default,";
-            
-            insert += "'"+ String.valueOf(nro_factura)+"',";
-            insert += "'"+ String.valueOf(rnpa.getNumero()) +"',";
-            insert += "'"+ rotulo+"',";
-            
-            insert += "'"+ composicion.getCAA()   +"',";
-            insert += "'"+ composicion.getContenido() +"',";
-            insert += "'"+ composicion.getDenominacion() +"',";
-            insert += "'"+ sdf.format(composicion.getFecha_duracion().getTime()) +"',";
-            insert += "'"+ composicion.getMarca() +"',";
-            insert += "'"+ composicion.getNombre_comercial() +"',";
-            insert += "'"+ composicion.getNroytipo_registro_marca() +"',"; ;
-            
-            insert += "'"+ sdf.format(this.getFecha_carga_solicitud().getTime()) +"',";
-            
-            insert += "'"+ descripcion.getControlesycuidados() +"',";
-            insert += "'"+ descripcion.getDestino_producto() +"',";
-            insert += "'"+ descripcion.getForma_uso_producto() +"',";
-            insert += "'"+ descripcion.getInformacion_adicional() +"',";
-            insert += "'"+ descripcion.getIntrucciones_preparacion() +"',";
-            insert += "'"+ descripcion.getLugar_venta() +"',";
-            insert += "'"+ descripcion.getModo_conservacion() +"',";
-            insert += "'"+ descripcion.getPeriodo_aptitud() +"',";
-            
-            insert += "'"+ sdf.format(rnpa.getFecha_vencimiento().getTime()) +"',";
-            
-            insert += "'"+ String.valueOf(muestraLaboratorio.getNumActa()) +"',";
-            insert += "'"+ String.valueOf(muestraLaboratorio.getNumProtocolo()) +"',";
-            
-            insert += "'"+ establecimiento.getId()+"');";
-                      
+    public boolean guardar() throws SQLException, InstantiationException, IllegalAccessException {
 
-            boolean result=con.insertar(insert);
-            
-            
-            return !result;
+        ConexionBD con = ConexionBD.getConexion();
+        String insert;
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+
+        insert = "INSERT INTO `producto_alimenticio`(`id`, `nro_factura`, `nro_RNPA`, `rotulo`, `CAA`,"
+                + " `contenido`, `denominacion`, "
+                + "`fecha_duracion`, "
+                + "`marca`, `nombre_comercial`, `num_y_tipo_reg_marca`,"
+                + " `fecha_carga_solicitud`, "
+                + "`Controles_y_cuidados`, `destino_prod`, `forma_uso`, `info_adicional`, "
+                + "`instrucciones_preparacion`, `lugar_venta`, `modo_conservacion`, `periodo_aptitud`, "
+                + "`Vencimiento_RNPA`, "
+                + "`ml_nroActa`, `ml_nroProtocolo`, "
+                + "`Establecimiento_idEstablecimiento`) VALUES (default,";
+
+        insert += "'" + String.valueOf(nro_factura) + "',";
+        insert += "'" + String.valueOf(rnpa.getNumero()) + "',";
+        insert += "'" + rotulo + "',";
+
+        insert += "'" + composicion.getCAA() + "',";
+        insert += "'" + composicion.getContenido() + "',";
+        insert += "'" + composicion.getDenominacion() + "',";
+        insert += "'" + sdf.format(composicion.getFecha_duracion().getTime()) + "',";
+        insert += "'" + composicion.getMarca() + "',";
+        insert += "'" + composicion.getNombre_comercial() + "',";
+        insert += "'" + composicion.getNroytipo_registro_marca() + "',";
+
+        insert += "'" + sdf.format(this.getFecha_carga_solicitud().getTime()) + "',";
+
+        insert += "'" + descripcion.getControlesycuidados() + "',";
+        insert += "'" + descripcion.getDestino_producto() + "',";
+        insert += "'" + descripcion.getForma_uso_producto() + "',";
+        insert += "'" + descripcion.getInformacion_adicional() + "',";
+        insert += "'" + descripcion.getIntrucciones_preparacion() + "',";
+        insert += "'" + descripcion.getLugar_venta() + "',";
+        insert += "'" + descripcion.getModo_conservacion() + "',";
+        insert += "'" + descripcion.getPeriodo_aptitud() + "',";
+
+        insert += "'" + sdf.format(rnpa.getFecha_vencimiento().getTime()) + "',";
+
+        insert += "'" + String.valueOf(muestraLaboratorio.getNumActa()) + "',";
+        insert += "'" + String.valueOf(muestraLaboratorio.getNumProtocolo()) + "',";
+
+        insert += "'" + establecimiento.getId() + "');";
+
+        boolean result;
+        result = !con.insertar(insert);
+
+        id = con.recuperarUltimoIdIngresado("producto_alimenticio");
+
+        if (result == true) {
+            result = guardarEnvasexProducto();
+            //guardarMateriaPrimaxProducto();
+        }
+
+        return result;
     }
-    
-    private void guardarEnvasexProducto() {
-        
+
+    //NESESITA QUE ANDE EXISTE ENVASE
+    private boolean guardarEnvasexProducto() throws SQLException, InstantiationException, IllegalAccessException {
+        int e_id;
+        ConexionBD con = ConexionBD.getConexion();
+        boolean result = false;
+        for (Envase e : Envases) {
+            if (!e.existe_material(e.getMaterial())) {
+                e.guardar_material(e.getMaterial());
+            }
+            if (!e.existe_unidad(e.getUnidad())) {
+                e.guardar_unidad(e.getUnidad());
+            }
+            //if (!e.existe_envase(e.getCapacidad(), e.getMaterial(), e.getUnidad())) {
+            e.guardar_envase(e.getCapacidad(), e.getMaterial(), e.getUnidad());
+            e_id = con.recuperarUltimoIdIngresado("envase");
+            //}
+            //else set e_id con el id del envase
+            result = !con.insertar("INSERT INTO `producto_alimenticio_has_envase`(`Producto_Alimenticio_id`, `Envase_id`) VALUES (" + id + "," + e_id + ");");
+
+            //si hay un error salir
+            if (result == false) {
+                break;
+            }
+        }
+        return result;
     }
 
     private void guardarMateriaPrimaxProducto() {
-       
+
     }
 }//end ProductoAlimenticio
