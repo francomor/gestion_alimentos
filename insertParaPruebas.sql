@@ -1,4 +1,4 @@
-//insert franco
+--insert franco
 
 INSERT INTO `provincia`(`id`, `nombre`) VALUES (NULL,"Rio Negro");
 
