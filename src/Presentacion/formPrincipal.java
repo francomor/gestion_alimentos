@@ -42,6 +42,8 @@ public class formPrincipal extends javax.swing.JFrame {
 
         jScrollPane1.setViewportView(panelCargaProducto2);
 
+        getContentPane().add(jScrollPane1, java.awt.BorderLayout.CENTER);
+
         jMenu1.setText("File");
 
         MenuSalir.setText("Salir");
@@ -70,17 +72,6 @@ public class formPrincipal extends javax.swing.JFrame {
         jMenuBar1.add(MenuCarga);
 
         setJMenuBar(jMenuBar1);
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 761, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 428, Short.MAX_VALUE)
-        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

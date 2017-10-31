@@ -127,10 +127,7 @@ public class panelCargaProducto extends javax.swing.JPanel {
 
         jButton1.setText("jButton1");
 
-        CargaBasica.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
         labelNumRNE.setText("Numero RNE: ");
-        CargaBasica.add(labelNumRNE, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 50, 88, 20));
 
         textFieldRNE.setText("32132132");
         textFieldRNE.setToolTipText("");
@@ -139,7 +136,6 @@ public class panelCargaProducto extends javax.swing.JPanel {
                 textFieldRNEActionPerformed(evt);
             }
         });
-        CargaBasica.add(textFieldRNE, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 50, 171, -1));
 
         BuscarRNE.setText("Buscar");
         BuscarRNE.addActionListener(new java.awt.event.ActionListener() {
@@ -147,38 +143,27 @@ public class panelCargaProducto extends javax.swing.JPanel {
                 BuscarRNEActionPerformed(evt);
             }
         });
-        CargaBasica.add(BuscarRNE, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 50, -1, -1));
-        CargaBasica.add(SeparadorDatosEmpresa, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 96, 620, 0));
 
         labelDatoEmpresa.setFont(new java.awt.Font("Liberation Sans", 1, 14)); // NOI18N
         labelDatoEmpresa.setText("Datos de la empresa");
-        CargaBasica.add(labelDatoEmpresa, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 100, -1, -1));
 
         labelEmp_CUIL.setText("CUIT: ");
-        CargaBasica.add(labelEmp_CUIL, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 130, -1, 20));
 
         labelEmp_NombreEmpresa.setText("Nombre: ");
-        CargaBasica.add(labelEmp_NombreEmpresa, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 160, -1, 20));
 
         labelEmp_RazonSocial.setText("Razon Social: ");
-        CargaBasica.add(labelEmp_RazonSocial, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 190, -1, 20));
 
         labelEmp_Email.setText("Email: ");
-        CargaBasica.add(labelEmp_Email, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 130, 49, 20));
 
         labelEmp_Telefono.setText("Telefono: ");
-        CargaBasica.add(labelEmp_Telefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 160, -1, 20));
 
         textFieldEmp_CUIL.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
         textFieldEmp_CUIL.setText("2345678");
         textFieldEmp_CUIL.setEnabled(false);
-        CargaBasica.add(textFieldEmp_CUIL, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 130, 122, -1));
 
         textFieldEmp_Nombre.setEnabled(false);
-        CargaBasica.add(textFieldEmp_Nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 160, 122, -1));
 
         textFieldEmp_RazonSocial.setEnabled(false);
-        CargaBasica.add(textFieldEmp_RazonSocial, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 190, 122, -1));
 
         textFieldEmp_Email.setEnabled(false);
         textFieldEmp_Email.addActionListener(new java.awt.event.ActionListener() {
@@ -186,95 +171,64 @@ public class panelCargaProducto extends javax.swing.JPanel {
                 textFieldEmp_EmailActionPerformed(evt);
             }
         });
-        CargaBasica.add(textFieldEmp_Email, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 130, 124, -1));
 
         textFieldEmp_Telefono.setEnabled(false);
-        CargaBasica.add(textFieldEmp_Telefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 160, 124, -1));
-        CargaBasica.add(SeparadorRegistroRNPA, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 220, 690, 10));
 
         labelComposicion.setFont(new java.awt.Font("Liberation Sans", 1, 12)); // NOI18N
         labelComposicion.setText("Composicion");
-        CargaBasica.add(labelComposicion, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 470, -1, 20));
 
         labelNroFactura.setText("Nro factura: ");
-        CargaBasica.add(labelNroFactura, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 340, -1, 20));
 
         textFieldNroFactura.setText("123");
-        CargaBasica.add(textFieldNroFactura, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 340, 120, -1));
-        CargaBasica.add(SeparadorDatosProducto, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 500, 670, 10));
 
         labelRegistroRNPA.setFont(new java.awt.Font("Liberation Sans", 1, 14)); // NOI18N
         labelRegistroRNPA.setText("Registro numero RNPA");
-        CargaBasica.add(labelRegistroRNPA, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 230, -1, -1));
 
         labelRNPA.setText("RNPA: ");
-        CargaBasica.add(labelRNPA, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 260, 50, 20));
 
         textFieldRNPA.setText("123456");
-        CargaBasica.add(textFieldRNPA, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 260, 120, -1));
 
         textFieldFechaVencimiento.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(java.text.DateFormat.getDateInstance(java.text.DateFormat.SHORT))));
         textFieldFechaVencimiento.setText("2017-11-31");
-        CargaBasica.add(textFieldFechaVencimiento, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 260, 122, -1));
 
         labelFechaVencimiento.setText("Fecha Vencimiento: ");
-        CargaBasica.add(labelFechaVencimiento, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 260, -1, 20));
 
         labelRotulo.setText("Rotulo: ");
-        CargaBasica.add(labelRotulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 370, -1, -1));
 
         textAreaRotulo.setColumns(20);
         textAreaRotulo.setRows(5);
         textAreaRotulo.setText("rotulo");
         jScrollPane1.setViewportView(textAreaRotulo);
 
-        CargaBasica.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 390, 560, 70));
-        CargaBasica.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 1230, 690, 10));
-
         labelDatosDeLab.setFont(new java.awt.Font("Liberation Sans", 1, 14)); // NOI18N
         labelDatosDeLab.setText("Datos de la muestra de laboratorio");
-        CargaBasica.add(labelDatosDeLab, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 1250, -1, -1));
 
         labelCargaProdAlimenticio.setFont(new java.awt.Font("Liberation Sans", 1, 14)); // NOI18N
         labelCargaProdAlimenticio.setText("Carga de Producto Alimenticio");
-        CargaBasica.add(labelCargaProdAlimenticio, new org.netbeans.lib.awtextra.AbsoluteConstraints(46, 11, -1, -1));
 
         labelNumProtocolo.setText("Numero Protocolo: ");
-        CargaBasica.add(labelNumProtocolo, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 1280, -1, 20));
 
         textFieldNroProtocolo.setText("123456");
-        CargaBasica.add(textFieldNroProtocolo, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 1280, 110, -1));
 
         labelNroActa.setText("Numero de Acta: ");
-        CargaBasica.add(labelNroActa, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 1280, -1, 20));
 
         textFieldNroActa.setText("654321");
-        CargaBasica.add(textFieldNroActa, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 1280, 116, -1));
-        CargaBasica.add(SeparadorRegistroRNPA1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 690, 10));
 
         labelComp_Nombre.setText("Nombre comercial:");
-        CargaBasica.add(labelComp_Nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 520, -1, 20));
 
         labelComp_Marca.setText("Marca:");
-        CargaBasica.add(labelComp_Marca, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 550, -1, 20));
 
         labelComp_Denominacion.setText("Denominacion:");
-        CargaBasica.add(labelComp_Denominacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 580, -1, 20));
 
         labelComp_Contenido.setText("Contenido:");
-        CargaBasica.add(labelComp_Contenido, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 610, -1, 20));
 
         labelComp_FechaDuracion.setText("Fecha de duracion:");
-        CargaBasica.add(labelComp_FechaDuracion, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 640, -1, 20));
 
         labelComp_NroTipoMarca.setText("N° y tipo de registro de marca:");
-        CargaBasica.add(labelComp_NroTipoMarca, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 520, -1, 20));
 
         labelComp_CAA.setText("CAA Articulo N°:");
-        CargaBasica.add(labelComp_CAA, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 550, -1, 20));
 
         labelComp_MateriasPrimas.setText("Materias Primas");
-        CargaBasica.add(labelComp_MateriasPrimas, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 670, -1, 20));
 
         textFieldComp_Nombre.setText("nombre");
         textFieldComp_Nombre.addActionListener(new java.awt.event.ActionListener() {
@@ -282,60 +236,41 @@ public class panelCargaProducto extends javax.swing.JPanel {
                 textFieldComp_NombreActionPerformed(evt);
             }
         });
-        CargaBasica.add(textFieldComp_Nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 520, 160, -1));
 
         textFieldComp_Marca.setText("marca");
-        CargaBasica.add(textFieldComp_Marca, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 550, 160, -1));
 
         textFieldComp_Denominacion.setText("denominacion");
-        CargaBasica.add(textFieldComp_Denominacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 580, 160, -1));
 
         textFieldComp_Contenido.setText("contenido");
-        CargaBasica.add(textFieldComp_Contenido, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 610, 160, 20));
 
         textFieldComp_FechaDuracion.setText("2017-11-31");
-        CargaBasica.add(textFieldComp_FechaDuracion, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 640, 160, -1));
 
         textFieldComp_NroTipoMarca.setText("tipomarca");
-        CargaBasica.add(textFieldComp_NroTipoMarca, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 520, 160, -1));
 
         textFieldComp_CAA.setText("caa");
         textFieldComp_CAA.setToolTipText("");
-        CargaBasica.add(textFieldComp_CAA, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 550, 160, -1));
-        CargaBasica.add(SeparadorDatosProducto1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 300, 690, 10));
 
         labelDatosPA.setFont(new java.awt.Font("Liberation Sans", 1, 14)); // NOI18N
         labelDatosPA.setText("Datos del producto alimenticio");
-        CargaBasica.add(labelDatosPA, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 310, -1, -1));
 
         labelDescripcion.setFont(new java.awt.Font("Liberation Sans", 1, 12)); // NOI18N
         labelDescripcion.setText("Descripcion");
-        CargaBasica.add(labelDescripcion, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 760, -1, 20));
-        CargaBasica.add(SeparadorDatosProducto3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 790, 670, 10));
 
         labelDesc_FormaUso.setText("Forma de uso del producto:");
-        CargaBasica.add(labelDesc_FormaUso, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 810, -1, 20));
 
         labelDesc_PeridoAptitud.setText("Periodo de aptitud:");
-        CargaBasica.add(labelDesc_PeridoAptitud, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 840, -1, 20));
 
         labelDesc_ModoConservacion.setText("Modo de conservacion:");
-        CargaBasica.add(labelDesc_ModoConservacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 870, -1, 20));
 
         labelDesc_DondeVendido.setText("Donde será vendido el producto:");
-        CargaBasica.add(labelDesc_DondeVendido, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 900, -1, 20));
 
         labelDesc_InstruccionPrep.setText("Instrucciones de preparación:");
-        CargaBasica.add(labelDesc_InstruccionPrep, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 930, -1, 20));
 
         labelDesc_ControlesEspeciales2.setText("durante la distribución y la comercialización:");
-        CargaBasica.add(labelDesc_ControlesEspeciales2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 980, 230, 20));
 
         labelDesc_InfoAdicional.setText("Información adicional:");
-        CargaBasica.add(labelDesc_InfoAdicional, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 1040, -1, 20));
 
         labelDesc_CaracteristicasEnvase.setText("Caracteristicas del envase");
-        CargaBasica.add(labelDesc_CaracteristicasEnvase, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 1080, -1, 20));
 
         textFieldDesc_FormaUso.setText("formauso");
         textFieldDesc_FormaUso.addActionListener(new java.awt.event.ActionListener() {
@@ -343,34 +278,24 @@ public class panelCargaProducto extends javax.swing.JPanel {
                 textFieldDesc_FormaUsoActionPerformed(evt);
             }
         });
-        CargaBasica.add(textFieldDesc_FormaUso, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 810, 410, -1));
 
         textFieldDesc_PeriodoAptitud.setText("aptitud");
-        CargaBasica.add(textFieldDesc_PeriodoAptitud, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 840, 410, -1));
 
         textFieldDesc_ModoConservacion.setText("conservacion");
-        CargaBasica.add(textFieldDesc_ModoConservacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 870, 410, -1));
 
         textFieldDesc_DondeVendido.setText("donde");
-        CargaBasica.add(textFieldDesc_DondeVendido, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 900, 410, 20));
 
         textFieldDesc_InstruccionPrep.setText("prepa");
-        CargaBasica.add(textFieldDesc_InstruccionPrep, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 930, 410, -1));
 
         textFieldDesc_ControlesEspeciales.setText("cuidado");
-        CargaBasica.add(textFieldDesc_ControlesEspeciales, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 960, 410, 40));
 
         textFieldDesc_InfoAdicional.setText("infoad");
-        CargaBasica.add(textFieldDesc_InfoAdicional, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 1040, 410, -1));
 
         labelDesc_AQuienDirigido.setText("A quien va dirigido el producto:");
-        CargaBasica.add(labelDesc_AQuienDirigido, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 1010, -1, 20));
 
         labelDesc_ControlesEspeciales1.setText("Controles y cuidados especiales");
-        CargaBasica.add(labelDesc_ControlesEspeciales1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 960, 230, 20));
 
         textFieldDesc_AQuienDirigido.setText("aquein");
-        CargaBasica.add(textFieldDesc_AQuienDirigido, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 1010, 410, -1));
 
         botonGuardar.setText("Guardar");
         botonGuardar.addActionListener(new java.awt.event.ActionListener() {
@@ -378,8 +303,6 @@ public class panelCargaProducto extends javax.swing.JPanel {
                 botonGuardarActionPerformed(evt);
             }
         });
-        CargaBasica.add(botonGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 1340, -1, -1));
-        CargaBasica.add(panelEnvase, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 1110, 620, 90));
 
         buttonAddEnvase.setText("+");
         buttonAddEnvase.addActionListener(new java.awt.event.ActionListener() {
@@ -387,7 +310,6 @@ public class panelCargaProducto extends javax.swing.JPanel {
                 buttonAddEnvaseActionPerformed(evt);
             }
         });
-        CargaBasica.add(buttonAddEnvase, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 1080, 40, -1));
 
         buttonRemoveEnvase.setText("-");
         buttonRemoveEnvase.addActionListener(new java.awt.event.ActionListener() {
@@ -395,7 +317,342 @@ public class panelCargaProducto extends javax.swing.JPanel {
                 buttonRemoveEnvaseActionPerformed(evt);
             }
         });
-        CargaBasica.add(buttonRemoveEnvase, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 1080, -1, -1));
+
+        javax.swing.GroupLayout CargaBasicaLayout = new javax.swing.GroupLayout(CargaBasica);
+        CargaBasica.setLayout(CargaBasicaLayout);
+        CargaBasicaLayout.setHorizontalGroup(
+            CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(CargaBasicaLayout.createSequentialGroup()
+                .addGap(46, 46, 46)
+                .addComponent(labelCargaProdAlimenticio))
+            .addGroup(CargaBasicaLayout.createSequentialGroup()
+                .addGap(70, 70, 70)
+                .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelNumRNE, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(CargaBasicaLayout.createSequentialGroup()
+                        .addGap(80, 80, 80)
+                        .addComponent(textFieldRNE, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(9, 9, 9)
+                .addComponent(BuscarRNE))
+            .addComponent(SeparadorDatosEmpresa, javax.swing.GroupLayout.PREFERRED_SIZE, 620, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(SeparadorRegistroRNPA1, javax.swing.GroupLayout.PREFERRED_SIZE, 690, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(CargaBasicaLayout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(labelDatoEmpresa))
+            .addGroup(CargaBasicaLayout.createSequentialGroup()
+                .addGap(70, 70, 70)
+                .addComponent(labelEmp_CUIL)
+                .addGap(59, 59, 59)
+                .addComponent(textFieldEmp_CUIL, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(78, 78, 78)
+                .addComponent(labelEmp_Email, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(11, 11, 11)
+                .addComponent(textFieldEmp_Email, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(CargaBasicaLayout.createSequentialGroup()
+                .addGap(70, 70, 70)
+                .addComponent(labelEmp_NombreEmpresa)
+                .addGap(46, 46, 46)
+                .addComponent(textFieldEmp_Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(78, 78, 78)
+                .addComponent(labelEmp_Telefono)
+                .addGap(11, 11, 11)
+                .addComponent(textFieldEmp_Telefono, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(CargaBasicaLayout.createSequentialGroup()
+                .addGap(70, 70, 70)
+                .addComponent(labelEmp_RazonSocial)
+                .addGap(23, 23, 23)
+                .addComponent(textFieldEmp_RazonSocial, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(SeparadorRegistroRNPA, javax.swing.GroupLayout.PREFERRED_SIZE, 690, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(CargaBasicaLayout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(labelRegistroRNPA))
+            .addGroup(CargaBasicaLayout.createSequentialGroup()
+                .addGap(70, 70, 70)
+                .addComponent(labelRNPA, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(10, 10, 10)
+                .addComponent(textFieldRNPA, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(70, 70, 70)
+                .addComponent(labelFechaVencimiento)
+                .addGap(4, 4, 4)
+                .addComponent(textFieldFechaVencimiento, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(SeparadorDatosProducto1, javax.swing.GroupLayout.PREFERRED_SIZE, 690, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(CargaBasicaLayout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(labelDatosPA))
+            .addGroup(CargaBasicaLayout.createSequentialGroup()
+                .addGap(70, 70, 70)
+                .addComponent(labelNroFactura)
+                .addGap(8, 8, 8)
+                .addComponent(textFieldNroFactura, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(CargaBasicaLayout.createSequentialGroup()
+                .addGap(70, 70, 70)
+                .addComponent(labelRotulo))
+            .addGroup(CargaBasicaLayout.createSequentialGroup()
+                .addGap(70, 70, 70)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 560, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(CargaBasicaLayout.createSequentialGroup()
+                .addGap(70, 70, 70)
+                .addComponent(labelComposicion))
+            .addGroup(CargaBasicaLayout.createSequentialGroup()
+                .addGap(70, 70, 70)
+                .addComponent(SeparadorDatosProducto, javax.swing.GroupLayout.PREFERRED_SIZE, 670, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(CargaBasicaLayout.createSequentialGroup()
+                .addGap(70, 70, 70)
+                .addComponent(labelComp_Nombre)
+                .addGap(22, 22, 22)
+                .addComponent(textFieldComp_Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(80, 80, 80)
+                .addComponent(labelComp_NroTipoMarca)
+                .addGap(12, 12, 12)
+                .addComponent(textFieldComp_NroTipoMarca, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(CargaBasicaLayout.createSequentialGroup()
+                .addGap(70, 70, 70)
+                .addComponent(labelComp_Marca)
+                .addGap(77, 77, 77)
+                .addComponent(textFieldComp_Marca, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(80, 80, 80)
+                .addComponent(labelComp_CAA)
+                .addGap(81, 81, 81)
+                .addComponent(textFieldComp_CAA, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(CargaBasicaLayout.createSequentialGroup()
+                .addGap(70, 70, 70)
+                .addComponent(labelComp_Denominacion)
+                .addGap(40, 40, 40)
+                .addComponent(textFieldComp_Denominacion, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(CargaBasicaLayout.createSequentialGroup()
+                .addGap(70, 70, 70)
+                .addComponent(labelComp_Contenido)
+                .addGap(57, 57, 57)
+                .addComponent(textFieldComp_Contenido, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(CargaBasicaLayout.createSequentialGroup()
+                .addGap(70, 70, 70)
+                .addComponent(labelComp_FechaDuracion)
+                .addGap(18, 18, 18)
+                .addComponent(textFieldComp_FechaDuracion, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(CargaBasicaLayout.createSequentialGroup()
+                .addGap(70, 70, 70)
+                .addComponent(labelComp_MateriasPrimas))
+            .addGroup(CargaBasicaLayout.createSequentialGroup()
+                .addGap(70, 70, 70)
+                .addComponent(labelDescripcion))
+            .addGroup(CargaBasicaLayout.createSequentialGroup()
+                .addGap(70, 70, 70)
+                .addComponent(SeparadorDatosProducto3, javax.swing.GroupLayout.PREFERRED_SIZE, 670, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(CargaBasicaLayout.createSequentialGroup()
+                .addGap(70, 70, 70)
+                .addComponent(labelDesc_FormaUso)
+                .addGap(88, 88, 88)
+                .addComponent(textFieldDesc_FormaUso, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(CargaBasicaLayout.createSequentialGroup()
+                .addGap(70, 70, 70)
+                .addComponent(labelDesc_PeridoAptitud)
+                .addGap(128, 128, 128)
+                .addComponent(textFieldDesc_PeriodoAptitud, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(CargaBasicaLayout.createSequentialGroup()
+                .addGap(70, 70, 70)
+                .addComponent(labelDesc_ModoConservacion)
+                .addGap(109, 109, 109)
+                .addComponent(textFieldDesc_ModoConservacion, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(CargaBasicaLayout.createSequentialGroup()
+                .addGap(70, 70, 70)
+                .addComponent(labelDesc_DondeVendido)
+                .addGap(63, 63, 63)
+                .addComponent(textFieldDesc_DondeVendido, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(CargaBasicaLayout.createSequentialGroup()
+                .addGap(70, 70, 70)
+                .addComponent(labelDesc_InstruccionPrep)
+                .addGap(77, 77, 77)
+                .addComponent(textFieldDesc_InstruccionPrep, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(CargaBasicaLayout.createSequentialGroup()
+                .addGap(70, 70, 70)
+                .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(CargaBasicaLayout.createSequentialGroup()
+                        .addGap(220, 220, 220)
+                        .addComponent(textFieldDesc_ControlesEspeciales, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(labelDesc_ControlesEspeciales2, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(labelDesc_ControlesEspeciales1, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)))
+            .addGroup(CargaBasicaLayout.createSequentialGroup()
+                .addGap(70, 70, 70)
+                .addComponent(labelDesc_AQuienDirigido)
+                .addGap(71, 71, 71)
+                .addComponent(textFieldDesc_AQuienDirigido, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(CargaBasicaLayout.createSequentialGroup()
+                .addGap(70, 70, 70)
+                .addComponent(labelDesc_InfoAdicional)
+                .addGap(115, 115, 115)
+                .addComponent(textFieldDesc_InfoAdicional, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(CargaBasicaLayout.createSequentialGroup()
+                .addGap(70, 70, 70)
+                .addComponent(labelDesc_CaracteristicasEnvase)
+                .addGap(14, 14, 14)
+                .addComponent(buttonAddEnvase, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(10, 10, 10)
+                .addComponent(buttonRemoveEnvase))
+            .addGroup(CargaBasicaLayout.createSequentialGroup()
+                .addGap(70, 70, 70)
+                .addComponent(panelEnvase, javax.swing.GroupLayout.PREFERRED_SIZE, 620, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 690, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(CargaBasicaLayout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(labelDatosDeLab))
+            .addGroup(CargaBasicaLayout.createSequentialGroup()
+                .addGap(70, 70, 70)
+                .addComponent(labelNumProtocolo)
+                .addGap(8, 8, 8)
+                .addComponent(textFieldNroProtocolo, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(130, 130, 130)
+                .addComponent(labelNroActa)
+                .addGap(6, 6, 6)
+                .addComponent(textFieldNroActa, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(CargaBasicaLayout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(botonGuardar))
+        );
+        CargaBasicaLayout.setVerticalGroup(
+            CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(CargaBasicaLayout.createSequentialGroup()
+                .addGap(11, 11, 11)
+                .addComponent(labelCargaProdAlimenticio)
+                .addGap(20, 20, 20)
+                .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelNumRNE, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textFieldRNE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(BuscarRNE))
+                .addGap(17, 17, 17)
+                .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(CargaBasicaLayout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addComponent(SeparadorDatosEmpresa, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(SeparadorRegistroRNPA1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(labelDatoEmpresa)
+                .addGap(11, 11, 11)
+                .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelEmp_CUIL, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textFieldEmp_CUIL, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(labelEmp_Email, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textFieldEmp_Email, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(9, 9, 9)
+                .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelEmp_NombreEmpresa, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textFieldEmp_Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(labelEmp_Telefono, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textFieldEmp_Telefono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(10, 10, 10)
+                .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelEmp_RazonSocial, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textFieldEmp_RazonSocial, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(10, 10, 10)
+                .addComponent(SeparadorRegistroRNPA, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(labelRegistroRNPA)
+                .addGap(11, 11, 11)
+                .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelRNPA, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textFieldRNPA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(labelFechaVencimiento, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textFieldFechaVencimiento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(20, 20, 20)
+                .addComponent(SeparadorDatosProducto1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(labelDatosPA)
+                .addGap(11, 11, 11)
+                .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelNroFactura, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textFieldNroFactura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(10, 10, 10)
+                .addComponent(labelRotulo)
+                .addGap(6, 6, 6)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(10, 10, 10)
+                .addComponent(labelComposicion, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(10, 10, 10)
+                .addComponent(SeparadorDatosProducto, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(10, 10, 10)
+                .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelComp_Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textFieldComp_Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(labelComp_NroTipoMarca, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textFieldComp_NroTipoMarca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(10, 10, 10)
+                .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelComp_Marca, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textFieldComp_Marca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(labelComp_CAA, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textFieldComp_CAA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(10, 10, 10)
+                .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelComp_Denominacion, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textFieldComp_Denominacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(10, 10, 10)
+                .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelComp_Contenido, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textFieldComp_Contenido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(10, 10, 10)
+                .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelComp_FechaDuracion, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textFieldComp_FechaDuracion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(10, 10, 10)
+                .addComponent(labelComp_MateriasPrimas, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(70, 70, 70)
+                .addComponent(labelDescripcion, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(10, 10, 10)
+                .addComponent(SeparadorDatosProducto3, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(10, 10, 10)
+                .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelDesc_FormaUso, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textFieldDesc_FormaUso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(10, 10, 10)
+                .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelDesc_PeridoAptitud, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textFieldDesc_PeriodoAptitud, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(10, 10, 10)
+                .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelDesc_ModoConservacion, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textFieldDesc_ModoConservacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(10, 10, 10)
+                .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelDesc_DondeVendido, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textFieldDesc_DondeVendido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(10, 10, 10)
+                .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelDesc_InstruccionPrep, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textFieldDesc_InstruccionPrep, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(10, 10, 10)
+                .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(textFieldDesc_ControlesEspeciales, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(CargaBasicaLayout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(labelDesc_ControlesEspeciales2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(labelDesc_ControlesEspeciales1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(10, 10, 10)
+                .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelDesc_AQuienDirigido, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textFieldDesc_AQuienDirigido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(10, 10, 10)
+                .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelDesc_InfoAdicional, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textFieldDesc_InfoAdicional, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(20, 20, 20)
+                .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelDesc_CaracteristicasEnvase, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(buttonAddEnvase)
+                    .addComponent(buttonRemoveEnvase))
+                .addGap(7, 7, 7)
+                .addComponent(panelEnvase, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+                .addGap(30, 30, 30)
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(10, 10, 10)
+                .addComponent(labelDatosDeLab)
+                .addGap(11, 11, 11)
+                .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelNumProtocolo, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textFieldNroProtocolo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(labelNroActa, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textFieldNroActa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(40, 40, 40)
+                .addComponent(botonGuardar)
+                .addGap(22, 22, 22))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -409,7 +666,7 @@ public class panelCargaProducto extends javax.swing.JPanel {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(CargaBasica, javax.swing.GroupLayout.DEFAULT_SIZE, 1385, Short.MAX_VALUE)
+                .addComponent(CargaBasica, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
@@ -518,14 +775,28 @@ public class panelCargaProducto extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_botonGuardarActionPerformed
 
+    
+    //NO ANDA EL CAMBIO DINAMICO DEL PANEL PREGUNTAR
     private void buttonAddEnvaseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAddEnvaseActionPerformed
         // TODO add your handling code here:
         panelCargaEnvase pCEnv = new panelCargaEnvase();
+        double height, width;
+        Dimension dimensionPanel;
         pCEnv.setPreferredSize(new Dimension(520, 30));
         vectorpanelesCargaEnvase.add(pCEnv);
         panelEnvase.add(pCEnv);
+
+        dimensionPanel = panelEnvase.getPreferredSize();
+        height = dimensionPanel.getHeight();
+        width = dimensionPanel.getWidth();
+        height += 30;
+        width += 520;
+        
+        panelEnvase.setPreferredSize(new Dimension((int)width,(int) height));
         panelEnvase.revalidate();
         panelEnvase.repaint();
+        this.revalidate();
+        this.repaint();
     }//GEN-LAST:event_buttonAddEnvaseActionPerformed
 
     private void buttonRemoveEnvaseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonRemoveEnvaseActionPerformed
