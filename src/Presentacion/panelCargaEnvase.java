@@ -47,9 +47,9 @@ public class panelCargaEnvase extends javax.swing.JPanel {
         buttonAddUnidad = new javax.swing.JButton();
         buttonAddCapacidad = new javax.swing.JButton();
 
-        setMaximumSize(new java.awt.Dimension(521, 30));
-        setMinimumSize(new java.awt.Dimension(521, 30));
-        setPreferredSize(new java.awt.Dimension(521, 30));
+        setMaximumSize(new java.awt.Dimension(521, 35));
+        setMinimumSize(new java.awt.Dimension(521, 35));
+        setPreferredSize(new java.awt.Dimension(521, 35));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         labelCapacidad.setText("Capacidad:");

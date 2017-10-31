@@ -111,6 +111,7 @@ public class panelCargaProducto extends javax.swing.JPanel {
         labelComp_MateriasPrimas = new javax.swing.JLabel();
         buttonAddMP = new javax.swing.JButton();
         buttonRemoveMP = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
         panelCompMP = new javax.swing.JPanel();
         panelDescripcion = new javax.swing.JPanel();
         panelDescDatos = new javax.swing.JPanel();
@@ -137,6 +138,7 @@ public class panelCargaProducto extends javax.swing.JPanel {
         labelDesc_CaracteristicasEnvase = new javax.swing.JLabel();
         buttonAddEnvase = new javax.swing.JButton();
         buttonRemoveEnvase = new javax.swing.JButton();
+        jScrollPane3 = new javax.swing.JScrollPane();
         panelDescEnvase = new javax.swing.JPanel();
         SeparadorRegistroRNPA2 = new javax.swing.JSeparator();
         SeparadorRegistroRNPA3 = new javax.swing.JSeparator();
@@ -155,7 +157,6 @@ public class panelCargaProducto extends javax.swing.JPanel {
         CargaBasica.setMaximumSize(new java.awt.Dimension(1980, 1600));
         CargaBasica.setMinimumSize(new java.awt.Dimension(700, 0));
         CargaBasica.setPreferredSize(new java.awt.Dimension(700, 1600));
-        CargaBasica.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         panelBuscaRNE.setMaximumSize(new java.awt.Dimension(1980, 90));
         panelBuscaRNE.setMinimumSize(new java.awt.Dimension(700, 90));
@@ -211,9 +212,6 @@ public class panelCargaProducto extends javax.swing.JPanel {
                     .addComponent(BuscarRNE))
                 .addContainerGap(17, Short.MAX_VALUE))
         );
-
-        CargaBasica.add(panelBuscaRNE, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, -1));
-        CargaBasica.add(SeparadorDatosEmpresa, new org.netbeans.lib.awtextra.AbsoluteConstraints(701, 96, 620, 0));
 
         panelDatosEmpresa.setMaximumSize(new java.awt.Dimension(1980, 120));
         panelDatosEmpresa.setMinimumSize(new java.awt.Dimension(700, 120));
@@ -305,8 +303,6 @@ public class panelCargaProducto extends javax.swing.JPanel {
                 .addGap(0, 10, Short.MAX_VALUE))
         );
 
-        CargaBasica.add(panelDatosEmpresa, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 700, -1));
-
         panelRegistroRNPA.setMaximumSize(new java.awt.Dimension(1980, 70));
         panelRegistroRNPA.setMinimumSize(new java.awt.Dimension(700, 70));
         panelRegistroRNPA.setPreferredSize(new java.awt.Dimension(700, 70));
@@ -356,11 +352,10 @@ public class panelCargaProducto extends javax.swing.JPanel {
                 .addContainerGap())
         );
 
-        CargaBasica.add(panelRegistroRNPA, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 240, 700, 70));
-
         panelDatosProducto.setMaximumSize(new java.awt.Dimension(1980, 1150));
         panelDatosProducto.setMinimumSize(new java.awt.Dimension(700, 1150));
         panelDatosProducto.setPreferredSize(new java.awt.Dimension(700, 1150));
+        panelDatosProducto.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         panelDatosProdAdentro.setMaximumSize(new java.awt.Dimension(1980, 180));
         panelDatosProdAdentro.setMinimumSize(new java.awt.Dimension(700, 180));
@@ -414,6 +409,8 @@ public class panelCargaProducto extends javax.swing.JPanel {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(19, Short.MAX_VALUE))
         );
+
+        panelDatosProducto.add(panelDatosProdAdentro, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         panelComposicion.setMaximumSize(new java.awt.Dimension(1980, 425));
         panelComposicion.setMinimumSize(new java.awt.Dimension(700, 425));
@@ -556,29 +553,40 @@ public class panelCargaProducto extends javax.swing.JPanel {
         });
         panelCompCarMP.add(buttonRemoveMP, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 0, -1, -1));
 
+        panelCompMP.setName(""); // NOI18N
         panelCompMP.setLayout(new javax.swing.BoxLayout(panelCompMP, javax.swing.BoxLayout.Y_AXIS));
+        jScrollPane2.setViewportView(panelCompMP);
 
         javax.swing.GroupLayout panelComposicionLayout = new javax.swing.GroupLayout(panelComposicion);
         panelComposicion.setLayout(panelComposicionLayout);
         panelComposicionLayout.setHorizontalGroup(
             panelComposicionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelCompDatos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addGroup(panelComposicionLayout.createSequentialGroup()
-                .addGap(20, 20, 20)
                 .addGroup(panelComposicionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(panelCompCarMP, javax.swing.GroupLayout.PREFERRED_SIZE, 610, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(panelCompMP, javax.swing.GroupLayout.PREFERRED_SIZE, 650, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(panelComposicionLayout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(panelCompCarMP, javax.swing.GroupLayout.PREFERRED_SIZE, 610, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panelComposicionLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 650, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(40, 40, 40))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelComposicionLayout.createSequentialGroup()
+                .addComponent(panelCompDatos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         panelComposicionLayout.setVerticalGroup(
             panelComposicionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelComposicionLayout.createSequentialGroup()
-                .addGap(10, 10, 10)
+                .addGap(14, 14, 14)
                 .addComponent(panelCompDatos, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(10, 10, 10)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(panelCompCarMP, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(10, 10, 10)
-                .addComponent(panelCompMP, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(30, Short.MAX_VALUE))
         );
+
+        panelDatosProducto.add(panelComposicion, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, 690, 409));
 
         panelDescripcion.setMaximumSize(new java.awt.Dimension(1980, 590));
         panelDescripcion.setMinimumSize(new java.awt.Dimension(700, 590));
@@ -746,56 +754,36 @@ public class panelCargaProducto extends javax.swing.JPanel {
         });
         panelDescCarEnvase.add(buttonRemoveEnvase, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 10, -1, -1));
 
-        panelDescEnvase.setMaximumSize(new java.awt.Dimension(700, 400));
-        panelDescEnvase.setMinimumSize(new java.awt.Dimension(700, 200));
-        panelDescEnvase.setPreferredSize(new java.awt.Dimension(700, 200));
+        panelDescEnvase.setName(""); // NOI18N
         panelDescEnvase.setLayout(new javax.swing.BoxLayout(panelDescEnvase, javax.swing.BoxLayout.Y_AXIS));
+        jScrollPane3.setViewportView(panelDescEnvase);
 
         javax.swing.GroupLayout panelDescripcionLayout = new javax.swing.GroupLayout(panelDescripcion);
         panelDescripcion.setLayout(panelDescripcionLayout);
         panelDescripcionLayout.setHorizontalGroup(
             panelDescripcionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelDescDatos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(panelDescCarEnvase, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(panelDescEnvase, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(panelDescripcionLayout.createSequentialGroup()
+                .addGroup(panelDescripcionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(panelDescDatos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(panelDescCarEnvase, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(panelDescripcionLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 653, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(10, 10, 10))
         );
         panelDescripcionLayout.setVerticalGroup(
             panelDescripcionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelDescripcionLayout.createSequentialGroup()
+                .addGap(72, 72, 72)
                 .addComponent(panelDescDatos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(5, 5, 5)
-                .addComponent(panelDescCarEnvase, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(5, 5, 5)
-                .addComponent(panelDescEnvase, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-
-        javax.swing.GroupLayout panelDatosProductoLayout = new javax.swing.GroupLayout(panelDatosProducto);
-        panelDatosProducto.setLayout(panelDatosProductoLayout);
-        panelDatosProductoLayout.setHorizontalGroup(
-            panelDatosProductoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelDatosProductoLayout.createSequentialGroup()
-                .addGap(10, 10, 10)
-                .addComponent(panelComposicion, javax.swing.GroupLayout.PREFERRED_SIZE, 690, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addComponent(panelDatosProdAdentro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(panelDescripcion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
-        panelDatosProductoLayout.setVerticalGroup(
-            panelDatosProductoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelDatosProductoLayout.createSequentialGroup()
-                .addGroup(panelDatosProductoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panelDatosProductoLayout.createSequentialGroup()
-                        .addGap(170, 170, 170)
-                        .addComponent(panelComposicion, javax.swing.GroupLayout.PREFERRED_SIZE, 380, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(panelDatosProdAdentro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(panelDescripcion, javax.swing.GroupLayout.PREFERRED_SIZE, 629, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addComponent(panelDescCarEnvase, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 149, Short.MAX_VALUE)
+                .addGap(14, 14, 14))
         );
 
-        CargaBasica.add(panelDatosProducto, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 340, 700, 1140));
-        CargaBasica.add(SeparadorRegistroRNPA2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 650, 10));
-        CargaBasica.add(SeparadorRegistroRNPA3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 230, 650, 10));
-        CargaBasica.add(SeparadorRegistroRNPA4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 320, 650, 10));
+        panelDatosProducto.add(panelDescripcion, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 500, -1, 629));
 
         panelDatosMuestraLab.setMaximumSize(new java.awt.Dimension(1980, 90));
         panelDatosMuestraLab.setMinimumSize(new java.awt.Dimension(700, 90));
@@ -829,10 +817,10 @@ public class panelCargaProducto extends javax.swing.JPanel {
                         .addComponent(labelNroActa)
                         .addGap(6, 6, 6)
                         .addComponent(textFieldNroActa, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(124, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(panelDatosMuestraLabLayout.createSequentialGroup()
                 .addComponent(SeparadorRegistroRNPA1, javax.swing.GroupLayout.PREFERRED_SIZE, 650, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(0, 50, Short.MAX_VALUE))
         );
         panelDatosMuestraLabLayout.setVerticalGroup(
             panelDatosMuestraLabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -850,7 +838,43 @@ public class panelCargaProducto extends javax.swing.JPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        CargaBasica.add(panelDatosMuestraLab, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 1480, -1, 80));
+        javax.swing.GroupLayout CargaBasicaLayout = new javax.swing.GroupLayout(CargaBasica);
+        CargaBasica.setLayout(CargaBasicaLayout);
+        CargaBasicaLayout.setHorizontalGroup(
+            CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(panelBuscaRNE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(CargaBasicaLayout.createSequentialGroup()
+                .addComponent(SeparadorRegistroRNPA2, javax.swing.GroupLayout.PREFERRED_SIZE, 650, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(51, 51, 51)
+                .addComponent(SeparadorDatosEmpresa, javax.swing.GroupLayout.PREFERRED_SIZE, 620, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(panelDatosEmpresa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(SeparadorRegistroRNPA3, javax.swing.GroupLayout.PREFERRED_SIZE, 650, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(panelRegistroRNPA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(SeparadorRegistroRNPA4, javax.swing.GroupLayout.PREFERRED_SIZE, 650, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(panelDatosProducto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(panelDatosMuestraLab, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        CargaBasicaLayout.setVerticalGroup(
+            CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(CargaBasicaLayout.createSequentialGroup()
+                .addComponent(panelBuscaRNE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(SeparadorRegistroRNPA2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(CargaBasicaLayout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addComponent(SeparadorDatosEmpresa, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addComponent(panelDatosEmpresa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(10, 10, 10)
+                .addComponent(SeparadorRegistroRNPA3, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(panelRegistroRNPA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(10, 10, 10)
+                .addComponent(SeparadorRegistroRNPA4, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(10, 10, 10)
+                .addComponent(panelDatosProducto, javax.swing.GroupLayout.PREFERRED_SIZE, 1140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(panelDatosMuestraLab, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
 
         botonGuardar.setText("Guardar");
         botonGuardar.addActionListener(new java.awt.event.ActionListener() {
@@ -998,6 +1022,10 @@ public class panelCargaProducto extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_botonGuardarActionPerformed
 
+    private boolean validarCampos(){
+        return false;
+    }
+    
     //NO ANDA EL CAMBIO DINAMICO DEL PANEL PREGUNTAR
     private void buttonAddEnvaseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAddEnvaseActionPerformed
         panelCargaEnvase pCEnv = new panelCargaEnvase();
@@ -1111,6 +1139,8 @@ public class panelCargaProducto extends javax.swing.JPanel {
     private javax.swing.JButton buttonRemoveMP;
     private javax.swing.JButton jButton1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JLabel labelCargaProdAlimenticio;
     private javax.swing.JLabel labelComp_CAA;
     private javax.swing.JLabel labelComp_Contenido;
