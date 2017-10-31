@@ -7,7 +7,9 @@ package Presentacion;
 
 import Logica.Empresa;
 import Logica.Establecimiento;
+import Logica.ProductoAlimenticio;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
 import java.util.Vector;
 import javax.swing.JOptionPane;
 
@@ -250,6 +252,7 @@ public
     private void botonBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonBuscarActionPerformed
 
         Vector<Establecimiento> establecimientos;
+        Vector<ProductoAlimenticio> ProductosAlimenticios;
         try {
             Empresa empresa;
             empresa = Empresa.recuperarPorCuit(CampoCUIT.getText());
@@ -284,12 +287,16 @@ public
                 
             establecimientos = Empresa.recuperarEstablecimientosAsociados(CampoCUIT.getText());
             Object [][] datosDeEstablecimientos= new Object[establecimientos.size()][5]; 
-            
+            SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+            System.out.println(establecimientos.size());
             for(int i=0;i<establecimientos.size(); i++){
                 datosDeEstablecimientos[i][0]= establecimientos.elementAt(i).getRne().getNumero();
                 datosDeEstablecimientos[i][1]= establecimientos.elementAt(i).getNombre();
                 datosDeEstablecimientos[i][2]= "aca va el rubro falta implementar.";
-                datosDeEstablecimientos[i][3]= "un tipo date";
+                if(establecimientos.elementAt(i).getRne().getFecha_vencimiento()!=null)
+                    datosDeEstablecimientos[i][3]= sdf.format(establecimientos.elementAt(i).getRne().getFecha_vencimiento().getTime());
+                else 
+                    datosDeEstablecimientos[i][3]="";
                 datosDeEstablecimientos[i][4]= "informacion Adicional";
             }
             
@@ -315,14 +322,56 @@ public
                 return canEdit [columnIndex];
             }
             });
+            //cargo tabla de producto alimenticio
+            
+            ProductosAlimenticios= Empresa.recuperarPAAsociados(CampoCUIT.getText());
+            Object [][] datosDePAAsociados= new Object[ProductosAlimenticios.size()][5];
+            System.out.println(ProductosAlimenticios.size());
+            for(int i=0;i<ProductosAlimenticios.size(); i++){
+                datosDePAAsociados[i][0]= ProductosAlimenticios.elementAt(i).getRnpa().getNumero();
+                datosDePAAsociados[i][1]= ProductosAlimenticios.elementAt(i).getEstablecimiento().getRne().getNumero();
+                datosDePAAsociados[i][2]= ProductosAlimenticios.elementAt(i).getComposicion().getNombre_comercial();
+                datosDePAAsociados[i][3]= sdf.format(ProductosAlimenticios.elementAt(i).getRnpa().getFecha_vencimiento().getTime());
+                datosDePAAsociados[i][4]= "informacion Adicional";
+            }
+                
+            TablaPAAsociado.setModel(new javax.swing.table.DefaultTableModel(
+            datosDePAAsociados,
+            new String [] {
+                "Numero RNPA", "Numero RNE", "Nombre Producto", "Vencimiento RNPA", "Informacion Adicional"
+                    }
+                ) {
+                    boolean[] canEdit = new boolean [] {
+                        false, false, false, false, false
+                    };
 
+                    public boolean isCellEditable(int rowIndex, int columnIndex) {
+                        return canEdit [columnIndex];
+                    }
+                });
+                ScrollpanelPAAsociado.setViewportView(TablaPAAsociado);
+                if (TablaPAAsociado.getColumnModel().getColumnCount() > 0) {
+                    TablaPAAsociado.getColumnModel().getColumn(0).setResizable(false);
+                    TablaPAAsociado.getColumnModel().getColumn(1).setResizable(false);
+                    TablaPAAsociado.getColumnModel().getColumn(2).setResizable(false);
+                    TablaPAAsociado.getColumnModel().getColumn(3).setResizable(false);
+                    TablaPAAsociado.getColumnModel().getColumn(4).setResizable(false);
+                }
+
+                botonBuscar.setText("Buscar");
+                botonBuscar.addActionListener(new java.awt.event.ActionListener() {
+                    public void actionPerformed(java.awt.event.ActionEvent evt) {
+                        botonBuscarActionPerformed(evt);
+                    }
+                });
             
             } else
-           {
-                JOptionPane.showMessageDialog(null, "Numero RNE no encontrado.");
+                 {
+                JOptionPane.showMessageDialog(null, "CUIT no encontrado.");
             }
         } catch (SQLException | InstantiationException | IllegalAccessException ex){
         }
+            
     }//GEN-LAST:event_botonBuscarActionPerformed
 
 

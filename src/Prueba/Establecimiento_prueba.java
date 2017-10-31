@@ -84,6 +84,11 @@ public class Establecimiento_prueba extends javax.swing.JFrame {
         labelFechaCarga.setText("Fecha Carga:");
 
         textFieldFechaCarga.setEnabled(false);
+        textFieldFechaCarga.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                textFieldFechaCargaActionPerformed(evt);
+            }
+        });
 
         labelDireccion.setText("Direccion:");
 
@@ -384,6 +389,10 @@ public class Establecimiento_prueba extends javax.swing.JFrame {
         }
 
     }//GEN-LAST:event_buttonBuscarRNEActionPerformed
+
+    private void textFieldFechaCargaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldFechaCargaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textFieldFechaCargaActionPerformed
 
     /**
      * @param args the command line arguments

@@ -118,19 +118,25 @@ public class Empresa {
         Vector<Establecimiento> establecimientos = new Vector<>();
 
         String[][] valores;
-        RNE RNEaux= new RNE();
+        RNE RNEaux;
+        boolean bandera=false;
         ConexionBD con = ConexionBD.getConexion();
         valores = new String[5][12];   
         valores = con.recuperar(valores, "select * from establecimiento where Empresa_CUIT=" + CUIT + ";", 12);  
         
 
-            
+         //para cada establecimiento recuperado voy cargando los valores en el vector   
          for (String[] establecimiento : valores){
+           
             Establecimiento auxiliar = new Establecimiento();
-           if (establecimiento!= null){ 
+            RNEaux= new RNE();
+            
+          if (establecimiento!= null){ 
+              
             if(establecimiento[0]!=null){
-                System.out.println(establecimiento[0]);
-            auxiliar.setId(Integer.parseInt(establecimiento[0]));}
+            auxiliar.setId(Integer.parseInt(establecimiento[0]));
+            bandera=true;
+            }
             
             if(establecimiento[1]!=null){
             auxiliar.setDireccion(establecimiento[1]);}
@@ -162,12 +168,104 @@ public class Empresa {
             
             if(establecimiento[11]!=null){
             auxiliar.setId_Categoria(Integer.parseInt(establecimiento[11]));}
-            }
-           if(establecimiento[0]!=null)
-            establecimientos.add(auxiliar);
-           auxiliar=null; //esto se hace porque sino limpio la variable carga 2 veces el mismo establecimiento.
+            }  
+          
+            if(bandera){
+                establecimientos.add(auxiliar);
+                bandera=false;}
+          
+            auxiliar=null;
          }
         
         return establecimientos;
     }
+    
+    public static Vector<ProductoAlimenticio> recuperarPAAsociados(String CUIT) throws SQLException, InstantiationException, IllegalAccessException{
+    
+            Vector<ProductoAlimenticio> productosAlimenticios= new Vector<>();
+            //recupero los establecimientos asociados para poder obtener los Productos asociados a cada Establecimiento.
+            Vector<Establecimiento> establecimientosAsociados= Empresa.recuperarEstablecimientosAsociados(CUIT);
+            ProductoAlimenticio auxiliar;
+            RNPA RNPAaux;
+            Composicion compAux;
+            Descripcion descAux;
+            boolean bandera=false;
+            String[][] valores;
+            ConexionBD con = ConexionBD.getConexion();     
+            
+            for(Establecimiento e : establecimientosAsociados){
+                valores = new String[20][22];
+                valores = con.recuperar(valores, "select * from producto_alimenticio where Establecimiento_idEstablecimiento=" + e.getId() + ";", 22);
+                //para cada PA recuperado se va guardando en el venctor productos alimenticios
+                for (String[] PA : valores){
+                    auxiliar= new ProductoAlimenticio();
+                    RNPAaux= new RNPA();
+                    compAux= new Composicion();
+                    descAux= new Descripcion();
+                  
+                    if(PA!=null){
+                        
+                      if(PA[0]!=null){
+                        auxiliar.setId(Integer.parseInt(PA[0]));
+                        bandera=true;
+                      }
+                      if(PA[1]!=null){
+                        auxiliar.setNro_factura(Integer.parseInt(PA[1]));}
+                      if(PA[2]!=null){
+                        RNPAaux.setNumero(Integer.parseInt(PA[2]));}
+                      if(PA[3]!=null){
+                        auxiliar.setRotulo(PA[3]);}
+                      if(PA[4]!=null){
+                        compAux.setCAA(PA[4]);}
+                      if(PA[5]!=null){
+                        compAux.setContenido(PA[5]);}
+                      if(PA[6]!=null){
+                        compAux.setDenominacion(PA[6]);}
+                      if(PA[7]!=null){
+                        compAux.setFecha_duracion(PA[7]);}
+                      if(PA[8]!=null){
+                        compAux.setMarca(PA[8]);}
+                      if(PA[9]!=null){
+                        compAux.setNombre_comercial(PA[9]);}
+                      if(PA[10]!=null){
+                        compAux.setNroytipo_registro_marca(PA[10]);}
+                        auxiliar.setComposicion(compAux);
+                      if(PA[11]!=null){
+                        auxiliar.setFecha_carga_solicitud(PA[0]);}
+                      if(PA[12]!=null){
+                        descAux.setControlesycuidados(PA[12]);}
+                      if(PA[13]!=null){
+                        descAux.setDestino_producto(PA[13]);}
+                      if(PA[14]!=null){
+                        descAux.setForma_uso_producto(PA[14]);}
+                      if(PA[15]!=null){
+                        descAux.setInformacion_adicional(PA[15]);}
+                      if(PA[16]!=null){
+                        descAux.setIntrucciones_preparacion(PA[16]);}
+                      if(PA[17]!=null){
+                        descAux.setLugar_venta(PA[17]);}
+                      if(PA[18]!=null){
+                        descAux.setModo_conservacion(PA[18]);}
+                      if(PA[19]!=null){
+                        descAux.setPeriodo_aptitud(PA[19]);}
+                        auxiliar.setDescripcion(descAux);
+                      if(PA[20]!=null){
+                        RNPAaux.setFecha_vencimiento(PA[20]);}
+                        auxiliar.setRnpa(RNPAaux);
+
+                       auxiliar.setEstablecimiento(e);
+                  }
+                       if(bandera){
+                           productosAlimenticios.add(auxiliar);
+                           bandera=false;
+                       }
+                       
+
+                }
+            }
+            return productosAlimenticios;
+            
+    }
+    
+    
 }//end Empresa
