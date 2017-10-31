@@ -324,14 +324,14 @@ public class Envase_prueba extends javax.swing.JFrame {
             
             //envase EXISTE ENVASE
             
-             /*if(envase.existe_envase(capacidad,material,unidad))
+             if(envase.existe_envase(capacidad,material,unidad))
             {JOptionPane.showMessageDialog(null, "Ya existe un envase con esas características");}
                 else {  
                     //guardarlo*/
                     error=envase.guardar_envase(capacidad,material,unidad);
-                   /* if(!error){JOptionPane.showMessageDialog(null, "envase agregado correctamente.");}
+                    if(!error){JOptionPane.showMessageDialog(null, "envase agregado correctamente.");}
                     else {JOptionPane.showMessageDialog(null, "Hubo un error al agregar el envase");}
-                    }*/
+                    }
                     
         }
             else {JOptionPane.showMessageDialog(null, "Ningún campo debe ser vacío");}

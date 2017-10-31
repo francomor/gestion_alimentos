@@ -221,11 +221,17 @@ public class Envase {
      * @throws java.lang.IllegalAccessException
      */
     //FALTA CORREGIR
+    //select 1 from envase where exists (select * from envase where `capacidad`='cap' and `Unidad_id`=1 and `Material_id`=1)
+    //select 1 from envase where exists (select * from envase where `capacidad`='cap' and `Unidad_id`=1 and `Material_id`=1) UNION select 0 from envase where NOT exists (select * from envase where `capacidad`='cap' and `Unidad_id`=1 and `Material_id`=1)select 1 from envase where exists (select * from envase where `capacidad`='cap' and `Unidad_id`=1 and `Material_id`=1) UNION select 0 from envase where NOT exists (select * from envase where `capacidad`='cap' and `Unidad_id`=1 and `Material_id`=1)
     public boolean existe_envase(String cap, String nom_mat, String nom_uni) throws SQLException, InstantiationException, IllegalAccessException {
         ConexionBD con = ConexionBD.getConexion();
         System.out.println(get_id_mat(nom_mat));
         System.out.println(get_id_uni(nom_uni));
-        boolean result = con.existe("select exists (select * from envase where capacidad='" + cap + "', Material_id='" + get_id_mat(nom_mat) + "', Unidad_id='" + get_id_uni(nom_uni) + "')");
+        String consulta;
+        consulta = "select 1 from envase where exists (select * from envase where capacidad='" + cap + "'and Material_id='" + get_id_mat(nom_mat) + "'and Unidad_id='" + get_id_uni(nom_uni) + "')";
+        consulta += " union ";
+        consulta += "select 0 from envase where not exists (select * from envase where capacidad='" + cap + "'and Material_id='" + get_id_mat(nom_mat) + "'and Unidad_id='" + get_id_uni(nom_uni) + "')";
+        boolean result = con.existe(consulta);
 
         return result;
     }
