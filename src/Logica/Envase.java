@@ -286,7 +286,7 @@ public class Envase {
         //insertar en envase los valores obtenidos.
         System.out.println("guardar envase");
 
-        boolean result = con.insertar("insert into envase (id,capacidad,Material_id,Unidad_id) values (default,'" + cap + "','" + get_id_mat(mat) + "','" + get_id_uni(uni) + "')");
+        boolean result = con.insertar("insert into envase (id,capacidad,Material_id,Unidad_id) values (default," + cap + ",'" + get_id_mat(mat) + "','" + get_id_uni(uni) + "')");
         return result;
     }
 }//end Envase
