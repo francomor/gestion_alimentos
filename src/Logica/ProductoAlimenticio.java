@@ -229,21 +229,25 @@ public class ProductoAlimenticio {
         return result;
     }
 
-    private void guardarMateriaPrimaxProducto() throws InstantiationException, IllegalAccessException {
+    private boolean guardarMateriaPrimaxProducto() throws InstantiationException, IllegalAccessException, SQLException {
         int id;
         int i=0;
+        boolean result=false;
         Vector<MateriaPrima> mp= new Vector<MateriaPrima>();
         id=this.getId();
         mp=this.getMateriasPrimas();
         String id_aux=String.valueOf(id);
         while(i<mp.size()){
         ConexionBD con = ConexionBD.getConexion();
-        boolean result=!con.insertar("INSERT INTO `producto_alimenticio_has_materia_prima`(`Producto_Alimenticio_id`, `materia_prima_id`,`cantidad_mat_prima`) VALUES (" + id_aux + "," + mp.get(i).get_id_mp(mp.get(i).getNombre()) + "," + mp.get(i).get_id_mp(mp.get(i).getCantidad())+");");
+        result= !con.insertar("INSERT INTO `producto_alimenticio_has_materia_prima`(`Producto_Alimenticio_id`, `materia_prima_id`,`cantidad_mat_prima`) VALUES (" + id_aux + "," + mp.get(i).get_id_mp(mp.get(i).getNombre())+ "," + mp.get(i).getCantidad()+");");
         if (result == false) {
                 break;
             }
         ++i;
         }
         return result;
+    }
+       public void agregarMP(MateriaPrima mp){
+    this.materiasPrimas.add(mp);
     }
 }//end ProductoAlimenticio

@@ -21,7 +21,7 @@ import javax.swing.JTextField;
  * @author Franco
  */
 public class panelCargaProducto extends javax.swing.JPanel {
-
+        ProductoAlimenticio p_a = new ProductoAlimenticio();
     /**
      * Creates new form CargaProducto
      */

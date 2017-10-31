@@ -11,7 +11,7 @@ import java.util.Vector;
 
 public class MateriaPrima {
 
-    private int cantidad;
+    private String cantidad;
     private String nombre;
     public ProductoAlimenticio m_ProductoAlimenticio;
 
@@ -19,11 +19,11 @@ public class MateriaPrima {
 
     }
 
-    public int getCantidad() {
+    public String getCantidad() {
         return cantidad;
     }
 
-    public void setCantidad(int cantidad) {
+    public void setCantidad(String cantidad) {
         this.cantidad = cantidad;
     }
 
@@ -127,5 +127,27 @@ public class MateriaPrima {
     public void borrar(MateriaPrima mp) throws SQLException, InstantiationException, IllegalAccessException {
         ConexionBD con = ConexionBD.getConexion();
         con.update("DELETE FROM `materia_prima` WHERE nombre='" + mp.getNombre() + "';");
+    }
+     public String get_id_mp(String mp) throws SQLException, InstantiationException, IllegalAccessException {
+        ConexionBD con = ConexionBD.getConexion();
+        String[][] materiaprima;
+        materiaprima = new String[1][1];
+        materiaprima = con.recuperar(materiaprima, "select id from materia_prima where nombre='" + mp + "'", 1);
+        return(materiaprima[0][0]);
+     }
+         public static Vector<String> recuperarTodasMp() throws SQLException, InstantiationException, IllegalAccessException {
+        ConexionBD con = ConexionBD.getConexion();
+        String[][] valores;
+        valores = new String[10][1];
+        valores = con.recuperar(valores, "select nombre from materia_prima", 1);
+        Vector<String> salida = new Vector<>();
+        for (String[] valore : valores) {
+            if (valore[0] == null) {
+                break;
+            }
+            salida.add(valore[0]);
+        }
+
+        return (Vector<String>) salida;
     }
 }//end MateriaPrima
