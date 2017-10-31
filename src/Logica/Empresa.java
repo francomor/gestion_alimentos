@@ -99,8 +99,8 @@ public class Empresa {
         String[][] valores;
         Empresa salida = new Empresa();
         Localidad locaux = new Localidad();
-        valores = new String[1][6];
-        valores = con.recuperar(valores, "select * from empresa where CUIT=" + CUIT + ";", 6);
+        valores = new String[1][7];
+        valores = con.recuperar(valores, "select * from Empresa where CUIT=" + CUIT + ";", 7);
         
         if (valores[0][0] == null) {
             salida = null;
@@ -139,7 +139,7 @@ public class Empresa {
         boolean bandera=false;
         ConexionBD con = ConexionBD.getConexion();
         valores = new String[5][12];   
-        valores = con.recuperar(valores, "select * from establecimiento where Empresa_CUIT=" + CUIT + ";", 12);  
+        valores = con.recuperar(valores, "select * from Establecimiento where Empresa_CUIT=" + CUIT + ";", 12);  
         
 
          //para cada establecimiento recuperado voy cargando los valores en el vector   
@@ -212,7 +212,7 @@ public class Empresa {
             
             for(Establecimiento e : establecimientosAsociados){
                 valores = new String[20][22];
-                valores = con.recuperar(valores, "select * from producto_alimenticio where Establecimiento_idEstablecimiento=" + e.getId() + ";", 22);
+                valores = con.recuperar(valores, "select * from Producto_Alimenticio where Establecimiento_idEstablecimiento=" + e.getId() + ";", 22);
                 //para cada PA recuperado se va guardando en el venctor productos alimenticios
                 for (String[] PA : valores){
                     auxiliar= new ProductoAlimenticio();

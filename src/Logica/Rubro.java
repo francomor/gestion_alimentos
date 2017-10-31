@@ -11,6 +11,8 @@ import java.util.Vector;
 
 public class Rubro {
 
+
+    private int id;
     private String nombre;
     public Establecimiento m_Establecimiento;
 
@@ -18,6 +20,15 @@ public class Rubro {
 
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    
     public String getNombre() {
         return nombre;
     }
@@ -116,5 +127,27 @@ public class Rubro {
         ConexionBD con = ConexionBD.getConexion();
         boolean result = con.existe("select exists (select nombre from rubro where nombre='" + rubro_name + "')");
         return result;
+        
     }
+    
+        static Rubro recuperarRubroporID(String id) throws SQLException, InstantiationException, IllegalAccessException {
+        
+                Rubro salida= new Rubro();
+                ConexionBD con = ConexionBD.getConexion();
+                String[][] valores;
+                valores = new String[1][2];
+                valores = con.recuperar(valores, "select * from rubro `id`=" + id + ";", 1);
+                
+                if(valores[0][0] == null)
+                    salida =null;
+                else{
+                    if(valores[0][0]!=null){
+                        salida.setId(Integer.parseInt(valores[0][0]));}
+                    
+                    if(valores[0][1]!=null){
+                        salida.setNombre(valores[0][1]);}
+                }
+                
+                return salida;
+        }
 }//end Rubro

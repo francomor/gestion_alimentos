@@ -8,6 +8,7 @@ package Presentacion;
 import Logica.Empresa;
 import Logica.Establecimiento;
 import Logica.ProductoAlimenticio;
+import Logica.Rubro;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.Vector;
@@ -104,7 +105,7 @@ public
                 {null, null, null, null, null}
             },
             new String [] {
-                "Numero RNE", "Nombre establecimiento", "Rubro", "Vencimiento RNE", "Informacion Adicional"
+                "Numero RNE", "Nombre establecimiento", "Telefono", "Vencimiento RNE", "Informacion Adicional"
             }
         ) {
             Class[] types = new Class [] {
@@ -182,26 +183,23 @@ public
                     .addComponent(SeparadorEstablecimientoAsociado)
                     .addComponent(SeparadorPAAsociado)
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(56, 56, 56)
+                        .addComponent(EtiquetaConsultaPorCUIT))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(42, 42, 42)
+                        .addComponent(EtiquetaNumerCuil)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(CampoCUIT, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(54, 54, 54)
+                        .addComponent(botonBuscar))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(57, 57, 57)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(EtiquetaDatosEmpresa)
+                            .addComponent(EtiquetaEstablecimientoAsociado)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(56, 56, 56)
-                                .addComponent(EtiquetaConsultaPorCUIT))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(42, 42, 42)
-                                .addComponent(EtiquetaNumerCuil)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(CampoCUIT, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(54, 54, 54)
-                                .addComponent(botonBuscar))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(57, 57, 57)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(EtiquetaDatosEmpresa)
-                                    .addComponent(EtiquetaEstablecimientoAsociado)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(1, 1, 1)
-                                        .addComponent(EtiquetaPAAsociado)))))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                .addGap(1, 1, 1)
+                                .addComponent(EtiquetaPAAsociado)))))
                 .addGap(6, 6, 6))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
@@ -286,25 +284,32 @@ public
             });
                 
             establecimientos = Empresa.recuperarEstablecimientosAsociados(CampoCUIT.getText());
-            Object [][] datosDeEstablecimientos= new Object[establecimientos.size()][5]; 
+            Object [][] datosDeEstablecimientos= new Object[establecimientos.size()][5];
+
             SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
             System.out.println(establecimientos.size());
+   
+
+
             for(int i=0;i<establecimientos.size(); i++){
-                datosDeEstablecimientos[i][0]= establecimientos.elementAt(i).getRne().getNumero();
-                datosDeEstablecimientos[i][1]= establecimientos.elementAt(i).getNombre();
-                datosDeEstablecimientos[i][2]= "aca va el rubro falta implementar.";
-                if(establecimientos.elementAt(i).getRne().getFecha_vencimiento()!=null)
-                    datosDeEstablecimientos[i][3]= sdf.format(establecimientos.elementAt(i).getRne().getFecha_vencimiento().getTime());
-                else 
-                    datosDeEstablecimientos[i][3]="";
-                datosDeEstablecimientos[i][4]= "informacion Adicional";
+                    datosDeEstablecimientos[i][0]= establecimientos.elementAt(i).getRne().getNumero();
+                    datosDeEstablecimientos[i][1]= establecimientos.elementAt(i).getNombre();
+                    datosDeEstablecimientos[i][2]= establecimientos.elementAt(i).getTelefono();
+                    if(establecimientos.elementAt(i).getRne().getFecha_vencimiento()!=null)
+                        datosDeEstablecimientos[i][3]= sdf.format(establecimientos.elementAt(i).getRne().getFecha_vencimiento().getTime());
+                    else 
+                        datosDeEstablecimientos[i][3]="";
+                    datosDeEstablecimientos[i][4]= "informacion Adicional";
+
+                
+ 
             }
             
 
             TablaEstablecimientoAsociado.setModel(new javax.swing.table.DefaultTableModel(
             datosDeEstablecimientos,
             new String [] {
-                "Numero RNE", "Nombre establecimiento", "Rubro", "Vencimiento RNE", "Informacion Adicional"
+                "Numero RNE", "Nombre establecimiento", "Telefono", "Vencimiento RNE", "Informacion Adicional"
             }
             ) {
             Class[] types = new Class [] {

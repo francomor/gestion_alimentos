@@ -199,7 +199,7 @@
               <Table columnCount="5" rowCount="4">
                 <Column editable="false" title="Numero RNE" type="java.lang.String"/>
                 <Column editable="false" title="Nombre establecimiento" type="java.lang.String"/>
-                <Column editable="false" title="Rubro" type="java.lang.String"/>
+                <Column editable="false" title="Telefono" type="java.lang.String"/>
                 <Column editable="false" title="Vencimiento RNE" type="java.lang.String"/>
                 <Column editable="false" title="Informacion Adicional" type="java.lang.String"/>
               </Table>
