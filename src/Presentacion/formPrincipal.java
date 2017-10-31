@@ -19,6 +19,7 @@ public class formPrincipal extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
 
     }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -39,6 +40,9 @@ public class formPrincipal extends javax.swing.JFrame {
         MenuItemCargaProductoA = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(1980, 500));
+        setMinimumSize(new java.awt.Dimension(700, 500));
+        setPreferredSize(new java.awt.Dimension(700, 500));
 
         jScrollPane1.setViewportView(panelCargaProducto2);
 

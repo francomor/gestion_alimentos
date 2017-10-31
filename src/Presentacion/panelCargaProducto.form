@@ -23,16 +23,17 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" attributes="0">
-              <EmptySpace min="0" pref="1" max="32767" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
               <Component id="CargaBasica" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="0" pref="1" max="32767" attributes="0"/>
+              <EmptySpace pref="41" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="1" attributes="0">
+          <Group type="102" attributes="0">
+              <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
               <Component id="CargaBasica" max="32767" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
@@ -41,804 +42,1108 @@
   </Layout>
   <SubComponents>
     <Container class="javax.swing.JPanel" name="CargaBasica">
+      <Properties>
+        <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[1980, 1500]"/>
+        </Property>
+        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[700, 0]"/>
+        </Property>
+        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[700, 1500]"/>
+        </Property>
+      </Properties>
 
-      <Layout>
-        <DimensionLayout dim="0">
-          <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" attributes="0">
-                  <EmptySpace min="46" pref="46" max="-2" attributes="0"/>
-                  <Component id="labelCargaProdAlimenticio" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="70" pref="70" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="labelNumRNE" min="-2" pref="88" max="-2" attributes="0"/>
-                      <Group type="102" attributes="0">
-                          <EmptySpace min="80" pref="80" max="-2" attributes="0"/>
-                          <Component id="textFieldRNE" min="-2" pref="171" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                  <EmptySpace min="9" pref="9" max="-2" attributes="0"/>
-                  <Component id="BuscarRNE" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <Component id="SeparadorDatosEmpresa" min="-2" pref="620" max="-2" attributes="0"/>
-              <Component id="SeparadorRegistroRNPA1" min="-2" pref="690" max="-2" attributes="0"/>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="50" pref="50" max="-2" attributes="0"/>
-                  <Component id="labelDatoEmpresa" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="70" pref="70" max="-2" attributes="0"/>
-                  <Component id="labelEmp_CUIL" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="59" pref="59" max="-2" attributes="0"/>
-                  <Component id="textFieldEmp_CUIL" min="-2" pref="122" max="-2" attributes="0"/>
-                  <EmptySpace min="78" pref="78" max="-2" attributes="0"/>
-                  <Component id="labelEmp_Email" min="-2" pref="49" max="-2" attributes="0"/>
-                  <EmptySpace min="11" pref="11" max="-2" attributes="0"/>
-                  <Component id="textFieldEmp_Email" min="-2" pref="124" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="70" pref="70" max="-2" attributes="0"/>
-                  <Component id="labelEmp_NombreEmpresa" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="46" pref="46" max="-2" attributes="0"/>
-                  <Component id="textFieldEmp_Nombre" min="-2" pref="122" max="-2" attributes="0"/>
-                  <EmptySpace min="78" pref="78" max="-2" attributes="0"/>
-                  <Component id="labelEmp_Telefono" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="11" pref="11" max="-2" attributes="0"/>
-                  <Component id="textFieldEmp_Telefono" min="-2" pref="124" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="70" pref="70" max="-2" attributes="0"/>
-                  <Component id="labelEmp_RazonSocial" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="23" pref="23" max="-2" attributes="0"/>
-                  <Component id="textFieldEmp_RazonSocial" min="-2" pref="122" max="-2" attributes="0"/>
-              </Group>
-              <Component id="SeparadorRegistroRNPA" min="-2" pref="690" max="-2" attributes="0"/>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="50" pref="50" max="-2" attributes="0"/>
-                  <Component id="labelRegistroRNPA" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="70" pref="70" max="-2" attributes="0"/>
-                  <Component id="labelRNPA" min="-2" pref="50" max="-2" attributes="0"/>
-                  <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                  <Component id="textFieldRNPA" min="-2" pref="120" max="-2" attributes="0"/>
-                  <EmptySpace min="70" pref="70" max="-2" attributes="0"/>
-                  <Component id="labelFechaVencimiento" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="4" pref="4" max="-2" attributes="0"/>
-                  <Component id="textFieldFechaVencimiento" min="-2" pref="122" max="-2" attributes="0"/>
-              </Group>
-              <Component id="SeparadorDatosProducto1" min="-2" pref="690" max="-2" attributes="0"/>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="50" pref="50" max="-2" attributes="0"/>
-                  <Component id="labelDatosPA" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="70" pref="70" max="-2" attributes="0"/>
-                  <Component id="labelNroFactura" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="8" pref="8" max="-2" attributes="0"/>
-                  <Component id="textFieldNroFactura" min="-2" pref="120" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="70" pref="70" max="-2" attributes="0"/>
-                  <Component id="labelRotulo" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="70" pref="70" max="-2" attributes="0"/>
-                  <Component id="jScrollPane1" min="-2" pref="560" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="70" pref="70" max="-2" attributes="0"/>
-                  <Component id="labelComposicion" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="70" pref="70" max="-2" attributes="0"/>
-                  <Component id="SeparadorDatosProducto" min="-2" pref="670" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="70" pref="70" max="-2" attributes="0"/>
-                  <Component id="labelComp_Nombre" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="22" pref="22" max="-2" attributes="0"/>
-                  <Component id="textFieldComp_Nombre" min="-2" pref="160" max="-2" attributes="0"/>
-                  <EmptySpace min="80" pref="80" max="-2" attributes="0"/>
-                  <Component id="labelComp_NroTipoMarca" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="12" pref="12" max="-2" attributes="0"/>
-                  <Component id="textFieldComp_NroTipoMarca" min="-2" pref="160" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="70" pref="70" max="-2" attributes="0"/>
-                  <Component id="labelComp_Marca" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="77" pref="77" max="-2" attributes="0"/>
-                  <Component id="textFieldComp_Marca" min="-2" pref="160" max="-2" attributes="0"/>
-                  <EmptySpace min="80" pref="80" max="-2" attributes="0"/>
-                  <Component id="labelComp_CAA" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="81" pref="81" max="-2" attributes="0"/>
-                  <Component id="textFieldComp_CAA" min="-2" pref="160" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="70" pref="70" max="-2" attributes="0"/>
-                  <Component id="labelComp_Denominacion" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="40" pref="40" max="-2" attributes="0"/>
-                  <Component id="textFieldComp_Denominacion" min="-2" pref="160" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="70" pref="70" max="-2" attributes="0"/>
-                  <Component id="labelComp_Contenido" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="57" pref="57" max="-2" attributes="0"/>
-                  <Component id="textFieldComp_Contenido" min="-2" pref="160" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="70" pref="70" max="-2" attributes="0"/>
-                  <Component id="labelComp_FechaDuracion" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
-                  <Component id="textFieldComp_FechaDuracion" min="-2" pref="160" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="70" pref="70" max="-2" attributes="0"/>
-                  <Component id="labelComp_MateriasPrimas" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="70" pref="70" max="-2" attributes="0"/>
-                  <Component id="labelDescripcion" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="70" pref="70" max="-2" attributes="0"/>
-                  <Component id="SeparadorDatosProducto3" min="-2" pref="670" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="70" pref="70" max="-2" attributes="0"/>
-                  <Component id="labelDesc_FormaUso" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="88" pref="88" max="-2" attributes="0"/>
-                  <Component id="textFieldDesc_FormaUso" min="-2" pref="410" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="70" pref="70" max="-2" attributes="0"/>
-                  <Component id="labelDesc_PeridoAptitud" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="128" pref="128" max="-2" attributes="0"/>
-                  <Component id="textFieldDesc_PeriodoAptitud" min="-2" pref="410" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="70" pref="70" max="-2" attributes="0"/>
-                  <Component id="labelDesc_ModoConservacion" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="109" pref="109" max="-2" attributes="0"/>
-                  <Component id="textFieldDesc_ModoConservacion" min="-2" pref="410" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="70" pref="70" max="-2" attributes="0"/>
-                  <Component id="labelDesc_DondeVendido" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="63" pref="63" max="-2" attributes="0"/>
-                  <Component id="textFieldDesc_DondeVendido" min="-2" pref="410" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="70" pref="70" max="-2" attributes="0"/>
-                  <Component id="labelDesc_InstruccionPrep" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="77" pref="77" max="-2" attributes="0"/>
-                  <Component id="textFieldDesc_InstruccionPrep" min="-2" pref="410" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="70" pref="70" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <EmptySpace min="220" pref="220" max="-2" attributes="0"/>
-                          <Component id="textFieldDesc_ControlesEspeciales" min="-2" pref="410" max="-2" attributes="0"/>
-                      </Group>
-                      <Component id="labelDesc_ControlesEspeciales2" min="-2" pref="230" max="-2" attributes="0"/>
-                      <Component id="labelDesc_ControlesEspeciales1" min="-2" pref="230" max="-2" attributes="0"/>
-                  </Group>
-              </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="70" pref="70" max="-2" attributes="0"/>
-                  <Component id="labelDesc_AQuienDirigido" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="71" pref="71" max="-2" attributes="0"/>
-                  <Component id="textFieldDesc_AQuienDirigido" min="-2" pref="410" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="70" pref="70" max="-2" attributes="0"/>
-                  <Component id="labelDesc_InfoAdicional" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="115" pref="115" max="-2" attributes="0"/>
-                  <Component id="textFieldDesc_InfoAdicional" min="-2" pref="410" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="70" pref="70" max="-2" attributes="0"/>
-                  <Component id="labelDesc_CaracteristicasEnvase" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="14" pref="14" max="-2" attributes="0"/>
-                  <Component id="buttonAddEnvase" min="-2" pref="40" max="-2" attributes="0"/>
-                  <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                  <Component id="buttonRemoveEnvase" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="70" pref="70" max="-2" attributes="0"/>
-                  <Component id="panelEnvase" min="-2" pref="620" max="-2" attributes="0"/>
-              </Group>
-              <Component id="jSeparator1" min="-2" pref="690" max="-2" attributes="0"/>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="50" pref="50" max="-2" attributes="0"/>
-                  <Component id="labelDatosDeLab" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="70" pref="70" max="-2" attributes="0"/>
-                  <Component id="labelNumProtocolo" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="8" pref="8" max="-2" attributes="0"/>
-                  <Component id="textFieldNroProtocolo" min="-2" pref="110" max="-2" attributes="0"/>
-                  <EmptySpace min="130" pref="130" max="-2" attributes="0"/>
-                  <Component id="labelNroActa" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                  <Component id="textFieldNroActa" min="-2" pref="116" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="50" pref="50" max="-2" attributes="0"/>
-                  <Component id="botonGuardar" min="-2" max="-2" attributes="0"/>
-              </Group>
-          </Group>
-        </DimensionLayout>
-        <DimensionLayout dim="1">
-          <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" attributes="0">
-                  <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
-                  <Component id="labelCargaProdAlimenticio" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="labelNumRNE" min="-2" pref="20" max="-2" attributes="0"/>
-                      <Component id="textFieldRNE" min="-2" max="-2" attributes="0"/>
-                      <Component id="BuscarRNE" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                          <Component id="SeparadorDatosEmpresa" min="-2" pref="0" max="-2" attributes="0"/>
-                      </Group>
-                      <Component id="SeparadorRegistroRNPA1" min="-2" pref="10" max="-2" attributes="0"/>
-                  </Group>
-                  <Component id="labelDatoEmpresa" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="labelEmp_CUIL" min="-2" pref="20" max="-2" attributes="0"/>
-                      <Component id="textFieldEmp_CUIL" min="-2" max="-2" attributes="0"/>
-                      <Component id="labelEmp_Email" min="-2" pref="20" max="-2" attributes="0"/>
-                      <Component id="textFieldEmp_Email" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="labelEmp_NombreEmpresa" min="-2" pref="20" max="-2" attributes="0"/>
-                      <Component id="textFieldEmp_Nombre" min="-2" max="-2" attributes="0"/>
-                      <Component id="labelEmp_Telefono" min="-2" pref="20" max="-2" attributes="0"/>
-                      <Component id="textFieldEmp_Telefono" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="labelEmp_RazonSocial" min="-2" pref="20" max="-2" attributes="0"/>
-                      <Component id="textFieldEmp_RazonSocial" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                  <Component id="SeparadorRegistroRNPA" min="-2" pref="10" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                  <Component id="labelRegistroRNPA" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="labelRNPA" min="-2" pref="20" max="-2" attributes="0"/>
-                      <Component id="textFieldRNPA" min="-2" max="-2" attributes="0"/>
-                      <Component id="labelFechaVencimiento" min="-2" pref="20" max="-2" attributes="0"/>
-                      <Component id="textFieldFechaVencimiento" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-                  <Component id="SeparadorDatosProducto1" min="-2" pref="10" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                  <Component id="labelDatosPA" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="labelNroFactura" min="-2" pref="20" max="-2" attributes="0"/>
-                      <Component id="textFieldNroFactura" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                  <Component id="labelRotulo" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
-                  <Component id="jScrollPane1" min="-2" pref="70" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                  <Component id="labelComposicion" min="-2" pref="20" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                  <Component id="SeparadorDatosProducto" min="-2" pref="10" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="labelComp_Nombre" min="-2" pref="20" max="-2" attributes="0"/>
-                      <Component id="textFieldComp_Nombre" min="-2" max="-2" attributes="0"/>
-                      <Component id="labelComp_NroTipoMarca" min="-2" pref="20" max="-2" attributes="0"/>
-                      <Component id="textFieldComp_NroTipoMarca" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="labelComp_Marca" min="-2" pref="20" max="-2" attributes="0"/>
-                      <Component id="textFieldComp_Marca" min="-2" max="-2" attributes="0"/>
-                      <Component id="labelComp_CAA" min="-2" pref="20" max="-2" attributes="0"/>
-                      <Component id="textFieldComp_CAA" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="labelComp_Denominacion" min="-2" pref="20" max="-2" attributes="0"/>
-                      <Component id="textFieldComp_Denominacion" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="labelComp_Contenido" min="-2" pref="20" max="-2" attributes="0"/>
-                      <Component id="textFieldComp_Contenido" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="labelComp_FechaDuracion" min="-2" pref="20" max="-2" attributes="0"/>
-                      <Component id="textFieldComp_FechaDuracion" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                  <Component id="labelComp_MateriasPrimas" min="-2" pref="20" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
-                  <Component id="labelDescripcion" min="-2" pref="20" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                  <Component id="SeparadorDatosProducto3" min="-2" pref="10" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="labelDesc_FormaUso" min="-2" pref="20" max="-2" attributes="0"/>
-                      <Component id="textFieldDesc_FormaUso" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="labelDesc_PeridoAptitud" min="-2" pref="20" max="-2" attributes="0"/>
-                      <Component id="textFieldDesc_PeriodoAptitud" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="labelDesc_ModoConservacion" min="-2" pref="20" max="-2" attributes="0"/>
-                      <Component id="textFieldDesc_ModoConservacion" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="labelDesc_DondeVendido" min="-2" pref="20" max="-2" attributes="0"/>
-                      <Component id="textFieldDesc_DondeVendido" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="labelDesc_InstruccionPrep" min="-2" pref="20" max="-2" attributes="0"/>
-                      <Component id="textFieldDesc_InstruccionPrep" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="textFieldDesc_ControlesEspeciales" min="-2" pref="40" max="-2" attributes="0"/>
-                      <Group type="102" attributes="0">
-                          <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
-                          <Component id="labelDesc_ControlesEspeciales2" min="-2" pref="20" max="-2" attributes="0"/>
-                      </Group>
-                      <Component id="labelDesc_ControlesEspeciales1" min="-2" pref="20" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="labelDesc_AQuienDirigido" min="-2" pref="20" max="-2" attributes="0"/>
-                      <Component id="textFieldDesc_AQuienDirigido" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="labelDesc_InfoAdicional" min="-2" pref="20" max="-2" attributes="0"/>
-                      <Component id="textFieldDesc_InfoAdicional" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="labelDesc_CaracteristicasEnvase" min="-2" pref="20" max="-2" attributes="0"/>
-                      <Component id="buttonAddEnvase" min="-2" max="-2" attributes="0"/>
-                      <Component id="buttonRemoveEnvase" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
-                  <Component id="panelEnvase" pref="90" max="32767" attributes="0"/>
-                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                  <Component id="jSeparator1" min="-2" pref="10" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                  <Component id="labelDatosDeLab" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="labelNumProtocolo" min="-2" pref="20" max="-2" attributes="0"/>
-                      <Component id="textFieldNroProtocolo" min="-2" max="-2" attributes="0"/>
-                      <Component id="labelNroActa" min="-2" pref="20" max="-2" attributes="0"/>
-                      <Component id="textFieldNroActa" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="botonGuardar" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="22" pref="22" max="-2" attributes="0"/>
-              </Group>
-          </Group>
-        </DimensionLayout>
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+        <Property name="useNullLayout" type="boolean" value="false"/>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="labelNumRNE">
+        <Container class="javax.swing.JPanel" name="panelBuscaRNE">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Numero RNE: "/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="textFieldRNE">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="32132132"/>
-            <Property name="toolTipText" type="java.lang.String" value=""/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textFieldRNEActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="BuscarRNE">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Buscar"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BuscarRNEActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JSeparator" name="SeparadorDatosEmpresa">
-        </Component>
-        <Component class="javax.swing.JLabel" name="labelDatoEmpresa">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Liberation Sans" size="14" style="1"/>
+            <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[1980, 90]"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Datos de la empresa"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="labelEmp_CUIL">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="CUIT: "/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="labelEmp_NombreEmpresa">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Nombre: "/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="labelEmp_RazonSocial">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Razon Social: "/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="labelEmp_Email">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Email: "/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="labelEmp_Telefono">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Telefono: "/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="textFieldEmp_CUIL">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Dialog" size="11" style="1"/>
+            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[700, 90]"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="2345678"/>
-            <Property name="enabled" type="boolean" value="false"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="textFieldEmp_Nombre">
-          <Properties>
-            <Property name="enabled" type="boolean" value="false"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="textFieldEmp_RazonSocial">
-          <Properties>
-            <Property name="enabled" type="boolean" value="false"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="textFieldEmp_Email">
-          <Properties>
-            <Property name="enabled" type="boolean" value="false"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textFieldEmp_EmailActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JTextField" name="textFieldEmp_Telefono">
-          <Properties>
-            <Property name="enabled" type="boolean" value="false"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JSeparator" name="SeparadorRegistroRNPA">
-        </Component>
-        <Component class="javax.swing.JLabel" name="labelComposicion">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Liberation Sans" size="12" style="1"/>
+            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[700, 90]"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Composicion"/>
           </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="labelNroFactura">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Nro factura: "/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="textFieldNroFactura">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="123"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JSeparator" name="SeparadorDatosProducto">
-        </Component>
-        <Component class="javax.swing.JLabel" name="labelRegistroRNPA">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Liberation Sans" size="14" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="Registro numero RNPA"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="labelRNPA">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="RNPA: "/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="textFieldRNPA">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="123456"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JFormattedTextField" name="textFieldFechaVencimiento">
-          <Properties>
-            <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor">
-              <Format subtype="1" type="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="2017-11-31"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="labelFechaVencimiento">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Fecha Vencimiento: "/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="labelRotulo">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Rotulo: "/>
-          </Properties>
-        </Component>
-        <Container class="javax.swing.JScrollPane" name="jScrollPane1">
-          <AuxValues>
-            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
-          </AuxValues>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="0" y="0" width="700" height="-1"/>
+            </Constraint>
+          </Constraints>
 
-          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="labelCargaProdAlimenticio" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="labelNumRNE" min="-2" pref="88" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="80" pref="80" max="-2" attributes="0"/>
+                                      <Component id="textFieldRNE" min="-2" pref="171" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace min="9" pref="9" max="-2" attributes="0"/>
+                              <Component id="BuscarRNE" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace pref="365" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="labelCargaProdAlimenticio" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="labelNumRNE" min="-2" pref="20" max="-2" attributes="0"/>
+                          <Component id="textFieldRNE" min="-2" max="-2" attributes="0"/>
+                          <Component id="BuscarRNE" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace pref="17" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
           <SubComponents>
-            <Component class="javax.swing.JTextArea" name="textAreaRotulo">
+            <Component class="javax.swing.JTextField" name="textFieldRNE">
               <Properties>
-                <Property name="columns" type="int" value="20"/>
-                <Property name="rows" type="int" value="5"/>
-                <Property name="text" type="java.lang.String" value="rotulo"/>
+                <Property name="text" type="java.lang.String" value="32132132"/>
+                <Property name="toolTipText" type="java.lang.String" value=""/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textFieldRNEActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="BuscarRNE">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Buscar"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BuscarRNEActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="labelNumRNE">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Numero RNE: "/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="labelCargaProdAlimenticio">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Liberation Sans" size="14" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Carga de Producto Alimenticio"/>
               </Properties>
             </Component>
           </SubComponents>
         </Container>
-        <Component class="javax.swing.JSeparator" name="jSeparator1">
+        <Component class="javax.swing.JSeparator" name="SeparadorDatosEmpresa">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="701" y="96" width="620" height="0"/>
+            </Constraint>
+          </Constraints>
         </Component>
-        <Component class="javax.swing.JLabel" name="labelDatosDeLab">
+        <Container class="javax.swing.JPanel" name="panelDatosEmpresa">
           <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Liberation Sans" size="14" style="1"/>
+            <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[1980, 120]"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Datos de la muestra de laboratorio"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="labelCargaProdAlimenticio">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Liberation Sans" size="14" style="1"/>
+            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[700, 120]"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Carga de Producto Alimenticio"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="labelNumProtocolo">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Numero Protocolo: "/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="textFieldNroProtocolo">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="123456"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="labelNroActa">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Numero de Acta: "/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="textFieldNroActa">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="654321"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JSeparator" name="SeparadorRegistroRNPA1">
-        </Component>
-        <Component class="javax.swing.JLabel" name="labelComp_Nombre">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Nombre comercial:"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="labelComp_Marca">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Marca:"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="labelComp_Denominacion">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Denominacion:"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="labelComp_Contenido">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Contenido:"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="labelComp_FechaDuracion">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Fecha de duracion:"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="labelComp_NroTipoMarca">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="N&#xb0; y tipo de registro de marca:"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="labelComp_CAA">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="CAA Articulo N&#xb0;:"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="labelComp_MateriasPrimas">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Materias Primas"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="textFieldComp_Nombre">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="nombre"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textFieldComp_NombreActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JTextField" name="textFieldComp_Marca">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="marca"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="textFieldComp_Denominacion">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="denominacion"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="textFieldComp_Contenido">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="contenido"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="textFieldComp_FechaDuracion">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="2017-11-31"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="textFieldComp_NroTipoMarca">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="tipomarca"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="textFieldComp_CAA">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="caa"/>
-            <Property name="toolTipText" type="java.lang.String" value=""/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JSeparator" name="SeparadorDatosProducto1">
-        </Component>
-        <Component class="javax.swing.JLabel" name="labelDatosPA">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Liberation Sans" size="14" style="1"/>
+            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[700, 120]"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Datos del producto alimenticio"/>
           </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="labelDescripcion">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="0" y="100" width="700" height="-1"/>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="labelDatoEmpresa" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
+                              <Component id="labelEmp_CUIL" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="59" pref="59" max="-2" attributes="0"/>
+                              <Component id="textFieldEmp_CUIL" min="-2" pref="122" max="-2" attributes="0"/>
+                              <EmptySpace min="78" pref="78" max="-2" attributes="0"/>
+                              <Component id="labelEmp_Email" min="-2" pref="49" max="-2" attributes="0"/>
+                              <EmptySpace min="11" pref="11" max="-2" attributes="0"/>
+                              <Component id="textFieldEmp_Email" min="-2" pref="124" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
+                              <Component id="labelEmp_NombreEmpresa" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="46" pref="46" max="-2" attributes="0"/>
+                              <Component id="textFieldEmp_Nombre" min="-2" pref="122" max="-2" attributes="0"/>
+                              <EmptySpace min="78" pref="78" max="-2" attributes="0"/>
+                              <Component id="labelEmp_Telefono" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="11" pref="11" max="-2" attributes="0"/>
+                              <Component id="textFieldEmp_Telefono" min="-2" pref="124" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
+                              <Component id="labelEmp_RazonSocial" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="23" pref="23" max="-2" attributes="0"/>
+                              <Component id="textFieldEmp_RazonSocial" min="-2" pref="122" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace pref="196" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="labelDatoEmpresa" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="11" pref="11" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="labelEmp_CUIL" min="-2" pref="20" max="-2" attributes="0"/>
+                          <Component id="textFieldEmp_CUIL" min="-2" max="-2" attributes="0"/>
+                          <Component id="labelEmp_Email" min="-2" pref="20" max="-2" attributes="0"/>
+                          <Component id="textFieldEmp_Email" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="9" pref="9" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="labelEmp_NombreEmpresa" min="-2" pref="20" max="-2" attributes="0"/>
+                          <Component id="textFieldEmp_Nombre" min="-2" max="-2" attributes="0"/>
+                          <Component id="labelEmp_Telefono" min="-2" pref="20" max="-2" attributes="0"/>
+                          <Component id="textFieldEmp_Telefono" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="labelEmp_RazonSocial" min="-2" pref="20" max="-2" attributes="0"/>
+                          <Component id="textFieldEmp_RazonSocial" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="0" pref="10" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JLabel" name="labelDatoEmpresa">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Liberation Sans" size="14" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Datos de la empresa"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="labelEmp_CUIL">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="CUIT: "/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="labelEmp_NombreEmpresa">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Nombre: "/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="labelEmp_RazonSocial">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Razon Social: "/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="textFieldEmp_RazonSocial">
+              <Properties>
+                <Property name="enabled" type="boolean" value="false"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="textFieldEmp_Nombre">
+              <Properties>
+                <Property name="enabled" type="boolean" value="false"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="textFieldEmp_CUIL">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Dialog" size="11" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="2345678"/>
+                <Property name="enabled" type="boolean" value="false"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="textFieldEmp_Email">
+              <Properties>
+                <Property name="enabled" type="boolean" value="false"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textFieldEmp_EmailActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JTextField" name="textFieldEmp_Telefono">
+              <Properties>
+                <Property name="enabled" type="boolean" value="false"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="labelEmp_Telefono">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Telefono: "/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="labelEmp_Email">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Email: "/>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JPanel" name="panelRegistroRNPA">
           <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Liberation Sans" size="12" style="1"/>
+            <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[1980, 70]"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Descripcion"/>
+            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[700, 70]"/>
+            </Property>
+            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[700, 70]"/>
+            </Property>
           </Properties>
-        </Component>
-        <Component class="javax.swing.JSeparator" name="SeparadorDatosProducto3">
-        </Component>
-        <Component class="javax.swing.JLabel" name="labelDesc_FormaUso">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="0" y="240" width="700" height="70"/>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="labelRegistroRNPA" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
+                              <Component id="labelRNPA" min="-2" pref="50" max="-2" attributes="0"/>
+                              <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                              <Component id="textFieldRNPA" min="-2" pref="120" max="-2" attributes="0"/>
+                              <EmptySpace min="70" pref="70" max="-2" attributes="0"/>
+                              <Component id="labelFechaVencimiento" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="4" pref="4" max="-2" attributes="0"/>
+                              <Component id="textFieldFechaVencimiento" min="-2" pref="122" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace pref="198" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="labelRegistroRNPA" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="11" pref="11" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="labelRNPA" min="-2" pref="20" max="-2" attributes="0"/>
+                          <Component id="textFieldRNPA" min="-2" max="-2" attributes="0"/>
+                          <Component id="labelFechaVencimiento" min="-2" pref="20" max="-2" attributes="0"/>
+                          <Component id="textFieldFechaVencimiento" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JLabel" name="labelRegistroRNPA">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Liberation Sans" size="14" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Registro numero RNPA"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="labelRNPA">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="RNPA: "/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="textFieldRNPA">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="123456"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JFormattedTextField" name="textFieldFechaVencimiento">
+              <Properties>
+                <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor">
+                  <Format subtype="1" type="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="2017-11-31"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="labelFechaVencimiento">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Fecha Vencimiento: "/>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JPanel" name="panelDatosProducto">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Forma de uso del producto:"/>
+            <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[1980, 1500]"/>
+            </Property>
+            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[700, 1000]"/>
+            </Property>
+            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[700, 1000]"/>
+            </Property>
           </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="labelDesc_PeridoAptitud">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="0" y="340" width="700" height="880"/>
+            </Constraint>
+          </Constraints>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBoxLayout">
+            <Property name="axis" type="int" value="1"/>
+          </Layout>
+          <SubComponents>
+            <Container class="javax.swing.JPanel" name="panelDatosProdAdentro">
+              <Properties>
+                <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[1980, 180]"/>
+                </Property>
+                <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[700, 180]"/>
+                </Property>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[700, 180]"/>
+                </Property>
+              </Properties>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="labelDatosPA" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
+                                  <Component id="labelNroFactura" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="8" pref="8" max="-2" attributes="0"/>
+                                  <Component id="textFieldNroFactura" min="-2" pref="120" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
+                                  <Component id="labelRotulo" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
+                                  <Component id="jScrollPane1" min="-2" pref="560" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="labelDatosPA" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="11" pref="11" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="labelNroFactura" min="-2" pref="20" max="-2" attributes="0"/>
+                              <Component id="textFieldNroFactura" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                          <Component id="labelRotulo" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                          <Component id="jScrollPane1" min="-2" pref="70" max="-2" attributes="0"/>
+                          <EmptySpace pref="19" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="labelDatosPA">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Liberation Sans" size="14" style="1"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Datos del producto alimenticio"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="labelNroFactura">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Nro factura: "/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="textFieldNroFactura">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="123"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="labelRotulo">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Rotulo: "/>
+                  </Properties>
+                </Component>
+                <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+                  <AuxValues>
+                    <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+                  </AuxValues>
+
+                  <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+                  <SubComponents>
+                    <Component class="javax.swing.JTextArea" name="textAreaRotulo">
+                      <Properties>
+                        <Property name="columns" type="int" value="20"/>
+                        <Property name="rows" type="int" value="5"/>
+                        <Property name="text" type="java.lang.String" value="rotulo"/>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
+                </Container>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JPanel" name="panelComposicion">
+              <Properties>
+                <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[1980, 245]"/>
+                </Property>
+                <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[700, 245]"/>
+                </Property>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[700, 245]"/>
+                </Property>
+              </Properties>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace pref="20" max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Component id="labelComp_Nombre" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="22" pref="22" max="-2" attributes="0"/>
+                                  <Component id="textFieldComp_Nombre" min="-2" pref="160" max="-2" attributes="0"/>
+                                  <EmptySpace min="80" pref="80" max="-2" attributes="0"/>
+                                  <Component id="labelComp_NroTipoMarca" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="12" pref="12" max="-2" attributes="0"/>
+                                  <Component id="textFieldComp_NroTipoMarca" min="-2" pref="160" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <Component id="labelComp_Marca" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="77" pref="77" max="-2" attributes="0"/>
+                                  <Component id="textFieldComp_Marca" min="-2" pref="160" max="-2" attributes="0"/>
+                                  <EmptySpace min="80" pref="80" max="-2" attributes="0"/>
+                                  <Component id="labelComp_CAA" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="81" pref="81" max="-2" attributes="0"/>
+                                  <Component id="textFieldComp_CAA" min="-2" pref="160" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <Component id="labelComp_Denominacion" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="40" pref="40" max="-2" attributes="0"/>
+                                  <Component id="textFieldComp_Denominacion" min="-2" pref="160" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <Component id="labelComp_Contenido" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="57" pref="57" max="-2" attributes="0"/>
+                                  <Component id="textFieldComp_Contenido" min="-2" pref="160" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <Component id="labelComp_FechaDuracion" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
+                                  <Component id="textFieldComp_FechaDuracion" min="-2" pref="160" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="labelComp_MateriasPrimas" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="labelComposicion" min="-2" max="-2" attributes="0"/>
+                              <Component id="SeparadorDatosProducto" min="-2" pref="670" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="labelComposicion" min="-2" pref="20" max="-2" attributes="0"/>
+                          <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                          <Component id="SeparadorDatosProducto" min="-2" pref="10" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="labelComp_Nombre" min="-2" pref="20" max="-2" attributes="0"/>
+                              <Component id="textFieldComp_Nombre" min="-2" max="-2" attributes="0"/>
+                              <Component id="labelComp_NroTipoMarca" min="-2" pref="20" max="-2" attributes="0"/>
+                              <Component id="textFieldComp_NroTipoMarca" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="labelComp_Marca" min="-2" pref="20" max="-2" attributes="0"/>
+                              <Component id="textFieldComp_Marca" min="-2" max="-2" attributes="0"/>
+                              <Component id="labelComp_CAA" min="-2" pref="20" max="-2" attributes="0"/>
+                              <Component id="textFieldComp_CAA" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="labelComp_Denominacion" min="-2" pref="20" max="-2" attributes="0"/>
+                              <Component id="textFieldComp_Denominacion" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="labelComp_Contenido" min="-2" pref="20" max="-2" attributes="0"/>
+                              <Component id="textFieldComp_Contenido" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="labelComp_FechaDuracion" min="-2" pref="20" max="-2" attributes="0"/>
+                              <Component id="textFieldComp_FechaDuracion" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                          <Component id="labelComp_MateriasPrimas" min="-2" pref="20" max="-2" attributes="0"/>
+                          <EmptySpace pref="18" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JTextField" name="textFieldComp_Nombre">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="nombre"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textFieldComp_NombreActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JLabel" name="labelComp_Nombre">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Nombre comercial:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="labelComp_Marca">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Marca:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="labelComp_Denominacion">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Denominacion:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="labelComp_Contenido">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Contenido:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="labelComp_FechaDuracion">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Fecha de duracion:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="labelComp_MateriasPrimas">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Materias Primas"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="textFieldComp_Marca">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="marca"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="textFieldComp_Denominacion">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="denominacion"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="textFieldComp_Contenido">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="contenido"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="textFieldComp_FechaDuracion">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="2017-11-31"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="labelComp_NroTipoMarca">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="N&#xb0; y tipo de registro de marca:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="labelComp_CAA">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="CAA Articulo N&#xb0;:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="textFieldComp_NroTipoMarca">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="tipomarca"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="textFieldComp_CAA">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="caa"/>
+                    <Property name="toolTipText" type="java.lang.String" value=""/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="labelComposicion">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Liberation Sans" size="12" style="1"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Composicion"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JSeparator" name="SeparadorDatosProducto">
+                </Component>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JPanel" name="panelDescripcion">
+              <Properties>
+                <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[1980, 1000]"/>
+                </Property>
+                <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[700, 350]"/>
+                </Property>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[700, 700]"/>
+                </Property>
+              </Properties>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout"/>
+              <SubComponents>
+                <Container class="javax.swing.JPanel" name="panelDescDatos">
+                  <Properties>
+                    <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                      <Dimension value="[1980, 335]"/>
+                    </Property>
+                    <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                      <Dimension value="[700, 335]"/>
+                    </Property>
+                    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                      <Dimension value="[700, 335]"/>
+                    </Property>
+                  </Properties>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
+                      <GridBagConstraints gridX="0" gridY="0" gridWidth="1" gridHeight="1" fill="0" ipadX="0" ipadY="0" insetsTop="0" insetsLeft="0" insetsBottom="0" insetsRight="0" anchor="10" weightX="0.0" weightY="0.0"/>
+                    </Constraint>
+                  </Constraints>
+
+                  <Layout>
+                    <DimensionLayout dim="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="labelDescripcion" min="-2" max="-2" attributes="0"/>
+                                  <Component id="SeparadorDatosProducto3" min="-2" pref="670" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="labelDesc_FormaUso" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="88" pref="88" max="-2" attributes="0"/>
+                                      <Component id="textFieldDesc_FormaUso" min="-2" pref="410" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="labelDesc_PeridoAptitud" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="128" pref="128" max="-2" attributes="0"/>
+                                      <Component id="textFieldDesc_PeriodoAptitud" min="-2" pref="410" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="labelDesc_ModoConservacion" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="109" pref="109" max="-2" attributes="0"/>
+                                      <Component id="textFieldDesc_ModoConservacion" min="-2" pref="410" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="labelDesc_DondeVendido" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="63" pref="63" max="-2" attributes="0"/>
+                                      <Component id="textFieldDesc_DondeVendido" min="-2" pref="410" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="labelDesc_InstruccionPrep" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="77" pref="77" max="-2" attributes="0"/>
+                                      <Component id="textFieldDesc_InstruccionPrep" min="-2" pref="410" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                          <Component id="labelDesc_ControlesEspeciales1" max="32767" attributes="0"/>
+                                          <Component id="labelDesc_ControlesEspeciales2" max="32767" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
+                                      <Component id="textFieldDesc_ControlesEspeciales" min="-2" pref="410" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="labelDesc_AQuienDirigido" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="71" pref="71" max="-2" attributes="0"/>
+                                      <Component id="textFieldDesc_AQuienDirigido" min="-2" pref="410" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="labelDesc_InfoAdicional" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="115" pref="115" max="-2" attributes="0"/>
+                                      <Component id="textFieldDesc_InfoAdicional" min="-2" pref="410" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace pref="20" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                    <DimensionLayout dim="1">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="labelDescripcion" min="-2" pref="20" max="-2" attributes="0"/>
+                              <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                              <Component id="SeparadorDatosProducto3" min="-2" pref="10" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="labelDesc_FormaUso" min="-2" pref="20" max="-2" attributes="0"/>
+                                  <Component id="textFieldDesc_FormaUso" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="labelDesc_PeridoAptitud" min="-2" pref="20" max="-2" attributes="0"/>
+                                  <Component id="textFieldDesc_PeriodoAptitud" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="labelDesc_ModoConservacion" min="-2" pref="20" max="-2" attributes="0"/>
+                                  <Component id="textFieldDesc_ModoConservacion" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="labelDesc_DondeVendido" min="-2" pref="20" max="-2" attributes="0"/>
+                                  <Component id="textFieldDesc_DondeVendido" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="labelDesc_InstruccionPrep" min="-2" pref="20" max="-2" attributes="0"/>
+                                  <Component id="textFieldDesc_InstruccionPrep" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="labelDesc_ControlesEspeciales1" min="-2" pref="20" max="-2" attributes="0"/>
+                                          <Component id="textFieldDesc_ControlesEspeciales" min="-2" pref="40" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                                      <Component id="labelDesc_ControlesEspeciales2" min="-2" pref="20" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="labelDesc_AQuienDirigido" min="-2" pref="20" max="-2" attributes="0"/>
+                                  <Component id="textFieldDesc_AQuienDirigido" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="labelDesc_InfoAdicional" min="-2" pref="20" max="-2" attributes="0"/>
+                                  <Component id="textFieldDesc_InfoAdicional" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                  </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JLabel" name="labelDesc_FormaUso">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Forma de uso del producto:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="textFieldDesc_FormaUso">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="formauso"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textFieldDesc_FormaUsoActionPerformed"/>
+                      </Events>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="labelDesc_PeridoAptitud">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Periodo de aptitud:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="labelDesc_ModoConservacion">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Modo de conservacion:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="labelDesc_DondeVendido">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Donde ser&#xe1; vendido el producto:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="labelDesc_InstruccionPrep">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Instrucciones de preparaci&#xf3;n:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="labelDesc_ControlesEspeciales1">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Controles y cuidados especiales"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="labelDesc_ControlesEspeciales2">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="durante la distribuci&#xf3;n y la comercializaci&#xf3;n:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="labelDesc_AQuienDirigido">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="A quien va dirigido el producto:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="labelDesc_InfoAdicional">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Informaci&#xf3;n adicional:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="textFieldDesc_InfoAdicional">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="infoad"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="textFieldDesc_AQuienDirigido">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="aquein"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="textFieldDesc_ControlesEspeciales">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="cuidado"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="textFieldDesc_InstruccionPrep">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="prepa"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="textFieldDesc_DondeVendido">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="donde"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="textFieldDesc_ModoConservacion">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="conservacion"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="textFieldDesc_PeriodoAptitud">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="aptitud"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JSeparator" name="SeparadorDatosProducto3">
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="labelDescripcion">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Liberation Sans" size="12" style="1"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="Descripcion"/>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
+                </Container>
+                <Container class="javax.swing.JPanel" name="panelDescCarEnvase">
+                  <Properties>
+                    <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                      <Dimension value="[1980, 35]"/>
+                    </Property>
+                    <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                      <Dimension value="[700, 35]"/>
+                    </Property>
+                    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                      <Dimension value="[700, 35]"/>
+                    </Property>
+                  </Properties>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
+                      <GridBagConstraints gridX="0" gridY="1" gridWidth="1" gridHeight="1" fill="0" ipadX="0" ipadY="0" insetsTop="0" insetsLeft="0" insetsBottom="0" insetsRight="0" anchor="10" weightX="0.0" weightY="0.0"/>
+                    </Constraint>
+                  </Constraints>
+
+                  <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+                    <Property name="useNullLayout" type="boolean" value="false"/>
+                  </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JLabel" name="labelDesc_CaracteristicasEnvase">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Caracteristicas del envase"/>
+                      </Properties>
+                      <Constraints>
+                        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                          <AbsoluteConstraints x="10" y="10" width="-1" height="20"/>
+                        </Constraint>
+                      </Constraints>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="buttonAddEnvase">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="+"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonAddEnvaseActionPerformed"/>
+                      </Events>
+                      <Constraints>
+                        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                          <AbsoluteConstraints x="170" y="10" width="40" height="-1"/>
+                        </Constraint>
+                      </Constraints>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="buttonRemoveEnvase">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="-"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonRemoveEnvaseActionPerformed"/>
+                      </Events>
+                      <Constraints>
+                        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                          <AbsoluteConstraints x="220" y="10" width="-1" height="-1"/>
+                        </Constraint>
+                      </Constraints>
+                    </Component>
+                  </SubComponents>
+                </Container>
+                <Container class="javax.swing.JPanel" name="panelEnvase">
+                  <Properties>
+                    <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                      <Dimension value="[700, 400]"/>
+                    </Property>
+                    <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                      <Dimension value="[700, 200]"/>
+                    </Property>
+                    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                      <Dimension value="[700, 200]"/>
+                    </Property>
+                  </Properties>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
+                      <GridBagConstraints gridX="0" gridY="2" gridWidth="1" gridHeight="1" fill="0" ipadX="0" ipadY="0" insetsTop="0" insetsLeft="0" insetsBottom="0" insetsRight="0" anchor="10" weightX="0.0" weightY="0.0"/>
+                    </Constraint>
+                  </Constraints>
+
+                  <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBoxLayout">
+                    <Property name="axis" type="int" value="1"/>
+                  </Layout>
+                </Container>
+              </SubComponents>
+            </Container>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JPanel" name="panelDatosMuestraLab">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Periodo de aptitud:"/>
+            <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[1980, 90]"/>
+            </Property>
+            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[700, 90]"/>
+            </Property>
+            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[700, 90]"/>
+            </Property>
           </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="labelDesc_ModoConservacion">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Modo de conservacion:"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="labelDesc_DondeVendido">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Donde ser&#xe1; vendido el producto:"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="labelDesc_InstruccionPrep">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Instrucciones de preparaci&#xf3;n:"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="labelDesc_ControlesEspeciales2">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="durante la distribuci&#xf3;n y la comercializaci&#xf3;n:"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="labelDesc_InfoAdicional">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Informaci&#xf3;n adicional:"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="labelDesc_CaracteristicasEnvase">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Caracteristicas del envase"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="textFieldDesc_FormaUso">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="formauso"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textFieldDesc_FormaUsoActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JTextField" name="textFieldDesc_PeriodoAptitud">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="aptitud"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="textFieldDesc_ModoConservacion">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="conservacion"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="textFieldDesc_DondeVendido">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="donde"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="textFieldDesc_InstruccionPrep">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="prepa"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="textFieldDesc_ControlesEspeciales">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="cuidado"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="textFieldDesc_InfoAdicional">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="infoad"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="labelDesc_AQuienDirigido">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="A quien va dirigido el producto:"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="labelDesc_ControlesEspeciales1">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Controles y cuidados especiales"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="textFieldDesc_AQuienDirigido">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="aquein"/>
-          </Properties>
-        </Component>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="0" y="1240" width="700" height="80"/>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="labelDatosDeLab" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
+                              <Component id="labelNumProtocolo" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="8" pref="8" max="-2" attributes="0"/>
+                              <Component id="textFieldNroProtocolo" min="-2" pref="110" max="-2" attributes="0"/>
+                              <EmptySpace min="130" pref="130" max="-2" attributes="0"/>
+                              <Component id="labelNroActa" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="textFieldNroActa" min="-2" pref="116" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace pref="124" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="labelDatosDeLab" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="11" pref="11" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="labelNumProtocolo" min="-2" pref="20" max="-2" attributes="0"/>
+                          <Component id="textFieldNroProtocolo" min="-2" max="-2" attributes="0"/>
+                          <Component id="labelNroActa" min="-2" pref="20" max="-2" attributes="0"/>
+                          <Component id="textFieldNroActa" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace pref="29" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JLabel" name="labelDatosDeLab">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Liberation Sans" size="14" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Datos de la muestra de laboratorio"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="labelNumProtocolo">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Numero Protocolo: "/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="textFieldNroProtocolo">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="123456"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="textFieldNroActa">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="654321"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="labelNroActa">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Numero de Acta: "/>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
         <Component class="javax.swing.JButton" name="botonGuardar">
           <Properties>
             <Property name="text" type="java.lang.String" value="Guardar"/>
@@ -846,26 +1151,39 @@
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonGuardarActionPerformed"/>
           </Events>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="50" y="1340" width="-1" height="-1"/>
+            </Constraint>
+          </Constraints>
         </Component>
-        <Container class="javax.swing.JPanel" name="panelEnvase">
-
-          <Layout class="org.netbeans.modules.form.compat2.layouts.DesignFlowLayout"/>
-        </Container>
-        <Component class="javax.swing.JButton" name="buttonAddEnvase">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="+"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonAddEnvaseActionPerformed"/>
-          </Events>
+        <Component class="javax.swing.JSeparator" name="SeparadorRegistroRNPA2">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="0" y="90" width="650" height="10"/>
+            </Constraint>
+          </Constraints>
         </Component>
-        <Component class="javax.swing.JButton" name="buttonRemoveEnvase">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="-"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonRemoveEnvaseActionPerformed"/>
-          </Events>
+        <Component class="javax.swing.JSeparator" name="SeparadorRegistroRNPA3">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="0" y="230" width="650" height="10"/>
+            </Constraint>
+          </Constraints>
+        </Component>
+        <Component class="javax.swing.JSeparator" name="SeparadorRegistroRNPA4">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="0" y="320" width="650" height="10"/>
+            </Constraint>
+          </Constraints>
+        </Component>
+        <Component class="javax.swing.JSeparator" name="SeparadorRegistroRNPA1">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="0" y="1230" width="650" height="10"/>
+            </Constraint>
+          </Constraints>
         </Component>
       </SubComponents>
     </Container>

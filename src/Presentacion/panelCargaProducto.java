@@ -44,90 +44,108 @@ public class panelCargaProducto extends javax.swing.JPanel {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+        java.awt.GridBagConstraints gridBagConstraints;
 
         jButton1 = new javax.swing.JButton();
         CargaBasica = new javax.swing.JPanel();
-        labelNumRNE = new javax.swing.JLabel();
+        panelBuscaRNE = new javax.swing.JPanel();
         textFieldRNE = new javax.swing.JTextField();
         BuscarRNE = new javax.swing.JButton();
+        labelNumRNE = new javax.swing.JLabel();
+        labelCargaProdAlimenticio = new javax.swing.JLabel();
         SeparadorDatosEmpresa = new javax.swing.JSeparator();
+        panelDatosEmpresa = new javax.swing.JPanel();
         labelDatoEmpresa = new javax.swing.JLabel();
         labelEmp_CUIL = new javax.swing.JLabel();
         labelEmp_NombreEmpresa = new javax.swing.JLabel();
         labelEmp_RazonSocial = new javax.swing.JLabel();
-        labelEmp_Email = new javax.swing.JLabel();
-        labelEmp_Telefono = new javax.swing.JLabel();
-        textFieldEmp_CUIL = new javax.swing.JTextField();
-        textFieldEmp_Nombre = new javax.swing.JTextField();
         textFieldEmp_RazonSocial = new javax.swing.JTextField();
+        textFieldEmp_Nombre = new javax.swing.JTextField();
+        textFieldEmp_CUIL = new javax.swing.JTextField();
         textFieldEmp_Email = new javax.swing.JTextField();
         textFieldEmp_Telefono = new javax.swing.JTextField();
-        SeparadorRegistroRNPA = new javax.swing.JSeparator();
-        labelComposicion = new javax.swing.JLabel();
-        labelNroFactura = new javax.swing.JLabel();
-        textFieldNroFactura = new javax.swing.JTextField();
-        SeparadorDatosProducto = new javax.swing.JSeparator();
+        labelEmp_Telefono = new javax.swing.JLabel();
+        labelEmp_Email = new javax.swing.JLabel();
+        panelRegistroRNPA = new javax.swing.JPanel();
         labelRegistroRNPA = new javax.swing.JLabel();
         labelRNPA = new javax.swing.JLabel();
         textFieldRNPA = new javax.swing.JTextField();
         textFieldFechaVencimiento = new javax.swing.JFormattedTextField();
         labelFechaVencimiento = new javax.swing.JLabel();
+        panelDatosProducto = new javax.swing.JPanel();
+        panelDatosProdAdentro = new javax.swing.JPanel();
+        labelDatosPA = new javax.swing.JLabel();
+        labelNroFactura = new javax.swing.JLabel();
+        textFieldNroFactura = new javax.swing.JTextField();
         labelRotulo = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         textAreaRotulo = new javax.swing.JTextArea();
-        jSeparator1 = new javax.swing.JSeparator();
-        labelDatosDeLab = new javax.swing.JLabel();
-        labelCargaProdAlimenticio = new javax.swing.JLabel();
-        labelNumProtocolo = new javax.swing.JLabel();
-        textFieldNroProtocolo = new javax.swing.JTextField();
-        labelNroActa = new javax.swing.JLabel();
-        textFieldNroActa = new javax.swing.JTextField();
-        SeparadorRegistroRNPA1 = new javax.swing.JSeparator();
+        panelComposicion = new javax.swing.JPanel();
+        textFieldComp_Nombre = new javax.swing.JTextField();
         labelComp_Nombre = new javax.swing.JLabel();
         labelComp_Marca = new javax.swing.JLabel();
         labelComp_Denominacion = new javax.swing.JLabel();
         labelComp_Contenido = new javax.swing.JLabel();
         labelComp_FechaDuracion = new javax.swing.JLabel();
-        labelComp_NroTipoMarca = new javax.swing.JLabel();
-        labelComp_CAA = new javax.swing.JLabel();
         labelComp_MateriasPrimas = new javax.swing.JLabel();
-        textFieldComp_Nombre = new javax.swing.JTextField();
         textFieldComp_Marca = new javax.swing.JTextField();
         textFieldComp_Denominacion = new javax.swing.JTextField();
         textFieldComp_Contenido = new javax.swing.JTextField();
         textFieldComp_FechaDuracion = new javax.swing.JTextField();
+        labelComp_NroTipoMarca = new javax.swing.JLabel();
+        labelComp_CAA = new javax.swing.JLabel();
         textFieldComp_NroTipoMarca = new javax.swing.JTextField();
         textFieldComp_CAA = new javax.swing.JTextField();
-        SeparadorDatosProducto1 = new javax.swing.JSeparator();
-        labelDatosPA = new javax.swing.JLabel();
-        labelDescripcion = new javax.swing.JLabel();
-        SeparadorDatosProducto3 = new javax.swing.JSeparator();
+        labelComposicion = new javax.swing.JLabel();
+        SeparadorDatosProducto = new javax.swing.JSeparator();
+        panelDescripcion = new javax.swing.JPanel();
+        panelDescDatos = new javax.swing.JPanel();
         labelDesc_FormaUso = new javax.swing.JLabel();
+        textFieldDesc_FormaUso = new javax.swing.JTextField();
         labelDesc_PeridoAptitud = new javax.swing.JLabel();
         labelDesc_ModoConservacion = new javax.swing.JLabel();
         labelDesc_DondeVendido = new javax.swing.JLabel();
         labelDesc_InstruccionPrep = new javax.swing.JLabel();
-        labelDesc_ControlesEspeciales2 = new javax.swing.JLabel();
-        labelDesc_InfoAdicional = new javax.swing.JLabel();
-        labelDesc_CaracteristicasEnvase = new javax.swing.JLabel();
-        textFieldDesc_FormaUso = new javax.swing.JTextField();
-        textFieldDesc_PeriodoAptitud = new javax.swing.JTextField();
-        textFieldDesc_ModoConservacion = new javax.swing.JTextField();
-        textFieldDesc_DondeVendido = new javax.swing.JTextField();
-        textFieldDesc_InstruccionPrep = new javax.swing.JTextField();
-        textFieldDesc_ControlesEspeciales = new javax.swing.JTextField();
-        textFieldDesc_InfoAdicional = new javax.swing.JTextField();
-        labelDesc_AQuienDirigido = new javax.swing.JLabel();
         labelDesc_ControlesEspeciales1 = new javax.swing.JLabel();
+        labelDesc_ControlesEspeciales2 = new javax.swing.JLabel();
+        labelDesc_AQuienDirigido = new javax.swing.JLabel();
+        labelDesc_InfoAdicional = new javax.swing.JLabel();
+        textFieldDesc_InfoAdicional = new javax.swing.JTextField();
         textFieldDesc_AQuienDirigido = new javax.swing.JTextField();
-        botonGuardar = new javax.swing.JButton();
-        panelEnvase = new javax.swing.JPanel();
+        textFieldDesc_ControlesEspeciales = new javax.swing.JTextField();
+        textFieldDesc_InstruccionPrep = new javax.swing.JTextField();
+        textFieldDesc_DondeVendido = new javax.swing.JTextField();
+        textFieldDesc_ModoConservacion = new javax.swing.JTextField();
+        textFieldDesc_PeriodoAptitud = new javax.swing.JTextField();
+        SeparadorDatosProducto3 = new javax.swing.JSeparator();
+        labelDescripcion = new javax.swing.JLabel();
+        panelDescCarEnvase = new javax.swing.JPanel();
+        labelDesc_CaracteristicasEnvase = new javax.swing.JLabel();
         buttonAddEnvase = new javax.swing.JButton();
         buttonRemoveEnvase = new javax.swing.JButton();
+        panelEnvase = new javax.swing.JPanel();
+        panelDatosMuestraLab = new javax.swing.JPanel();
+        labelDatosDeLab = new javax.swing.JLabel();
+        labelNumProtocolo = new javax.swing.JLabel();
+        textFieldNroProtocolo = new javax.swing.JTextField();
+        textFieldNroActa = new javax.swing.JTextField();
+        labelNroActa = new javax.swing.JLabel();
+        botonGuardar = new javax.swing.JButton();
+        SeparadorRegistroRNPA2 = new javax.swing.JSeparator();
+        SeparadorRegistroRNPA3 = new javax.swing.JSeparator();
+        SeparadorRegistroRNPA4 = new javax.swing.JSeparator();
+        SeparadorRegistroRNPA1 = new javax.swing.JSeparator();
 
         jButton1.setText("jButton1");
 
-        labelNumRNE.setText("Numero RNE: ");
+        CargaBasica.setMaximumSize(new java.awt.Dimension(1980, 1500));
+        CargaBasica.setMinimumSize(new java.awt.Dimension(700, 0));
+        CargaBasica.setPreferredSize(new java.awt.Dimension(700, 1500));
+        CargaBasica.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        panelBuscaRNE.setMaximumSize(new java.awt.Dimension(1980, 90));
+        panelBuscaRNE.setMinimumSize(new java.awt.Dimension(700, 90));
+        panelBuscaRNE.setPreferredSize(new java.awt.Dimension(700, 90));
 
         textFieldRNE.setText("32132132");
         textFieldRNE.setToolTipText("");
@@ -144,6 +162,49 @@ public class panelCargaProducto extends javax.swing.JPanel {
             }
         });
 
+        labelNumRNE.setText("Numero RNE: ");
+
+        labelCargaProdAlimenticio.setFont(new java.awt.Font("Liberation Sans", 1, 14)); // NOI18N
+        labelCargaProdAlimenticio.setText("Carga de Producto Alimenticio");
+
+        javax.swing.GroupLayout panelBuscaRNELayout = new javax.swing.GroupLayout(panelBuscaRNE);
+        panelBuscaRNE.setLayout(panelBuscaRNELayout);
+        panelBuscaRNELayout.setHorizontalGroup(
+            panelBuscaRNELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelBuscaRNELayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(panelBuscaRNELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelCargaProdAlimenticio)
+                    .addGroup(panelBuscaRNELayout.createSequentialGroup()
+                        .addGroup(panelBuscaRNELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(labelNumRNE, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(panelBuscaRNELayout.createSequentialGroup()
+                                .addGap(80, 80, 80)
+                                .addComponent(textFieldRNE, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(9, 9, 9)
+                        .addComponent(BuscarRNE)))
+                .addContainerGap(365, Short.MAX_VALUE))
+        );
+        panelBuscaRNELayout.setVerticalGroup(
+            panelBuscaRNELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelBuscaRNELayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(labelCargaProdAlimenticio)
+                .addGap(20, 20, 20)
+                .addGroup(panelBuscaRNELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelNumRNE, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textFieldRNE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(BuscarRNE))
+                .addContainerGap(17, Short.MAX_VALUE))
+        );
+
+        CargaBasica.add(panelBuscaRNE, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, -1));
+        CargaBasica.add(SeparadorDatosEmpresa, new org.netbeans.lib.awtextra.AbsoluteConstraints(701, 96, 620, 0));
+
+        panelDatosEmpresa.setMaximumSize(new java.awt.Dimension(1980, 120));
+        panelDatosEmpresa.setMinimumSize(new java.awt.Dimension(700, 120));
+        panelDatosEmpresa.setPreferredSize(new java.awt.Dimension(700, 120));
+
         labelDatoEmpresa.setFont(new java.awt.Font("Liberation Sans", 1, 14)); // NOI18N
         labelDatoEmpresa.setText("Datos de la empresa");
 
@@ -153,17 +214,13 @@ public class panelCargaProducto extends javax.swing.JPanel {
 
         labelEmp_RazonSocial.setText("Razon Social: ");
 
-        labelEmp_Email.setText("Email: ");
+        textFieldEmp_RazonSocial.setEnabled(false);
 
-        labelEmp_Telefono.setText("Telefono: ");
+        textFieldEmp_Nombre.setEnabled(false);
 
         textFieldEmp_CUIL.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
         textFieldEmp_CUIL.setText("2345678");
         textFieldEmp_CUIL.setEnabled(false);
-
-        textFieldEmp_Nombre.setEnabled(false);
-
-        textFieldEmp_RazonSocial.setEnabled(false);
 
         textFieldEmp_Email.setEnabled(false);
         textFieldEmp_Email.addActionListener(new java.awt.event.ActionListener() {
@@ -174,12 +231,71 @@ public class panelCargaProducto extends javax.swing.JPanel {
 
         textFieldEmp_Telefono.setEnabled(false);
 
-        labelComposicion.setFont(new java.awt.Font("Liberation Sans", 1, 12)); // NOI18N
-        labelComposicion.setText("Composicion");
+        labelEmp_Telefono.setText("Telefono: ");
 
-        labelNroFactura.setText("Nro factura: ");
+        labelEmp_Email.setText("Email: ");
 
-        textFieldNroFactura.setText("123");
+        javax.swing.GroupLayout panelDatosEmpresaLayout = new javax.swing.GroupLayout(panelDatosEmpresa);
+        panelDatosEmpresa.setLayout(panelDatosEmpresaLayout);
+        panelDatosEmpresaLayout.setHorizontalGroup(
+            panelDatosEmpresaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelDatosEmpresaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(panelDatosEmpresaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelDatoEmpresa)
+                    .addGroup(panelDatosEmpresaLayout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(labelEmp_CUIL)
+                        .addGap(59, 59, 59)
+                        .addComponent(textFieldEmp_CUIL, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(78, 78, 78)
+                        .addComponent(labelEmp_Email, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(11, 11, 11)
+                        .addComponent(textFieldEmp_Email, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panelDatosEmpresaLayout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(labelEmp_NombreEmpresa)
+                        .addGap(46, 46, 46)
+                        .addComponent(textFieldEmp_Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(78, 78, 78)
+                        .addComponent(labelEmp_Telefono)
+                        .addGap(11, 11, 11)
+                        .addComponent(textFieldEmp_Telefono, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panelDatosEmpresaLayout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(labelEmp_RazonSocial)
+                        .addGap(23, 23, 23)
+                        .addComponent(textFieldEmp_RazonSocial, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(196, Short.MAX_VALUE))
+        );
+        panelDatosEmpresaLayout.setVerticalGroup(
+            panelDatosEmpresaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelDatosEmpresaLayout.createSequentialGroup()
+                .addComponent(labelDatoEmpresa)
+                .addGap(11, 11, 11)
+                .addGroup(panelDatosEmpresaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelEmp_CUIL, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textFieldEmp_CUIL, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(labelEmp_Email, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textFieldEmp_Email, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(9, 9, 9)
+                .addGroup(panelDatosEmpresaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelEmp_NombreEmpresa, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textFieldEmp_Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(labelEmp_Telefono, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textFieldEmp_Telefono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(10, 10, 10)
+                .addGroup(panelDatosEmpresaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelEmp_RazonSocial, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textFieldEmp_RazonSocial, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 10, Short.MAX_VALUE))
+        );
+
+        CargaBasica.add(panelDatosEmpresa, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 700, -1));
+
+        panelRegistroRNPA.setMaximumSize(new java.awt.Dimension(1980, 70));
+        panelRegistroRNPA.setMinimumSize(new java.awt.Dimension(700, 70));
+        panelRegistroRNPA.setPreferredSize(new java.awt.Dimension(700, 70));
 
         labelRegistroRNPA.setFont(new java.awt.Font("Liberation Sans", 1, 14)); // NOI18N
         labelRegistroRNPA.setText("Registro numero RNPA");
@@ -193,6 +309,57 @@ public class panelCargaProducto extends javax.swing.JPanel {
 
         labelFechaVencimiento.setText("Fecha Vencimiento: ");
 
+        javax.swing.GroupLayout panelRegistroRNPALayout = new javax.swing.GroupLayout(panelRegistroRNPA);
+        panelRegistroRNPA.setLayout(panelRegistroRNPALayout);
+        panelRegistroRNPALayout.setHorizontalGroup(
+            panelRegistroRNPALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelRegistroRNPALayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(panelRegistroRNPALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelRegistroRNPA)
+                    .addGroup(panelRegistroRNPALayout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(labelRNPA, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(10, 10, 10)
+                        .addComponent(textFieldRNPA, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(70, 70, 70)
+                        .addComponent(labelFechaVencimiento)
+                        .addGap(4, 4, 4)
+                        .addComponent(textFieldFechaVencimiento, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(198, Short.MAX_VALUE))
+        );
+        panelRegistroRNPALayout.setVerticalGroup(
+            panelRegistroRNPALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelRegistroRNPALayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(labelRegistroRNPA)
+                .addGap(11, 11, 11)
+                .addGroup(panelRegistroRNPALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelRNPA, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textFieldRNPA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(labelFechaVencimiento, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textFieldFechaVencimiento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
+        );
+
+        CargaBasica.add(panelRegistroRNPA, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 240, 700, 70));
+
+        panelDatosProducto.setMaximumSize(new java.awt.Dimension(1980, 1500));
+        panelDatosProducto.setMinimumSize(new java.awt.Dimension(700, 1000));
+        panelDatosProducto.setPreferredSize(new java.awt.Dimension(700, 1000));
+        panelDatosProducto.setLayout(new javax.swing.BoxLayout(panelDatosProducto, javax.swing.BoxLayout.Y_AXIS));
+
+        panelDatosProdAdentro.setMaximumSize(new java.awt.Dimension(1980, 180));
+        panelDatosProdAdentro.setMinimumSize(new java.awt.Dimension(700, 180));
+        panelDatosProdAdentro.setPreferredSize(new java.awt.Dimension(700, 180));
+
+        labelDatosPA.setFont(new java.awt.Font("Liberation Sans", 1, 14)); // NOI18N
+        labelDatosPA.setText("Datos del producto alimenticio");
+
+        labelNroFactura.setText("Nro factura: ");
+
+        textFieldNroFactura.setText("123");
+
         labelRotulo.setText("Rotulo: ");
 
         textAreaRotulo.setColumns(20);
@@ -200,19 +367,55 @@ public class panelCargaProducto extends javax.swing.JPanel {
         textAreaRotulo.setText("rotulo");
         jScrollPane1.setViewportView(textAreaRotulo);
 
-        labelDatosDeLab.setFont(new java.awt.Font("Liberation Sans", 1, 14)); // NOI18N
-        labelDatosDeLab.setText("Datos de la muestra de laboratorio");
+        javax.swing.GroupLayout panelDatosProdAdentroLayout = new javax.swing.GroupLayout(panelDatosProdAdentro);
+        panelDatosProdAdentro.setLayout(panelDatosProdAdentroLayout);
+        panelDatosProdAdentroLayout.setHorizontalGroup(
+            panelDatosProdAdentroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelDatosProdAdentroLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(panelDatosProdAdentroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelDatosPA)
+                    .addGroup(panelDatosProdAdentroLayout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(labelNroFactura)
+                        .addGap(8, 8, 8)
+                        .addComponent(textFieldNroFactura, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panelDatosProdAdentroLayout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(labelRotulo))
+                    .addGroup(panelDatosProdAdentroLayout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 560, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        panelDatosProdAdentroLayout.setVerticalGroup(
+            panelDatosProdAdentroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelDatosProdAdentroLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(labelDatosPA)
+                .addGap(11, 11, 11)
+                .addGroup(panelDatosProdAdentroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelNroFactura, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textFieldNroFactura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(10, 10, 10)
+                .addComponent(labelRotulo)
+                .addGap(6, 6, 6)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(19, Short.MAX_VALUE))
+        );
 
-        labelCargaProdAlimenticio.setFont(new java.awt.Font("Liberation Sans", 1, 14)); // NOI18N
-        labelCargaProdAlimenticio.setText("Carga de Producto Alimenticio");
+        panelDatosProducto.add(panelDatosProdAdentro);
 
-        labelNumProtocolo.setText("Numero Protocolo: ");
+        panelComposicion.setMaximumSize(new java.awt.Dimension(1980, 245));
+        panelComposicion.setMinimumSize(new java.awt.Dimension(700, 245));
+        panelComposicion.setPreferredSize(new java.awt.Dimension(700, 245));
 
-        textFieldNroProtocolo.setText("123456");
-
-        labelNroActa.setText("Numero de Acta: ");
-
-        textFieldNroActa.setText("654321");
+        textFieldComp_Nombre.setText("nombre");
+        textFieldComp_Nombre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                textFieldComp_NombreActionPerformed(evt);
+            }
+        });
 
         labelComp_Nombre.setText("Nombre comercial:");
 
@@ -224,18 +427,7 @@ public class panelCargaProducto extends javax.swing.JPanel {
 
         labelComp_FechaDuracion.setText("Fecha de duracion:");
 
-        labelComp_NroTipoMarca.setText("N° y tipo de registro de marca:");
-
-        labelComp_CAA.setText("CAA Articulo N°:");
-
         labelComp_MateriasPrimas.setText("Materias Primas");
-
-        textFieldComp_Nombre.setText("nombre");
-        textFieldComp_Nombre.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textFieldComp_NombreActionPerformed(evt);
-            }
-        });
 
         textFieldComp_Marca.setText("marca");
 
@@ -245,18 +437,116 @@ public class panelCargaProducto extends javax.swing.JPanel {
 
         textFieldComp_FechaDuracion.setText("2017-11-31");
 
+        labelComp_NroTipoMarca.setText("N° y tipo de registro de marca:");
+
+        labelComp_CAA.setText("CAA Articulo N°:");
+
         textFieldComp_NroTipoMarca.setText("tipomarca");
 
         textFieldComp_CAA.setText("caa");
         textFieldComp_CAA.setToolTipText("");
 
-        labelDatosPA.setFont(new java.awt.Font("Liberation Sans", 1, 14)); // NOI18N
-        labelDatosPA.setText("Datos del producto alimenticio");
+        labelComposicion.setFont(new java.awt.Font("Liberation Sans", 1, 12)); // NOI18N
+        labelComposicion.setText("Composicion");
 
-        labelDescripcion.setFont(new java.awt.Font("Liberation Sans", 1, 12)); // NOI18N
-        labelDescripcion.setText("Descripcion");
+        javax.swing.GroupLayout panelComposicionLayout = new javax.swing.GroupLayout(panelComposicion);
+        panelComposicion.setLayout(panelComposicionLayout);
+        panelComposicionLayout.setHorizontalGroup(
+            panelComposicionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelComposicionLayout.createSequentialGroup()
+                .addContainerGap(20, Short.MAX_VALUE)
+                .addGroup(panelComposicionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelComposicionLayout.createSequentialGroup()
+                        .addComponent(labelComp_Nombre)
+                        .addGap(22, 22, 22)
+                        .addComponent(textFieldComp_Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(80, 80, 80)
+                        .addComponent(labelComp_NroTipoMarca)
+                        .addGap(12, 12, 12)
+                        .addComponent(textFieldComp_NroTipoMarca, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panelComposicionLayout.createSequentialGroup()
+                        .addComponent(labelComp_Marca)
+                        .addGap(77, 77, 77)
+                        .addComponent(textFieldComp_Marca, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(80, 80, 80)
+                        .addComponent(labelComp_CAA)
+                        .addGap(81, 81, 81)
+                        .addComponent(textFieldComp_CAA, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panelComposicionLayout.createSequentialGroup()
+                        .addComponent(labelComp_Denominacion)
+                        .addGap(40, 40, 40)
+                        .addComponent(textFieldComp_Denominacion, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panelComposicionLayout.createSequentialGroup()
+                        .addComponent(labelComp_Contenido)
+                        .addGap(57, 57, 57)
+                        .addComponent(textFieldComp_Contenido, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panelComposicionLayout.createSequentialGroup()
+                        .addComponent(labelComp_FechaDuracion)
+                        .addGap(18, 18, 18)
+                        .addComponent(textFieldComp_FechaDuracion, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(labelComp_MateriasPrimas))
+                .addContainerGap())
+            .addGroup(panelComposicionLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(panelComposicionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelComposicion)
+                    .addComponent(SeparadorDatosProducto, javax.swing.GroupLayout.PREFERRED_SIZE, 670, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        panelComposicionLayout.setVerticalGroup(
+            panelComposicionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelComposicionLayout.createSequentialGroup()
+                .addComponent(labelComposicion, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(10, 10, 10)
+                .addComponent(SeparadorDatosProducto, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(17, 17, 17)
+                .addGroup(panelComposicionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelComp_Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textFieldComp_Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(labelComp_NroTipoMarca, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textFieldComp_NroTipoMarca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(10, 10, 10)
+                .addGroup(panelComposicionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelComp_Marca, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textFieldComp_Marca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(labelComp_CAA, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textFieldComp_CAA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(10, 10, 10)
+                .addGroup(panelComposicionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelComp_Denominacion, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textFieldComp_Denominacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(10, 10, 10)
+                .addGroup(panelComposicionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelComp_Contenido, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textFieldComp_Contenido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(10, 10, 10)
+                .addGroup(panelComposicionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelComp_FechaDuracion, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textFieldComp_FechaDuracion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(10, 10, 10)
+                .addComponent(labelComp_MateriasPrimas, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(18, Short.MAX_VALUE))
+        );
+
+        panelDatosProducto.add(panelComposicion);
+
+        panelDescripcion.setMaximumSize(new java.awt.Dimension(1980, 1000));
+        panelDescripcion.setMinimumSize(new java.awt.Dimension(700, 350));
+        panelDescripcion.setPreferredSize(new java.awt.Dimension(700, 700));
+        panelDescripcion.setLayout(new java.awt.GridBagLayout());
+
+        panelDescDatos.setMaximumSize(new java.awt.Dimension(1980, 335));
+        panelDescDatos.setMinimumSize(new java.awt.Dimension(700, 335));
+        panelDescDatos.setPreferredSize(new java.awt.Dimension(700, 335));
 
         labelDesc_FormaUso.setText("Forma de uso del producto:");
+
+        textFieldDesc_FormaUso.setText("formauso");
+        textFieldDesc_FormaUso.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                textFieldDesc_FormaUsoActionPerformed(evt);
+            }
+        });
 
         labelDesc_PeridoAptitud.setText("Periodo de aptitud:");
 
@@ -266,43 +556,135 @@ public class panelCargaProducto extends javax.swing.JPanel {
 
         labelDesc_InstruccionPrep.setText("Instrucciones de preparación:");
 
+        labelDesc_ControlesEspeciales1.setText("Controles y cuidados especiales");
+
         labelDesc_ControlesEspeciales2.setText("durante la distribución y la comercialización:");
-
-        labelDesc_InfoAdicional.setText("Información adicional:");
-
-        labelDesc_CaracteristicasEnvase.setText("Caracteristicas del envase");
-
-        textFieldDesc_FormaUso.setText("formauso");
-        textFieldDesc_FormaUso.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textFieldDesc_FormaUsoActionPerformed(evt);
-            }
-        });
-
-        textFieldDesc_PeriodoAptitud.setText("aptitud");
-
-        textFieldDesc_ModoConservacion.setText("conservacion");
-
-        textFieldDesc_DondeVendido.setText("donde");
-
-        textFieldDesc_InstruccionPrep.setText("prepa");
-
-        textFieldDesc_ControlesEspeciales.setText("cuidado");
-
-        textFieldDesc_InfoAdicional.setText("infoad");
 
         labelDesc_AQuienDirigido.setText("A quien va dirigido el producto:");
 
-        labelDesc_ControlesEspeciales1.setText("Controles y cuidados especiales");
+        labelDesc_InfoAdicional.setText("Información adicional:");
+
+        textFieldDesc_InfoAdicional.setText("infoad");
 
         textFieldDesc_AQuienDirigido.setText("aquein");
 
-        botonGuardar.setText("Guardar");
-        botonGuardar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonGuardarActionPerformed(evt);
-            }
-        });
+        textFieldDesc_ControlesEspeciales.setText("cuidado");
+
+        textFieldDesc_InstruccionPrep.setText("prepa");
+
+        textFieldDesc_DondeVendido.setText("donde");
+
+        textFieldDesc_ModoConservacion.setText("conservacion");
+
+        textFieldDesc_PeriodoAptitud.setText("aptitud");
+
+        labelDescripcion.setFont(new java.awt.Font("Liberation Sans", 1, 12)); // NOI18N
+        labelDescripcion.setText("Descripcion");
+
+        javax.swing.GroupLayout panelDescDatosLayout = new javax.swing.GroupLayout(panelDescDatos);
+        panelDescDatos.setLayout(panelDescDatosLayout);
+        panelDescDatosLayout.setHorizontalGroup(
+            panelDescDatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelDescDatosLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(panelDescDatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelDescripcion)
+                    .addComponent(SeparadorDatosProducto3, javax.swing.GroupLayout.PREFERRED_SIZE, 670, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(panelDescDatosLayout.createSequentialGroup()
+                        .addComponent(labelDesc_FormaUso)
+                        .addGap(88, 88, 88)
+                        .addComponent(textFieldDesc_FormaUso, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panelDescDatosLayout.createSequentialGroup()
+                        .addComponent(labelDesc_PeridoAptitud)
+                        .addGap(128, 128, 128)
+                        .addComponent(textFieldDesc_PeriodoAptitud, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panelDescDatosLayout.createSequentialGroup()
+                        .addComponent(labelDesc_ModoConservacion)
+                        .addGap(109, 109, 109)
+                        .addComponent(textFieldDesc_ModoConservacion, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panelDescDatosLayout.createSequentialGroup()
+                        .addComponent(labelDesc_DondeVendido)
+                        .addGap(63, 63, 63)
+                        .addComponent(textFieldDesc_DondeVendido, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panelDescDatosLayout.createSequentialGroup()
+                        .addComponent(labelDesc_InstruccionPrep)
+                        .addGap(77, 77, 77)
+                        .addComponent(textFieldDesc_InstruccionPrep, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panelDescDatosLayout.createSequentialGroup()
+                        .addGroup(panelDescDatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(labelDesc_ControlesEspeciales1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(labelDesc_ControlesEspeciales2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(11, 11, 11)
+                        .addComponent(textFieldDesc_ControlesEspeciales, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panelDescDatosLayout.createSequentialGroup()
+                        .addComponent(labelDesc_AQuienDirigido)
+                        .addGap(71, 71, 71)
+                        .addComponent(textFieldDesc_AQuienDirigido, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panelDescDatosLayout.createSequentialGroup()
+                        .addComponent(labelDesc_InfoAdicional)
+                        .addGap(115, 115, 115)
+                        .addComponent(textFieldDesc_InfoAdicional, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(20, Short.MAX_VALUE))
+        );
+        panelDescDatosLayout.setVerticalGroup(
+            panelDescDatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelDescDatosLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(labelDescripcion, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(10, 10, 10)
+                .addComponent(SeparadorDatosProducto3, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(panelDescDatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelDesc_FormaUso, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textFieldDesc_FormaUso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(10, 10, 10)
+                .addGroup(panelDescDatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelDesc_PeridoAptitud, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textFieldDesc_PeriodoAptitud, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(10, 10, 10)
+                .addGroup(panelDescDatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelDesc_ModoConservacion, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textFieldDesc_ModoConservacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(10, 10, 10)
+                .addGroup(panelDescDatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelDesc_DondeVendido, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textFieldDesc_DondeVendido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(10, 10, 10)
+                .addGroup(panelDescDatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelDesc_InstruccionPrep, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textFieldDesc_InstruccionPrep, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(panelDescDatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelDescDatosLayout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addGroup(panelDescDatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(labelDesc_ControlesEspeciales1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(textFieldDesc_ControlesEspeciales, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(panelDescDatosLayout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addComponent(labelDesc_ControlesEspeciales2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(10, 10, 10)
+                .addGroup(panelDescDatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelDesc_AQuienDirigido, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textFieldDesc_AQuienDirigido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(10, 10, 10)
+                .addGroup(panelDescDatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelDesc_InfoAdicional, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textFieldDesc_InfoAdicional, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
+        );
+
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        panelDescripcion.add(panelDescDatos, gridBagConstraints);
+
+        panelDescCarEnvase.setMaximumSize(new java.awt.Dimension(1980, 35));
+        panelDescCarEnvase.setMinimumSize(new java.awt.Dimension(700, 35));
+        panelDescCarEnvase.setPreferredSize(new java.awt.Dimension(700, 35));
+        panelDescCarEnvase.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        labelDesc_CaracteristicasEnvase.setText("Caracteristicas del envase");
+        panelDescCarEnvase.add(labelDesc_CaracteristicasEnvase, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, 20));
 
         buttonAddEnvase.setText("+");
         buttonAddEnvase.addActionListener(new java.awt.event.ActionListener() {
@@ -310,6 +692,7 @@ public class panelCargaProducto extends javax.swing.JPanel {
                 buttonAddEnvaseActionPerformed(evt);
             }
         });
+        panelDescCarEnvase.add(buttonAddEnvase, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 10, 40, -1));
 
         buttonRemoveEnvase.setText("-");
         buttonRemoveEnvase.addActionListener(new java.awt.event.ActionListener() {
@@ -317,355 +700,101 @@ public class panelCargaProducto extends javax.swing.JPanel {
                 buttonRemoveEnvaseActionPerformed(evt);
             }
         });
+        panelDescCarEnvase.add(buttonRemoveEnvase, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 10, -1, -1));
 
-        javax.swing.GroupLayout CargaBasicaLayout = new javax.swing.GroupLayout(CargaBasica);
-        CargaBasica.setLayout(CargaBasicaLayout);
-        CargaBasicaLayout.setHorizontalGroup(
-            CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(CargaBasicaLayout.createSequentialGroup()
-                .addGap(46, 46, 46)
-                .addComponent(labelCargaProdAlimenticio))
-            .addGroup(CargaBasicaLayout.createSequentialGroup()
-                .addGap(70, 70, 70)
-                .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(labelNumRNE, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(CargaBasicaLayout.createSequentialGroup()
-                        .addGap(80, 80, 80)
-                        .addComponent(textFieldRNE, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(9, 9, 9)
-                .addComponent(BuscarRNE))
-            .addComponent(SeparadorDatosEmpresa, javax.swing.GroupLayout.PREFERRED_SIZE, 620, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(SeparadorRegistroRNPA1, javax.swing.GroupLayout.PREFERRED_SIZE, 690, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGroup(CargaBasicaLayout.createSequentialGroup()
-                .addGap(50, 50, 50)
-                .addComponent(labelDatoEmpresa))
-            .addGroup(CargaBasicaLayout.createSequentialGroup()
-                .addGap(70, 70, 70)
-                .addComponent(labelEmp_CUIL)
-                .addGap(59, 59, 59)
-                .addComponent(textFieldEmp_CUIL, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(78, 78, 78)
-                .addComponent(labelEmp_Email, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(11, 11, 11)
-                .addComponent(textFieldEmp_Email, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(CargaBasicaLayout.createSequentialGroup()
-                .addGap(70, 70, 70)
-                .addComponent(labelEmp_NombreEmpresa)
-                .addGap(46, 46, 46)
-                .addComponent(textFieldEmp_Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(78, 78, 78)
-                .addComponent(labelEmp_Telefono)
-                .addGap(11, 11, 11)
-                .addComponent(textFieldEmp_Telefono, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(CargaBasicaLayout.createSequentialGroup()
-                .addGap(70, 70, 70)
-                .addComponent(labelEmp_RazonSocial)
-                .addGap(23, 23, 23)
-                .addComponent(textFieldEmp_RazonSocial, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addComponent(SeparadorRegistroRNPA, javax.swing.GroupLayout.PREFERRED_SIZE, 690, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGroup(CargaBasicaLayout.createSequentialGroup()
-                .addGap(50, 50, 50)
-                .addComponent(labelRegistroRNPA))
-            .addGroup(CargaBasicaLayout.createSequentialGroup()
-                .addGap(70, 70, 70)
-                .addComponent(labelRNPA, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(10, 10, 10)
-                .addComponent(textFieldRNPA, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(70, 70, 70)
-                .addComponent(labelFechaVencimiento)
-                .addGap(4, 4, 4)
-                .addComponent(textFieldFechaVencimiento, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addComponent(SeparadorDatosProducto1, javax.swing.GroupLayout.PREFERRED_SIZE, 690, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGroup(CargaBasicaLayout.createSequentialGroup()
-                .addGap(50, 50, 50)
-                .addComponent(labelDatosPA))
-            .addGroup(CargaBasicaLayout.createSequentialGroup()
-                .addGap(70, 70, 70)
-                .addComponent(labelNroFactura)
-                .addGap(8, 8, 8)
-                .addComponent(textFieldNroFactura, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(CargaBasicaLayout.createSequentialGroup()
-                .addGap(70, 70, 70)
-                .addComponent(labelRotulo))
-            .addGroup(CargaBasicaLayout.createSequentialGroup()
-                .addGap(70, 70, 70)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 560, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(CargaBasicaLayout.createSequentialGroup()
-                .addGap(70, 70, 70)
-                .addComponent(labelComposicion))
-            .addGroup(CargaBasicaLayout.createSequentialGroup()
-                .addGap(70, 70, 70)
-                .addComponent(SeparadorDatosProducto, javax.swing.GroupLayout.PREFERRED_SIZE, 670, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(CargaBasicaLayout.createSequentialGroup()
-                .addGap(70, 70, 70)
-                .addComponent(labelComp_Nombre)
-                .addGap(22, 22, 22)
-                .addComponent(textFieldComp_Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(80, 80, 80)
-                .addComponent(labelComp_NroTipoMarca)
-                .addGap(12, 12, 12)
-                .addComponent(textFieldComp_NroTipoMarca, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(CargaBasicaLayout.createSequentialGroup()
-                .addGap(70, 70, 70)
-                .addComponent(labelComp_Marca)
-                .addGap(77, 77, 77)
-                .addComponent(textFieldComp_Marca, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(80, 80, 80)
-                .addComponent(labelComp_CAA)
-                .addGap(81, 81, 81)
-                .addComponent(textFieldComp_CAA, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(CargaBasicaLayout.createSequentialGroup()
-                .addGap(70, 70, 70)
-                .addComponent(labelComp_Denominacion)
-                .addGap(40, 40, 40)
-                .addComponent(textFieldComp_Denominacion, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(CargaBasicaLayout.createSequentialGroup()
-                .addGap(70, 70, 70)
-                .addComponent(labelComp_Contenido)
-                .addGap(57, 57, 57)
-                .addComponent(textFieldComp_Contenido, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(CargaBasicaLayout.createSequentialGroup()
-                .addGap(70, 70, 70)
-                .addComponent(labelComp_FechaDuracion)
-                .addGap(18, 18, 18)
-                .addComponent(textFieldComp_FechaDuracion, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(CargaBasicaLayout.createSequentialGroup()
-                .addGap(70, 70, 70)
-                .addComponent(labelComp_MateriasPrimas))
-            .addGroup(CargaBasicaLayout.createSequentialGroup()
-                .addGap(70, 70, 70)
-                .addComponent(labelDescripcion))
-            .addGroup(CargaBasicaLayout.createSequentialGroup()
-                .addGap(70, 70, 70)
-                .addComponent(SeparadorDatosProducto3, javax.swing.GroupLayout.PREFERRED_SIZE, 670, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(CargaBasicaLayout.createSequentialGroup()
-                .addGap(70, 70, 70)
-                .addComponent(labelDesc_FormaUso)
-                .addGap(88, 88, 88)
-                .addComponent(textFieldDesc_FormaUso, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(CargaBasicaLayout.createSequentialGroup()
-                .addGap(70, 70, 70)
-                .addComponent(labelDesc_PeridoAptitud)
-                .addGap(128, 128, 128)
-                .addComponent(textFieldDesc_PeriodoAptitud, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(CargaBasicaLayout.createSequentialGroup()
-                .addGap(70, 70, 70)
-                .addComponent(labelDesc_ModoConservacion)
-                .addGap(109, 109, 109)
-                .addComponent(textFieldDesc_ModoConservacion, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(CargaBasicaLayout.createSequentialGroup()
-                .addGap(70, 70, 70)
-                .addComponent(labelDesc_DondeVendido)
-                .addGap(63, 63, 63)
-                .addComponent(textFieldDesc_DondeVendido, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(CargaBasicaLayout.createSequentialGroup()
-                .addGap(70, 70, 70)
-                .addComponent(labelDesc_InstruccionPrep)
-                .addGap(77, 77, 77)
-                .addComponent(textFieldDesc_InstruccionPrep, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(CargaBasicaLayout.createSequentialGroup()
-                .addGap(70, 70, 70)
-                .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(CargaBasicaLayout.createSequentialGroup()
-                        .addGap(220, 220, 220)
-                        .addComponent(textFieldDesc_ControlesEspeciales, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(labelDesc_ControlesEspeciales2, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(labelDesc_ControlesEspeciales1, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)))
-            .addGroup(CargaBasicaLayout.createSequentialGroup()
-                .addGap(70, 70, 70)
-                .addComponent(labelDesc_AQuienDirigido)
-                .addGap(71, 71, 71)
-                .addComponent(textFieldDesc_AQuienDirigido, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(CargaBasicaLayout.createSequentialGroup()
-                .addGap(70, 70, 70)
-                .addComponent(labelDesc_InfoAdicional)
-                .addGap(115, 115, 115)
-                .addComponent(textFieldDesc_InfoAdicional, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(CargaBasicaLayout.createSequentialGroup()
-                .addGap(70, 70, 70)
-                .addComponent(labelDesc_CaracteristicasEnvase)
-                .addGap(14, 14, 14)
-                .addComponent(buttonAddEnvase, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(10, 10, 10)
-                .addComponent(buttonRemoveEnvase))
-            .addGroup(CargaBasicaLayout.createSequentialGroup()
-                .addGap(70, 70, 70)
-                .addComponent(panelEnvase, javax.swing.GroupLayout.PREFERRED_SIZE, 620, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 690, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGroup(CargaBasicaLayout.createSequentialGroup()
-                .addGap(50, 50, 50)
-                .addComponent(labelDatosDeLab))
-            .addGroup(CargaBasicaLayout.createSequentialGroup()
-                .addGap(70, 70, 70)
-                .addComponent(labelNumProtocolo)
-                .addGap(8, 8, 8)
-                .addComponent(textFieldNroProtocolo, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(130, 130, 130)
-                .addComponent(labelNroActa)
-                .addGap(6, 6, 6)
-                .addComponent(textFieldNroActa, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(CargaBasicaLayout.createSequentialGroup()
-                .addGap(50, 50, 50)
-                .addComponent(botonGuardar))
-        );
-        CargaBasicaLayout.setVerticalGroup(
-            CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(CargaBasicaLayout.createSequentialGroup()
-                .addGap(11, 11, 11)
-                .addComponent(labelCargaProdAlimenticio)
-                .addGap(20, 20, 20)
-                .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(labelNumRNE, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(textFieldRNE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(BuscarRNE))
-                .addGap(17, 17, 17)
-                .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(CargaBasicaLayout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(SeparadorDatosEmpresa, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(SeparadorRegistroRNPA1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addComponent(labelDatoEmpresa)
-                .addGap(11, 11, 11)
-                .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(labelEmp_CUIL, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(textFieldEmp_CUIL, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(labelEmp_Email, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(textFieldEmp_Email, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(9, 9, 9)
-                .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(labelEmp_NombreEmpresa, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(textFieldEmp_Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(labelEmp_Telefono, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(textFieldEmp_Telefono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(10, 10, 10)
-                .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(labelEmp_RazonSocial, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(textFieldEmp_RazonSocial, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(10, 10, 10)
-                .addComponent(SeparadorRegistroRNPA, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(labelRegistroRNPA)
-                .addGap(11, 11, 11)
-                .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(labelRNPA, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(textFieldRNPA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(labelFechaVencimiento, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(textFieldFechaVencimiento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(20, 20, 20)
-                .addComponent(SeparadorDatosProducto1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(labelDatosPA)
-                .addGap(11, 11, 11)
-                .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(labelNroFactura, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(textFieldNroFactura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(10, 10, 10)
-                .addComponent(labelRotulo)
-                .addGap(6, 6, 6)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(10, 10, 10)
-                .addComponent(labelComposicion, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(10, 10, 10)
-                .addComponent(SeparadorDatosProducto, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(10, 10, 10)
-                .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(labelComp_Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(textFieldComp_Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(labelComp_NroTipoMarca, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(textFieldComp_NroTipoMarca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(10, 10, 10)
-                .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(labelComp_Marca, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(textFieldComp_Marca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(labelComp_CAA, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(textFieldComp_CAA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(10, 10, 10)
-                .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(labelComp_Denominacion, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(textFieldComp_Denominacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(10, 10, 10)
-                .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(labelComp_Contenido, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(textFieldComp_Contenido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(10, 10, 10)
-                .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(labelComp_FechaDuracion, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(textFieldComp_FechaDuracion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(10, 10, 10)
-                .addComponent(labelComp_MateriasPrimas, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(70, 70, 70)
-                .addComponent(labelDescripcion, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(10, 10, 10)
-                .addComponent(SeparadorDatosProducto3, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(10, 10, 10)
-                .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(labelDesc_FormaUso, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(textFieldDesc_FormaUso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(10, 10, 10)
-                .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(labelDesc_PeridoAptitud, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(textFieldDesc_PeriodoAptitud, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(10, 10, 10)
-                .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(labelDesc_ModoConservacion, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(textFieldDesc_ModoConservacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(10, 10, 10)
-                .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(labelDesc_DondeVendido, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(textFieldDesc_DondeVendido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(10, 10, 10)
-                .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(labelDesc_InstruccionPrep, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(textFieldDesc_InstruccionPrep, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(10, 10, 10)
-                .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(textFieldDesc_ControlesEspeciales, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(CargaBasicaLayout.createSequentialGroup()
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 1;
+        panelDescripcion.add(panelDescCarEnvase, gridBagConstraints);
+
+        panelEnvase.setMaximumSize(new java.awt.Dimension(700, 400));
+        panelEnvase.setMinimumSize(new java.awt.Dimension(700, 200));
+        panelEnvase.setPreferredSize(new java.awt.Dimension(700, 200));
+        panelEnvase.setLayout(new javax.swing.BoxLayout(panelEnvase, javax.swing.BoxLayout.Y_AXIS));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 2;
+        panelDescripcion.add(panelEnvase, gridBagConstraints);
+
+        panelDatosProducto.add(panelDescripcion);
+
+        CargaBasica.add(panelDatosProducto, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 340, 700, 880));
+
+        panelDatosMuestraLab.setMaximumSize(new java.awt.Dimension(1980, 90));
+        panelDatosMuestraLab.setMinimumSize(new java.awt.Dimension(700, 90));
+        panelDatosMuestraLab.setPreferredSize(new java.awt.Dimension(700, 90));
+
+        labelDatosDeLab.setFont(new java.awt.Font("Liberation Sans", 1, 14)); // NOI18N
+        labelDatosDeLab.setText("Datos de la muestra de laboratorio");
+
+        labelNumProtocolo.setText("Numero Protocolo: ");
+
+        textFieldNroProtocolo.setText("123456");
+
+        textFieldNroActa.setText("654321");
+
+        labelNroActa.setText("Numero de Acta: ");
+
+        javax.swing.GroupLayout panelDatosMuestraLabLayout = new javax.swing.GroupLayout(panelDatosMuestraLab);
+        panelDatosMuestraLab.setLayout(panelDatosMuestraLabLayout);
+        panelDatosMuestraLabLayout.setHorizontalGroup(
+            panelDatosMuestraLabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelDatosMuestraLabLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(panelDatosMuestraLabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelDatosDeLab)
+                    .addGroup(panelDatosMuestraLabLayout.createSequentialGroup()
                         .addGap(20, 20, 20)
-                        .addComponent(labelDesc_ControlesEspeciales2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(labelDesc_ControlesEspeciales1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(10, 10, 10)
-                .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(labelDesc_AQuienDirigido, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(textFieldDesc_AQuienDirigido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(10, 10, 10)
-                .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(labelDesc_InfoAdicional, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(textFieldDesc_InfoAdicional, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(20, 20, 20)
-                .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(labelDesc_CaracteristicasEnvase, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(buttonAddEnvase)
-                    .addComponent(buttonRemoveEnvase))
-                .addGap(7, 7, 7)
-                .addComponent(panelEnvase, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
-                .addGap(30, 30, 30)
-                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(10, 10, 10)
+                        .addComponent(labelNumProtocolo)
+                        .addGap(8, 8, 8)
+                        .addComponent(textFieldNroProtocolo, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(130, 130, 130)
+                        .addComponent(labelNroActa)
+                        .addGap(6, 6, 6)
+                        .addComponent(textFieldNroActa, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(124, Short.MAX_VALUE))
+        );
+        panelDatosMuestraLabLayout.setVerticalGroup(
+            panelDatosMuestraLabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelDatosMuestraLabLayout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(labelDatosDeLab)
                 .addGap(11, 11, 11)
-                .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(panelDatosMuestraLabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(labelNumProtocolo, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(textFieldNroProtocolo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(labelNroActa, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(textFieldNroActa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(40, 40, 40)
-                .addComponent(botonGuardar)
-                .addGap(22, 22, 22))
+                .addContainerGap(29, Short.MAX_VALUE))
         );
+
+        CargaBasica.add(panelDatosMuestraLab, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 1240, 700, 80));
+
+        botonGuardar.setText("Guardar");
+        botonGuardar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonGuardarActionPerformed(evt);
+            }
+        });
+        CargaBasica.add(botonGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 1340, -1, -1));
+        CargaBasica.add(SeparadorRegistroRNPA2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 650, 10));
+        CargaBasica.add(SeparadorRegistroRNPA3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 230, 650, 10));
+        CargaBasica.add(SeparadorRegistroRNPA4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 320, 650, 10));
+        CargaBasica.add(SeparadorRegistroRNPA1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 1230, 650, 10));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(0, 1, Short.MAX_VALUE)
+                .addGap(29, 29, 29)
                 .addComponent(CargaBasica, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 1, Short.MAX_VALUE))
+                .addContainerGap(41, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+            .addGroup(layout.createSequentialGroup()
+                .addGap(56, 56, 56)
                 .addComponent(CargaBasica, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
@@ -786,15 +915,26 @@ public class panelCargaProducto extends javax.swing.JPanel {
         vectorpanelesCargaEnvase.add(pCEnv);
         panelEnvase.add(pCEnv);
 
-        dimensionPanel = panelEnvase.getPreferredSize();
-        height = dimensionPanel.getHeight();
-        width = dimensionPanel.getWidth();
-        height += 30;
-        width += 520;
+//        dimensionPanel = panelEnvase.getPreferredSize();
+//        height = dimensionPanel.getHeight();
+//        width = dimensionPanel.getWidth();
+//        height += 30;
+//        width += 520;
         
-        panelEnvase.setPreferredSize(new Dimension((int)width,(int) height));
+        //panelEnvase.setPreferredSize(new Dimension((int)width,(int) height));
         panelEnvase.revalidate();
         panelEnvase.repaint();
+       
+//        dimensionPanel = panelDatosProducto.getPreferredSize();
+//        height = dimensionPanel.getHeight();
+//        width = dimensionPanel.getWidth();
+//        height += 30;
+//        width += 520;
+        
+        //panelDatosProducto.setPreferredSize(new Dimension((int)width,(int) height));
+        panelDatosProducto.revalidate();
+        panelDatosProducto.repaint();
+        
         this.revalidate();
         this.repaint();
     }//GEN-LAST:event_buttonAddEnvaseActionPerformed
@@ -830,16 +970,16 @@ public class panelCargaProducto extends javax.swing.JPanel {
     private javax.swing.JPanel CargaBasica;
     private javax.swing.JSeparator SeparadorDatosEmpresa;
     private javax.swing.JSeparator SeparadorDatosProducto;
-    private javax.swing.JSeparator SeparadorDatosProducto1;
     private javax.swing.JSeparator SeparadorDatosProducto3;
-    private javax.swing.JSeparator SeparadorRegistroRNPA;
     private javax.swing.JSeparator SeparadorRegistroRNPA1;
+    private javax.swing.JSeparator SeparadorRegistroRNPA2;
+    private javax.swing.JSeparator SeparadorRegistroRNPA3;
+    private javax.swing.JSeparator SeparadorRegistroRNPA4;
     private javax.swing.JButton botonGuardar;
     private javax.swing.JButton buttonAddEnvase;
     private javax.swing.JButton buttonRemoveEnvase;
     private javax.swing.JButton jButton1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JSeparator jSeparator1;
     private javax.swing.JLabel labelCargaProdAlimenticio;
     private javax.swing.JLabel labelComp_CAA;
     private javax.swing.JLabel labelComp_Contenido;
@@ -877,7 +1017,17 @@ public class panelCargaProducto extends javax.swing.JPanel {
     private javax.swing.JLabel labelRNPA;
     private javax.swing.JLabel labelRegistroRNPA;
     private javax.swing.JLabel labelRotulo;
+    private javax.swing.JPanel panelBuscaRNE;
+    private javax.swing.JPanel panelComposicion;
+    private javax.swing.JPanel panelDatosEmpresa;
+    private javax.swing.JPanel panelDatosMuestraLab;
+    private javax.swing.JPanel panelDatosProdAdentro;
+    private javax.swing.JPanel panelDatosProducto;
+    private javax.swing.JPanel panelDescCarEnvase;
+    private javax.swing.JPanel panelDescDatos;
+    private javax.swing.JPanel panelDescripcion;
     private javax.swing.JPanel panelEnvase;
+    private javax.swing.JPanel panelRegistroRNPA;
     private javax.swing.JTextArea textAreaRotulo;
     private javax.swing.JTextField textFieldComp_CAA;
     private javax.swing.JTextField textFieldComp_Contenido;
