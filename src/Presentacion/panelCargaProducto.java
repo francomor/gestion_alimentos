@@ -109,6 +109,15 @@ public class panelCargaProducto extends javax.swing.JPanel {
         labelDesc_ControlesEspeciales1 = new javax.swing.JLabel();
         textFieldDesc_AQuienDirigido = new javax.swing.JTextField();
         botonGuardar = new javax.swing.JButton();
+        capacidad_textfield = new javax.swing.JTextField();
+        material_selec = new javax.swing.JComboBox<>();
+        unidad_selec = new javax.swing.JComboBox<>();
+        material_tf = new javax.swing.JTextField();
+        unidad_tf = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        buttonInsertar = new javax.swing.JButton();
 
         CargaBasica.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -363,6 +372,60 @@ public class panelCargaProducto extends javax.swing.JPanel {
         });
         CargaBasica.add(botonGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 1290, -1, -1));
 
+        capacidad_textfield.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                capacidad_textfieldActionPerformed(evt);
+            }
+        });
+        CargaBasica.add(capacidad_textfield, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 1150, 100, -1));
+
+        material_selec.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "otro..." }));
+        material_selec.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                material_selecActionPerformed(evt);
+            }
+        });
+        CargaBasica.add(material_selec, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 1130, 80, -1));
+
+        unidad_selec.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "otro..." }));
+        unidad_selec.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                unidad_selecActionPerformed(evt);
+            }
+        });
+        CargaBasica.add(unidad_selec, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 1130, 100, 20));
+
+        material_tf.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                material_tfActionPerformed(evt);
+            }
+        });
+        CargaBasica.add(material_tf, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 1150, 80, -1));
+
+        unidad_tf.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                unidad_tfActionPerformed(evt);
+            }
+        });
+        CargaBasica.add(unidad_tf, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 1130, 100, -1));
+
+        jLabel5.setText("capacidad");
+        CargaBasica.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 1110, -1, -1));
+
+        jLabel6.setText("material");
+        CargaBasica.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 1110, -1, -1));
+
+        jLabel4.setText("unidad");
+        CargaBasica.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 1110, -1, -1));
+
+        buttonInsertar.setText("Insertar");
+        buttonInsertar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonInsertarActionPerformed(evt);
+            }
+        });
+        CargaBasica.add(buttonInsertar, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 1130, -1, -1));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -472,6 +535,89 @@ public class panelCargaProducto extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_botonGuardarActionPerformed
 
+    private void capacidad_textfieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_capacidad_textfieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_capacidad_textfieldActionPerformed
+
+    private void material_selecActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_material_selecActionPerformed
+
+        if (material_selec.getSelectedItem()=="otro..."){
+            material_tf.setEnabled(true);
+        }
+        else{material_tf.setEnabled(false);}
+    }//GEN-LAST:event_material_selecActionPerformed
+
+    private void unidad_selecActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_unidad_selecActionPerformed
+
+        if (unidad_selec.getSelectedItem()=="otro..."){
+            unidad_tf.setEnabled(true);
+        }
+        else{unidad_tf.setEnabled(false);}
+    }//GEN-LAST:event_unidad_selecActionPerformed
+
+    private void material_tfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_material_tfActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_material_tfActionPerformed
+
+    private void unidad_tfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_unidad_tfActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_unidad_tfActionPerformed
+
+    private void buttonInsertarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonInsertarActionPerformed
+        // TODO add your handling code here:
+        /*Vector<String> mat_car= new Vector<String>();
+        Vector<String> uni_car= new Vector<String>();*/
+
+        Envase envase=new Envase();
+
+        Boolean error=false, existe=false,existe1=false;
+        envase.setCapacidad(this.capacidad_textfield.getText());
+
+        if(material_tf.isEnabled() && unidad_tf.isEnabled()){
+            envase.setMaterial(this.material_tf.getText());
+            envase.setUnidad(this.unidad_tf.getText());
+        }
+        if(material_tf.isEnabled() && !unidad_tf.isEnabled()){
+            envase.setMaterial(this.material_tf.getText());
+            envase.setUnidad(this.unidad_selec.getSelectedItem().toString());
+        }
+        if(!material_tf.isEnabled() && unidad_tf.isEnabled()){
+            envase.setMaterial(this.material_selec.getSelectedItem().toString());
+            envase.setUnidad(this.unidad_selec.getSelectedItem().toString());
+        }
+
+        try {
+            //verificar existencia y guardar (en caso de no existir) materia y unidad.
+            existe=envase.existe_material(envase.getMaterial());
+            existe1=envase.existe_unidad(envase.getUnidad());
+            if (existe)
+            {JOptionPane.showMessageDialog(null, "Ya existe un material con ese nombre.");}
+            else {
+                //guardarlo
+                error=envase.guardar_material(envase.getMaterial());
+                if(!error){JOptionPane.showMessageDialog(null, "material agregado correctamente.");}
+                else {JOptionPane.showMessageDialog(null, "Hubo un error al agregar el material");}
+            }
+            if (existe1)
+            {JOptionPane.showMessageDialog(null, "Ya existe una unidad con ese nombre.");}
+            else {
+                //guardarlo
+                error=envase.guardar_unidad(envase.getUnidad());
+                if(!error){JOptionPane.showMessageDialog(null, "unidad agregado correctamente.");}
+                else {JOptionPane.showMessageDialog(null, "Hubo un error al agregar la unidad");}
+            }
+            envase.guardar_envase(envase.getCapacidad(),envase.getMaterial(),envase.getUnidad());
+        } catch (SQLException | InstantiationException | IllegalAccessException ex) {
+            Logger.getLogger(Envase_prueba.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        //////////////////////////////////////////
+        //////////////////////////////////////////
+
+        //////////////////////////////////////////
+        //////////////////////////////////////////
+
+    }//GEN-LAST:event_buttonInsertarActionPerformed
+
     private Empresa recuperarDatosEmpresa(String nro_rne) throws SQLException, InstantiationException, IllegalAccessException {
         Empresa empresa_salida = null;
         try {
@@ -499,6 +645,11 @@ public class panelCargaProducto extends javax.swing.JPanel {
     private javax.swing.JSeparator SeparadorRegistroRNPA;
     private javax.swing.JSeparator SeparadorRegistroRNPA1;
     private javax.swing.JButton botonGuardar;
+    private javax.swing.JButton buttonInsertar;
+    private javax.swing.JTextField capacidad_textfield;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JLabel labelCargaProdAlimenticio;
@@ -538,6 +689,8 @@ public class panelCargaProducto extends javax.swing.JPanel {
     private javax.swing.JLabel labelRNPA;
     private javax.swing.JLabel labelRegistroRNPA;
     private javax.swing.JLabel labelRotulo;
+    private javax.swing.JComboBox<String> material_selec;
+    private javax.swing.JTextField material_tf;
     private javax.swing.JTextArea textAreaRotulo;
     private javax.swing.JTextField textFieldComp_CAA;
     private javax.swing.JTextField textFieldComp_Contenido;
@@ -565,5 +718,7 @@ public class panelCargaProducto extends javax.swing.JPanel {
     private javax.swing.JTextField textFieldNroProtocolo;
     private javax.swing.JTextField textFieldRNE;
     private javax.swing.JTextField textFieldRNPA;
+    private javax.swing.JComboBox<String> unidad_selec;
+    private javax.swing.JTextField unidad_tf;
     // End of variables declaration//GEN-END:variables
 }
