@@ -180,31 +180,33 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="labelDatoEmpresa" min="-2" max="-2" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
+                          <Group type="102" attributes="0">
                               <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
-                              <Component id="labelEmp_CUIL" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="59" pref="59" max="-2" attributes="0"/>
-                              <Component id="textFieldEmp_CUIL" min="-2" pref="122" max="-2" attributes="0"/>
-                              <EmptySpace min="78" pref="78" max="-2" attributes="0"/>
-                              <Component id="labelEmp_Email" min="-2" pref="49" max="-2" attributes="0"/>
-                              <EmptySpace min="11" pref="11" max="-2" attributes="0"/>
-                              <Component id="textFieldEmp_Email" min="-2" pref="124" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
-                              <Component id="labelEmp_NombreEmpresa" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="46" pref="46" max="-2" attributes="0"/>
-                              <Component id="textFieldEmp_Nombre" min="-2" pref="122" max="-2" attributes="0"/>
-                              <EmptySpace min="78" pref="78" max="-2" attributes="0"/>
-                              <Component id="labelEmp_Telefono" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="11" pref="11" max="-2" attributes="0"/>
-                              <Component id="textFieldEmp_Telefono" min="-2" pref="124" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
-                              <Component id="labelEmp_RazonSocial" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="23" pref="23" max="-2" attributes="0"/>
-                              <Component id="textFieldEmp_RazonSocial" min="-2" pref="122" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="labelEmp_CUIL" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="59" pref="59" max="-2" attributes="0"/>
+                                      <Component id="textFieldEmp_CUIL" min="-2" pref="122" max="-2" attributes="0"/>
+                                      <EmptySpace min="78" pref="78" max="-2" attributes="0"/>
+                                      <Component id="labelEmp_Email" min="-2" pref="49" max="-2" attributes="0"/>
+                                      <EmptySpace min="11" pref="11" max="-2" attributes="0"/>
+                                      <Component id="textFieldEmp_Email" min="-2" pref="124" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="labelEmp_NombreEmpresa" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="46" pref="46" max="-2" attributes="0"/>
+                                      <Component id="textFieldEmp_Nombre" min="-2" pref="122" max="-2" attributes="0"/>
+                                      <EmptySpace min="78" pref="78" max="-2" attributes="0"/>
+                                      <Component id="labelEmp_Telefono" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="11" pref="11" max="-2" attributes="0"/>
+                                      <Component id="textFieldEmp_Telefono" min="-2" pref="124" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="labelEmp_RazonSocial" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="23" pref="23" max="-2" attributes="0"/>
+                                      <Component id="textFieldEmp_RazonSocial" min="-2" pref="122" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
                           </Group>
                       </Group>
                       <EmptySpace pref="196" max="32767" attributes="0"/>
@@ -442,17 +444,15 @@
                               <Component id="labelDatosPA" min="-2" max="-2" attributes="0"/>
                               <Group type="102" attributes="0">
                                   <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
-                                  <Component id="labelNroFactura" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="8" pref="8" max="-2" attributes="0"/>
-                                  <Component id="textFieldNroFactura" min="-2" pref="120" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" attributes="0">
-                                  <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
-                                  <Component id="labelRotulo" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" attributes="0">
-                                  <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
-                                  <Component id="jScrollPane1" min="-2" pref="560" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <Component id="labelNroFactura" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="8" pref="8" max="-2" attributes="0"/>
+                                          <Component id="textFieldNroFactura" min="-2" pref="120" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Component id="labelRotulo" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jScrollPane1" min="-2" pref="560" max="-2" attributes="0"/>
+                                  </Group>
                               </Group>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
@@ -537,7 +537,7 @@
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace pref="20" max="32767" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
                                   <Component id="labelComp_Nombre" min="-2" max="-2" attributes="0"/>
@@ -558,21 +558,27 @@
                                   <Component id="textFieldComp_CAA" min="-2" pref="160" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" attributes="0">
-                                  <Component id="labelComp_Denominacion" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="40" pref="40" max="-2" attributes="0"/>
-                                  <Component id="textFieldComp_Denominacion" min="-2" pref="160" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="labelComp_Denominacion" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="40" pref="40" max="-2" attributes="0"/>
+                                          <Component id="textFieldComp_Denominacion" min="-2" pref="160" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="labelComp_Contenido" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="57" pref="57" max="-2" attributes="0"/>
+                                          <Component id="textFieldComp_Contenido" min="-2" pref="160" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="labelComp_FechaDuracion" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
+                                          <Component id="textFieldComp_FechaDuracion" min="-2" pref="160" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Component id="labelComp_MateriasPrimas" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+                                  <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <Group type="102" attributes="0">
-                                  <Component id="labelComp_Contenido" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="57" pref="57" max="-2" attributes="0"/>
-                                  <Component id="textFieldComp_Contenido" min="-2" pref="160" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" attributes="0">
-                                  <Component id="labelComp_FechaDuracion" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
-                                  <Component id="textFieldComp_FechaDuracion" min="-2" pref="160" max="-2" attributes="0"/>
-                              </Group>
-                              <Component id="labelComp_MateriasPrimas" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
@@ -589,40 +595,45 @@
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="labelComposicion" min="-2" pref="20" max="-2" attributes="0"/>
-                          <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                          <Component id="SeparadorDatosProducto" min="-2" pref="10" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="labelComp_Nombre" min="-2" pref="20" max="-2" attributes="0"/>
-                              <Component id="textFieldComp_Nombre" min="-2" max="-2" attributes="0"/>
-                              <Component id="labelComp_NroTipoMarca" min="-2" pref="20" max="-2" attributes="0"/>
-                              <Component id="textFieldComp_NroTipoMarca" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <Component id="labelComposicion" min="-2" pref="20" max="-2" attributes="0"/>
+                                  <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                  <Component id="SeparadorDatosProducto" min="-2" pref="10" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="labelComp_Nombre" min="-2" pref="20" max="-2" attributes="0"/>
+                                      <Component id="textFieldComp_Nombre" min="-2" max="-2" attributes="0"/>
+                                      <Component id="labelComp_NroTipoMarca" min="-2" pref="20" max="-2" attributes="0"/>
+                                      <Component id="textFieldComp_NroTipoMarca" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="labelComp_Marca" min="-2" pref="20" max="-2" attributes="0"/>
+                                      <Component id="textFieldComp_Marca" min="-2" max="-2" attributes="0"/>
+                                      <Component id="labelComp_CAA" min="-2" pref="20" max="-2" attributes="0"/>
+                                      <Component id="textFieldComp_CAA" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="labelComp_Denominacion" min="-2" pref="20" max="-2" attributes="0"/>
+                                      <Component id="textFieldComp_Denominacion" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="labelComp_Contenido" min="-2" pref="20" max="-2" attributes="0"/>
+                                      <Component id="textFieldComp_Contenido" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="labelComp_FechaDuracion" min="-2" pref="20" max="-2" attributes="0"/>
+                                      <Component id="textFieldComp_FechaDuracion" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                  <Component id="labelComp_MateriasPrimas" min="-2" pref="20" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
-                          <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="labelComp_Marca" min="-2" pref="20" max="-2" attributes="0"/>
-                              <Component id="textFieldComp_Marca" min="-2" max="-2" attributes="0"/>
-                              <Component id="labelComp_CAA" min="-2" pref="20" max="-2" attributes="0"/>
-                              <Component id="textFieldComp_CAA" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="labelComp_Denominacion" min="-2" pref="20" max="-2" attributes="0"/>
-                              <Component id="textFieldComp_Denominacion" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="labelComp_Contenido" min="-2" pref="20" max="-2" attributes="0"/>
-                              <Component id="textFieldComp_Contenido" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="labelComp_FechaDuracion" min="-2" pref="20" max="-2" attributes="0"/>
-                              <Component id="textFieldComp_FechaDuracion" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                          <Component id="labelComp_MateriasPrimas" min="-2" pref="20" max="-2" attributes="0"/>
                           <EmptySpace pref="18" max="32767" attributes="0"/>
                       </Group>
                   </Group>
@@ -718,6 +729,144 @@
                 </Component>
                 <Component class="javax.swing.JSeparator" name="SeparadorDatosProducto">
                 </Component>
+                <Container class="javax.swing.JPanel" name="jPanel1">
+
+                  <Layout>
+                    <DimensionLayout dim="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="labelComp_MateriasPrimas1" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="13" pref="13" max="-2" attributes="0"/>
+                                      <Component id="mp_lista" min="-2" pref="160" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="50" pref="50" max="-2" attributes="0"/>
+                                      <Component id="mp_nombre" min="-2" pref="160" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <EmptySpace min="50" pref="50" max="-2" attributes="0"/>
+                                              <Component id="mp_cantidad" min="-2" pref="150" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Component id="jLabel1" min="-2" pref="60" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="197" max="-2" attributes="0"/>
+                                      <Component id="mp_aniadir" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace pref="36" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  <Component id="mp_cargar" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="0" pref="245" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                    <DimensionLayout dim="1">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="labelComp_MateriasPrimas1" min="-2" pref="20" max="-2" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                                          <Component id="mp_lista" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="7" pref="7" max="-2" attributes="0"/>
+                                      <Component id="mp_nombre" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="mp_cantidad" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel1" min="-2" pref="20" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="mp_aniadir" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <EmptySpace min="0" pref="66" max="32767" attributes="0"/>
+                                  <Component id="mp_cargar" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="0" pref="13" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                  </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JLabel" name="labelComp_MateriasPrimas1">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Materias Primas"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel2">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Nombre"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="mp_lista">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection code="new javax.swing.DefaultComboBoxModel&lt;&gt;(new String[] { &quot;otro...&quot; })" type="code"/>
+                        </Property>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mp_listaActionPerformed"/>
+                      </Events>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel1">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Cantidad"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="mp_cantidad">
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mp_cantidadActionPerformed"/>
+                      </Events>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="mp_aniadir">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="a&#xf1;adir"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mp_aniadirActionPerformed"/>
+                      </Events>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="mp_cargar">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="cargar"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mp_cargarActionPerformed"/>
+                      </Events>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="mp_nombre">
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mp_nombreActionPerformed"/>
+                      </Events>
+                    </Component>
+                  </SubComponents>
+                </Container>
               </SubComponents>
             </Container>
             <Container class="javax.swing.JPanel" name="panelDescripcion">
