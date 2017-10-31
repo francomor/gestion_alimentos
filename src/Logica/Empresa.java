@@ -17,6 +17,16 @@ public class Empresa {
     private String razon_social;
     private String direccion;
     private int telefono;
+    private int id_localidad;
+
+    public int getId_localidad() {
+        return id_localidad;
+    }
+
+    public void setId_localidad(int id_localidad) {
+        this.id_localidad = id_localidad;
+    }
+
 
     public
     String getDireccion() {
@@ -84,11 +94,14 @@ public class Empresa {
      * @throws java.lang.IllegalAccessException
      */
     public static Empresa recuperarPorCuit(String CUIT) throws SQLException, InstantiationException, IllegalAccessException {
+        
         ConexionBD con = ConexionBD.getConexion();
         String[][] valores;
         Empresa salida = new Empresa();
+        Localidad locaux = new Localidad();
         valores = new String[1][6];
         valores = con.recuperar(valores, "select * from empresa where CUIT=" + CUIT + ";", 6);
+        
         if (valores[0][0] == null) {
             salida = null;
         } else {
@@ -96,17 +109,21 @@ public class Empresa {
             if (valores[0][1] != null) {
                 salida.setEmail(valores[0][1]);
             }
-             if (valores[0][2] != null) {
-                salida.setDireccion(valores[0][2]);
+             
+            if (valores[0][2] != null) {
+                salida.setNombre(valores[0][2]);
             }
             if (valores[0][3] != null) {
-                salida.setNombre(valores[0][3]);
+                salida.setRazon_social(valores[0][3]);
             }
             if (valores[0][4] != null) {
-                salida.setRazon_social(valores[0][4]);
+                salida.setTelefono(Integer.parseInt(valores[0][4]));
             }
             if (valores[0][5] != null) {
-                salida.setTelefono(Integer.parseInt(valores[0][5]));
+                salida.setDireccion(valores[0][5]);
+            }
+            if (valores[0][6] != null) {
+                salida.setId_localidad(Integer.parseInt(valores[0][6]));
             }
         }
         return salida;
