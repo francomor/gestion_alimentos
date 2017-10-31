@@ -1,11 +1,7 @@
-
-
 /**
- * @author Franco
+ * @author Francisco Herrero, Franco Morero y Mauricio Vazquez
  * @version 1.0
- * @created 18-oct.-2017 19:44:04
  */
-
 package Logica;
 
 import Persistencia.ConexionBD;
@@ -104,7 +100,8 @@ public class Descripcion {
     }
 
     /**
-     * Metodo que actualiza Descripcion en la BD. Require que el producto alimenticio halla sido cargado
+     * Metodo que actualiza Descripcion en la BD. Require que el producto
+     * alimenticio halla sido cargado
      *
      * @throws java.sql.SQLException
      * @throws java.lang.InstantiationException
@@ -114,21 +111,21 @@ public class Descripcion {
 
         ConexionBD con = ConexionBD.getConexion();
         String update;
-        
-        if(m_ProductoAlimenticio != null){
+
+        if (m_ProductoAlimenticio != null) {
             update = "UPDATE `producto_alimenticio` SET ";
-            update += "`Controles_y_cuidados`='" + controlesycuidados   +"',";
-            update += "`destino_prod`='" + destino_producto   +"',";
-            update += "`forma_uso`='" + forma_uso_producto   +"',";
-            update += "`info_adicional`='" + informacion_adicional   +"',";
-            update += "`instrucciones_preparacion`='" + intrucciones_preparacion   +"',";
-            update += "`lugar_venta`='" + lugar_venta   +"',";
-            update += "`modo_conservacion`='" + modo_conservacion   +"',";
-            update += "`periodo_aptitud`='" + periodo_aptitud +"' ";
+            update += "`Controles_y_cuidados`='" + controlesycuidados + "',";
+            update += "`destino_prod`='" + destino_producto + "',";
+            update += "`forma_uso`='" + forma_uso_producto + "',";
+            update += "`info_adicional`='" + informacion_adicional + "',";
+            update += "`instrucciones_preparacion`='" + intrucciones_preparacion + "',";
+            update += "`lugar_venta`='" + lugar_venta + "',";
+            update += "`modo_conservacion`='" + modo_conservacion + "',";
+            update += "`periodo_aptitud`='" + periodo_aptitud + "' ";
             update += "WHERE id='" + m_ProductoAlimenticio.getId() + "';";
 
             con.update(update);
         }
-        
+
     }
 }//end Descripcion

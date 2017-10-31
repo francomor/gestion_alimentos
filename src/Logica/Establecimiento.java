@@ -1,7 +1,6 @@
 /**
- * @author Franco
+ * @author Francisco Herrero, Franco Morero y Mauricio Vazquez
  * @version 1.0
- * @created 18-oct.-2017 19:44:00
  */
 package Logica;
 
@@ -92,6 +91,7 @@ public class Establecimiento {
 
     /**
      * getEmpresa asociada
+     *
      * @return Empresa asociada al establecimiento
      * @throws SQLException
      * @throws InstantiationException
@@ -291,27 +291,25 @@ public class Establecimiento {
         return estab;
 
     }
-    
-    public static Vector<Rubro> recuperarRubrosAsociados(String estab_id)throws SQLException, InstantiationException, IllegalAccessException
-    {
-       ConexionBD con = ConexionBD.getConexion();
-       String[][] valores;
-       
-       Vector<Rubro> RubrosAsociados= new Vector<>();
-    
-       valores = new String[10][1];
-       valores = con.recuperar(valores, "SELECT Rubro_id FROM `Establecimiento_has_Rubro` WHERE `Establecimiento_id`=" + estab_id + ";", 1);
-       
-       //para cada id recuperado busco el Rubro y lo añado al vector.
-       for(String[] id_r : valores){
-           if(Rubro.recuperarRubroporID(id_r[0])!=null){
-                RubrosAsociados.add(Rubro.recuperarRubroporID(id_r[0]));}
-       }
-       
-       
-       return RubrosAsociados;
-       
-    } 
-    
-    
+
+    public static Vector<Rubro> recuperarRubrosAsociados(String estab_id) throws SQLException, InstantiationException, IllegalAccessException {
+        ConexionBD con = ConexionBD.getConexion();
+        String[][] valores;
+
+        Vector<Rubro> RubrosAsociados = new Vector<>();
+
+        valores = new String[10][1];
+        valores = con.recuperar(valores, "SELECT Rubro_id FROM `Establecimiento_has_Rubro` WHERE `Establecimiento_id`=" + estab_id + ";", 1);
+
+        //para cada id recuperado busco el Rubro y lo añado al vector.
+        for (String[] id_r : valores) {
+            if (Rubro.recuperarRubroporID(id_r[0]) != null) {
+                RubrosAsociados.add(Rubro.recuperarRubroporID(id_r[0]));
+            }
+        }
+
+        return RubrosAsociados;
+
+    }
+
 }//end Establecimiento

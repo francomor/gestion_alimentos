@@ -1,7 +1,6 @@
 /**
- * @author Franco
+ * @author Francisco Herrero, Franco Morero y Mauricio Vazquez
  * @version 1.0
- * @created 18-oct.-2017 19:44:08
  */
 package Logica;
 
@@ -52,23 +51,67 @@ public class Envase {
         this.m_ProductoAlimenticio = m_ProductoAlimenticio;
     }
 
+    /**
+     * Devuelve el id del envase
+     *
+     * @return int id
+     * @throws java.sql.SQLException
+     * @throws java.lang.InstantiationException
+     * @throws java.lang.IllegalAccessException
+     */
+    public int get_id() throws SQLException, InstantiationException, IllegalAccessException {
+        ConexionBD con = ConexionBD.getConexion();
+        String[][] id;
+        id = new String[1][1];
+        id = con.recuperar(id, "select id from envase where capacidad='" + capacidad + "' and Material_id='" + get_id_mat(material) + "' and Unidad_id='" + get_id_uni(unidad) + "'", 1);
+        return Integer.parseInt(id[0][0]);
+
+    }
+
+    /**
+     * Devuelve el id del material
+     *
+     * @param mat nombre de la materia
+     * @return int id
+     * @throws java.sql.SQLException
+     * @throws java.lang.InstantiationException
+     * @throws java.lang.IllegalAccessException
+     */
     public String get_id_mat(String mat) throws SQLException, InstantiationException, IllegalAccessException {
         ConexionBD con = ConexionBD.getConexion();
-        String[][] material;
-        material = new String[1][1];
-        material = con.recuperar(material, "select id from material where nombre='" + mat + "'", 1);
-        return (material[0][0]);
+        String[][] mate;
+        mate = new String[1][1];
+        mate = con.recuperar(mate, "select id from material where nombre='" + mat + "'", 1);
+        return (mate[0][0]);
 
     }
 
+    /**
+     * Devuelve el id de la unidad
+     *
+     * @param uni nombre de la unidad
+     * @return int id
+     * @throws java.sql.SQLException
+     * @throws java.lang.InstantiationException
+     * @throws java.lang.IllegalAccessException
+     */
     public String get_id_uni(String uni) throws SQLException, InstantiationException, IllegalAccessException {
         ConexionBD con = ConexionBD.getConexion();
-        String[][] unidad;
-        unidad = new String[1][1];
-        unidad = con.recuperar(unidad, "select id from unidad where nombre='" + uni + "'", 1);
-        return (unidad[0][0]);
+        String[][] unid;
+        unid = new String[1][1];
+        unid = con.recuperar(unid, "select id from unidad where nombre='" + uni + "'", 1);
+        return (unid[0][0]);
     }
 
+    /**
+     * Devuelve el nombre de la materia
+     *
+     * @param id_mat id materia
+     * @return string nombre de la materia
+     * @throws java.sql.SQLException
+     * @throws java.lang.InstantiationException
+     * @throws java.lang.IllegalAccessException
+     */
     public static String get_nom_mat(String id_mat) throws SQLException, InstantiationException, IllegalAccessException {
         ConexionBD con = ConexionBD.getConexion();
         String[][] material;
@@ -77,6 +120,15 @@ public class Envase {
         return (material[0][0]);
     }
 
+    /**
+     * Devuelve el nombre de la unidad
+     *
+     * @param id_uni id unidad
+     * @return string nombre de la unidad
+     * @throws java.sql.SQLException
+     * @throws java.lang.InstantiationException
+     * @throws java.lang.IllegalAccessException
+     */
     public static String get_nom_uni(String id_uni) throws SQLException, InstantiationException, IllegalAccessException {
         ConexionBD con = ConexionBD.getConexion();
         String[][] unidad;
@@ -220,13 +272,8 @@ public class Envase {
      * @throws java.lang.InstantiationException
      * @throws java.lang.IllegalAccessException
      */
-    //FALTA CORREGIR
-    //select 1 from envase where exists (select * from envase where `capacidad`='cap' and `Unidad_id`=1 and `Material_id`=1)
-    //select 1 from envase where exists (select * from envase where `capacidad`='cap' and `Unidad_id`=1 and `Material_id`=1) UNION select 0 from envase where NOT exists (select * from envase where `capacidad`='cap' and `Unidad_id`=1 and `Material_id`=1)select 1 from envase where exists (select * from envase where `capacidad`='cap' and `Unidad_id`=1 and `Material_id`=1) UNION select 0 from envase where NOT exists (select * from envase where `capacidad`='cap' and `Unidad_id`=1 and `Material_id`=1)
     public boolean existe_envase(String cap, String nom_mat, String nom_uni) throws SQLException, InstantiationException, IllegalAccessException {
         ConexionBD con = ConexionBD.getConexion();
-        System.out.println(get_id_mat(nom_mat));
-        System.out.println(get_id_uni(nom_uni));
         String consulta;
         consulta = "select 1 from envase where exists (select * from envase where capacidad='" + cap + "'and Material_id='" + get_id_mat(nom_mat) + "'and Unidad_id='" + get_id_uni(nom_uni) + "')";
         consulta += " union ";

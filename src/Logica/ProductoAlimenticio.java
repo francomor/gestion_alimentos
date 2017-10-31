@@ -1,7 +1,6 @@
 /**
- * @author Franco
+ * @author Francisco Herrero, Franco Morero y Mauricio Vazquez
  * @version 1.0
- * @created 18-oct.-2017 19:43:58
  */
 package Logica;
 
@@ -141,7 +140,7 @@ public class ProductoAlimenticio {
     /**
      * Metodo que guarda ProductoAlimenticio en la BD.
      *
-     * @return boolean
+     * @return boolean verdadero si se guardo correctamente
      * @throws java.sql.SQLException
      * @throws java.lang.InstantiationException
      * @throws java.lang.IllegalAccessException
@@ -200,29 +199,33 @@ public class ProductoAlimenticio {
 
         if (result == true) {
             result = guardarEnvasexProducto();
-            result = guardarMateriaPrimaxProducto();
+            if (result == true) {
+                result = guardarMateriaPrimaxProducto();
+            }
         }
 
         return result;
     }
 
-    //NESESITA QUE ANDE EXISTE ENVASE
+    /**
+     * Metodo que guarda EnvasexProducto en la BD.
+     *
+     * @return boolean verdadero si se carga bien
+     * @throws java.sql.SQLException
+     * @throws java.lang.InstantiationException
+     * @throws java.lang.IllegalAccessException
+     */
     private boolean guardarEnvasexProducto() throws SQLException, InstantiationException, IllegalAccessException {
         int e_id;
         ConexionBD con = ConexionBD.getConexion();
         boolean result = false;
         for (Envase e : Envases) {
-            if (!e.existe_material(e.getMaterial())) {
-                e.guardar_material(e.getMaterial());
+            if (!e.existe_envase(e.getCapacidad(), e.getMaterial(), e.getUnidad())) {
+                e.guardar_envase(e.getCapacidad(), e.getMaterial(), e.getUnidad());
+                e_id = con.recuperarUltimoIdIngresado("envase");
+            } else {
+                e_id = e.get_id();
             }
-            if (!e.existe_unidad(e.getUnidad())) {
-                e.guardar_unidad(e.getUnidad());
-            }
-            //if (!e.existe_envase(e.getCapacidad(), e.getMaterial(), e.getUnidad())) {
-            e.guardar_envase(e.getCapacidad(), e.getMaterial(), e.getUnidad());
-            e_id = con.recuperarUltimoIdIngresado("envase");
-            //}
-            //else set e_id con el id del envase
             result = !con.insertar("INSERT INTO `producto_alimenticio_has_envase`(`Producto_Alimenticio_id`, `Envase_id`) VALUES (" + id + "," + e_id + ");");
 
             //si hay un error salir
@@ -233,21 +236,27 @@ public class ProductoAlimenticio {
         return result;
     }
 
+    /**
+     * Metodo que guarda MateriaPrimaxProducto en la BD.
+     *
+     * @return boolean verdadero si se carga bien
+     * @throws java.sql.SQLException
+     * @throws java.lang.InstantiationException
+     * @throws java.lang.IllegalAccessException
+     */
     private boolean guardarMateriaPrimaxProducto() throws InstantiationException, IllegalAccessException, SQLException {
-        int id;
-        int i = 0;
+        int mp_id;
+        ConexionBD con = ConexionBD.getConexion();
         boolean result = false;
-        Vector<MateriaPrima> mp = new Vector<MateriaPrima>();
-        id = this.getId();
-        mp = this.getMateriasPrimas();
-        String id_aux = String.valueOf(id);
-        while (i < mp.size()) {
-            ConexionBD con = ConexionBD.getConexion();
-            result = !con.insertar("INSERT INTO `producto_alimenticio_has_materia_prima`(`Producto_Alimenticio_id`, `materia_prima_id`,`cantidad_mat_prima`) VALUES (" + id_aux + "," + mp.get(i).get_id_mp(mp.get(i).getNombre()) + "," + mp.get(i).getCantidad() + ");");
+
+        for (MateriaPrima mp : materiasPrimas) {
+            mp_id = mp.getId();
+            result = !con.insertar("INSERT INTO `producto_alimenticio_has_materia_prima`(`Producto_Alimenticio_id`, `materia_prima_id`,`cantidad_mat_prima`) VALUES (" + id + "," + mp_id + ",'" + mp.getCantidad() + "');");
+
+            //si hay un error salir
             if (result == false) {
                 break;
             }
-            ++i;
         }
         return result;
     }

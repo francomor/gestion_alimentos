@@ -1,15 +1,11 @@
-
-
 /**
- * @author Franco
+ * @author Francisco Herrero, Franco Morero y Mauricio Vazquez
  * @version 1.0
- * @created 18-oct.-2017 19:44:01
  */
 package Logica;
 import Persistencia.ConexionBD;
 import java.sql.SQLException;
 import java.util.Calendar;
-import java.util.Date;
 import java.util.GregorianCalendar;
 
 public class RNPA {

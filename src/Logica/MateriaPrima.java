@@ -1,7 +1,6 @@
 /**
- * @author Franco
+ * @author Francisco Herrero, Franco Morero y Mauricio Vazquez
  * @version 1.0
- * @created 18-oct.-2017 19:44:07
  */
 package Logica;
 
@@ -44,9 +43,24 @@ public class MateriaPrima {
     }
 
     /**
-     * Verifica la existencia de un material
+     * Devuelve el id de la materia
      *
-     * @param materiaprima Nombre del material
+     * @return int id
+     * @throws java.lang.InstantiationException
+     * @throws java.lang.IllegalAccessException
+     */
+    public int getId() throws InstantiationException, IllegalAccessException {
+        ConexionBD con = ConexionBD.getConexion();
+        String[][] id_aux;
+        id_aux = new String[1][1];
+        id_aux = con.recuperar(id_aux, "select id from materia_prima where nombre='" + nombre + "'", 1);
+        return Integer.parseInt(id_aux[0][0]);
+    }
+
+    /**
+     * Verifica la existencia de una materiaPrima
+     *
+     * @param materiaprima Nombre de la materiaPrima
      * @return boolean Es verdadero si existe
      * @throws java.sql.SQLException
      * @throws java.lang.InstantiationException
@@ -60,9 +74,9 @@ public class MateriaPrima {
     }
 
     /**
-     * Metodo que guarda un material
+     * Metodo que guarda una materiaPrima
      *
-     * @param materiaprima Nombre del material
+     * @param materiaprima Nombre de la materiaPrima
      * @return boolean Es verdadero si se cargo correctamente
      * @throws java.sql.SQLException
      * @throws java.lang.InstantiationException
@@ -72,12 +86,12 @@ public class MateriaPrima {
 
         ConexionBD con = ConexionBD.getConexion();
 
-        boolean result = con.insertar("insert into materia_prima (id,nombre) values (default,'" + materiaprima.nombre + "')");
+        boolean result = !con.insertar("insert into materia_prima (id,nombre) values (default,'" + materiaprima.nombre + "')");
         return result;
     }
 
     /**
-     * Cambia un material
+     * Cambia una materiaPrima
      *
      * @param materiaprima Materia prima con el nombre que tomara el valor luego
      * del cambio
@@ -92,10 +106,10 @@ public class MateriaPrima {
     }
 
     /**
-     * Recupera todos los materiales
+     * Recupera todos las materiaPrima
      *
-     * @return {@code Vector<String>} que contiene los
-     * nombres de todos los materiales
+     * @return {@code Vector<String>} que contiene los nombres de todos las
+     * materiaPrima
      * @throws java.sql.SQLException
      * @throws java.lang.InstantiationException
      * @throws java.lang.IllegalAccessException
@@ -117,7 +131,7 @@ public class MateriaPrima {
     }
 
     /**
-     * Borra un material
+     * Borra una materiaPrima
      *
      * @param mp Materia prima a borrar
      * @throws java.sql.SQLException
@@ -128,26 +142,5 @@ public class MateriaPrima {
         ConexionBD con = ConexionBD.getConexion();
         con.update("DELETE FROM `materia_prima` WHERE nombre='" + mp.getNombre() + "';");
     }
-     public String get_id_mp(String mp) throws SQLException, InstantiationException, IllegalAccessException {
-        ConexionBD con = ConexionBD.getConexion();
-        String[][] materiaprima;
-        materiaprima = new String[1][1];
-        materiaprima = con.recuperar(materiaprima, "select id from materia_prima where nombre='" + mp + "'", 1);
-        return(materiaprima[0][0]);
-     }
-         public static Vector<String> recuperarTodasMp() throws SQLException, InstantiationException, IllegalAccessException {
-        ConexionBD con = ConexionBD.getConexion();
-        String[][] valores;
-        valores = new String[10][1];
-        valores = con.recuperar(valores, "select nombre from materia_prima", 1);
-        Vector<String> salida = new Vector<>();
-        for (String[] valore : valores) {
-            if (valore[0] == null) {
-                break;
-            }
-            salida.add(valore[0]);
-        }
 
-        return (Vector<String>) salida;
-    }
 }//end MateriaPrima

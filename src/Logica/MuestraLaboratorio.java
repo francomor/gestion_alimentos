@@ -1,15 +1,8 @@
-
-
 /**
- * @author Franco
+ * @author Francisco Herrero, Franco Morero y Mauricio Vazquez
  * @version 1.0
- * @created 18-oct.-2017 19:44:03
  */
 package Logica;
-
-import Persistencia.ConexionBD;
-import java.sql.SQLException;
-
 
 public class MuestraLaboratorio {
 
@@ -45,5 +38,4 @@ public class MuestraLaboratorio {
         this.m_ProductoAlimenticio = m_ProductoAlimenticio;
     }
 
-    
 }//end MuestraLaboratorio

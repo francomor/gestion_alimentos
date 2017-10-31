@@ -1,11 +1,7 @@
-
-
 /**
- * @author Franco
+ * @author Francisco Herrero, Franco Morero y Mauricio Vazquez
  * @version 1.0
- * @created 18-oct.-2017 19:44:02
  */
-
 package Logica;
 
 import Persistencia.ConexionBD;
@@ -27,7 +23,7 @@ public class Composicion {
     public Composicion() {
 
     }
-    
+
     public String getCAA() {
         return CAA;
     }
@@ -59,6 +55,7 @@ public class Composicion {
     public void setFecha_duracion(Calendar fecha_duracion) {
         this.fecha_duracion = fecha_duracion;
     }
+
     /**
      * Set fecha_duracion
      *
@@ -102,9 +99,9 @@ public class Composicion {
         this.m_ProductoAlimenticio = m_ProductoAlimenticio;
     }
 
-
     /**
-     * Metodo que actualiza Composicion en la BD. Require que el producto alimenticio halla sido cargado
+     * Metodo que actualiza Composicion en la BD. Require que el producto
+     * alimenticio halla sido cargado
      *
      * @throws java.sql.SQLException
      * @throws java.lang.InstantiationException
@@ -114,19 +111,19 @@ public class Composicion {
 
         ConexionBD con = ConexionBD.getConexion();
         String update;
-        if(m_ProductoAlimenticio != null){
+        if (m_ProductoAlimenticio != null) {
             update = "UPDATE `producto_alimenticio` SET ";
-            update += "`CAA`='" + CAA   +"',";
-            update += "`contenido`='" + contenido   +"',";
-            update += "`denominacion`='" + denominacion   +"',";
+            update += "`CAA`='" + CAA + "',";
+            update += "`contenido`='" + contenido + "',";
+            update += "`denominacion`='" + denominacion + "',";
             //insert += "`fecha_duracion`='" + fecha_duracion   +"',";
-            update += "`marca`='" + marca   +"',";
-            update += "`nombre_comercial`='" + nombre_comercial   +"',";
-            update += "`num_y_tipo_reg_marca`='" + nroytipo_registro_marca +"' "; ;
+            update += "`marca`='" + marca + "',";
+            update += "`nombre_comercial`='" + nombre_comercial + "',";
+            update += "`num_y_tipo_reg_marca`='" + nroytipo_registro_marca + "' ";;
             update += "WHERE id='" + m_ProductoAlimenticio.getId() + "';";
 
             con.update(update);
         }
-        
+
     }
 }//end Composicion

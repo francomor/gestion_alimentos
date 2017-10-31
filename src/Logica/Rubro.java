@@ -1,7 +1,6 @@
 /**
- * @author Franco
+ * @author Francisco Herrero, Franco Morero y Mauricio Vazquez
  * @version 1.0
- * @created 18-oct.-2017 19:44:08
  */
 package Logica;
 
@@ -10,7 +9,6 @@ import java.sql.SQLException;
 import java.util.Vector;
 
 public class Rubro {
-
 
     private int id;
     private String nombre;
@@ -28,7 +26,6 @@ public class Rubro {
         this.id = id;
     }
 
-    
     public String getNombre() {
         return nombre;
     }
@@ -91,8 +88,8 @@ public class Rubro {
     /**
      * Recupera todos los rubros
      *
-     * @return {@code Vector<String>} que contiene los
-     * nombres de todos los rubros
+     * @return {@code Vector<String>} que contiene los nombres de todos los
+     * rubros
      * @throws java.sql.SQLException
      * @throws java.lang.InstantiationException
      * @throws java.lang.IllegalAccessException
@@ -127,27 +124,29 @@ public class Rubro {
         ConexionBD con = ConexionBD.getConexion();
         boolean result = con.existe("select exists (select nombre from rubro where nombre='" + rubro_name + "')");
         return result;
-        
+
     }
-    
-        static Rubro recuperarRubroporID(String id) throws SQLException, InstantiationException, IllegalAccessException {
-        
-                Rubro salida= new Rubro();
-                ConexionBD con = ConexionBD.getConexion();
-                String[][] valores;
-                valores = new String[1][2];
-                valores = con.recuperar(valores, "select * from rubro `id`=" + id + ";", 1);
-                
-                if(valores[0][0] == null)
-                    salida =null;
-                else{
-                    if(valores[0][0]!=null){
-                        salida.setId(Integer.parseInt(valores[0][0]));}
-                    
-                    if(valores[0][1]!=null){
-                        salida.setNombre(valores[0][1]);}
-                }
-                
-                return salida;
+
+    static Rubro recuperarRubroporID(String id) throws SQLException, InstantiationException, IllegalAccessException {
+
+        Rubro salida = new Rubro();
+        ConexionBD con = ConexionBD.getConexion();
+        String[][] valores;
+        valores = new String[1][2];
+        valores = con.recuperar(valores, "select * from rubro `id`=" + id + ";", 1);
+
+        if (valores[0][0] == null) {
+            salida = null;
+        } else {
+            if (valores[0][0] != null) {
+                salida.setId(Integer.parseInt(valores[0][0]));
+            }
+
+            if (valores[0][1] != null) {
+                salida.setNombre(valores[0][1]);
+            }
         }
+
+        return salida;
+    }
 }//end Rubro

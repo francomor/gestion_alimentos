@@ -5,6 +5,13 @@
  */
 package Prueba;
 
+import Logica.*;
+import java.sql.SQLException;
+import java.util.Vector;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Franco
@@ -35,6 +42,7 @@ public class MateriaPrima_prueba extends javax.swing.JPanel {
         mp_cargar = new javax.swing.JButton();
         mp_nombre = new javax.swing.JTextField();
         labelComp_MateriasPrimas1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         jLabel2.setText("Nombre");
 
@@ -75,6 +83,8 @@ public class MateriaPrima_prueba extends javax.swing.JPanel {
 
         labelComp_MateriasPrimas1.setText("Materias Primas");
 
+        jLabel3.setText("NO ANDA ES PARA GUARDAR EL CODIGO DE FRAN");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -101,7 +111,9 @@ public class MateriaPrima_prueba extends javax.swing.JPanel {
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jLabel2)
                 .addGap(30, 30, 30)
-                .addComponent(mp_lista, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel3)
+                    .addComponent(mp_lista, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(105, 105, 105))
         );
         layout.setVerticalGroup(
@@ -112,7 +124,9 @@ public class MateriaPrima_prueba extends javax.swing.JPanel {
                         .addGap(66, 66, 66)
                         .addComponent(labelComp_MateriasPrimas1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(76, 76, 76)
+                        .addGap(30, 30, 30)
+                        .addComponent(jLabel3)
+                        .addGap(32, 32, 32)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(mp_cantidad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
@@ -171,13 +185,13 @@ public class MateriaPrima_prueba extends javax.swing.JPanel {
                 if(!error){JOptionPane.showMessageDialog(null, "materia prima agregado correctamente.");}
                 else {JOptionPane.showMessageDialog(null, "Hubo un error al agregar la materia prima");}
             }
-            m_p.setNombre(m_p.get_id_mp(nombre));
+            m_p.setNombre(String.valueOf(m_p.getId()));
         } catch (SQLException ex) {
-            Logger.getLogger(panelCargaProducto.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(MateriaPrima_prueba.class.getName()).log(Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            Logger.getLogger(panelCargaProducto.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(MateriaPrima_prueba.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            Logger.getLogger(panelCargaProducto.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(MateriaPrima_prueba.class.getName()).log(Level.SEVERE, null, ex);
         }
 
         p_a.agregarMP(m_p);
@@ -187,13 +201,13 @@ public class MateriaPrima_prueba extends javax.swing.JPanel {
         Vector<String> mp_nom;
 
         try{
-            mp_nom=MateriaPrima.recuperarTodasMp();
+            mp_nom=MateriaPrima.recuperarTodosNombres();
             for(int i=0;i<mp_nom.size();i++){
                 mp_lista.addItem(mp_nom.elementAt(i));
             }
         }
         catch (SQLException | InstantiationException | IllegalAccessException ex) {
-            Logger.getLogger(panelCargaProducto.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(MateriaPrima_prueba.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_mp_cargarActionPerformed
 
@@ -201,10 +215,11 @@ public class MateriaPrima_prueba extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_mp_nombreActionPerformed
 
-
+    ProductoAlimenticio p_a = new ProductoAlimenticio();
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel labelComp_MateriasPrimas1;
     private javax.swing.JButton mp_aniadir;
     private javax.swing.JTextField mp_cantidad;
