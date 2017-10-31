@@ -98,6 +98,15 @@ public class panelCargaProducto extends javax.swing.JPanel {
         textFieldComp_CAA = new javax.swing.JTextField();
         labelComposicion = new javax.swing.JLabel();
         SeparadorDatosProducto = new javax.swing.JSeparator();
+        jPanel1 = new javax.swing.JPanel();
+        labelComp_MateriasPrimas1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        mp_lista = new javax.swing.JComboBox<>();
+        jLabel1 = new javax.swing.JLabel();
+        mp_cantidad = new javax.swing.JTextField();
+        mp_aniadir = new javax.swing.JButton();
+        mp_cargar = new javax.swing.JButton();
+        mp_nombre = new javax.swing.JTextField();
         panelDescripcion = new javax.swing.JPanel();
         panelDescDatos = new javax.swing.JPanel();
         labelDesc_FormaUso = new javax.swing.JLabel();
@@ -245,27 +254,27 @@ public class panelCargaProducto extends javax.swing.JPanel {
                     .addComponent(labelDatoEmpresa)
                     .addGroup(panelDatosEmpresaLayout.createSequentialGroup()
                         .addGap(20, 20, 20)
-                        .addComponent(labelEmp_CUIL)
-                        .addGap(59, 59, 59)
-                        .addComponent(textFieldEmp_CUIL, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(78, 78, 78)
-                        .addComponent(labelEmp_Email, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(11, 11, 11)
-                        .addComponent(textFieldEmp_Email, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(panelDatosEmpresaLayout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(labelEmp_NombreEmpresa)
-                        .addGap(46, 46, 46)
-                        .addComponent(textFieldEmp_Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(78, 78, 78)
-                        .addComponent(labelEmp_Telefono)
-                        .addGap(11, 11, 11)
-                        .addComponent(textFieldEmp_Telefono, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(panelDatosEmpresaLayout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(labelEmp_RazonSocial)
-                        .addGap(23, 23, 23)
-                        .addComponent(textFieldEmp_RazonSocial, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(panelDatosEmpresaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panelDatosEmpresaLayout.createSequentialGroup()
+                                .addComponent(labelEmp_CUIL)
+                                .addGap(59, 59, 59)
+                                .addComponent(textFieldEmp_CUIL, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(78, 78, 78)
+                                .addComponent(labelEmp_Email, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(11, 11, 11)
+                                .addComponent(textFieldEmp_Email, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(panelDatosEmpresaLayout.createSequentialGroup()
+                                .addComponent(labelEmp_NombreEmpresa)
+                                .addGap(46, 46, 46)
+                                .addComponent(textFieldEmp_Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(78, 78, 78)
+                                .addComponent(labelEmp_Telefono)
+                                .addGap(11, 11, 11)
+                                .addComponent(textFieldEmp_Telefono, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(panelDatosEmpresaLayout.createSequentialGroup()
+                                .addComponent(labelEmp_RazonSocial)
+                                .addGap(23, 23, 23)
+                                .addComponent(textFieldEmp_RazonSocial, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap(196, Short.MAX_VALUE))
         );
         panelDatosEmpresaLayout.setVerticalGroup(
@@ -377,15 +386,13 @@ public class panelCargaProducto extends javax.swing.JPanel {
                     .addComponent(labelDatosPA)
                     .addGroup(panelDatosProdAdentroLayout.createSequentialGroup()
                         .addGap(20, 20, 20)
-                        .addComponent(labelNroFactura)
-                        .addGap(8, 8, 8)
-                        .addComponent(textFieldNroFactura, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(panelDatosProdAdentroLayout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(labelRotulo))
-                    .addGroup(panelDatosProdAdentroLayout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 560, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(panelDatosProdAdentroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panelDatosProdAdentroLayout.createSequentialGroup()
+                                .addComponent(labelNroFactura)
+                                .addGap(8, 8, 8)
+                                .addComponent(textFieldNroFactura, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(labelRotulo)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 560, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panelDatosProdAdentroLayout.setVerticalGroup(
@@ -449,12 +456,110 @@ public class panelCargaProducto extends javax.swing.JPanel {
         labelComposicion.setFont(new java.awt.Font("Liberation Sans", 1, 12)); // NOI18N
         labelComposicion.setText("Composicion");
 
+        labelComp_MateriasPrimas1.setText("Materias Primas");
+
+        jLabel2.setText("Nombre");
+
+        mp_lista.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "otro..." }));
+        mp_lista.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mp_listaActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setText("Cantidad");
+
+        mp_cantidad.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mp_cantidadActionPerformed(evt);
+            }
+        });
+
+        mp_aniadir.setText("añadir");
+        mp_aniadir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mp_aniadirActionPerformed(evt);
+            }
+        });
+
+        mp_cargar.setText("cargar");
+        mp_cargar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mp_cargarActionPerformed(evt);
+            }
+        });
+
+        mp_nombre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mp_nombreActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(labelComp_MateriasPrimas1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel2)
+                        .addGap(13, 13, 13)
+                        .addComponent(mp_lista, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(50, 50, 50)
+                        .addComponent(mp_nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(72, 72, 72)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(50, 50, 50)
+                                .addComponent(mp_cantidad, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(197, 197, 197)
+                        .addComponent(mp_aniadir)))
+                .addContainerGap(36, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(mp_cargar)
+                    .addGap(0, 245, Short.MAX_VALUE)))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelComp_MateriasPrimas1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2)
+                            .addComponent(mp_lista, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(7, 7, 7)
+                        .addComponent(mp_nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(mp_cantidad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(mp_aniadir))
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGap(0, 66, Short.MAX_VALUE)
+                    .addComponent(mp_cargar)
+                    .addGap(0, 13, Short.MAX_VALUE)))
+        );
+
         javax.swing.GroupLayout panelComposicionLayout = new javax.swing.GroupLayout(panelComposicion);
         panelComposicion.setLayout(panelComposicionLayout);
         panelComposicionLayout.setHorizontalGroup(
             panelComposicionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelComposicionLayout.createSequentialGroup()
-                .addContainerGap(20, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(panelComposicionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelComposicionLayout.createSequentialGroup()
                         .addComponent(labelComp_Nombre)
@@ -473,18 +578,22 @@ public class panelCargaProducto extends javax.swing.JPanel {
                         .addGap(81, 81, 81)
                         .addComponent(textFieldComp_CAA, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(panelComposicionLayout.createSequentialGroup()
-                        .addComponent(labelComp_Denominacion)
-                        .addGap(40, 40, 40)
-                        .addComponent(textFieldComp_Denominacion, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(panelComposicionLayout.createSequentialGroup()
-                        .addComponent(labelComp_Contenido)
-                        .addGap(57, 57, 57)
-                        .addComponent(textFieldComp_Contenido, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(panelComposicionLayout.createSequentialGroup()
-                        .addComponent(labelComp_FechaDuracion)
-                        .addGap(18, 18, 18)
-                        .addComponent(textFieldComp_FechaDuracion, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(labelComp_MateriasPrimas))
+                        .addGroup(panelComposicionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panelComposicionLayout.createSequentialGroup()
+                                .addComponent(labelComp_Denominacion)
+                                .addGap(40, 40, 40)
+                                .addComponent(textFieldComp_Denominacion, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(panelComposicionLayout.createSequentialGroup()
+                                .addComponent(labelComp_Contenido)
+                                .addGap(57, 57, 57)
+                                .addComponent(textFieldComp_Contenido, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(panelComposicionLayout.createSequentialGroup()
+                                .addComponent(labelComp_FechaDuracion)
+                                .addGap(18, 18, 18)
+                                .addComponent(textFieldComp_FechaDuracion, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(labelComp_MateriasPrimas))
+                        .addGap(29, 29, 29)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
             .addGroup(panelComposicionLayout.createSequentialGroup()
                 .addContainerGap()
@@ -496,35 +605,38 @@ public class panelCargaProducto extends javax.swing.JPanel {
         panelComposicionLayout.setVerticalGroup(
             panelComposicionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelComposicionLayout.createSequentialGroup()
-                .addComponent(labelComposicion, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(10, 10, 10)
-                .addComponent(SeparadorDatosProducto, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(17, 17, 17)
-                .addGroup(panelComposicionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(labelComp_Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(textFieldComp_Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(labelComp_NroTipoMarca, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(textFieldComp_NroTipoMarca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(10, 10, 10)
-                .addGroup(panelComposicionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(labelComp_Marca, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(textFieldComp_Marca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(labelComp_CAA, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(textFieldComp_CAA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(10, 10, 10)
-                .addGroup(panelComposicionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(labelComp_Denominacion, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(textFieldComp_Denominacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(10, 10, 10)
-                .addGroup(panelComposicionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(labelComp_Contenido, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(textFieldComp_Contenido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(10, 10, 10)
-                .addGroup(panelComposicionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(labelComp_FechaDuracion, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(textFieldComp_FechaDuracion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(10, 10, 10)
-                .addComponent(labelComp_MateriasPrimas, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(panelComposicionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(panelComposicionLayout.createSequentialGroup()
+                        .addComponent(labelComposicion, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(10, 10, 10)
+                        .addComponent(SeparadorDatosProducto, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(17, 17, 17)
+                        .addGroup(panelComposicionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(labelComp_Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(textFieldComp_Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(labelComp_NroTipoMarca, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(textFieldComp_NroTipoMarca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(10, 10, 10)
+                        .addGroup(panelComposicionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(labelComp_Marca, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(textFieldComp_Marca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(labelComp_CAA, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(textFieldComp_CAA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(10, 10, 10)
+                        .addGroup(panelComposicionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(labelComp_Denominacion, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(textFieldComp_Denominacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(10, 10, 10)
+                        .addGroup(panelComposicionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(labelComp_Contenido, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(textFieldComp_Contenido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(10, 10, 10)
+                        .addGroup(panelComposicionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(labelComp_FechaDuracion, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(textFieldComp_FechaDuracion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(10, 10, 10)
+                        .addComponent(labelComp_MateriasPrimas, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(18, Short.MAX_VALUE))
         );
 
@@ -948,6 +1060,77 @@ public class panelCargaProducto extends javax.swing.JPanel {
         panelEnvase.repaint();
     }//GEN-LAST:event_buttonRemoveEnvaseActionPerformed
 
+    private void mp_listaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mp_listaActionPerformed
+        if (mp_lista.getSelectedItem()=="otro..."){
+
+            mp_nombre.setEnabled(true);
+        }
+        else{
+            mp_nombre.setText("");
+            mp_nombre.setEnabled(false);
+        }
+    }//GEN-LAST:event_mp_listaActionPerformed
+
+    private void mp_cantidadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mp_cantidadActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_mp_cantidadActionPerformed
+
+    private void mp_aniadirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mp_aniadirActionPerformed
+        MateriaPrima m_p = new MateriaPrima();
+        String nombre;
+        Boolean error=false, existe=false;
+        m_p.setCantidad(this.mp_cantidad.getText());
+
+        if(mp_nombre.isEnabled()){
+            m_p.setNombre(this.mp_nombre.getText());
+            nombre=this.mp_nombre.getText();
+        }else{
+            m_p.setNombre(this.mp_lista.getSelectedItem().toString());
+            nombre=this.mp_lista.getSelectedItem().toString();
+        }
+
+        try {
+            //verificar si existe ya esa mp. mysql insert da el error code 1062 duplicate entry, pero si las PK son AI, nunca se va a dar...
+
+            existe=m_p.existe(m_p.getNombre());
+            if (existe)
+            {JOptionPane.showMessageDialog(null, "Ya existe una materia prima con ese nombre.");}
+            else {
+                //guardarlo
+                error=m_p.guardar(m_p);
+                if(!error){JOptionPane.showMessageDialog(null, "materia prima agregado correctamente.");}
+                else {JOptionPane.showMessageDialog(null, "Hubo un error al agregar la materia prima");}
+            }
+            m_p.setNombre(m_p.get_id_mp(nombre));
+        } catch (SQLException ex) {
+            Logger.getLogger(panelCargaProducto.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            Logger.getLogger(panelCargaProducto.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            Logger.getLogger(panelCargaProducto.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        p_a.agregarMP(m_p);
+    }//GEN-LAST:event_mp_aniadirActionPerformed
+
+    private void mp_cargarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mp_cargarActionPerformed
+        Vector<String> mp_nom;
+
+        try{
+            mp_nom=MateriaPrima.recuperarTodasMp();
+            for(int i=0;i<mp_nom.size();i++){
+                mp_lista.addItem(mp_nom.elementAt(i));
+            }
+        }
+        catch (SQLException | InstantiationException | IllegalAccessException ex) {
+            Logger.getLogger(panelCargaProducto.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_mp_cargarActionPerformed
+
+    private void mp_nombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mp_nombreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_mp_nombreActionPerformed
+
     private Empresa recuperarDatosEmpresa(String nro_rne) throws SQLException, InstantiationException, IllegalAccessException {
         Empresa empresa_salida = null;
         try {
@@ -979,6 +1162,9 @@ public class panelCargaProducto extends javax.swing.JPanel {
     private javax.swing.JButton buttonAddEnvase;
     private javax.swing.JButton buttonRemoveEnvase;
     private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel labelCargaProdAlimenticio;
     private javax.swing.JLabel labelComp_CAA;
@@ -987,6 +1173,7 @@ public class panelCargaProducto extends javax.swing.JPanel {
     private javax.swing.JLabel labelComp_FechaDuracion;
     private javax.swing.JLabel labelComp_Marca;
     private javax.swing.JLabel labelComp_MateriasPrimas;
+    private javax.swing.JLabel labelComp_MateriasPrimas1;
     private javax.swing.JLabel labelComp_Nombre;
     private javax.swing.JLabel labelComp_NroTipoMarca;
     private javax.swing.JLabel labelComposicion;
@@ -1017,6 +1204,11 @@ public class panelCargaProducto extends javax.swing.JPanel {
     private javax.swing.JLabel labelRNPA;
     private javax.swing.JLabel labelRegistroRNPA;
     private javax.swing.JLabel labelRotulo;
+    private javax.swing.JButton mp_aniadir;
+    private javax.swing.JTextField mp_cantidad;
+    private javax.swing.JButton mp_cargar;
+    private javax.swing.JComboBox<String> mp_lista;
+    private javax.swing.JTextField mp_nombre;
     private javax.swing.JPanel panelBuscaRNE;
     private javax.swing.JPanel panelComposicion;
     private javax.swing.JPanel panelDatosEmpresa;
