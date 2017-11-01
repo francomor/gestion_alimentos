@@ -50,11 +50,9 @@ public class panelCargaEnvase extends javax.swing.JPanel {
         setMaximumSize(new java.awt.Dimension(521, 35));
         setMinimumSize(new java.awt.Dimension(521, 35));
         setPreferredSize(new java.awt.Dimension(521, 35));
-        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         labelCapacidad.setText("Capacidad:");
         labelCapacidad.setName("labelCapacidad"); // NOI18N
-        add(labelCapacidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, 20));
 
         textFieldCapacidad.setName("textFieldCapacidad"); // NOI18N
         textFieldCapacidad.addActionListener(new java.awt.event.ActionListener() {
@@ -62,7 +60,6 @@ public class panelCargaEnvase extends javax.swing.JPanel {
                 textFieldCapacidadActionPerformed(evt);
             }
         });
-        add(textFieldCapacidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 10, 60, -1));
 
         comboBoxMaterial.setName("comboBoxMaterial"); // NOI18N
         comboBoxMaterial.addActionListener(new java.awt.event.ActionListener() {
@@ -70,26 +67,58 @@ public class panelCargaEnvase extends javax.swing.JPanel {
                 comboBoxMaterialActionPerformed(evt);
             }
         });
-        add(comboBoxMaterial, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 10, 80, -1));
 
         labelMaterial.setText("Material");
         labelMaterial.setName("labelMaterial"); // NOI18N
-        add(labelMaterial, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 10, -1, 20));
 
         labelUnidad.setText("Unidad:");
         labelUnidad.setName("labelUnidad"); // NOI18N
-        add(labelUnidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 10, -1, 20));
 
         comboBoxUnidad.setName("comboBoxUnidad"); // NOI18N
-        add(comboBoxUnidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 10, 50, -1));
 
         buttonAddUnidad.setText("+");
         buttonAddUnidad.setName("buttonAddUnidad"); // NOI18N
-        add(buttonAddUnidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 10, -1, 20));
 
         buttonAddCapacidad.setText("+");
         buttonAddCapacidad.setName("buttonAddCapacidad"); // NOI18N
-        add(buttonAddCapacidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 10, -1, 20));
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(0, 0, 0)
+                .addComponent(labelCapacidad)
+                .addGap(6, 6, 6)
+                .addComponent(textFieldCapacidad, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(40, 40, 40)
+                .addComponent(labelMaterial)
+                .addGap(2, 2, 2)
+                .addComponent(comboBoxMaterial, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(buttonAddCapacidad)
+                .addGap(39, 39, 39)
+                .addComponent(labelUnidad)
+                .addGap(13, 13, 13)
+                .addComponent(comboBoxUnidad, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(10, 10, 10)
+                .addComponent(buttonAddUnidad))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(0, 0, 0)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelCapacidad, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textFieldCapacidad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(labelMaterial, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(comboBoxMaterial, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(buttonAddCapacidad, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(labelUnidad, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(comboBoxUnidad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(buttonAddUnidad, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
     }// </editor-fold>//GEN-END:initComponents
 
     private void textFieldCapacidadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldCapacidadActionPerformed

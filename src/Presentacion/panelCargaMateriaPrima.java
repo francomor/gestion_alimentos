@@ -46,19 +46,40 @@ public class panelCargaMateriaPrima extends javax.swing.JPanel {
         setMaximumSize(new java.awt.Dimension(521, 30));
         setMinimumSize(new java.awt.Dimension(521, 30));
         setPreferredSize(new java.awt.Dimension(521, 30));
-        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         labelNombre.setText("Nombre:");
-        add(labelNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 10, -1, 20));
 
         comboBoxNombre.setName("comboBoxNombre"); // NOI18N
-        add(comboBoxNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 10, 68, -1));
 
         labelCantidad.setText("Cantidad");
-        add(labelCantidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 10, -1, 20));
 
         textFieldCantidad.setName("textFieldCantidad"); // NOI18N
-        add(textFieldCantidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 10, 65, -1));
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(0, 0, 0)
+                .addComponent(labelNombre)
+                .addGap(9, 9, 9)
+                .addComponent(comboBoxNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 199, Short.MAX_VALUE)
+                .addComponent(labelCantidad)
+                .addGap(7, 7, 7)
+                .addComponent(textFieldCantidad, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(89, 89, 89))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(0, 0, 0)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(comboBoxNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(labelCantidad, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textFieldCantidad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+        );
     }// </editor-fold>//GEN-END:initComponents
  
     private void cargarValores() {

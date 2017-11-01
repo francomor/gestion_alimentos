@@ -154,11 +154,9 @@ public class panelCargaProducto extends javax.swing.JPanel {
 
         jButton1.setText("jButton1");
 
-        CargaBasica.setMaximumSize(new java.awt.Dimension(1980, 1600));
         CargaBasica.setMinimumSize(new java.awt.Dimension(700, 0));
-        CargaBasica.setPreferredSize(new java.awt.Dimension(700, 1600));
+        CargaBasica.setPreferredSize(new java.awt.Dimension(700, 1650));
 
-        panelBuscaRNE.setMaximumSize(new java.awt.Dimension(1980, 90));
         panelBuscaRNE.setMinimumSize(new java.awt.Dimension(700, 90));
         panelBuscaRNE.setPreferredSize(new java.awt.Dimension(700, 90));
 
@@ -187,35 +185,36 @@ public class panelCargaProducto extends javax.swing.JPanel {
         panelBuscaRNELayout.setHorizontalGroup(
             panelBuscaRNELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelBuscaRNELayout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(5, 5, 5)
                 .addGroup(panelBuscaRNELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(labelCargaProdAlimenticio)
                     .addGroup(panelBuscaRNELayout.createSequentialGroup()
-                        .addGroup(panelBuscaRNELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(labelNumRNE, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(panelBuscaRNELayout.createSequentialGroup()
-                                .addGap(80, 80, 80)
-                                .addComponent(textFieldRNE, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(20, 20, 20)
+                        .addComponent(labelNumRNE, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(textFieldRNE, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(9, 9, 9)
                         .addComponent(BuscarRNE)))
-                .addContainerGap(365, Short.MAX_VALUE))
+                .addContainerGap(338, Short.MAX_VALUE))
         );
         panelBuscaRNELayout.setVerticalGroup(
             panelBuscaRNELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelBuscaRNELayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(labelCargaProdAlimenticio)
-                .addGap(20, 20, 20)
-                .addGroup(panelBuscaRNELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(labelNumRNE, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(textFieldRNE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(BuscarRNE))
-                .addContainerGap(17, Short.MAX_VALUE))
+                .addGroup(panelBuscaRNELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(panelBuscaRNELayout.createSequentialGroup()
+                        .addGap(50, 50, 50)
+                        .addComponent(BuscarRNE, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panelBuscaRNELayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(labelCargaProdAlimenticio)
+                        .addGap(20, 20, 20)
+                        .addGroup(panelBuscaRNELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(textFieldRNE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(labelNumRNE, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(20, Short.MAX_VALUE))
         );
 
-        panelDatosEmpresa.setMaximumSize(new java.awt.Dimension(1980, 120));
         panelDatosEmpresa.setMinimumSize(new java.awt.Dimension(700, 120));
-        panelDatosEmpresa.setPreferredSize(new java.awt.Dimension(700, 120));
 
         labelDatoEmpresa.setFont(new java.awt.Font("Liberation Sans", 1, 14)); // NOI18N
         labelDatoEmpresa.setText("Datos de la empresa");
@@ -252,58 +251,61 @@ public class panelCargaProducto extends javax.swing.JPanel {
         panelDatosEmpresaLayout.setHorizontalGroup(
             panelDatosEmpresaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelDatosEmpresaLayout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(5, 5, 5)
                 .addGroup(panelDatosEmpresaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(labelDatoEmpresa)
                     .addGroup(panelDatosEmpresaLayout.createSequentialGroup()
                         .addGap(20, 20, 20)
                         .addGroup(panelDatosEmpresaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(panelDatosEmpresaLayout.createSequentialGroup()
-                                .addComponent(labelEmp_CUIL)
-                                .addGap(59, 59, 59)
-                                .addComponent(textFieldEmp_CUIL, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(78, 78, 78)
-                                .addComponent(labelEmp_Email, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(11, 11, 11)
-                                .addComponent(textFieldEmp_Email, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(panelDatosEmpresaLayout.createSequentialGroup()
-                                .addComponent(labelEmp_NombreEmpresa)
-                                .addGap(46, 46, 46)
-                                .addComponent(textFieldEmp_Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(78, 78, 78)
-                                .addComponent(labelEmp_Telefono)
-                                .addGap(11, 11, 11)
-                                .addComponent(textFieldEmp_Telefono, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(panelDatosEmpresaLayout.createSequentialGroup()
                                 .addComponent(labelEmp_RazonSocial)
                                 .addGap(23, 23, 23)
-                                .addComponent(textFieldEmp_RazonSocial, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(196, Short.MAX_VALUE))
+                                .addComponent(textFieldEmp_RazonSocial, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(panelDatosEmpresaLayout.createSequentialGroup()
+                                .addGroup(panelDatosEmpresaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(panelDatosEmpresaLayout.createSequentialGroup()
+                                        .addComponent(labelEmp_CUIL)
+                                        .addGap(59, 59, 59)
+                                        .addComponent(textFieldEmp_CUIL, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(panelDatosEmpresaLayout.createSequentialGroup()
+                                        .addComponent(labelEmp_NombreEmpresa)
+                                        .addGap(46, 46, 46)
+                                        .addComponent(textFieldEmp_Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(219, 219, 219)
+                                .addGroup(panelDatosEmpresaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(panelDatosEmpresaLayout.createSequentialGroup()
+                                        .addComponent(labelEmp_Email, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(11, 11, 11)
+                                        .addComponent(textFieldEmp_Email, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(panelDatosEmpresaLayout.createSequentialGroup()
+                                        .addComponent(labelEmp_Telefono)
+                                        .addGap(11, 11, 11)
+                                        .addComponent(textFieldEmp_Telefono, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
+                .addGap(60, 60, 60))
         );
         panelDatosEmpresaLayout.setVerticalGroup(
             panelDatosEmpresaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelDatosEmpresaLayout.createSequentialGroup()
                 .addComponent(labelDatoEmpresa)
-                .addGap(11, 11, 11)
+                .addGap(20, 20, 20)
                 .addGroup(panelDatosEmpresaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(labelEmp_CUIL, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(textFieldEmp_CUIL, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(labelEmp_Email, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(textFieldEmp_Email, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(9, 9, 9)
+                .addGap(15, 15, 15)
                 .addGroup(panelDatosEmpresaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(labelEmp_NombreEmpresa, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(textFieldEmp_Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(labelEmp_Telefono, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(textFieldEmp_Telefono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(10, 10, 10)
+                .addGap(15, 15, 15)
                 .addGroup(panelDatosEmpresaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(labelEmp_RazonSocial, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(textFieldEmp_RazonSocial, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 10, Short.MAX_VALUE))
+                .addGap(20, 20, 20))
         );
 
-        panelRegistroRNPA.setMaximumSize(new java.awt.Dimension(1980, 70));
         panelRegistroRNPA.setMinimumSize(new java.awt.Dimension(700, 70));
         panelRegistroRNPA.setPreferredSize(new java.awt.Dimension(700, 70));
 
@@ -324,40 +326,38 @@ public class panelCargaProducto extends javax.swing.JPanel {
         panelRegistroRNPALayout.setHorizontalGroup(
             panelRegistroRNPALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelRegistroRNPALayout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(10, 10, 10)
                 .addGroup(panelRegistroRNPALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(labelRegistroRNPA)
+                    .addGroup(panelRegistroRNPALayout.createSequentialGroup()
+                        .addComponent(labelRegistroRNPA)
+                        .addContainerGap(530, Short.MAX_VALUE))
                     .addGroup(panelRegistroRNPALayout.createSequentialGroup()
                         .addGap(20, 20, 20)
                         .addComponent(labelRNPA, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(10, 10, 10)
                         .addComponent(textFieldRNPA, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(70, 70, 70)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(labelFechaVencimiento)
                         .addGap(4, 4, 4)
-                        .addComponent(textFieldFechaVencimiento, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(198, Short.MAX_VALUE))
+                        .addComponent(textFieldFechaVencimiento, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(60, 60, 60))))
         );
         panelRegistroRNPALayout.setVerticalGroup(
             panelRegistroRNPALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelRegistroRNPALayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(labelRegistroRNPA)
-                .addGap(11, 11, 11)
+                .addGap(20, 20, 20)
                 .addGroup(panelRegistroRNPALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(labelRNPA, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(textFieldRNPA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(labelFechaVencimiento, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(textFieldFechaVencimiento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
+                .addGap(20, 20, 20))
         );
 
-        panelDatosProducto.setMaximumSize(new java.awt.Dimension(1980, 1150));
         panelDatosProducto.setMinimumSize(new java.awt.Dimension(700, 1150));
         panelDatosProducto.setPreferredSize(new java.awt.Dimension(700, 1150));
-        panelDatosProducto.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        panelDatosProdAdentro.setMaximumSize(new java.awt.Dimension(1980, 180));
         panelDatosProdAdentro.setMinimumSize(new java.awt.Dimension(700, 180));
         panelDatosProdAdentro.setPreferredSize(new java.awt.Dimension(700, 180));
 
@@ -380,7 +380,7 @@ public class panelCargaProducto extends javax.swing.JPanel {
         panelDatosProdAdentroLayout.setHorizontalGroup(
             panelDatosProdAdentroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelDatosProdAdentroLayout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(10, 10, 10)
                 .addGroup(panelDatosProdAdentroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(labelDatosPA)
                     .addGroup(panelDatosProdAdentroLayout.createSequentialGroup()
@@ -397,22 +397,19 @@ public class panelCargaProducto extends javax.swing.JPanel {
         panelDatosProdAdentroLayout.setVerticalGroup(
             panelDatosProdAdentroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelDatosProdAdentroLayout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(0, 0, 0)
                 .addComponent(labelDatosPA)
-                .addGap(11, 11, 11)
+                .addGap(20, 20, 20)
                 .addGroup(panelDatosProdAdentroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(labelNroFactura, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(textFieldNroFactura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(10, 10, 10)
+                .addGap(15, 15, 15)
                 .addComponent(labelRotulo)
                 .addGap(6, 6, 6)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(19, Short.MAX_VALUE))
+                .addGap(20, 20, 20))
         );
 
-        panelDatosProducto.add(panelDatosProdAdentro, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
-
-        panelComposicion.setMaximumSize(new java.awt.Dimension(1980, 425));
         panelComposicion.setMinimumSize(new java.awt.Dimension(700, 425));
         panelComposicion.setPreferredSize(new java.awt.Dimension(700, 425));
 
@@ -458,84 +455,85 @@ public class panelCargaProducto extends javax.swing.JPanel {
         panelCompDatosLayout.setHorizontalGroup(
             panelCompDatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelCompDatosLayout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(30, 30, 30)
                 .addGroup(panelCompDatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(labelComposicion)
-                    .addComponent(SeparadorDatosProducto, javax.swing.GroupLayout.PREFERRED_SIZE, 670, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(panelCompDatosLayout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addGroup(panelCompDatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(panelCompDatosLayout.createSequentialGroup()
-                                .addComponent(labelComp_Nombre)
-                                .addGap(22, 22, 22)
-                                .addComponent(textFieldComp_Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(80, 80, 80)
-                                .addComponent(labelComp_NroTipoMarca)
-                                .addGap(12, 12, 12)
-                                .addComponent(textFieldComp_NroTipoMarca, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(panelCompDatosLayout.createSequentialGroup()
-                                .addComponent(labelComp_Marca)
-                                .addGap(77, 77, 77)
-                                .addComponent(textFieldComp_Marca, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(80, 80, 80)
-                                .addComponent(labelComp_CAA)
-                                .addGap(81, 81, 81)
-                                .addComponent(textFieldComp_CAA, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(panelCompDatosLayout.createSequentialGroup()
-                                .addComponent(labelComp_Denominacion)
-                                .addGap(40, 40, 40)
-                                .addComponent(textFieldComp_Denominacion, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(panelCompDatosLayout.createSequentialGroup()
-                                .addComponent(labelComp_Contenido)
-                                .addGap(57, 57, 57)
-                                .addComponent(textFieldComp_Contenido, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(panelCompDatosLayout.createSequentialGroup()
-                                .addComponent(labelComp_FechaDuracion)
-                                .addGap(18, 18, 18)
-                                .addComponent(textFieldComp_FechaDuracion, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(labelComposicion)
+                        .addContainerGap(596, Short.MAX_VALUE))
+                    .addGroup(panelCompDatosLayout.createSequentialGroup()
+                        .addGroup(panelCompDatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(SeparadorDatosProducto)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panelCompDatosLayout.createSequentialGroup()
+                                .addGap(5, 5, 5)
+                                .addGroup(panelCompDatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(labelComp_Nombre)
+                                    .addComponent(labelComp_Marca)
+                                    .addComponent(labelComp_Denominacion)
+                                    .addComponent(labelComp_Contenido)
+                                    .addComponent(labelComp_FechaDuracion))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(panelCompDatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(textFieldComp_Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(textFieldComp_Marca, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(textFieldComp_Denominacion, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(textFieldComp_Contenido, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(textFieldComp_FechaDuracion, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(panelCompDatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(panelCompDatosLayout.createSequentialGroup()
+                                        .addComponent(labelComp_NroTipoMarca)
+                                        .addGap(12, 12, 12)
+                                        .addComponent(textFieldComp_NroTipoMarca, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(panelCompDatosLayout.createSequentialGroup()
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 1, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(labelComp_CAA)
+                                        .addGap(81, 81, 81)
+                                        .addComponent(textFieldComp_CAA)))))
+                        .addGap(41, 41, 41))))
         );
         panelCompDatosLayout.setVerticalGroup(
             panelCompDatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelCompDatosLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(labelComposicion, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(10, 10, 10)
                 .addComponent(SeparadorDatosProducto, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20)
-                .addGroup(panelCompDatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(labelComp_Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(textFieldComp_Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(labelComp_NroTipoMarca, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(textFieldComp_NroTipoMarca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(10, 10, 10)
                 .addGroup(panelCompDatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(labelComp_Marca, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(textFieldComp_Marca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(labelComp_CAA, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(textFieldComp_CAA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(10, 10, 10)
+                    .addGroup(panelCompDatosLayout.createSequentialGroup()
+                        .addGroup(panelCompDatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(labelComp_Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(textFieldComp_Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(15, 15, 15)
+                        .addGroup(panelCompDatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(labelComp_Marca, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(textFieldComp_Marca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(panelCompDatosLayout.createSequentialGroup()
+                        .addGroup(panelCompDatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(labelComp_NroTipoMarca, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(textFieldComp_NroTipoMarca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(15, 15, 15)
+                        .addGroup(panelCompDatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(labelComp_CAA, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(textFieldComp_CAA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(15, 15, 15)
                 .addGroup(panelCompDatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(labelComp_Denominacion, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(textFieldComp_Denominacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(10, 10, 10)
+                .addGap(15, 15, 15)
                 .addGroup(panelCompDatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(labelComp_Contenido, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(textFieldComp_Contenido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(10, 10, 10)
+                .addGap(15, 15, 15)
                 .addGroup(panelCompDatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(labelComp_FechaDuracion, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(textFieldComp_FechaDuracion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30))
+                .addGap(20, 20, 20))
         );
 
-        panelCompCarMP.setMaximumSize(new java.awt.Dimension(1980, 35));
         panelCompCarMP.setMinimumSize(new java.awt.Dimension(700, 35));
         panelCompCarMP.setPreferredSize(new java.awt.Dimension(700, 35));
-        panelCompCarMP.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         labelComp_MateriasPrimas.setText("Materias Primas");
-        panelCompCarMP.add(labelComp_MateriasPrimas, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, -1, 20));
 
         buttonAddMP.setText("+");
         buttonAddMP.addActionListener(new java.awt.event.ActionListener() {
@@ -543,7 +541,6 @@ public class panelCargaProducto extends javax.swing.JPanel {
                 buttonAddMPActionPerformed(evt);
             }
         });
-        panelCompCarMP.add(buttonAddMP, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 0, -1, -1));
 
         buttonRemoveMP.setText("-");
         buttonRemoveMP.addActionListener(new java.awt.event.ActionListener() {
@@ -551,7 +548,29 @@ public class panelCargaProducto extends javax.swing.JPanel {
                 buttonRemoveMPActionPerformed(evt);
             }
         });
-        panelCompCarMP.add(buttonRemoveMP, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 0, -1, -1));
+
+        javax.swing.GroupLayout panelCompCarMPLayout = new javax.swing.GroupLayout(panelCompCarMP);
+        panelCompCarMP.setLayout(panelCompCarMPLayout);
+        panelCompCarMPLayout.setHorizontalGroup(
+            panelCompCarMPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelCompCarMPLayout.createSequentialGroup()
+                .addGap(35, 35, 35)
+                .addComponent(labelComp_MateriasPrimas)
+                .addGap(20, 20, 20)
+                .addComponent(buttonAddMP)
+                .addGap(15, 15, 15)
+                .addComponent(buttonRemoveMP)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        panelCompCarMPLayout.setVerticalGroup(
+            panelCompCarMPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelCompCarMPLayout.createSequentialGroup()
+                .addGroup(panelCompCarMPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelComp_MateriasPrimas, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(buttonAddMP)
+                    .addComponent(buttonRemoveMP))
+                .addGap(15, 15, 15))
+        );
 
         panelCompMP.setName(""); // NOI18N
         panelCompMP.setLayout(new javax.swing.BoxLayout(panelCompMP, javax.swing.BoxLayout.Y_AXIS));
@@ -562,37 +581,28 @@ public class panelCargaProducto extends javax.swing.JPanel {
         panelComposicionLayout.setHorizontalGroup(
             panelComposicionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelComposicionLayout.createSequentialGroup()
-                .addGroup(panelComposicionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panelComposicionLayout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(panelCompCarMP, javax.swing.GroupLayout.PREFERRED_SIZE, 610, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(panelComposicionLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 650, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(40, 40, 40))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelComposicionLayout.createSequentialGroup()
                 .addComponent(panelCompDatos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(panelCompCarMP, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(panelComposicionLayout.createSequentialGroup()
+                .addGap(35, 35, 35)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 621, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panelComposicionLayout.setVerticalGroup(
             panelComposicionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelComposicionLayout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addComponent(panelCompDatos, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(panelCompDatos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
                 .addComponent(panelCompCarMP, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(30, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        panelDatosProducto.add(panelComposicion, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, 690, 409));
-
-        panelDescripcion.setMaximumSize(new java.awt.Dimension(1980, 590));
         panelDescripcion.setMinimumSize(new java.awt.Dimension(700, 590));
         panelDescripcion.setPreferredSize(new java.awt.Dimension(700, 590));
 
-        panelDescDatos.setMaximumSize(new java.awt.Dimension(1980, 335));
         panelDescDatos.setMinimumSize(new java.awt.Dimension(700, 335));
         panelDescDatos.setPreferredSize(new java.awt.Dimension(700, 335));
 
@@ -643,100 +653,85 @@ public class panelCargaProducto extends javax.swing.JPanel {
         panelDescDatosLayout.setHorizontalGroup(
             panelDescDatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelDescDatosLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(panelDescDatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(30, 30, 30)
+                .addGroup(panelDescDatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(labelDescripcion)
-                    .addComponent(SeparadorDatosProducto3, javax.swing.GroupLayout.PREFERRED_SIZE, 670, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(SeparadorDatosProducto3)
                     .addGroup(panelDescDatosLayout.createSequentialGroup()
-                        .addComponent(labelDesc_FormaUso)
-                        .addGap(88, 88, 88)
-                        .addComponent(textFieldDesc_FormaUso, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(panelDescDatosLayout.createSequentialGroup()
-                        .addComponent(labelDesc_PeridoAptitud)
-                        .addGap(128, 128, 128)
-                        .addComponent(textFieldDesc_PeriodoAptitud, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(panelDescDatosLayout.createSequentialGroup()
-                        .addComponent(labelDesc_ModoConservacion)
-                        .addGap(109, 109, 109)
-                        .addComponent(textFieldDesc_ModoConservacion, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(panelDescDatosLayout.createSequentialGroup()
-                        .addComponent(labelDesc_DondeVendido)
-                        .addGap(63, 63, 63)
-                        .addComponent(textFieldDesc_DondeVendido, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(panelDescDatosLayout.createSequentialGroup()
-                        .addComponent(labelDesc_InstruccionPrep)
-                        .addGap(77, 77, 77)
-                        .addComponent(textFieldDesc_InstruccionPrep, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(panelDescDatosLayout.createSequentialGroup()
-                        .addGroup(panelDescDatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(labelDesc_ControlesEspeciales1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(labelDesc_ControlesEspeciales2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(11, 11, 11)
-                        .addComponent(textFieldDesc_ControlesEspeciales, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(panelDescDatosLayout.createSequentialGroup()
-                        .addComponent(labelDesc_AQuienDirigido)
-                        .addGap(71, 71, 71)
-                        .addComponent(textFieldDesc_AQuienDirigido, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(panelDescDatosLayout.createSequentialGroup()
-                        .addComponent(labelDesc_InfoAdicional)
-                        .addGap(115, 115, 115)
-                        .addComponent(textFieldDesc_InfoAdicional, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(20, Short.MAX_VALUE))
+                        .addGap(5, 5, 5)
+                        .addGroup(panelDescDatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(labelDesc_ControlesEspeciales1, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(panelDescDatosLayout.createSequentialGroup()
+                                .addGroup(panelDescDatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(labelDesc_FormaUso)
+                                    .addComponent(labelDesc_PeridoAptitud)
+                                    .addComponent(labelDesc_ModoConservacion)
+                                    .addComponent(labelDesc_DondeVendido)
+                                    .addComponent(labelDesc_InstruccionPrep)
+                                    .addComponent(labelDesc_ControlesEspeciales2)
+                                    .addComponent(labelDesc_AQuienDirigido)
+                                    .addComponent(labelDesc_InfoAdicional))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(panelDescDatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(textFieldDesc_FormaUso, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(textFieldDesc_PeriodoAptitud, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(textFieldDesc_ModoConservacion, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(textFieldDesc_DondeVendido, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(textFieldDesc_InstruccionPrep, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(textFieldDesc_ControlesEspeciales, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(textFieldDesc_AQuienDirigido, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(textFieldDesc_InfoAdicional, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                .addGap(40, 40, 40))
         );
         panelDescDatosLayout.setVerticalGroup(
             panelDescDatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelDescDatosLayout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(20, 20, 20)
                 .addComponent(labelDescripcion, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(10, 10, 10)
                 .addComponent(SeparadorDatosProducto3, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(10, 10, 10)
                 .addGroup(panelDescDatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(labelDesc_FormaUso, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(textFieldDesc_FormaUso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(10, 10, 10)
+                .addGap(15, 15, 15)
                 .addGroup(panelDescDatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(labelDesc_PeridoAptitud, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(textFieldDesc_PeriodoAptitud, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(10, 10, 10)
+                .addGap(15, 15, 15)
                 .addGroup(panelDescDatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(labelDesc_ModoConservacion, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(textFieldDesc_ModoConservacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(10, 10, 10)
+                .addGap(15, 15, 15)
                 .addGroup(panelDescDatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(labelDesc_DondeVendido, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(textFieldDesc_DondeVendido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(10, 10, 10)
+                .addGap(15, 15, 15)
                 .addGroup(panelDescDatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(labelDesc_InstruccionPrep, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(textFieldDesc_InstruccionPrep, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(15, 15, 15)
                 .addGroup(panelDescDatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelDescDatosLayout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addGroup(panelDescDatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(labelDesc_ControlesEspeciales1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(textFieldDesc_ControlesEspeciales, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(panelDescDatosLayout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addComponent(labelDesc_ControlesEspeciales2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(36, 36, 36)
+                        .addComponent(labelDesc_ControlesEspeciales1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, 0)
+                        .addComponent(labelDesc_ControlesEspeciales2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(textFieldDesc_ControlesEspeciales, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(15, 15, 15)
                 .addGroup(panelDescDatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(labelDesc_AQuienDirigido, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(textFieldDesc_AQuienDirigido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(10, 10, 10)
+                .addGap(15, 15, 15)
                 .addGroup(panelDescDatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(labelDesc_InfoAdicional, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(textFieldDesc_InfoAdicional, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
+                .addGap(20, 20, 20))
         );
 
-        panelDescCarEnvase.setMaximumSize(new java.awt.Dimension(1980, 35));
         panelDescCarEnvase.setMinimumSize(new java.awt.Dimension(700, 35));
         panelDescCarEnvase.setPreferredSize(new java.awt.Dimension(700, 35));
-        panelDescCarEnvase.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         labelDesc_CaracteristicasEnvase.setText("Caracteristicas del envase");
-        panelDescCarEnvase.add(labelDesc_CaracteristicasEnvase, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, 20));
 
         buttonAddEnvase.setText("+");
         buttonAddEnvase.addActionListener(new java.awt.event.ActionListener() {
@@ -744,7 +739,6 @@ public class panelCargaProducto extends javax.swing.JPanel {
                 buttonAddEnvaseActionPerformed(evt);
             }
         });
-        panelDescCarEnvase.add(buttonAddEnvase, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 10, 40, -1));
 
         buttonRemoveEnvase.setText("-");
         buttonRemoveEnvase.addActionListener(new java.awt.event.ActionListener() {
@@ -752,7 +746,29 @@ public class panelCargaProducto extends javax.swing.JPanel {
                 buttonRemoveEnvaseActionPerformed(evt);
             }
         });
-        panelDescCarEnvase.add(buttonRemoveEnvase, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 10, -1, -1));
+
+        javax.swing.GroupLayout panelDescCarEnvaseLayout = new javax.swing.GroupLayout(panelDescCarEnvase);
+        panelDescCarEnvase.setLayout(panelDescCarEnvaseLayout);
+        panelDescCarEnvaseLayout.setHorizontalGroup(
+            panelDescCarEnvaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelDescCarEnvaseLayout.createSequentialGroup()
+                .addGap(35, 35, 35)
+                .addComponent(labelDesc_CaracteristicasEnvase)
+                .addGap(20, 20, 20)
+                .addComponent(buttonAddEnvase)
+                .addGap(15, 15, 15)
+                .addComponent(buttonRemoveEnvase))
+        );
+        panelDescCarEnvaseLayout.setVerticalGroup(
+            panelDescCarEnvaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelDescCarEnvaseLayout.createSequentialGroup()
+                .addGap(0, 0, 0)
+                .addGroup(panelDescCarEnvaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelDesc_CaracteristicasEnvase, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(buttonAddEnvase)
+                    .addComponent(buttonRemoveEnvase))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
 
         panelDescEnvase.setName(""); // NOI18N
         panelDescEnvase.setLayout(new javax.swing.BoxLayout(panelDescEnvase, javax.swing.BoxLayout.Y_AXIS));
@@ -767,25 +783,42 @@ public class panelCargaProducto extends javax.swing.JPanel {
                     .addComponent(panelDescDatos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(panelDescCarEnvase, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(panelDescripcionLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 653, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(35, 35, 35)
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 622, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(10, 10, 10))
         );
         panelDescripcionLayout.setVerticalGroup(
             panelDescripcionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelDescripcionLayout.createSequentialGroup()
-                .addGap(72, 72, 72)
-                .addComponent(panelDescDatos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(panelDescDatos, javax.swing.GroupLayout.PREFERRED_SIZE, 377, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(panelDescCarEnvase, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 149, Short.MAX_VALUE)
-                .addGap(14, 14, 14))
+                .addComponent(panelDescCarEnvase, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        panelDatosProducto.add(panelDescripcion, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 500, -1, 629));
+        javax.swing.GroupLayout panelDatosProductoLayout = new javax.swing.GroupLayout(panelDatosProducto);
+        panelDatosProducto.setLayout(panelDatosProductoLayout);
+        panelDatosProductoLayout.setHorizontalGroup(
+            panelDatosProductoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(panelDatosProdAdentro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(panelDescripcion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(panelComposicion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        panelDatosProductoLayout.setVerticalGroup(
+            panelDatosProductoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelDatosProductoLayout.createSequentialGroup()
+                .addGap(0, 0, 0)
+                .addComponent(panelDatosProdAdentro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(panelComposicion, javax.swing.GroupLayout.PREFERRED_SIZE, 382, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(panelDescripcion, javax.swing.GroupLayout.PREFERRED_SIZE, 506, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
 
-        panelDatosMuestraLab.setMaximumSize(new java.awt.Dimension(1980, 90));
         panelDatosMuestraLab.setMinimumSize(new java.awt.Dimension(700, 90));
         panelDatosMuestraLab.setPreferredSize(new java.awt.Dimension(700, 90));
 
@@ -804,8 +837,8 @@ public class panelCargaProducto extends javax.swing.JPanel {
         panelDatosMuestraLab.setLayout(panelDatosMuestraLabLayout);
         panelDatosMuestraLabLayout.setHorizontalGroup(
             panelDatosMuestraLabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelDatosMuestraLabLayout.createSequentialGroup()
-                .addContainerGap()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelDatosMuestraLabLayout.createSequentialGroup()
+                .addGap(10, 10, 10)
                 .addGroup(panelDatosMuestraLabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(labelDatosDeLab)
                     .addGroup(panelDatosMuestraLabLayout.createSequentialGroup()
@@ -813,29 +846,27 @@ public class panelCargaProducto extends javax.swing.JPanel {
                         .addComponent(labelNumProtocolo)
                         .addGap(8, 8, 8)
                         .addComponent(textFieldNroProtocolo, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(130, 130, 130)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 194, Short.MAX_VALUE)
                         .addComponent(labelNroActa)
                         .addGap(6, 6, 6)
                         .addComponent(textFieldNroActa, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(panelDatosMuestraLabLayout.createSequentialGroup()
-                .addComponent(SeparadorRegistroRNPA1, javax.swing.GroupLayout.PREFERRED_SIZE, 650, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 50, Short.MAX_VALUE))
+                .addGap(60, 60, 60))
+            .addComponent(SeparadorRegistroRNPA1)
         );
         panelDatosMuestraLabLayout.setVerticalGroup(
             panelDatosMuestraLabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelDatosMuestraLabLayout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(0, 0, 0)
                 .addComponent(SeparadorRegistroRNPA1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(10, 10, 10)
                 .addComponent(labelDatosDeLab)
-                .addGap(11, 11, 11)
+                .addGap(20, 20, 20)
                 .addGroup(panelDatosMuestraLabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(labelNumProtocolo, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(textFieldNroProtocolo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(labelNroActa, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(textFieldNroActa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(20, 20, 20))
         );
 
         javax.swing.GroupLayout CargaBasicaLayout = new javax.swing.GroupLayout(CargaBasica);
@@ -843,16 +874,18 @@ public class panelCargaProducto extends javax.swing.JPanel {
         CargaBasicaLayout.setHorizontalGroup(
             CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(panelBuscaRNE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGroup(CargaBasicaLayout.createSequentialGroup()
-                .addComponent(SeparadorRegistroRNPA2, javax.swing.GroupLayout.PREFERRED_SIZE, 650, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(51, 51, 51)
-                .addComponent(SeparadorDatosEmpresa, javax.swing.GroupLayout.PREFERRED_SIZE, 620, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addComponent(panelDatosEmpresa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(SeparadorRegistroRNPA3, javax.swing.GroupLayout.PREFERRED_SIZE, 650, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(panelRegistroRNPA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(SeparadorRegistroRNPA4, javax.swing.GroupLayout.PREFERRED_SIZE, 650, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addComponent(panelDatosProducto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addComponent(panelDatosMuestraLab, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(CargaBasicaLayout.createSequentialGroup()
+                .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(SeparadorRegistroRNPA2)
+                    .addComponent(panelDatosEmpresa, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(1, 1, 1)
+                .addComponent(SeparadorDatosEmpresa, javax.swing.GroupLayout.PREFERRED_SIZE, 620, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                .addComponent(SeparadorRegistroRNPA4, javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(SeparadorRegistroRNPA3, javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(panelRegistroRNPA, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         CargaBasicaLayout.setVerticalGroup(
             CargaBasicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -863,17 +896,18 @@ public class panelCargaProducto extends javax.swing.JPanel {
                     .addGroup(CargaBasicaLayout.createSequentialGroup()
                         .addGap(6, 6, 6)
                         .addComponent(SeparadorDatosEmpresa, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(panelDatosEmpresa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(10, 10, 10)
+                .addGap(0, 0, 0)
                 .addComponent(SeparadorRegistroRNPA3, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
-                .addComponent(panelRegistroRNPA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(10, 10, 10)
-                .addComponent(SeparadorRegistroRNPA4, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(10, 10, 10)
-                .addComponent(panelDatosProducto, javax.swing.GroupLayout.PREFERRED_SIZE, 1140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(panelRegistroRNPA, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
-                .addComponent(panelDatosMuestraLab, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(SeparadorRegistroRNPA4, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(panelDatosProducto, javax.swing.GroupLayout.PREFERRED_SIZE, 1095, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(panelDatosMuestraLab, javax.swing.GroupLayout.DEFAULT_SIZE, 125, Short.MAX_VALUE))
         );
 
         botonGuardar.setText("Guardar");
@@ -890,21 +924,21 @@ public class panelCargaProducto extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(29, 29, 29)
+                        .addGap(20, 20, 20)
                         .addComponent(CargaBasica, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(71, 71, 71)
+                        .addGap(68, 68, 68)
                         .addComponent(botonGuardar)))
-                .addContainerGap(41, Short.MAX_VALUE))
+                .addContainerGap(20, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(CargaBasica, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(CargaBasica, javax.swing.GroupLayout.PREFERRED_SIZE, 1585, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(botonGuardar)
-                .addGap(393, 393, 393))
+                .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
 

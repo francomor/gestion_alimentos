@@ -25,27 +25,27 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                       <Component id="CargaBasica" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="71" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
                       <Component id="botonGuardar" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace pref="41" max="32767" attributes="0"/>
+              <EmptySpace pref="20" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
-              <EmptySpace max="32767" attributes="0"/>
-              <Component id="CargaBasica" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+              <Component id="CargaBasica" min="-2" pref="1585" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
               <Component id="botonGuardar" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="393" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -53,14 +53,11 @@
   <SubComponents>
     <Container class="javax.swing.JPanel" name="CargaBasica">
       <Properties>
-        <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[1980, 1600]"/>
-        </Property>
         <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[700, 0]"/>
         </Property>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[700, 1600]"/>
+          <Dimension value="[700, 1650]"/>
         </Property>
       </Properties>
 
@@ -68,17 +65,21 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Component id="panelBuscaRNE" min="-2" max="-2" attributes="0"/>
-              <Group type="102" attributes="0">
-                  <Component id="SeparadorRegistroRNPA2" min="-2" pref="650" max="-2" attributes="0"/>
-                  <EmptySpace min="51" pref="51" max="-2" attributes="0"/>
-                  <Component id="SeparadorDatosEmpresa" min="-2" pref="620" max="-2" attributes="0"/>
-              </Group>
-              <Component id="panelDatosEmpresa" min="-2" max="-2" attributes="0"/>
-              <Component id="SeparadorRegistroRNPA3" min="-2" pref="650" max="-2" attributes="0"/>
-              <Component id="panelRegistroRNPA" min="-2" max="-2" attributes="0"/>
-              <Component id="SeparadorRegistroRNPA4" min="-2" pref="650" max="-2" attributes="0"/>
               <Component id="panelDatosProducto" min="-2" max="-2" attributes="0"/>
               <Component id="panelDatosMuestraLab" min="-2" max="-2" attributes="0"/>
+              <Group type="102" alignment="0" attributes="0">
+                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                      <Component id="SeparadorRegistroRNPA2" max="32767" attributes="0"/>
+                      <Component id="panelDatosEmpresa" max="32767" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
+                  <Component id="SeparadorDatosEmpresa" min="-2" pref="620" max="-2" attributes="0"/>
+              </Group>
+              <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                  <Component id="SeparadorRegistroRNPA4" alignment="0" max="32767" attributes="0"/>
+                  <Component id="SeparadorRegistroRNPA3" alignment="0" max="32767" attributes="0"/>
+                  <Component id="panelRegistroRNPA" alignment="0" max="32767" attributes="0"/>
+              </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
@@ -92,17 +93,18 @@
                           <Component id="SeparadorDatosEmpresa" min="-2" pref="0" max="-2" attributes="0"/>
                       </Group>
                   </Group>
+                  <EmptySpace max="-2" attributes="0"/>
                   <Component id="panelDatosEmpresa" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                  <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                   <Component id="SeparadorRegistroRNPA3" min="-2" pref="10" max="-2" attributes="0"/>
                   <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                  <Component id="panelRegistroRNPA" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                  <Component id="SeparadorRegistroRNPA4" min="-2" pref="10" max="-2" attributes="0"/>
-                  <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                  <Component id="panelDatosProducto" min="-2" pref="1140" max="-2" attributes="0"/>
+                  <Component id="panelRegistroRNPA" min="-2" pref="77" max="-2" attributes="0"/>
                   <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                  <Component id="panelDatosMuestraLab" min="-2" pref="80" max="-2" attributes="0"/>
+                  <Component id="SeparadorRegistroRNPA4" min="-2" pref="10" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="panelDatosProducto" min="-2" pref="1095" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="panelDatosMuestraLab" pref="125" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -110,9 +112,6 @@
       <SubComponents>
         <Container class="javax.swing.JPanel" name="panelBuscaRNE">
           <Properties>
-            <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-              <Dimension value="[1980, 90]"/>
-            </Property>
             <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[700, 90]"/>
             </Property>
@@ -125,37 +124,41 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="labelCargaProdAlimenticio" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="labelNumRNE" min="-2" pref="88" max="-2" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="80" pref="80" max="-2" attributes="0"/>
-                                      <Component id="textFieldRNE" min="-2" pref="171" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
+                              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                              <Component id="labelNumRNE" min="-2" pref="88" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="textFieldRNE" min="-2" pref="171" max="-2" attributes="0"/>
                               <EmptySpace min="9" pref="9" max="-2" attributes="0"/>
                               <Component id="BuscarRNE" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace pref="365" max="32767" attributes="0"/>
+                      <EmptySpace pref="338" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="labelCargaProdAlimenticio" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="labelNumRNE" min="-2" pref="20" max="-2" attributes="0"/>
-                          <Component id="textFieldRNE" min="-2" max="-2" attributes="0"/>
-                          <Component id="BuscarRNE" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
+                              <Component id="BuscarRNE" min="-2" pref="20" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="labelCargaProdAlimenticio" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="textFieldRNE" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="labelNumRNE" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
                       </Group>
-                      <EmptySpace pref="17" max="32767" attributes="0"/>
+                      <EmptySpace pref="20" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -197,13 +200,7 @@
         </Component>
         <Container class="javax.swing.JPanel" name="panelDatosEmpresa">
           <Properties>
-            <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-              <Dimension value="[1980, 120]"/>
-            </Property>
             <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-              <Dimension value="[700, 120]"/>
-            </Property>
-            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[700, 120]"/>
             </Property>
           </Properties>
@@ -212,39 +209,48 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="labelDatoEmpresa" min="-2" max="-2" attributes="0"/>
                           <Group type="102" attributes="0">
-                              <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="labelEmp_CUIL" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="59" pref="59" max="-2" attributes="0"/>
-                                      <Component id="textFieldEmp_CUIL" min="-2" pref="122" max="-2" attributes="0"/>
-                                      <EmptySpace min="78" pref="78" max="-2" attributes="0"/>
-                                      <Component id="labelEmp_Email" min="-2" pref="49" max="-2" attributes="0"/>
-                                      <EmptySpace min="11" pref="11" max="-2" attributes="0"/>
-                                      <Component id="textFieldEmp_Email" min="-2" pref="124" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="labelEmp_NombreEmpresa" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="46" pref="46" max="-2" attributes="0"/>
-                                      <Component id="textFieldEmp_Nombre" min="-2" pref="122" max="-2" attributes="0"/>
-                                      <EmptySpace min="78" pref="78" max="-2" attributes="0"/>
-                                      <Component id="labelEmp_Telefono" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="11" pref="11" max="-2" attributes="0"/>
-                                      <Component id="textFieldEmp_Telefono" min="-2" pref="124" max="-2" attributes="0"/>
-                                  </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="labelEmp_RazonSocial" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="23" pref="23" max="-2" attributes="0"/>
                                       <Component id="textFieldEmp_RazonSocial" min="-2" pref="122" max="-2" attributes="0"/>
                                   </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="labelEmp_CUIL" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
+                                              <Component id="textFieldEmp_CUIL" min="-2" pref="122" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="labelEmp_NombreEmpresa" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
+                                              <Component id="textFieldEmp_Nombre" min="-2" pref="122" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="219" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="labelEmp_Email" min="-2" pref="49" max="-2" attributes="0"/>
+                                              <EmptySpace min="11" pref="11" max="-2" attributes="0"/>
+                                              <Component id="textFieldEmp_Email" min="-2" pref="124" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="labelEmp_Telefono" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace min="11" pref="11" max="-2" attributes="0"/>
+                                              <Component id="textFieldEmp_Telefono" min="-2" pref="124" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                  </Group>
                               </Group>
                           </Group>
                       </Group>
-                      <EmptySpace pref="196" max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -252,26 +258,26 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <Component id="labelDatoEmpresa" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="11" pref="11" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="labelEmp_CUIL" min="-2" pref="20" max="-2" attributes="0"/>
                           <Component id="textFieldEmp_CUIL" min="-2" max="-2" attributes="0"/>
                           <Component id="labelEmp_Email" min="-2" pref="20" max="-2" attributes="0"/>
                           <Component id="textFieldEmp_Email" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="9" pref="9" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="labelEmp_NombreEmpresa" min="-2" pref="20" max="-2" attributes="0"/>
                           <Component id="textFieldEmp_Nombre" min="-2" max="-2" attributes="0"/>
                           <Component id="labelEmp_Telefono" min="-2" pref="20" max="-2" attributes="0"/>
                           <Component id="textFieldEmp_Telefono" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="labelEmp_RazonSocial" min="-2" pref="20" max="-2" attributes="0"/>
                           <Component id="textFieldEmp_RazonSocial" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="0" pref="10" max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -346,9 +352,6 @@
         </Container>
         <Container class="javax.swing.JPanel" name="panelRegistroRNPA">
           <Properties>
-            <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-              <Dimension value="[1980, 70]"/>
-            </Property>
             <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[700, 70]"/>
             </Property>
@@ -361,37 +364,39 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="labelRegistroRNPA" min="-2" max="-2" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
+                              <Component id="labelRegistroRNPA" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace pref="530" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                               <Component id="labelRNPA" min="-2" pref="50" max="-2" attributes="0"/>
                               <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
                               <Component id="textFieldRNPA" min="-2" pref="120" max="-2" attributes="0"/>
-                              <EmptySpace min="70" pref="70" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
                               <Component id="labelFechaVencimiento" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="4" pref="4" max="-2" attributes="0"/>
                               <Component id="textFieldFechaVencimiento" min="-2" pref="122" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace pref="198" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace max="32767" attributes="0"/>
                       <Component id="labelRegistroRNPA" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="11" pref="11" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="labelRNPA" min="-2" pref="20" max="-2" attributes="0"/>
                           <Component id="textFieldRNPA" min="-2" max="-2" attributes="0"/>
                           <Component id="labelFechaVencimiento" min="-2" pref="20" max="-2" attributes="0"/>
                           <Component id="textFieldFechaVencimiento" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -432,9 +437,6 @@
         </Container>
         <Container class="javax.swing.JPanel" name="panelDatosProducto">
           <Properties>
-            <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-              <Dimension value="[1980, 1150]"/>
-            </Property>
             <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[700, 1150]"/>
             </Property>
@@ -443,15 +445,31 @@
             </Property>
           </Properties>
 
-          <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
-            <Property name="useNullLayout" type="boolean" value="false"/>
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="panelDatosProdAdentro" min="-2" max="-2" attributes="0"/>
+                  <Component id="panelDescripcion" min="-2" max="-2" attributes="0"/>
+                  <Component id="panelComposicion" alignment="0" min="-2" max="-2" attributes="0"/>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
+                      <Component id="panelDatosProdAdentro" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="panelComposicion" min="-2" pref="382" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="panelDescripcion" min="-2" pref="506" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
           </Layout>
           <SubComponents>
             <Container class="javax.swing.JPanel" name="panelDatosProdAdentro">
               <Properties>
-                <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[1980, 180]"/>
-                </Property>
                 <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                   <Dimension value="[700, 180]"/>
                 </Property>
@@ -459,21 +477,16 @@
                   <Dimension value="[700, 180]"/>
                 </Property>
               </Properties>
-              <Constraints>
-                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="0" y="0" width="-1" height="-1"/>
-                </Constraint>
-              </Constraints>
 
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="labelDatosPA" min="-2" max="-2" attributes="0"/>
                               <Group type="102" attributes="0">
-                                  <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" attributes="0">
                                           <Component id="labelNroFactura" min="-2" max="-2" attributes="0"/>
@@ -492,18 +505,18 @@
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                           <Component id="labelDatosPA" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="11" pref="11" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="labelNroFactura" min="-2" pref="20" max="-2" attributes="0"/>
                               <Component id="textFieldNroFactura" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
                           <Component id="labelRotulo" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                           <Component id="jScrollPane1" min="-2" pref="70" max="-2" attributes="0"/>
-                          <EmptySpace pref="19" max="32767" attributes="0"/>
+                          <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -552,9 +565,6 @@
             </Container>
             <Container class="javax.swing.JPanel" name="panelComposicion">
               <Properties>
-                <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[1980, 425]"/>
-                </Property>
                 <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                   <Dimension value="[700, 425]"/>
                 </Property>
@@ -562,44 +572,31 @@
                   <Dimension value="[700, 425]"/>
                 </Property>
               </Properties>
-              <Constraints>
-                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="10" y="170" width="690" height="409"/>
-                </Constraint>
-              </Constraints>
 
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
-                                  <Component id="panelCompCarMP" min="-2" pref="610" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jScrollPane2" min="-2" pref="650" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="1" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
                           <Component id="panelCompDatos" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      </Group>
+                      <Component id="panelCompCarMP" max="32767" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                          <Component id="jScrollPane2" min="-2" pref="621" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
-                          <Component id="panelCompDatos" min="-2" pref="210" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="panelCompDatos" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                           <Component id="panelCompCarMP" min="-2" pref="30" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="jScrollPane2" min="-2" pref="117" max="-2" attributes="0"/>
-                          <EmptySpace pref="30" max="32767" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="jScrollPane2" min="-2" pref="75" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -611,90 +608,101 @@
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="labelComposicion" min="-2" max="-2" attributes="0"/>
-                                  <Component id="SeparadorDatosProducto" min="-2" pref="670" max="-2" attributes="0"/>
                                   <Group type="102" attributes="0">
-                                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Group type="102" attributes="0">
-                                              <Component id="labelComp_Nombre" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace min="22" pref="22" max="-2" attributes="0"/>
-                                              <Component id="textFieldComp_Nombre" min="-2" pref="160" max="-2" attributes="0"/>
-                                              <EmptySpace min="80" pref="80" max="-2" attributes="0"/>
-                                              <Component id="labelComp_NroTipoMarca" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace min="12" pref="12" max="-2" attributes="0"/>
-                                              <Component id="textFieldComp_NroTipoMarca" min="-2" pref="160" max="-2" attributes="0"/>
-                                          </Group>
-                                          <Group type="102" attributes="0">
-                                              <Component id="labelComp_Marca" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace min="77" pref="77" max="-2" attributes="0"/>
-                                              <Component id="textFieldComp_Marca" min="-2" pref="160" max="-2" attributes="0"/>
-                                              <EmptySpace min="80" pref="80" max="-2" attributes="0"/>
-                                              <Component id="labelComp_CAA" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace min="81" pref="81" max="-2" attributes="0"/>
-                                              <Component id="textFieldComp_CAA" min="-2" pref="160" max="-2" attributes="0"/>
-                                          </Group>
-                                          <Group type="102" attributes="0">
-                                              <Component id="labelComp_Denominacion" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace min="40" pref="40" max="-2" attributes="0"/>
-                                              <Component id="textFieldComp_Denominacion" min="-2" pref="160" max="-2" attributes="0"/>
-                                          </Group>
-                                          <Group type="102" attributes="0">
-                                              <Component id="labelComp_Contenido" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace min="57" pref="57" max="-2" attributes="0"/>
-                                              <Component id="textFieldComp_Contenido" min="-2" pref="160" max="-2" attributes="0"/>
-                                          </Group>
-                                          <Group type="102" attributes="0">
-                                              <Component id="labelComp_FechaDuracion" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
-                                              <Component id="textFieldComp_FechaDuracion" min="-2" pref="160" max="-2" attributes="0"/>
+                                      <Component id="labelComposicion" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace pref="596" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" attributes="0">
+                                      <Group type="103" groupAlignment="1" attributes="0">
+                                          <Component id="SeparadorDatosProducto" alignment="1" max="32767" attributes="0"/>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="labelComp_Nombre" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="labelComp_Marca" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="labelComp_Denominacion" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="labelComp_Contenido" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="labelComp_FechaDuracion" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                                  <Component id="textFieldComp_Nombre" alignment="0" min="-2" pref="160" max="-2" attributes="0"/>
+                                                  <Component id="textFieldComp_Marca" alignment="0" min="-2" pref="160" max="-2" attributes="0"/>
+                                                  <Component id="textFieldComp_Denominacion" alignment="0" min="-2" pref="160" max="-2" attributes="0"/>
+                                                  <Component id="textFieldComp_Contenido" alignment="0" min="-2" pref="160" max="-2" attributes="0"/>
+                                                  <Component id="textFieldComp_FechaDuracion" alignment="0" min="-2" pref="160" max="-2" attributes="0"/>
+                                              </Group>
+                                              <EmptySpace max="32767" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                                  <Group type="102" alignment="0" attributes="0">
+                                                      <Component id="labelComp_NroTipoMarca" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                                                      <Component id="textFieldComp_NroTipoMarca" min="-2" pref="123" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Group type="102" alignment="0" attributes="0">
+                                                      <EmptySpace pref="1" max="-2" attributes="0"/>
+                                                      <Component id="labelComp_CAA" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace min="-2" pref="81" max="-2" attributes="0"/>
+                                                      <Component id="textFieldComp_CAA" max="32767" attributes="0"/>
+                                                  </Group>
+                                              </Group>
                                           </Group>
                                       </Group>
+                                      <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <EmptySpace max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                               <Component id="labelComposicion" min="-2" pref="20" max="-2" attributes="0"/>
-                              <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
                               <Component id="SeparadorDatosProducto" min="-2" pref="10" max="-2" attributes="0"/>
-                              <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="labelComp_Nombre" min="-2" pref="20" max="-2" attributes="0"/>
-                                  <Component id="textFieldComp_Nombre" min="-2" max="-2" attributes="0"/>
-                                  <Component id="labelComp_NroTipoMarca" min="-2" pref="20" max="-2" attributes="0"/>
-                                  <Component id="textFieldComp_NroTipoMarca" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="labelComp_Nombre" min="-2" pref="20" max="-2" attributes="0"/>
+                                          <Component id="textFieldComp_Nombre" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="labelComp_Marca" min="-2" pref="20" max="-2" attributes="0"/>
+                                          <Component id="textFieldComp_Marca" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="labelComp_NroTipoMarca" min="-2" pref="20" max="-2" attributes="0"/>
+                                          <Component id="textFieldComp_NroTipoMarca" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="labelComp_CAA" min="-2" pref="20" max="-2" attributes="0"/>
+                                          <Component id="textFieldComp_CAA" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
                               </Group>
-                              <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="labelComp_Marca" min="-2" pref="20" max="-2" attributes="0"/>
-                                  <Component id="textFieldComp_Marca" min="-2" max="-2" attributes="0"/>
-                                  <Component id="labelComp_CAA" min="-2" pref="20" max="-2" attributes="0"/>
-                                  <Component id="textFieldComp_CAA" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="labelComp_Denominacion" min="-2" pref="20" max="-2" attributes="0"/>
                                   <Component id="textFieldComp_Denominacion" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="labelComp_Contenido" min="-2" pref="20" max="-2" attributes="0"/>
                                   <Component id="textFieldComp_Contenido" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="labelComp_FechaDuracion" min="-2" pref="20" max="-2" attributes="0"/>
                                   <Component id="textFieldComp_FechaDuracion" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -788,9 +796,6 @@
                 </Container>
                 <Container class="javax.swing.JPanel" name="panelCompCarMP">
                   <Properties>
-                    <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                      <Dimension value="[1980, 35]"/>
-                    </Property>
                     <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[700, 35]"/>
                     </Property>
@@ -799,19 +804,38 @@
                     </Property>
                   </Properties>
 
-                  <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
-                    <Property name="useNullLayout" type="boolean" value="false"/>
+                  <Layout>
+                    <DimensionLayout dim="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                              <Component id="labelComp_MateriasPrimas" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                              <Component id="buttonAddMP" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+                              <Component id="buttonRemoveMP" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                    <DimensionLayout dim="1">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="labelComp_MateriasPrimas" min="-2" pref="20" max="-2" attributes="0"/>
+                                  <Component id="buttonAddMP" min="-2" max="-2" attributes="0"/>
+                                  <Component id="buttonRemoveMP" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="labelComp_MateriasPrimas">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Materias Primas"/>
                       </Properties>
-                      <Constraints>
-                        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                          <AbsoluteConstraints x="20" y="0" width="-1" height="20"/>
-                        </Constraint>
-                      </Constraints>
                     </Component>
                     <Component class="javax.swing.JButton" name="buttonAddMP">
                       <Properties>
@@ -820,11 +844,6 @@
                       <Events>
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonAddMPActionPerformed"/>
                       </Events>
-                      <Constraints>
-                        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                          <AbsoluteConstraints x="110" y="0" width="-1" height="-1"/>
-                        </Constraint>
-                      </Constraints>
                     </Component>
                     <Component class="javax.swing.JButton" name="buttonRemoveMP">
                       <Properties>
@@ -833,11 +852,6 @@
                       <Events>
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonRemoveMPActionPerformed"/>
                       </Events>
-                      <Constraints>
-                        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                          <AbsoluteConstraints x="160" y="0" width="-1" height="-1"/>
-                        </Constraint>
-                      </Constraints>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -860,9 +874,6 @@
             </Container>
             <Container class="javax.swing.JPanel" name="panelDescripcion">
               <Properties>
-                <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[1980, 590]"/>
-                </Property>
                 <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                   <Dimension value="[700, 590]"/>
                 </Property>
@@ -870,11 +881,6 @@
                   <Dimension value="[700, 590]"/>
                 </Property>
               </Properties>
-              <Constraints>
-                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="0" y="500" width="-1" height="629"/>
-                </Constraint>
-              </Constraints>
 
               <Layout>
                 <DimensionLayout dim="0">
@@ -884,8 +890,8 @@
                               <Component id="panelDescDatos" min="-2" max="-2" attributes="0"/>
                               <Component id="panelDescCarEnvase" min="-2" max="-2" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jScrollPane3" min="-2" pref="653" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                                  <Component id="jScrollPane3" min="-2" pref="622" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
@@ -895,13 +901,13 @@
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
-                          <Component id="panelDescDatos" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
+                          <Component id="panelDescDatos" min="-2" pref="377" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="panelDescCarEnvase" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="jScrollPane3" pref="149" max="32767" attributes="0"/>
-                          <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+                          <Component id="panelDescCarEnvase" min="-2" pref="27" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="jScrollPane3" min="-2" pref="71" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -909,9 +915,6 @@
               <SubComponents>
                 <Container class="javax.swing.JPanel" name="panelDescDatos">
                   <Properties>
-                    <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                      <Dimension value="[1980, 335]"/>
-                    </Property>
                     <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[700, 335]"/>
                     </Property>
@@ -924,114 +927,96 @@
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Component id="labelDescripcion" min="-2" max="-2" attributes="0"/>
-                                  <Component id="SeparadorDatosProducto3" min="-2" pref="670" max="-2" attributes="0"/>
+                                  <Component id="SeparadorDatosProducto3" alignment="0" max="32767" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="labelDesc_FormaUso" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="88" pref="88" max="-2" attributes="0"/>
-                                      <Component id="textFieldDesc_FormaUso" min="-2" pref="410" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="labelDesc_PeridoAptitud" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="128" pref="128" max="-2" attributes="0"/>
-                                      <Component id="textFieldDesc_PeriodoAptitud" min="-2" pref="410" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="labelDesc_ModoConservacion" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="109" pref="109" max="-2" attributes="0"/>
-                                      <Component id="textFieldDesc_ModoConservacion" min="-2" pref="410" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="labelDesc_DondeVendido" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="63" pref="63" max="-2" attributes="0"/>
-                                      <Component id="textFieldDesc_DondeVendido" min="-2" pref="410" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="labelDesc_InstruccionPrep" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="77" pref="77" max="-2" attributes="0"/>
-                                      <Component id="textFieldDesc_InstruccionPrep" min="-2" pref="410" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="labelDesc_ControlesEspeciales1" max="32767" attributes="0"/>
-                                          <Component id="labelDesc_ControlesEspeciales2" max="32767" attributes="0"/>
+                                      <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="labelDesc_ControlesEspeciales1" min="-2" pref="197" max="-2" attributes="0"/>
+                                          <Group type="102" attributes="0">
+                                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                                  <Component id="labelDesc_FormaUso" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="labelDesc_PeridoAptitud" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="labelDesc_ModoConservacion" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="labelDesc_DondeVendido" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="labelDesc_InstruccionPrep" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="labelDesc_ControlesEspeciales2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="labelDesc_AQuienDirigido" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="labelDesc_InfoAdicional" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <EmptySpace max="32767" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="textFieldDesc_FormaUso" alignment="0" min="-2" pref="410" max="-2" attributes="0"/>
+                                                  <Component id="textFieldDesc_PeriodoAptitud" alignment="0" min="-2" pref="410" max="-2" attributes="0"/>
+                                                  <Component id="textFieldDesc_ModoConservacion" alignment="0" min="-2" pref="410" max="-2" attributes="0"/>
+                                                  <Component id="textFieldDesc_DondeVendido" alignment="0" min="-2" pref="410" max="-2" attributes="0"/>
+                                                  <Component id="textFieldDesc_InstruccionPrep" alignment="0" min="-2" pref="410" max="-2" attributes="0"/>
+                                                  <Component id="textFieldDesc_ControlesEspeciales" alignment="0" min="-2" pref="410" max="-2" attributes="0"/>
+                                                  <Component id="textFieldDesc_AQuienDirigido" alignment="0" min="-2" pref="410" max="-2" attributes="0"/>
+                                                  <Component id="textFieldDesc_InfoAdicional" alignment="0" min="-2" pref="410" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
                                       </Group>
-                                      <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
-                                      <Component id="textFieldDesc_ControlesEspeciales" min="-2" pref="410" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="labelDesc_AQuienDirigido" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="71" pref="71" max="-2" attributes="0"/>
-                                      <Component id="textFieldDesc_AQuienDirigido" min="-2" pref="410" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="labelDesc_InfoAdicional" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="115" pref="115" max="-2" attributes="0"/>
-                                      <Component id="textFieldDesc_InfoAdicional" min="-2" pref="410" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <EmptySpace pref="20" max="32767" attributes="0"/>
+                              <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                               <Component id="labelDescripcion" min="-2" pref="20" max="-2" attributes="0"/>
-                              <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
                               <Component id="SeparadorDatosProducto3" min="-2" pref="10" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
+                              <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="labelDesc_FormaUso" min="-2" pref="20" max="-2" attributes="0"/>
                                   <Component id="textFieldDesc_FormaUso" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="labelDesc_PeridoAptitud" min="-2" pref="20" max="-2" attributes="0"/>
                                   <Component id="textFieldDesc_PeriodoAptitud" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="labelDesc_ModoConservacion" min="-2" pref="20" max="-2" attributes="0"/>
                                   <Component id="textFieldDesc_ModoConservacion" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="labelDesc_DondeVendido" min="-2" pref="20" max="-2" attributes="0"/>
                                   <Component id="textFieldDesc_DondeVendido" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="labelDesc_InstruccionPrep" min="-2" pref="20" max="-2" attributes="0"/>
                                   <Component id="textFieldDesc_InstruccionPrep" min="-2" max="-2" attributes="0"/>
                               </Group>
+                              <EmptySpace min="15" pref="15" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="labelDesc_ControlesEspeciales1" min="-2" pref="20" max="-2" attributes="0"/>
-                                          <Component id="textFieldDesc_ControlesEspeciales" min="-2" pref="40" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                                  <Group type="102" attributes="0">
-                                      <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="labelDesc_ControlesEspeciales1" min="-2" pref="20" max="-2" attributes="0"/>
+                                      <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                                       <Component id="labelDesc_ControlesEspeciales2" min="-2" pref="20" max="-2" attributes="0"/>
                                   </Group>
+                                  <Component id="textFieldDesc_ControlesEspeciales" min="-2" pref="40" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="labelDesc_AQuienDirigido" min="-2" pref="20" max="-2" attributes="0"/>
                                   <Component id="textFieldDesc_AQuienDirigido" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="labelDesc_InfoAdicional" min="-2" pref="20" max="-2" attributes="0"/>
                                   <Component id="textFieldDesc_InfoAdicional" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -1139,9 +1124,6 @@
                 </Container>
                 <Container class="javax.swing.JPanel" name="panelDescCarEnvase">
                   <Properties>
-                    <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                      <Dimension value="[1980, 35]"/>
-                    </Property>
                     <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[700, 35]"/>
                     </Property>
@@ -1150,19 +1132,38 @@
                     </Property>
                   </Properties>
 
-                  <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
-                    <Property name="useNullLayout" type="boolean" value="false"/>
+                  <Layout>
+                    <DimensionLayout dim="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                              <Component id="labelDesc_CaracteristicasEnvase" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                              <Component id="buttonAddEnvase" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+                              <Component id="buttonRemoveEnvase" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                    <DimensionLayout dim="1">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="labelDesc_CaracteristicasEnvase" min="-2" pref="20" max="-2" attributes="0"/>
+                                  <Component id="buttonAddEnvase" min="-2" max="-2" attributes="0"/>
+                                  <Component id="buttonRemoveEnvase" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="labelDesc_CaracteristicasEnvase">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Caracteristicas del envase"/>
                       </Properties>
-                      <Constraints>
-                        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                          <AbsoluteConstraints x="10" y="10" width="-1" height="20"/>
-                        </Constraint>
-                      </Constraints>
                     </Component>
                     <Component class="javax.swing.JButton" name="buttonAddEnvase">
                       <Properties>
@@ -1171,11 +1172,6 @@
                       <Events>
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonAddEnvaseActionPerformed"/>
                       </Events>
-                      <Constraints>
-                        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                          <AbsoluteConstraints x="170" y="10" width="40" height="-1"/>
-                        </Constraint>
-                      </Constraints>
                     </Component>
                     <Component class="javax.swing.JButton" name="buttonRemoveEnvase">
                       <Properties>
@@ -1184,11 +1180,6 @@
                       <Events>
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonRemoveEnvaseActionPerformed"/>
                       </Events>
-                      <Constraints>
-                        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                          <AbsoluteConstraints x="220" y="10" width="-1" height="-1"/>
-                        </Constraint>
-                      </Constraints>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -1219,9 +1210,6 @@
         </Component>
         <Container class="javax.swing.JPanel" name="panelDatosMuestraLab">
           <Properties>
-            <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-              <Dimension value="[1980, 90]"/>
-            </Property>
             <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[700, 90]"/>
             </Property>
@@ -1233,8 +1221,8 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="labelDatosDeLab" min="-2" max="-2" attributes="0"/>
                           <Group type="102" attributes="0">
@@ -1242,35 +1230,32 @@
                               <Component id="labelNumProtocolo" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="8" pref="8" max="-2" attributes="0"/>
                               <Component id="textFieldNroProtocolo" min="-2" pref="110" max="-2" attributes="0"/>
-                              <EmptySpace min="130" pref="130" max="-2" attributes="0"/>
+                              <EmptySpace pref="194" max="32767" attributes="0"/>
                               <Component id="labelNroActa" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                               <Component id="textFieldNroActa" min="-2" pref="116" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
                   </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="SeparadorRegistroRNPA1" min="-2" pref="650" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="50" max="32767" attributes="0"/>
-                  </Group>
+                  <Component id="SeparadorRegistroRNPA1" alignment="0" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                       <Component id="SeparadorRegistroRNPA1" min="-2" pref="10" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
                       <Component id="labelDatosDeLab" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="11" pref="11" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="labelNumProtocolo" min="-2" pref="20" max="-2" attributes="0"/>
                           <Component id="textFieldNroProtocolo" min="-2" max="-2" attributes="0"/>
                           <Component id="labelNroActa" min="-2" pref="20" max="-2" attributes="0"/>
                           <Component id="textFieldNroActa" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
