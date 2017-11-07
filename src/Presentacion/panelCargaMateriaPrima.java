@@ -43,6 +43,7 @@ public class panelCargaMateriaPrima extends javax.swing.JPanel {
         labelCantidad = new javax.swing.JLabel();
         textFieldCantidad = new javax.swing.JTextField();
 
+        setBackground(new java.awt.Color(255, 255, 255));
         setMaximumSize(new java.awt.Dimension(521, 30));
         setMinimumSize(new java.awt.Dimension(521, 30));
         setPreferredSize(new java.awt.Dimension(521, 30));

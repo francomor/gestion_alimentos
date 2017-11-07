@@ -5,6 +5,8 @@
  */
 package Presentacion;
 
+import java.awt.CardLayout;
+
 /**
  *
  * @author mauri
@@ -17,7 +19,8 @@ public class formPrincipal extends javax.swing.JFrame {
     public formPrincipal() {
         initComponents();
         this.setLocationRelativeTo(null);
-
+        CardLayout card = (CardLayout)panelCard.getLayout();
+        card.show(panelCard, "cargaPA");    
     }
     
 
@@ -30,66 +33,101 @@ public class formPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane1 = new javax.swing.JScrollPane();
-        panelCargaProducto2 = new Presentacion.panelCargaProducto();
-        jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        MenuSalir = new javax.swing.JMenuItem();
-        jMenu2 = new javax.swing.JMenu();
-        MenuCarga = new javax.swing.JMenu();
-        MenuItemCargaProductoA = new javax.swing.JMenuItem();
+        panelMenu = new javax.swing.JPanel();
+        label_TRAMITES = new javax.swing.JLabel();
+        label_CONSULTAS = new javax.swing.JLabel();
+        label_ESTADISTICAS = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        label_ConsultaCUIT = new javax.swing.JLabel();
+        label_CargaPA = new javax.swing.JLabel();
+        panelCard = new javax.swing.JPanel();
+        consultaPorCuit1 = new Presentacion.ConsultaPorCuit();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        panelCargaProducto1 = new Presentacion.panelCargaProducto();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(1980, 500));
         setMinimumSize(new java.awt.Dimension(700, 500));
         setPreferredSize(new java.awt.Dimension(700, 500));
 
-        jScrollPane1.setViewportView(panelCargaProducto2);
+        panelMenu.setBackground(new java.awt.Color(139, 195, 74));
+        panelMenu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        getContentPane().add(jScrollPane1, java.awt.BorderLayout.CENTER);
+        label_TRAMITES.setFont(new java.awt.Font("Roboto", 1, 24)); // NOI18N
+        label_TRAMITES.setForeground(new java.awt.Color(255, 255, 255));
+        label_TRAMITES.setText("TRAMITES");
+        label_TRAMITES.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        label_TRAMITES.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        panelMenu.add(label_TRAMITES, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 10, 140, 30));
 
-        jMenu1.setText("File");
+        label_CONSULTAS.setFont(new java.awt.Font("Roboto", 1, 24)); // NOI18N
+        label_CONSULTAS.setForeground(new java.awt.Color(255, 255, 255));
+        label_CONSULTAS.setText("CONSULTAS");
+        label_CONSULTAS.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        label_CONSULTAS.setPreferredSize(new java.awt.Dimension(115, 29));
+        label_CONSULTAS.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        panelMenu.add(label_CONSULTAS, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 10, 150, 30));
 
-        MenuSalir.setText("Salir");
-        MenuSalir.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MenuSalirActionPerformed(evt);
+        label_ESTADISTICAS.setFont(new java.awt.Font("Roboto", 1, 24)); // NOI18N
+        label_ESTADISTICAS.setForeground(new java.awt.Color(255, 255, 255));
+        label_ESTADISTICAS.setText("ESTADISTICAS");
+        label_ESTADISTICAS.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        label_ESTADISTICAS.setPreferredSize(new java.awt.Dimension(115, 29));
+        label_ESTADISTICAS.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        panelMenu.add(label_ESTADISTICAS, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 10, 180, 30));
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/logo-SA-nuevo-2.jpg"))); // NOI18N
+        jLabel4.setText("jLabel4");
+        panelMenu.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(-2, 3, 140, 110));
+
+        label_ConsultaCUIT.setBackground(new java.awt.Color(255, 255, 255));
+        label_ConsultaCUIT.setFont(new java.awt.Font("Roboto", 1, 12)); // NOI18N
+        label_ConsultaCUIT.setForeground(new java.awt.Color(255, 255, 255));
+        label_ConsultaCUIT.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/atras.png"))); // NOI18N
+        label_ConsultaCUIT.setText("Consulta por CUIT");
+        label_ConsultaCUIT.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                label_ConsultaCUITMouseClicked(evt);
             }
         });
-        jMenu1.add(MenuSalir);
+        panelMenu.add(label_ConsultaCUIT, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 40, -1, -1));
 
-        jMenuBar1.add(jMenu1);
-
-        jMenu2.setText("Edit");
-        jMenuBar1.add(jMenu2);
-
-        MenuCarga.setText("Cargar");
-
-        MenuItemCargaProductoA.setText("Cargar Producto Alimenticio");
-        MenuItemCargaProductoA.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MenuItemCargaProductoAActionPerformed(evt);
+        label_CargaPA.setBackground(new java.awt.Color(255, 255, 255));
+        label_CargaPA.setFont(new java.awt.Font("Roboto", 1, 12)); // NOI18N
+        label_CargaPA.setForeground(new java.awt.Color(255, 255, 255));
+        label_CargaPA.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/atras.png"))); // NOI18N
+        label_CargaPA.setText("Cargar producto alimenticio");
+        label_CargaPA.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                label_CargaPAMouseClicked(evt);
             }
         });
-        MenuCarga.add(MenuItemCargaProductoA);
+        panelMenu.add(label_CargaPA, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 40, -1, -1));
 
-        jMenuBar1.add(MenuCarga);
+        getContentPane().add(panelMenu, java.awt.BorderLayout.PAGE_START);
 
-        setJMenuBar(jMenuBar1);
+        panelCard.setLayout(new java.awt.CardLayout());
+        panelCard.add(consultaPorCuit1, "consultaCUIT");
+
+        jScrollPane2.setViewportView(panelCargaProducto1);
+
+        panelCard.add(jScrollPane2, "cargaPA");
+
+        getContentPane().add(panelCard, java.awt.BorderLayout.CENTER);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void MenuSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuSalirActionPerformed
-        // TODO add your handling code here:
-        System.exit(0);
-    }//GEN-LAST:event_MenuSalirActionPerformed
+    private void label_CargaPAMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_label_CargaPAMouseClicked
+        CardLayout card = (CardLayout)panelCard.getLayout();
+        card.show(panelCard, "cargaPA");
+        
+    }//GEN-LAST:event_label_CargaPAMouseClicked
 
-    private void MenuItemCargaProductoAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemCargaProductoAActionPerformed
-        // TODO add your handling code here:
-
-
-    }//GEN-LAST:event_MenuItemCargaProductoAActionPerformed
+    private void label_ConsultaCUITMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_label_ConsultaCUITMouseClicked
+        CardLayout card = (CardLayout)panelCard.getLayout();
+        card.show(panelCard, "consultaCUIT");
+    }//GEN-LAST:event_label_ConsultaCUITMouseClicked
 
     /**
      * @param args the command line arguments
@@ -126,13 +164,16 @@ public class formPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JMenu MenuCarga;
-    private javax.swing.JMenuItem MenuItemCargaProductoA;
-    private javax.swing.JMenuItem MenuSalir;
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JScrollPane jScrollPane1;
-    private Presentacion.panelCargaProducto panelCargaProducto2;
+    private Presentacion.ConsultaPorCuit consultaPorCuit1;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JLabel label_CONSULTAS;
+    private javax.swing.JLabel label_CargaPA;
+    private javax.swing.JLabel label_ConsultaCUIT;
+    private javax.swing.JLabel label_ESTADISTICAS;
+    private javax.swing.JLabel label_TRAMITES;
+    private javax.swing.JPanel panelCard;
+    private Presentacion.panelCargaProducto panelCargaProducto1;
+    private javax.swing.JPanel panelMenu;
     // End of variables declaration//GEN-END:variables
 }

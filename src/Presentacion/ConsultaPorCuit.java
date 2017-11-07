@@ -55,10 +55,14 @@ public
         botonBuscar = new javax.swing.JButton();
         EtiquetaNumerCuil = new javax.swing.JLabel();
 
-        EtiquetaConsultaPorCUIT.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        setBackground(new java.awt.Color(255, 255, 255));
+
+        EtiquetaConsultaPorCUIT.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
+        EtiquetaConsultaPorCUIT.setForeground(new java.awt.Color(0, 51, 0));
         EtiquetaConsultaPorCUIT.setText("Consulta por CUIT ");
 
-        EtiquetaDatosEmpresa.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        EtiquetaDatosEmpresa.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
+        EtiquetaDatosEmpresa.setForeground(new java.awt.Color(0, 51, 0));
         EtiquetaDatosEmpresa.setText("Datos de la empresa ");
 
         TablaDatosEmpresa.setModel(new javax.swing.table.DefaultTableModel(
@@ -93,7 +97,8 @@ public
             TablaDatosEmpresa.getColumnModel().getColumn(4).setResizable(false);
         }
 
-        EtiquetaEstablecimientoAsociado.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        EtiquetaEstablecimientoAsociado.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
+        EtiquetaEstablecimientoAsociado.setForeground(new java.awt.Color(0, 51, 0));
         EtiquetaEstablecimientoAsociado.setText("Establecimientos Asociados ");
 
         TablaEstablecimientoAsociado.setModel(new javax.swing.table.DefaultTableModel(
@@ -131,7 +136,8 @@ public
             TablaEstablecimientoAsociado.getColumnModel().getColumn(4).setResizable(false);
         }
 
-        EtiquetaPAAsociado.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        EtiquetaPAAsociado.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
+        EtiquetaPAAsociado.setForeground(new java.awt.Color(0, 51, 0));
         EtiquetaPAAsociado.setText("Producto Alimenticio Asociado");
 
         TablaPAAsociado.setModel(new javax.swing.table.DefaultTableModel(
@@ -242,7 +248,7 @@ public
                 .addComponent(EtiquetaPAAsociado)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(ScrollpanelPAAsociado, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(40, Short.MAX_VALUE))
+                .addContainerGap(32, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
