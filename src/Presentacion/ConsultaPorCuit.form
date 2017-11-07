@@ -215,7 +215,7 @@
                 <Column editable="false" title="Nombre establecimiento" type="java.lang.String"/>
                 <Column editable="false" title="Telefono" type="java.lang.String"/>
                 <Column editable="false" title="Vencimiento RNE" type="java.lang.String"/>
-                <Column editable="false" title="Informacion Adicional" type="java.lang.String"/>
+                <Column editable="false" title="Direccion" type="java.lang.String"/>
               </Table>
             </Property>
             <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
@@ -282,7 +282,7 @@
                 <Column editable="false" title="Numero RNE" type="java.lang.Object"/>
                 <Column editable="false" title="Nombre Producto" type="java.lang.Object"/>
                 <Column editable="false" title="Vencimiento RNPA" type="java.lang.Object"/>
-                <Column editable="false" title="Informacion Adicional" type="java.lang.Object"/>
+                <Column editable="false" title="Marca" type="java.lang.Object"/>
               </Table>
             </Property>
             <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
