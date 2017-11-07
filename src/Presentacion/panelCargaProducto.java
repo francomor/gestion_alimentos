@@ -178,7 +178,7 @@ public class panelCargaProducto extends javax.swing.JPanel {
 
         BuscarRNE.setBackground(new java.awt.Color(255, 255, 255));
         BuscarRNE.setForeground(new java.awt.Color(255, 255, 255));
-        BuscarRNE.setIcon(new javax.swing.ImageIcon("D:\\Github\\gestion_alimentos\\resources\\Search_24px.png")); // NOI18N
+        BuscarRNE.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/Search_24px.png"))); // NOI18N
         BuscarRNE.setBorder(null);
         BuscarRNE.setBorderPainted(false);
         BuscarRNE.setContentAreaFilled(false);
@@ -362,7 +362,7 @@ public class panelCargaProducto extends javax.swing.JPanel {
                         .addComponent(labelRNPA, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(10, 10, 10)
                         .addComponent(textFieldRNPA, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(70, 70, 70)
                         .addComponent(labelFechaVencimiento)
                         .addGap(4, 4, 4)
                         .addComponent(textFieldFechaVencimiento, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1159,8 +1159,25 @@ public class panelCargaProducto extends javax.swing.JPanel {
 
     private void botonGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonGuardarActionPerformed
         try {
-            ProductoAlimenticio producto = new ProductoAlimenticio();
-            Composicion composicion = new Composicion();
+            validarCampos();
+            ProductoAlimenticio producto = crearyCargarPA();
+
+            boolean result = producto.guardar();
+            if (result == true) {
+                JOptionPane.showMessageDialog(null, "correcto.");
+            } else {
+                JOptionPane.showMessageDialog(null, "error");
+            }
+
+        } catch (SQLException | InstantiationException | IllegalAccessException ex) {
+            Logger.getLogger(panelCargaProducto.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_botonGuardarActionPerformed
+
+    private ProductoAlimenticio crearyCargarPA(){
+        ProductoAlimenticio producto = new ProductoAlimenticio();
+            
+        Composicion composicion = new Composicion();
             Descripcion descripcion = new Descripcion();
             RNPA rnpa = new RNPA();
             Envase envase_aux;
@@ -1225,19 +1242,10 @@ public class panelCargaProducto extends javax.swing.JPanel {
             producto.setFecha_carga_solicitud(Calendar.getInstance());
             //if estab_aCargar es null no tiene que dejar cargar
             producto.setEstablecimiento(estab_aCargar);
-
-            boolean result = producto.guardar();
-            if (result == true) {
-                JOptionPane.showMessageDialog(null, "correcto.");
-            } else {
-                JOptionPane.showMessageDialog(null, "error");
-            }
-
-        } catch (SQLException | InstantiationException | IllegalAccessException ex) {
-            Logger.getLogger(panelCargaProducto.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }//GEN-LAST:event_botonGuardarActionPerformed
-
+                 
+            return producto;
+    }
+    
     private boolean validarCampos() {
         return false;
     }
