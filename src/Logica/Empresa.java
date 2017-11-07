@@ -204,8 +204,10 @@ public class Empresa {
     public static Vector<ProductoAlimenticio> recuperarPAAsociados(String CUIT) throws SQLException, InstantiationException, IllegalAccessException {
 
         Vector<ProductoAlimenticio> productosAlimenticios = new Vector<>();
+        
         //recupero los establecimientos asociados para poder obtener los Productos asociados a cada Establecimiento.
         Vector<Establecimiento> establecimientosAsociados = Empresa.recuperarEstablecimientosAsociados(CUIT);
+        
         ProductoAlimenticio auxiliar;
         RNPA RNPAaux;
         Composicion compAux;
@@ -215,9 +217,11 @@ public class Empresa {
         ConexionBD con = ConexionBD.getConexion();
 
         for (Establecimiento e : establecimientosAsociados) {
+            
             valores = new String[20][22];
             valores = con.recuperar(valores, "select * from Producto_Alimenticio where Establecimiento_idEstablecimiento=" + e.getId() + ";", 22);
-            //para cada PA recuperado se va guardando en el venctor productos alimenticios
+            
+            //para cada PA recuperado se va guardando en el vector productos alimenticios
             for (String[] PA : valores) {
                 auxiliar = new ProductoAlimenticio();
                 RNPAaux = new RNPA();

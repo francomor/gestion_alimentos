@@ -8,7 +8,6 @@ package Presentacion;
 import Logica.Empresa;
 import Logica.Establecimiento;
 import Logica.ProductoAlimenticio;
-import Logica.Rubro;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.Vector;
@@ -251,10 +250,14 @@ public
 
         Vector<Establecimiento> establecimientos;
         Vector<ProductoAlimenticio> ProductosAlimenticios;
+        
         try {
+            
             Empresa empresa;
             empresa = Empresa.recuperarPorCuit(CampoCUIT.getText());
+            
             //CARGO DATOS DE LA EMPRESA EN LA TABLA SI ENECUENTRO
+            
             if (empresa != null){
                 TablaDatosEmpresa.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -289,7 +292,7 @@ public
             SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
             System.out.println(establecimientos.size());
    
-
+            //cargo tabla con datos de establecimiento
 
             for(int i=0;i<establecimientos.size(); i++){
                     datosDeEstablecimientos[i][0]= establecimientos.elementAt(i).getRne().getNumero();
@@ -305,7 +308,8 @@ public
  
             }
             
-
+            //seteo modelo de tabla
+            
             TablaEstablecimientoAsociado.setModel(new javax.swing.table.DefaultTableModel(
             datosDeEstablecimientos,
             new String [] {
@@ -327,11 +331,12 @@ public
                 return canEdit [columnIndex];
             }
             });
+            
             //cargo tabla de producto alimenticio
             
             ProductosAlimenticios= Empresa.recuperarPAAsociados(CampoCUIT.getText());
             Object [][] datosDePAAsociados= new Object[ProductosAlimenticios.size()][5];
-            System.out.println(ProductosAlimenticios.size());
+            //System.out.println(ProductosAlimenticios.size());
             for(int i=0;i<ProductosAlimenticios.size(); i++){
                 datosDePAAsociados[i][0]= ProductosAlimenticios.elementAt(i).getRnpa().getNumero();
                 datosDePAAsociados[i][1]= ProductosAlimenticios.elementAt(i).getEstablecimiento().getRne().getNumero();
