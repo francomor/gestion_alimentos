@@ -1,7 +1,3 @@
-/**
- * @author Francisco Herrero, Franco Morero y Mauricio Vazquez
- * @version 1.0
- */
 package Logica;
 
 import Persistencia.ConexionBD;
@@ -11,6 +7,10 @@ import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.Vector;
 
+/**
+ * @author Francisco Herrero, Franco Morero y Mauricio Vazquez
+ * @version 1.0
+ */
 public class ProductoAlimenticio {
 
     private int id;
