@@ -358,7 +358,8 @@ public
                 public boolean isCellEditable(int rowIndex, int columnIndex) {
                     return canEdit [columnIndex];
                 }
-                });
+                })
+                        ;
                 
             Object [][] datosDePAAsociados= new Object[ProductosAlimenticios.size()][5];
             
