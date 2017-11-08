@@ -320,5 +320,12 @@ public class Establecimiento {
         return RubrosAsociados;
 
     }
+    
+    public boolean existe_RNE(String num_rne) throws SQLException, InstantiationException, IllegalAccessException {
+
+        ConexionBD con = ConexionBD.getConexion();
+        boolean result = con.existe("select exists (select id from establecimiento where nro_rne='" + num_rne + "')");
+        return result;
+    }
 
 }//end Establecimiento
