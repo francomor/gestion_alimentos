@@ -25,6 +25,7 @@ public class Establecimiento {
     private int id_Localidad;
     private RNE rne;
     private Empresa m_Empresa;
+    private Vector<ProductoAlimenticio> productosAlimenticios;
 
     public Establecimiento() {
 

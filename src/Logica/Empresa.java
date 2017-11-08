@@ -17,6 +17,7 @@ public class Empresa {
     private String direccion;
     private int telefono;
     private int id_localidad;
+    private Vector<Establecimiento> establecimientos;
 
     public int getId_localidad() {
         return id_localidad;
@@ -129,7 +130,7 @@ public class Empresa {
      * Recupera los establecimientos asociados a una empresa
      *
      * @param CUIT CUIT de la empresa
-     * @return {@code Vector<Establecimiento>}con todas los establecimientos
+     * @return {@code Vector<Establecimiento>}con todos los establecimientos
      * asociados
      * @throws java.sql.SQLException
      * @throws java.lang.InstantiationException

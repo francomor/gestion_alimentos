@@ -7,6 +7,7 @@ package Presentacion;
 import Logica.Empresa;
 import Logica.Establecimiento;
 import Logica.ProductoAlimenticio;
+import java.awt.event.KeyEvent;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.Vector;
@@ -57,6 +58,11 @@ public class ConsultaPorCuit extends javax.swing.JPanel {
         CampoCUIT.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         CampoCUIT.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         CampoCUIT.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
+        CampoCUIT.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                CampoCUITKeyPressed(evt);
+            }
+        });
 
         EtiquetaDatosEmpresa.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
         EtiquetaDatosEmpresa.setForeground(new java.awt.Color(0, 51, 0));
@@ -281,34 +287,7 @@ public class ConsultaPorCuit extends javax.swing.JPanel {
 
     private void botonBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonBuscarActionPerformed
 
-        Vector<Establecimiento> establecimientos;
-        Vector<ProductoAlimenticio> ProductosAlimenticios;
-
-        try {
-
-            Empresa empresa;
-            empresa = Empresa.recuperarPorCuit(CampoCUIT.getText());
-
-            //CARGO DATOS DE LA EMPRESA EN LA TABLA SI ENECUENTRO
-            if (empresa != null) {
-
-                establecimientos = Empresa.recuperarEstablecimientosAsociados(CampoCUIT.getText());
-                ProductosAlimenticios = Empresa.recuperarPAAsociados(CampoCUIT.getText());
-
-                cargarTablas(empresa, establecimientos, ProductosAlimenticios);
-
-                botonBuscar.setText("Buscar");
-                botonBuscar.addActionListener(new java.awt.event.ActionListener() {
-                    public void actionPerformed(java.awt.event.ActionEvent evt) {
-                        botonBuscarActionPerformed(evt);
-                    }
-                });
-
-            } else {
-                JOptionPane.showMessageDialog(null, "CUIT no encontrado.");
-            }
-        } catch (SQLException | InstantiationException | IllegalAccessException ex) {
-        }
+        consultaCuit(CampoCUIT.getText());
 
     }//GEN-LAST:event_botonBuscarActionPerformed
 
@@ -323,10 +302,18 @@ public class ConsultaPorCuit extends javax.swing.JPanel {
     private void botonBuscarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonBuscarMousePressed
         botonBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/Search_24px.png")));
     }//GEN-LAST:event_botonBuscarMousePressed
-    
-    public void cargarTablas(Empresa empresa, Vector<Establecimiento> establecimientos, Vector<ProductoAlimenticio> ProductosAlimenticios) {
 
-        if (empresa != null) {
+    private void CampoCUITKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_CampoCUITKeyPressed
+        if(KeyEvent.VK_ENTER == evt.getKeyCode())
+        {
+            consultaCuit(CampoCUIT.getText());
+        }
+    }//GEN-LAST:event_CampoCUITKeyPressed
+    
+    public void cargarTablas(Empresa empresa, Vector<Establecimiento> establecimientos, Vector<ProductoAlimenticio> ProductosAlimenticios) 
+    {
+
+        
             TablaDatosEmpresa.setModel(new javax.swing.table.DefaultTableModel(
                     new Object[][]{
                         {empresa.getNombre(),
@@ -357,6 +344,7 @@ public class ConsultaPorCuit extends javax.swing.JPanel {
             SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 
             //cargo tabla con datos de establecimiento
+            
             Object[][] datosDeEstablecimientos = new Object[establecimientos.size()][5];
 
             for (int i = 0; i < establecimientos.size(); i++) {
@@ -421,17 +409,125 @@ public class ConsultaPorCuit extends javax.swing.JPanel {
                     return canEdit[columnIndex];
                 }
             });
-            ScrollpanelPAAsociado.setViewportView(TablaPAAsociado);
-            if (TablaPAAsociado.getColumnModel().getColumnCount() > 0) {
-                TablaPAAsociado.getColumnModel().getColumn(0).setResizable(false);
-                TablaPAAsociado.getColumnModel().getColumn(1).setResizable(false);
-                TablaPAAsociado.getColumnModel().getColumn(2).setResizable(false);
-                TablaPAAsociado.getColumnModel().getColumn(3).setResizable(false);
-                TablaPAAsociado.getColumnModel().getColumn(4).setResizable(false);
+           
+
+        
+
+    }
+    
+    public void clearPanel()
+    {
+        CampoCUIT.setText("");
+        
+        //reseteo las tablas
+        
+        TablaDatosEmpresa.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null}
+            },
+            new String [] {
+                "Nombre", "Razon Social", "Direccion", "Email", "Telefono"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
             }
 
-        }
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        
+        TablaEstablecimientoAsociado.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null}
+            },
+            new String [] {
+                "Numero RNE", "Nombre establecimiento", "Telefono", "Vencimiento RNE", "Direccion"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false
+            };
 
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        
+
+        
+        TablaPAAsociado.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null},
+
+            },
+            new String [] {
+                "Numero RNPA", "Numero RNE", "Nombre Producto", "Vencimiento RNPA", "Marca"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        
+        
+        
+        
+    
+    
+    }
+    
+    public void consultaCuit(String cuit)
+    {
+    
+         
+        Vector<Establecimiento> establecimientos;
+        Vector<ProductoAlimenticio> ProductosAlimenticios;
+
+        try {
+
+            Empresa empresa;
+            empresa = Empresa.recuperarPorCuit(cuit);
+
+            //CARGA DE TABLAS
+            if (empresa != null) 
+            {
+
+                establecimientos = Empresa.recuperarEstablecimientosAsociados(cuit);
+                ProductosAlimenticios = Empresa.recuperarPAAsociados(cuit);
+
+                cargarTablas(empresa, establecimientos, ProductosAlimenticios);
+                
+
+            } 
+            else 
+            {
+                JOptionPane.showMessageDialog(null, "CUIT no encontrado.");
+                clearPanel();
+            }
+        } catch (SQLException | InstantiationException | IllegalAccessException ex) {
+        }
+    
+    
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
