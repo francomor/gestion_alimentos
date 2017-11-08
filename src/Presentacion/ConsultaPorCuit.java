@@ -1,7 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * @author Francisco Herrero, Franco Morero y Mauricio Vazquez
+ * @version 1.0
  */
 package Presentacion;
 
@@ -14,18 +13,12 @@ import java.util.Vector;
 import javax.swing.JOptionPane;
 
 
-/**
- *
- * @author mauri
- */
-public
-        class ConsultaPorCuit extends javax.swing.JPanel {
+public class ConsultaPorCuit extends javax.swing.JPanel {
 
     /**
      * Creates new form ConsultaPorCuit
      */
-    public
-            ConsultaPorCuit() {
+    public ConsultaPorCuit() {
         initComponents();
     }
 
@@ -61,10 +54,15 @@ public
         EtiquetaConsultaPorCUIT.setForeground(new java.awt.Color(0, 51, 0));
         EtiquetaConsultaPorCUIT.setText("Consulta por CUIT ");
 
+        CampoCUIT.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        CampoCUIT.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        CampoCUIT.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
+
         EtiquetaDatosEmpresa.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
         EtiquetaDatosEmpresa.setForeground(new java.awt.Color(0, 51, 0));
         EtiquetaDatosEmpresa.setText("Datos de la empresa ");
 
+        TablaDatosEmpresa.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         TablaDatosEmpresa.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null}
@@ -88,6 +86,7 @@ public
                 return canEdit [columnIndex];
             }
         });
+        TablaDatosEmpresa.setSelectionBackground(new java.awt.Color(76, 140, 74));
         ScrollPanelDatosEmpresa.setViewportView(TablaDatosEmpresa);
         if (TablaDatosEmpresa.getColumnModel().getColumnCount() > 0) {
             TablaDatosEmpresa.getColumnModel().getColumn(0).setResizable(false);
@@ -101,6 +100,7 @@ public
         EtiquetaEstablecimientoAsociado.setForeground(new java.awt.Color(0, 51, 0));
         EtiquetaEstablecimientoAsociado.setText("Establecimientos Asociados ");
 
+        TablaEstablecimientoAsociado.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         TablaEstablecimientoAsociado.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
@@ -127,6 +127,7 @@ public
                 return canEdit [columnIndex];
             }
         });
+        TablaEstablecimientoAsociado.setSelectionBackground(new java.awt.Color(76, 140, 74));
         ScrollpanelEstablecimientoAsociado.setViewportView(TablaEstablecimientoAsociado);
         if (TablaEstablecimientoAsociado.getColumnModel().getColumnCount() > 0) {
             TablaEstablecimientoAsociado.getColumnModel().getColumn(0).setResizable(false);
@@ -140,6 +141,7 @@ public
         EtiquetaPAAsociado.setForeground(new java.awt.Color(0, 51, 0));
         EtiquetaPAAsociado.setText("Producto Alimenticio Asociado");
 
+        TablaPAAsociado.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         TablaPAAsociado.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
@@ -159,6 +161,7 @@ public
                 return canEdit [columnIndex];
             }
         });
+        TablaPAAsociado.setSelectionBackground(new java.awt.Color(76, 140, 74));
         ScrollpanelPAAsociado.setViewportView(TablaPAAsociado);
         if (TablaPAAsociado.getColumnModel().getColumnCount() > 0) {
             TablaPAAsociado.getColumnModel().getColumn(0).setResizable(false);
@@ -168,7 +171,23 @@ public
             TablaPAAsociado.getColumnModel().getColumn(4).setResizable(false);
         }
 
-        botonBuscar.setText("Buscar");
+        botonBuscar.setBackground(new java.awt.Color(255, 255, 255));
+        botonBuscar.setForeground(new java.awt.Color(255, 255, 255));
+        botonBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/Search_sombrapx.png"))); // NOI18N
+        botonBuscar.setBorder(null);
+        botonBuscar.setBorderPainted(false);
+        botonBuscar.setContentAreaFilled(false);
+        botonBuscar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                botonBuscarMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                botonBuscarMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                botonBuscarMousePressed(evt);
+            }
+        });
         botonBuscar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botonBuscarActionPerformed(evt);
@@ -188,23 +207,28 @@ public
                     .addComponent(SeparadorEstablecimientoAsociado)
                     .addComponent(SeparadorPAAsociado)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(56, 56, 56)
-                        .addComponent(EtiquetaConsultaPorCUIT))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(42, 42, 42)
-                        .addComponent(EtiquetaNumerCuil)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(CampoCUIT, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(54, 54, 54)
-                        .addComponent(botonBuscar))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(57, 57, 57)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(EtiquetaDatosEmpresa)
-                            .addComponent(EtiquetaEstablecimientoAsociado)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(1, 1, 1)
-                                .addComponent(EtiquetaPAAsociado)))))
+                                .addGap(57, 57, 57)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(EtiquetaDatosEmpresa)
+                                    .addComponent(EtiquetaEstablecimientoAsociado)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(1, 1, 1)
+                                        .addComponent(EtiquetaPAAsociado))))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(56, 56, 56)
+                                        .addComponent(EtiquetaConsultaPorCUIT))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(42, 42, 42)
+                                        .addComponent(EtiquetaNumerCuil)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(CampoCUIT, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(20, 20, 20)
+                                .addComponent(botonBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addGap(6, 6, 6))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
@@ -224,31 +248,34 @@ public
             .addGroup(layout.createSequentialGroup()
                 .addGap(20, 20, 20)
                 .addComponent(EtiquetaConsultaPorCUIT)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(CampoCUIT, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(EtiquetaNumerCuil))
-                    .addComponent(botonBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                .addGap(17, 17, 17)
-                .addComponent(SeparadorDatosEmpresa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(EtiquetaDatosEmpresa)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(ScrollPanelDatosEmpresa, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(SeparadorEstablecimientoAsociado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(EtiquetaEstablecimientoAsociado)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(ScrollpanelEstablecimientoAsociado, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(39, 39, 39)
-                .addComponent(SeparadorPAAsociado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(EtiquetaPAAsociado)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(ScrollpanelPAAsociado, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(32, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(CampoCUIT, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(EtiquetaNumerCuil))
+                        .addGap(35, 35, 35)
+                        .addComponent(SeparadorDatosEmpresa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(EtiquetaDatosEmpresa)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(ScrollPanelDatosEmpresa, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(SeparadorEstablecimientoAsociado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(EtiquetaEstablecimientoAsociado)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(ScrollpanelEstablecimientoAsociado, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(39, 39, 39)
+                        .addComponent(SeparadorPAAsociado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(EtiquetaPAAsociado)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(ScrollpanelPAAsociado, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(8, 8, 8)
+                        .addComponent(botonBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(66, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -256,149 +283,156 @@ public
 
         Vector<Establecimiento> establecimientos;
         Vector<ProductoAlimenticio> ProductosAlimenticios;
-        
+
         try {
-            
+
             Empresa empresa;
             empresa = Empresa.recuperarPorCuit(CampoCUIT.getText());
-            
+
             //CARGO DATOS DE LA EMPRESA EN LA TABLA SI ENECUENTRO
-            
-            if (empresa != null){
-              
-                
-            establecimientos = Empresa.recuperarEstablecimientosAsociados(CampoCUIT.getText());
-            ProductosAlimenticios= Empresa.recuperarPAAsociados(CampoCUIT.getText());
-  
-            cargarTablas(empresa,establecimientos,ProductosAlimenticios);
-                    
+            if (empresa != null) {
+
+                establecimientos = Empresa.recuperarEstablecimientosAsociados(CampoCUIT.getText());
+                ProductosAlimenticios = Empresa.recuperarPAAsociados(CampoCUIT.getText());
+
+                cargarTablas(empresa, establecimientos, ProductosAlimenticios);
+
                 botonBuscar.setText("Buscar");
                 botonBuscar.addActionListener(new java.awt.event.ActionListener() {
                     public void actionPerformed(java.awt.event.ActionEvent evt) {
                         botonBuscarActionPerformed(evt);
                     }
                 });
-            
-            } else
-                 {
+
+            } else {
                 JOptionPane.showMessageDialog(null, "CUIT no encontrado.");
             }
-        } catch (SQLException | InstantiationException | IllegalAccessException ex){
+        } catch (SQLException | InstantiationException | IllegalAccessException ex) {
         }
-            
+
     }//GEN-LAST:event_botonBuscarActionPerformed
-        public void cargarTablas(Empresa empresa, Vector<Establecimiento> establecimientos, Vector<ProductoAlimenticio> ProductosAlimenticios)
-        {
-            
-            if(empresa!=null){
-              TablaDatosEmpresa.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {   empresa.getNombre(), 
-                    empresa.getRazon_social(), 
-                    empresa.getDireccion(), 
-                    empresa.getEmail(), 
-                    empresa.getTelefono()}
-            },
-            new String [] {
-                "Nombre", "Razon Social", "Direccion", "Email", "Telefono"
-            }){
-            Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
-            };
-            boolean[] canEdit = new boolean [] {
-                false, false, false, false, false
-            };
 
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
+    private void botonBuscarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonBuscarMouseEntered
+        botonBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/Search_24px.png")));
+    }//GEN-LAST:event_botonBuscarMouseEntered
 
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-            });
-            
-             SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-   
-            //cargo tabla con datos de establecimiento
-             Object [][] datosDeEstablecimientos= new Object[establecimientos.size()][5];
-            
-            for(int i=0;i<establecimientos.size(); i++){
-                
-                    datosDeEstablecimientos[i][0]= establecimientos.elementAt(i).getRne().getNumero();
-                    datosDeEstablecimientos[i][1]= establecimientos.elementAt(i).getNombre();
-                    datosDeEstablecimientos[i][2]= establecimientos.elementAt(i).getTelefono();
-                    if(establecimientos.elementAt(i).getRne().getFecha_vencimiento()!=null)
-                        datosDeEstablecimientos[i][3]= sdf.format(establecimientos.elementAt(i).getRne().getFecha_vencimiento().getTime());
-                    else 
-                        datosDeEstablecimientos[i][3]="";
-                    datosDeEstablecimientos[i][4]= establecimientos.elementAt(i).getDireccion();
+    private void botonBuscarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonBuscarMouseExited
+        botonBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/Search_sombrapx.png")));
+    }//GEN-LAST:event_botonBuscarMouseExited
 
-                }
+    private void botonBuscarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonBuscarMousePressed
+        botonBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/Search_24px.png")));
+    }//GEN-LAST:event_botonBuscarMousePressed
+    
+    public void cargarTablas(Empresa empresa, Vector<Establecimiento> establecimientos, Vector<ProductoAlimenticio> ProductosAlimenticios) {
 
-                //seteo modelo de tabla
-
-                TablaEstablecimientoAsociado.setModel(new javax.swing.table.DefaultTableModel(
-                datosDeEstablecimientos,
-                new String [] {
-                    "Numero RNE", "Nombre establecimiento", "Telefono", "Vencimiento RNE", "Direccion"
-                }
-                ) {
-                Class[] types = new Class [] {
+        if (empresa != null) {
+            TablaDatosEmpresa.setModel(new javax.swing.table.DefaultTableModel(
+                    new Object[][]{
+                        {empresa.getNombre(),
+                            empresa.getRazon_social(),
+                            empresa.getDireccion(),
+                            empresa.getEmail(),
+                            empresa.getTelefono()}
+                    },
+                    new String[]{
+                        "Nombre", "Razon Social", "Direccion", "Email", "Telefono"
+                    }) {
+                Class[] types = new Class[]{
                     java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
                 };
-                boolean[] canEdit = new boolean [] {
+                boolean[] canEdit = new boolean[]{
                     false, false, false, false, false
                 };
 
                 public Class getColumnClass(int columnIndex) {
-                    return types [columnIndex];
+                    return types[columnIndex];
                 }
 
                 public boolean isCellEditable(int rowIndex, int columnIndex) {
-                    return canEdit [columnIndex];
+                    return canEdit[columnIndex];
                 }
-                })
-                        ;
-                
-            Object [][] datosDePAAsociados= new Object[ProductosAlimenticios.size()][5];
-            
-            //System.out.println(ProductosAlimenticios.size());
-            
-            for(int i=0;i<ProductosAlimenticios.size(); i++){
-                datosDePAAsociados[i][0]= ProductosAlimenticios.elementAt(i).getRnpa().getNumero();
-                datosDePAAsociados[i][1]= ProductosAlimenticios.elementAt(i).getEstablecimiento().getRne().getNumero();
-                datosDePAAsociados[i][2]= ProductosAlimenticios.elementAt(i).getComposicion().getNombre_comercial();
-                datosDePAAsociados[i][3]= sdf.format(ProductosAlimenticios.elementAt(i).getRnpa().getFecha_vencimiento().getTime());
-                datosDePAAsociados[i][4]= ProductosAlimenticios.elementAt(i).getComposicion().getMarca();
-            }
-                
-            TablaPAAsociado.setModel(new javax.swing.table.DefaultTableModel(
-            datosDePAAsociados,
-            new String [] {
-                "Numero RNPA", "Numero RNE", "Nombre Producto", "Vencimiento RNPA", "Marca"
-                    }
-                ) {
-                    boolean[] canEdit = new boolean [] {
-                        false, false, false, false, false
-                    };
+            });
 
-                    public boolean isCellEditable(int rowIndex, int columnIndex) {
-                        return canEdit [columnIndex];
-                    }
-                });
-                ScrollpanelPAAsociado.setViewportView(TablaPAAsociado);
-                if (TablaPAAsociado.getColumnModel().getColumnCount() > 0) {
-                    TablaPAAsociado.getColumnModel().getColumn(0).setResizable(false);
-                    TablaPAAsociado.getColumnModel().getColumn(1).setResizable(false);
-                    TablaPAAsociado.getColumnModel().getColumn(2).setResizable(false);
-                    TablaPAAsociado.getColumnModel().getColumn(3).setResizable(false);
-                    TablaPAAsociado.getColumnModel().getColumn(4).setResizable(false);
+            SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+
+            //cargo tabla con datos de establecimiento
+            Object[][] datosDeEstablecimientos = new Object[establecimientos.size()][5];
+
+            for (int i = 0; i < establecimientos.size(); i++) {
+
+                datosDeEstablecimientos[i][0] = establecimientos.elementAt(i).getRne().getNumero();
+                datosDeEstablecimientos[i][1] = establecimientos.elementAt(i).getNombre();
+                datosDeEstablecimientos[i][2] = establecimientos.elementAt(i).getTelefono();
+                if (establecimientos.elementAt(i).getRne().getFecha_vencimiento() != null) {
+                    datosDeEstablecimientos[i][3] = sdf.format(establecimientos.elementAt(i).getRne().getFecha_vencimiento().getTime());
+                } else {
+                    datosDeEstablecimientos[i][3] = "";
                 }
-            
+                datosDeEstablecimientos[i][4] = establecimientos.elementAt(i).getDireccion();
+
             }
-        
+
+            //seteo modelo de tabla
+            TablaEstablecimientoAsociado.setModel(new javax.swing.table.DefaultTableModel(
+                    datosDeEstablecimientos,
+                    new String[]{
+                        "Numero RNE", "Nombre establecimiento", "Telefono", "Vencimiento RNE", "Direccion"
+                    }
+            ) {
+                Class[] types = new Class[]{
+                    java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+                };
+                boolean[] canEdit = new boolean[]{
+                    false, false, false, false, false
+                };
+
+                public Class getColumnClass(int columnIndex) {
+                    return types[columnIndex];
+                }
+
+                public boolean isCellEditable(int rowIndex, int columnIndex) {
+                    return canEdit[columnIndex];
+                }
+            });
+
+            Object[][] datosDePAAsociados = new Object[ProductosAlimenticios.size()][5];
+
+            //System.out.println(ProductosAlimenticios.size());
+            for (int i = 0; i < ProductosAlimenticios.size(); i++) {
+                datosDePAAsociados[i][0] = ProductosAlimenticios.elementAt(i).getRnpa().getNumero();
+                datosDePAAsociados[i][1] = ProductosAlimenticios.elementAt(i).getEstablecimiento().getRne().getNumero();
+                datosDePAAsociados[i][2] = ProductosAlimenticios.elementAt(i).getComposicion().getNombre_comercial();
+                datosDePAAsociados[i][3] = sdf.format(ProductosAlimenticios.elementAt(i).getRnpa().getFecha_vencimiento().getTime());
+                datosDePAAsociados[i][4] = ProductosAlimenticios.elementAt(i).getComposicion().getMarca();
+            }
+
+            TablaPAAsociado.setModel(new javax.swing.table.DefaultTableModel(
+                    datosDePAAsociados,
+                    new String[]{
+                        "Numero RNPA", "Numero RNE", "Nombre Producto", "Vencimiento RNPA", "Marca"
+                    }
+            ) {
+                boolean[] canEdit = new boolean[]{
+                    false, false, false, false, false
+                };
+
+                public boolean isCellEditable(int rowIndex, int columnIndex) {
+                    return canEdit[columnIndex];
+                }
+            });
+            ScrollpanelPAAsociado.setViewportView(TablaPAAsociado);
+            if (TablaPAAsociado.getColumnModel().getColumnCount() > 0) {
+                TablaPAAsociado.getColumnModel().getColumn(0).setResizable(false);
+                TablaPAAsociado.getColumnModel().getColumn(1).setResizable(false);
+                TablaPAAsociado.getColumnModel().getColumn(2).setResizable(false);
+                TablaPAAsociado.getColumnModel().getColumn(3).setResizable(false);
+                TablaPAAsociado.getColumnModel().getColumn(4).setResizable(false);
+            }
+
         }
+
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField CampoCUIT;

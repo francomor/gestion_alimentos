@@ -1,7 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * @author Francisco Herrero, Franco Morero y Mauricio Vazquez
+ * @version 1.0
  */
 package Presentacion;
 
@@ -13,10 +12,6 @@ import java.util.Vector;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-/**
- *
- * @author Franco
- */
 public class panelCargaEnvase extends javax.swing.JPanel {
 
     /**
@@ -44,14 +39,15 @@ public class panelCargaEnvase extends javax.swing.JPanel {
         labelMaterial = new javax.swing.JLabel();
         labelUnidad = new javax.swing.JLabel();
         comboBoxUnidad = new javax.swing.JComboBox<>();
-        buttonAddUnidad = new javax.swing.JButton();
         buttonAddCapacidad = new javax.swing.JButton();
+        buttonAddUnidad = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setMaximumSize(new java.awt.Dimension(521, 35));
         setMinimumSize(new java.awt.Dimension(521, 35));
         setPreferredSize(new java.awt.Dimension(521, 35));
 
+        labelCapacidad.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         labelCapacidad.setText("Capacidad:");
         labelCapacidad.setName("labelCapacidad"); // NOI18N
 
@@ -62,6 +58,10 @@ public class panelCargaEnvase extends javax.swing.JPanel {
             }
         });
 
+        comboBoxMaterial.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        comboBoxMaterial.setForeground(new java.awt.Color(76, 140, 74));
+        comboBoxMaterial.setMaximumRowCount(16);
+        comboBoxMaterial.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         comboBoxMaterial.setName("comboBoxMaterial"); // NOI18N
         comboBoxMaterial.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -69,19 +69,60 @@ public class panelCargaEnvase extends javax.swing.JPanel {
             }
         });
 
+        labelMaterial.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         labelMaterial.setText("Material");
         labelMaterial.setName("labelMaterial"); // NOI18N
 
+        labelUnidad.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         labelUnidad.setText("Unidad:");
         labelUnidad.setName("labelUnidad"); // NOI18N
 
+        comboBoxUnidad.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        comboBoxUnidad.setForeground(new java.awt.Color(76, 140, 74));
+        comboBoxUnidad.setMaximumRowCount(16);
         comboBoxUnidad.setName("comboBoxUnidad"); // NOI18N
 
-        buttonAddUnidad.setText("+");
-        buttonAddUnidad.setName("buttonAddUnidad"); // NOI18N
+        buttonAddCapacidad.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/mas.png"))); // NOI18N
+        buttonAddCapacidad.setBorder(null);
+        buttonAddCapacidad.setBorderPainted(false);
+        buttonAddCapacidad.setContentAreaFilled(false);
+        buttonAddCapacidad.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                buttonAddCapacidadMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                buttonAddCapacidadMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                buttonAddCapacidadMousePressed(evt);
+            }
+        });
+        buttonAddCapacidad.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonAddCapacidadActionPerformed(evt);
+            }
+        });
 
-        buttonAddCapacidad.setText("+");
-        buttonAddCapacidad.setName("buttonAddCapacidad"); // NOI18N
+        buttonAddUnidad.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/mas.png"))); // NOI18N
+        buttonAddUnidad.setBorder(null);
+        buttonAddUnidad.setBorderPainted(false);
+        buttonAddUnidad.setContentAreaFilled(false);
+        buttonAddUnidad.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                buttonAddUnidadMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                buttonAddUnidadMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                buttonAddUnidadMousePressed(evt);
+            }
+        });
+        buttonAddUnidad.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonAddUnidadActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -92,33 +133,41 @@ public class panelCargaEnvase extends javax.swing.JPanel {
                 .addComponent(labelCapacidad)
                 .addGap(6, 6, 6)
                 .addComponent(textFieldCapacidad, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(40, 40, 40)
+                .addGap(18, 18, 18)
                 .addComponent(labelMaterial)
                 .addGap(2, 2, 2)
                 .addComponent(comboBoxMaterial, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(buttonAddCapacidad)
-                .addGap(39, 39, 39)
+                .addGap(28, 28, 28)
                 .addComponent(labelUnidad)
-                .addGap(13, 13, 13)
-                .addComponent(comboBoxUnidad, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(10, 10, 10)
-                .addComponent(buttonAddUnidad))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(comboBoxUnidad, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(buttonAddUnidad)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(0, 0, 0)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(labelCapacidad, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(textFieldCapacidad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(labelMaterial, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(comboBoxMaterial, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(buttonAddCapacidad, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(labelUnidad, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(comboBoxUnidad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(buttonAddUnidad, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(comboBoxMaterial)
+                            .addComponent(buttonAddCapacidad, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(buttonAddUnidad, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(labelCapacidad, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(textFieldCapacidad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(labelMaterial, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(labelUnidad, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(comboBoxUnidad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addContainerGap(14, Short.MAX_VALUE))))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -129,6 +178,38 @@ public class panelCargaEnvase extends javax.swing.JPanel {
     private void comboBoxMaterialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboBoxMaterialActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_comboBoxMaterialActionPerformed
+
+    private void buttonAddCapacidadMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttonAddCapacidadMouseEntered
+        buttonAddCapacidad.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/mas_entered.png")));
+    }//GEN-LAST:event_buttonAddCapacidadMouseEntered
+
+    private void buttonAddCapacidadMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttonAddCapacidadMouseExited
+        buttonAddCapacidad.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/mas.png")));
+    }//GEN-LAST:event_buttonAddCapacidadMouseExited
+
+    private void buttonAddCapacidadMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttonAddCapacidadMousePressed
+        buttonAddCapacidad.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/mas_pressed.png")));
+    }//GEN-LAST:event_buttonAddCapacidadMousePressed
+
+    private void buttonAddCapacidadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAddCapacidadActionPerformed
+        
+    }//GEN-LAST:event_buttonAddCapacidadActionPerformed
+
+    private void buttonAddUnidadMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttonAddUnidadMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_buttonAddUnidadMouseEntered
+
+    private void buttonAddUnidadMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttonAddUnidadMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_buttonAddUnidadMouseExited
+
+    private void buttonAddUnidadMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttonAddUnidadMousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_buttonAddUnidadMousePressed
+
+    private void buttonAddUnidadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAddUnidadActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_buttonAddUnidadActionPerformed
 
     private void createComponentMap() {
         componentMap = new HashMap<>();
