@@ -1,3 +1,7 @@
+/**
+ * @author Francisco Herrero, Franco Morero y Mauricio Vazquez
+ * @version 1.0
+ */
 package Logica;
 
 import Persistencia.ConexionBD;
@@ -6,10 +10,6 @@ import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.Vector;
 
-/**
- * @author Francisco Herrero, Franco Morero y Mauricio Vazquez
- * @version 1.0
- */
 public class Establecimiento {
 
     private int id;
@@ -292,15 +292,6 @@ public class Establecimiento {
 
     }
 
-    /**
-     * Recupera los rubros asociados a un establecimiento
-     *
-     * @param estab_id id del establecimiento
-     * @return {@code Vector<Rubro>}con todos los rubros alimenticios asociados
-     * @throws java.sql.SQLException
-     * @throws java.lang.InstantiationException
-     * @throws java.lang.IllegalAccessException
-     */
     public static Vector<Rubro> recuperarRubrosAsociados(String estab_id) throws SQLException, InstantiationException, IllegalAccessException {
         ConexionBD con = ConexionBD.getConexion();
         String[][] valores;
@@ -319,13 +310,6 @@ public class Establecimiento {
 
         return RubrosAsociados;
 
-    }
-    
-    public boolean existe_RNE(String num_rne) throws SQLException, InstantiationException, IllegalAccessException {
-
-        ConexionBD con = ConexionBD.getConexion();
-        boolean result = con.existe("select exists (select id from establecimiento where nro_rne='" + num_rne + "')");
-        return result;
     }
 
 }//end Establecimiento

@@ -1,11 +1,16 @@
-/**
- * @author Francisco Herrero, Franco Morero y Mauricio Vazquez
- * @version 1.0
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
 package Presentacion;
 
 import java.awt.CardLayout;
 
+/**
+ *
+ * @author mauri
+ */
 public class formPrincipal extends javax.swing.JFrame {
 
     /**
@@ -14,9 +19,10 @@ public class formPrincipal extends javax.swing.JFrame {
     public formPrincipal() {
         initComponents();
         this.setLocationRelativeTo(null);
-        CardLayout card = (CardLayout) panelCard.getLayout();
-        card.show(panelCard, "bienvenido");
+        CardLayout card = (CardLayout)panelCard.getLayout();
+        card.show(panelCard, "cargaPA");    
     }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -31,21 +37,18 @@ public class formPrincipal extends javax.swing.JFrame {
         label_TRAMITES = new javax.swing.JLabel();
         label_CONSULTAS = new javax.swing.JLabel();
         label_ESTADISTICAS = new javax.swing.JLabel();
-        labelLogo = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
         label_ConsultaCUIT = new javax.swing.JLabel();
         label_CargaPA = new javax.swing.JLabel();
         panelCard = new javax.swing.JPanel();
-        panelBienvenida = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         consultaPorCuit1 = new Presentacion.ConsultaPorCuit();
-        scrollPanelCargaPA = new javax.swing.JScrollPane();
-        scrollPanelCargaPA.getVerticalScrollBar().setUnitIncrement(16);
+        jScrollPane2 = new javax.swing.JScrollPane();
         panelCargaProducto1 = new Presentacion.panelCargaProducto();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(1980, 500));
         setMinimumSize(new java.awt.Dimension(700, 500));
-        setPreferredSize(new java.awt.Dimension(1000, 500));
+        setPreferredSize(new java.awt.Dimension(700, 500));
 
         panelMenu.setBackground(new java.awt.Color(139, 195, 74));
         panelMenu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -73,8 +76,9 @@ public class formPrincipal extends javax.swing.JFrame {
         label_ESTADISTICAS.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         panelMenu.add(label_ESTADISTICAS, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 10, 180, 30));
 
-        labelLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/logomarcarn.png"))); // NOI18N
-        panelMenu.add(labelLogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 140, 110));
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/logo-SA-nuevo-2.jpg"))); // NOI18N
+        jLabel4.setText("jLabel4");
+        panelMenu.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(-2, 3, 140, 110));
 
         label_ConsultaCUIT.setBackground(new java.awt.Color(255, 255, 255));
         label_ConsultaCUIT.setFont(new java.awt.Font("Roboto", 1, 12)); // NOI18N
@@ -103,41 +107,11 @@ public class formPrincipal extends javax.swing.JFrame {
         getContentPane().add(panelMenu, java.awt.BorderLayout.PAGE_START);
 
         panelCard.setLayout(new java.awt.CardLayout());
-
-        panelBienvenida.setBackground(new java.awt.Color(255, 255, 255));
-
-        jLabel1.setFont(new java.awt.Font("Roboto", 0, 30)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Bienvenido");
-
-        jLabel2.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("Seleccione una opcion para comenzar");
-
-        javax.swing.GroupLayout panelBienvenidaLayout = new javax.swing.GroupLayout(panelBienvenida);
-        panelBienvenida.setLayout(panelBienvenidaLayout);
-        panelBienvenidaLayout.setHorizontalGroup(
-            panelBienvenidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 917, Short.MAX_VALUE)
-        );
-        panelBienvenidaLayout.setVerticalGroup(
-            panelBienvenidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelBienvenidaLayout.createSequentialGroup()
-                .addContainerGap(87, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel2)
-                .addContainerGap(158, Short.MAX_VALUE))
-        );
-
-        panelCard.add(panelBienvenida, "bienvenida");
         panelCard.add(consultaPorCuit1, "consultaCUIT");
 
-        scrollPanelCargaPA.setBorder(null);
-        scrollPanelCargaPA.setViewportView(panelCargaProducto1);
+        jScrollPane2.setViewportView(panelCargaProducto1);
 
-        panelCard.add(scrollPanelCargaPA, "cargaPA");
+        panelCard.add(jScrollPane2, "cargaPA");
 
         getContentPane().add(panelCard, java.awt.BorderLayout.CENTER);
 
@@ -145,13 +119,13 @@ public class formPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void label_CargaPAMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_label_CargaPAMouseClicked
-        CardLayout card = (CardLayout) panelCard.getLayout();
+        CardLayout card = (CardLayout)panelCard.getLayout();
         card.show(panelCard, "cargaPA");
-
+        
     }//GEN-LAST:event_label_CargaPAMouseClicked
 
     private void label_ConsultaCUITMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_label_ConsultaCUITMouseClicked
-        CardLayout card = (CardLayout) panelCard.getLayout();
+        CardLayout card = (CardLayout)panelCard.getLayout();
         card.show(panelCard, "consultaCUIT");
     }//GEN-LAST:event_label_ConsultaCUITMouseClicked
 
@@ -191,18 +165,15 @@ public class formPrincipal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private Presentacion.ConsultaPorCuit consultaPorCuit1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel labelLogo;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JLabel label_CONSULTAS;
     private javax.swing.JLabel label_CargaPA;
     private javax.swing.JLabel label_ConsultaCUIT;
     private javax.swing.JLabel label_ESTADISTICAS;
     private javax.swing.JLabel label_TRAMITES;
-    private javax.swing.JPanel panelBienvenida;
     private javax.swing.JPanel panelCard;
     private Presentacion.panelCargaProducto panelCargaProducto1;
     private javax.swing.JPanel panelMenu;
-    private javax.swing.JScrollPane scrollPanelCargaPA;
     // End of variables declaration//GEN-END:variables
 }

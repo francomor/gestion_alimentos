@@ -1,12 +1,12 @@
+/**
+ * @author Francisco Herrero, Franco Morero y Mauricio Vazquez
+ * @version 1.0
+ */
 package Logica;
 
 import Persistencia.ConexionBD;
 import java.sql.SQLException;
 
-/**
- * @author Francisco Herrero, Franco Morero y Mauricio Vazquez
- * @version 1.0
- */
 class Localidad {
 
     private int id;
@@ -43,15 +43,6 @@ class Localidad {
         this.provincia = provincia;
     }
 
-    /**
-     * Verifica la existencia de una localidad
-     *
-     * @param localidad_name Nombre de la localidad
-     * @return boolean Es verdadero si existe
-     * @throws java.sql.SQLException
-     * @throws java.lang.InstantiationException
-     * @throws java.lang.IllegalAccessException
-     */
     public boolean existe(String localidad_name) throws SQLException, InstantiationException, IllegalAccessException {
 
         ConexionBD con = ConexionBD.getConexion();
@@ -59,15 +50,6 @@ class Localidad {
         return result;
     }
 
-    /**
-     * Recupera una localidad por su id
-     *
-     * @param id id de la localidad
-     * @return Localidad con su nombre y provincia
-     * @throws java.sql.SQLException
-     * @throws java.lang.InstantiationException
-     * @throws java.lang.IllegalAccessException
-     */
     public Localidad recuperarLocalidadporID(String id) throws SQLException, InstantiationException, IllegalAccessException {
 
         Localidad salida = new Localidad();

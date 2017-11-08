@@ -1,6 +1,7 @@
-/**
- * @author Francisco Herrero, Franco Morero y Mauricio Vazquez
- * @version 1.0
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
 package Presentacion;
 
@@ -13,6 +14,10 @@ import java.util.Vector;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+/**
+ *
+ * @author Franco
+ */
 public class panelCargaMateriaPrima extends javax.swing.JPanel {
 
     /**
@@ -43,19 +48,12 @@ public class panelCargaMateriaPrima extends javax.swing.JPanel {
         setMinimumSize(new java.awt.Dimension(521, 30));
         setPreferredSize(new java.awt.Dimension(521, 30));
 
-        labelNombre.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         labelNombre.setText("Nombre:");
 
-        comboBoxNombre.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        comboBoxNombre.setForeground(new java.awt.Color(76, 140, 74));
-        comboBoxNombre.setMaximumRowCount(16);
         comboBoxNombre.setName("comboBoxNombre"); // NOI18N
 
-        labelCantidad.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        labelCantidad.setText("Cantidad:");
+        labelCantidad.setText("Cantidad");
 
-        textFieldCantidad.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        textFieldCantidad.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         textFieldCantidad.setName("textFieldCantidad"); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -63,11 +61,11 @@ public class panelCargaMateriaPrima extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(0, 0, 0)
                 .addComponent(labelNombre)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(comboBoxNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 141, Short.MAX_VALUE)
+                .addGap(9, 9, 9)
+                .addComponent(comboBoxNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 199, Short.MAX_VALUE)
                 .addComponent(labelCantidad)
                 .addGap(7, 7, 7)
                 .addComponent(textFieldCantidad, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -80,9 +78,8 @@ public class panelCargaMateriaPrima extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(labelNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(comboBoxNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(textFieldCantidad, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(labelCantidad, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 20, Short.MAX_VALUE))))
+                    .addComponent(labelCantidad, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textFieldCantidad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
     }// </editor-fold>//GEN-END:initComponents
  

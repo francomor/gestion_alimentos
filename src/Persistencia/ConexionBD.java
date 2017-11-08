@@ -17,12 +17,6 @@ public final class ConexionBD {
         crearConexion();
     }
 
-    /**
-     * Crea una conexion a la base de datos
-     *
-     * @throws java.lang.InstantiationException
-     * @throws java.lang.IllegalAccessException
-     */
     public void crearConexion() throws InstantiationException, IllegalAccessException {
 
         try {
@@ -39,13 +33,6 @@ public final class ConexionBD {
         }
     }
 
-    /**
-     * Obtiene la conexion a la base de datos
-     *
-     * @return ConexionBD
-     * @throws java.lang.InstantiationException
-     * @throws java.lang.IllegalAccessException
-     */
     static public ConexionBD getConexion() throws InstantiationException, IllegalAccessException {
 
         if (instanciaBD == null) {
@@ -54,12 +41,6 @@ public final class ConexionBD {
         return instanciaBD;
     }
 
-    /**
-     * Inserta en la base de datos
-     *
-     * @param consulta consulta a realizar
-     * @return ConexionBD
-     */
     public boolean insertar(String consulta) {
         boolean error = false;
         try {
@@ -75,20 +56,19 @@ public final class ConexionBD {
         }
         return error;
     }
-
+    
     /**
      * Recupera el ultimo id de una tabla
-     *
      * @param nombre_tabla nombre de la tabla
      * @return int ultimo id
      */
-    public int recuperarUltimoIdIngresado(String nombre_tabla) {
+    public int recuperarUltimoIdIngresado(String nombre_tabla){
         int salida = 0;
         try {
-            ResultSet res = s.executeQuery("SELECT MAX(id) AS id FROM " + nombre_tabla);
+            ResultSet res = s.executeQuery("SELECT MAX(id) AS id FROM "+ nombre_tabla);
             res.next();
             salida = res.getInt(1);
-
+            
         } catch (Exception e) {
 
             System.out.println("Error Base de Datos" + e.getLocalizedMessage());
@@ -97,11 +77,6 @@ public final class ConexionBD {
         return salida;
     }
 
-    /**
-     * Actualiza en la base de datos
-     *
-     * @param consulta consulta a realizar
-     */
     public void update(String consulta) {
         try {
             s.executeUpdate(consulta);
@@ -112,18 +87,12 @@ public final class ConexionBD {
         }
     }
 
-    /**
-     * Recupera de la base de datos
-     *
-     * @param vector donde se guardaran
-     * @param consulta consulta a realizar
-     * @param nro cantidad de columnas a recuperar
-     * @return String[][]
-     */
+//nro es la cantidad de columnas a recuperar
+//vector[i][j] i es la cantidad de filas y j la cantidad de columnas
     public String[][] recuperar(String[][] vector, String consulta, int nro) {
 
         int i, j = 0;
-        //vector[i][j] i es la cantidad de filas y j la cantidad de columnas
+
         try {
 
             ResultSet res = s.executeQuery(consulta);
@@ -143,12 +112,6 @@ public final class ConexionBD {
 
     }
 
-    /**
-     * Obtiene la cantidad de registros
-     *
-     * @param consulta consulta a realizar
-     * @return int cantidad de registros
-     */
     public int getCantidadRegistros(String consulta) {
 
         int cant = 0;
@@ -166,9 +129,6 @@ public final class ConexionBD {
         return cant;
     }
 
-    /**
-     * Cierra la conexion a la base de datos
-     */
     public void cerrarConexion() {
 
         try {
@@ -181,13 +141,6 @@ public final class ConexionBD {
         }
     }
 
-    /**
-     * Verifica existencia en la base de datos
-     *
-     * @param consulta consulta a realizar
-     * @return boolean
-     * @throws java.sql.SQLException
-     */
     public boolean existe(String consulta) throws SQLException {
         ResultSet rs = s.executeQuery(consulta);
         try {

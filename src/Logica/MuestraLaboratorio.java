@@ -1,10 +1,9 @@
-
-package Logica;
-
 /**
  * @author Francisco Herrero, Franco Morero y Mauricio Vazquez
  * @version 1.0
  */
+package Logica;
+
 public class MuestraLaboratorio {
 
     private int numActa;

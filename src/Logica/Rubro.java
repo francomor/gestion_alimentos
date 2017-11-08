@@ -1,13 +1,13 @@
+/**
+ * @author Francisco Herrero, Franco Morero y Mauricio Vazquez
+ * @version 1.0
+ */
 package Logica;
 
 import Persistencia.ConexionBD;
 import java.sql.SQLException;
 import java.util.Vector;
 
-/**
- * @author Francisco Herrero, Franco Morero y Mauricio Vazquez
- * @version 1.0
- */
 public class Rubro {
 
     private int id;
@@ -127,15 +127,6 @@ public class Rubro {
 
     }
 
-    /**
-     * Recupera un rubro por su id
-     *
-     * @param id id del rubro
-     * @return Rubro con su nombre
-     * @throws java.sql.SQLException
-     * @throws java.lang.InstantiationException
-     * @throws java.lang.IllegalAccessException
-     */
     static Rubro recuperarRubroporID(String id) throws SQLException, InstantiationException, IllegalAccessException {
 
         Rubro salida = new Rubro();

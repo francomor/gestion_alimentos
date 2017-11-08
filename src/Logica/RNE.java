@@ -1,13 +1,12 @@
-
+/**
+ * @author Francisco Herrero, Franco Morero y Mauricio Vazquez
+ * @version 1.0
+ */
 package Logica;
 
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
-/**
- * @author Francisco Herrero, Franco Morero y Mauricio Vazquez
- * @version 1.0
- */
 public class RNE {
 
     private Calendar fecha_vencimiento;

@@ -1,22 +1,25 @@
-/**
- * @author Francisco Herrero, Franco Morero y Mauricio Vazquez
- * @version 1.0
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
 package Presentacion;
 
 import Logica.*;
-import java.awt.Color;
 import java.awt.Dimension;
 import java.sql.SQLException;
 import java.util.Calendar;
 import java.util.Vector;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.swing.BorderFactory;
 import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
+/**
+ *
+ * @author Franco
+ */
 public class panelCargaProducto extends javax.swing.JPanel {
 
     ProductoAlimenticio p_a = new ProductoAlimenticio();
@@ -148,7 +151,6 @@ public class panelCargaProducto extends javax.swing.JPanel {
         textFieldNroActa = new javax.swing.JTextField();
         labelNroActa = new javax.swing.JLabel();
         botonGuardar = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
 
         jButton1.setText("jButton1");
 
@@ -176,21 +178,10 @@ public class panelCargaProducto extends javax.swing.JPanel {
 
         BuscarRNE.setBackground(new java.awt.Color(255, 255, 255));
         BuscarRNE.setForeground(new java.awt.Color(255, 255, 255));
-        BuscarRNE.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/Search_sombrapx.png"))); // NOI18N
+        BuscarRNE.setIcon(new javax.swing.ImageIcon("D:\\Github\\gestion_alimentos\\resources\\Search_24px.png")); // NOI18N
         BuscarRNE.setBorder(null);
         BuscarRNE.setBorderPainted(false);
         BuscarRNE.setContentAreaFilled(false);
-        BuscarRNE.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                BuscarRNEMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                BuscarRNEMouseExited(evt);
-            }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                BuscarRNEMousePressed(evt);
-            }
-        });
         BuscarRNE.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BuscarRNEActionPerformed(evt);
@@ -198,7 +189,7 @@ public class panelCargaProducto extends javax.swing.JPanel {
         });
 
         labelNumRNE.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        labelNumRNE.setText("*Numero RNE: ");
+        labelNumRNE.setText("Numero RNE: ");
 
         labelCargaProdAlimenticio.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
         labelCargaProdAlimenticio.setForeground(new java.awt.Color(0, 51, 0));
@@ -231,7 +222,7 @@ public class panelCargaProducto extends javax.swing.JPanel {
                         .addComponent(labelNumRNE, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(panelBuscaRNELayout.createSequentialGroup()
                         .addGap(11, 11, 11)
-                        .addComponent(textFieldRNE, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(textFieldRNE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(BuscarRNE, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
 
@@ -350,7 +341,6 @@ public class panelCargaProducto extends javax.swing.JPanel {
         textFieldRNPA.setText("123456");
         textFieldRNPA.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
 
-        textFieldFechaVencimiento.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         textFieldFechaVencimiento.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(java.text.DateFormat.getDateInstance(java.text.DateFormat.SHORT))));
         textFieldFechaVencimiento.setText("2017-11-31");
 
@@ -364,17 +354,19 @@ public class panelCargaProducto extends javax.swing.JPanel {
             .addGroup(panelRegistroRNPALayout.createSequentialGroup()
                 .addGap(10, 10, 10)
                 .addGroup(panelRegistroRNPALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(labelRegistroRNPA)
+                    .addGroup(panelRegistroRNPALayout.createSequentialGroup()
+                        .addComponent(labelRegistroRNPA)
+                        .addContainerGap(1824, Short.MAX_VALUE))
                     .addGroup(panelRegistroRNPALayout.createSequentialGroup()
                         .addGap(20, 20, 20)
                         .addComponent(labelRNPA, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(10, 10, 10)
                         .addComponent(textFieldRNPA, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(70, 70, 70)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(labelFechaVencimiento)
                         .addGap(4, 4, 4)
-                        .addComponent(textFieldFechaVencimiento, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(1484, Short.MAX_VALUE))
+                        .addComponent(textFieldFechaVencimiento, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(60, 60, 60))))
         );
         panelRegistroRNPALayout.setVerticalGroup(
             panelRegistroRNPALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -385,8 +377,8 @@ public class panelCargaProducto extends javax.swing.JPanel {
                 .addGroup(panelRegistroRNPALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(labelRNPA, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(labelFechaVencimiento, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(textFieldFechaVencimiento, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(textFieldRNPA, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(textFieldFechaVencimiento)
+                    .addComponent(textFieldRNPA))
                 .addGap(20, 20, 20))
         );
 
@@ -474,7 +466,7 @@ public class panelCargaProducto extends javax.swing.JPanel {
         labelComp_NroTipoMarca.setText("N° y tipo de registro de marca:");
 
         labelComp_CAA.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        labelComp_CAA.setText("*CAA Articulo N°:");
+        labelComp_CAA.setText("CAA Articulo N°:");
 
         textFieldComp_Denominacion.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         textFieldComp_Denominacion.setText("denominacion");
@@ -519,10 +511,10 @@ public class panelCargaProducto extends javax.swing.JPanel {
         labelComp_Nombre.setText("Nombre comercial:");
 
         labelComp_Marca.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        labelComp_Marca.setText("*Marca:");
+        labelComp_Marca.setText("Marca:");
 
         labelComp_Denominacion.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        labelComp_Denominacion.setText("*Denominacion:");
+        labelComp_Denominacion.setText("Denominacion:");
 
         labelComp_Contenido.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         labelComp_Contenido.setText("Contenido:");
@@ -719,7 +711,7 @@ public class panelCargaProducto extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(panelCompCarMP, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -851,7 +843,7 @@ public class panelCargaProducto extends javax.swing.JPanel {
                                     .addComponent(labelDesc_InfoAdicional)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(textFieldDesc_InfoAdicional, javax.swing.GroupLayout.PREFERRED_SIZE, 391, javax.swing.GroupLayout.PREFERRED_SIZE))))))
-                .addContainerGap(24, Short.MAX_VALUE))
+                .addContainerGap(28, Short.MAX_VALUE))
         );
         panelDescDatosLayout.setVerticalGroup(
             panelDescDatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -895,7 +887,7 @@ public class panelCargaProducto extends javax.swing.JPanel {
                 .addGroup(panelDescDatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(labelDesc_InfoAdicional, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(textFieldDesc_InfoAdicional, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(34, Short.MAX_VALUE))
+                .addContainerGap(29, Short.MAX_VALUE))
         );
 
         panelDescCarEnvase.setBackground(new java.awt.Color(255, 255, 255));
@@ -979,13 +971,16 @@ public class panelCargaProducto extends javax.swing.JPanel {
         panelDescripcion.setLayout(panelDescripcionLayout);
         panelDescripcionLayout.setHorizontalGroup(
             panelDescripcionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelDescCarEnvase, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(panelDescripcionLayout.createSequentialGroup()
+                .addGroup(panelDescripcionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(panelDescCarEnvase, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(panelDescripcionLayout.createSequentialGroup()
+                        .addGap(35, 35, 35)
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 622, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(10, 10, 10))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelDescripcionLayout.createSequentialGroup()
                 .addComponent(panelDescDatos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
-            .addGroup(panelDescripcionLayout.createSequentialGroup()
-                .addGap(35, 35, 35)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 622, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         panelDescripcionLayout.setVerticalGroup(
             panelDescripcionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -994,7 +989,7 @@ public class panelCargaProducto extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(panelDescCarEnvase, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -1014,11 +1009,11 @@ public class panelCargaProducto extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(panelComposicion, javax.swing.GroupLayout.PREFERRED_SIZE, 382, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(panelDescripcion, javax.swing.GroupLayout.PREFERRED_SIZE, 559, Short.MAX_VALUE)
+                .addComponent(panelDescripcion, javax.swing.GroupLayout.PREFERRED_SIZE, 506, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
-        CargaBasica.add(panelDatosProducto, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 356, -1, 1150));
+        CargaBasica.add(panelDatosProducto, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 356, -1, 1095));
 
         SeparadorRegistroRNPA2.setBackground(new java.awt.Color(76, 140, 74));
         SeparadorRegistroRNPA2.setForeground(new java.awt.Color(27, 94, 32));
@@ -1042,7 +1037,7 @@ public class panelCargaProducto extends javax.swing.JPanel {
         SeparadorRegistroRNPA1.setForeground(new java.awt.Color(27, 94, 32));
         SeparadorRegistroRNPA1.setToolTipText("");
         SeparadorRegistroRNPA1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(76, 140, 74), 2));
-        CargaBasica.add(SeparadorRegistroRNPA1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 1522, 2500, 1));
+        CargaBasica.add(SeparadorRegistroRNPA1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 1457, 2500, 1));
 
         panelDatosMuestraLab.setBackground(new java.awt.Color(255, 255, 255));
         panelDatosMuestraLab.setMinimumSize(new java.awt.Dimension(700, 90));
@@ -1066,17 +1061,14 @@ public class panelCargaProducto extends javax.swing.JPanel {
         labelNroActa.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         labelNroActa.setText("Numero de Acta: ");
 
-        botonGuardar.setText("Guardar");
-        botonGuardar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonGuardarActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout panelDatosMuestraLabLayout = new javax.swing.GroupLayout(panelDatosMuestraLab);
         panelDatosMuestraLab.setLayout(panelDatosMuestraLabLayout);
         panelDatosMuestraLabLayout.setHorizontalGroup(
             panelDatosMuestraLabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelDatosMuestraLabLayout.createSequentialGroup()
+                .addGap(10, 10, 10)
+                .addComponent(labelDatosDeLab)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(panelDatosMuestraLabLayout.createSequentialGroup()
                 .addGap(38, 38, 38)
                 .addComponent(labelNumProtocolo)
@@ -1087,15 +1079,6 @@ public class panelCargaProducto extends javax.swing.JPanel {
                 .addGap(6, 6, 6)
                 .addComponent(textFieldNroActa, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(78, 78, 78))
-            .addGroup(panelDatosMuestraLabLayout.createSequentialGroup()
-                .addGroup(panelDatosMuestraLabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panelDatosMuestraLabLayout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(labelDatosDeLab))
-                    .addGroup(panelDatosMuestraLabLayout.createSequentialGroup()
-                        .addGap(64, 64, 64)
-                        .addComponent(botonGuardar)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panelDatosMuestraLabLayout.setVerticalGroup(
             panelDatosMuestraLabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1106,34 +1089,42 @@ public class panelCargaProducto extends javax.swing.JPanel {
                 .addGroup(panelDatosMuestraLabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(labelNumProtocolo, javax.swing.GroupLayout.DEFAULT_SIZE, 20, Short.MAX_VALUE)
                     .addComponent(labelNroActa, javax.swing.GroupLayout.DEFAULT_SIZE, 20, Short.MAX_VALUE)
-                    .addComponent(textFieldNroProtocolo, javax.swing.GroupLayout.DEFAULT_SIZE, 20, Short.MAX_VALUE)
-                    .addComponent(textFieldNroActa, javax.swing.GroupLayout.DEFAULT_SIZE, 20, Short.MAX_VALUE))
-                .addGap(45, 45, 45)
-                .addComponent(botonGuardar)
-                .addContainerGap())
+                    .addComponent(textFieldNroProtocolo)
+                    .addComponent(textFieldNroActa))
+                .addGap(20, 20, 20))
         );
 
-        CargaBasica.add(panelDatosMuestraLab, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 1510, -1, 190));
+        CargaBasica.add(panelDatosMuestraLab, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 1457, -1, 193));
 
-        jLabel1.setText("En este formulario hay campos obligatorios (*)");
+        botonGuardar.setText("Guardar");
+        botonGuardar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonGuardarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(CargaBasica, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1133, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
-                .addGap(40, 40, 40)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(CargaBasica, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(68, 68, 68)
+                        .addComponent(botonGuardar)))
+                .addContainerGap(413, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(CargaBasica, javax.swing.GroupLayout.DEFAULT_SIZE, 1707, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel1)
-                .addGap(22, 22, 22))
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(CargaBasica, javax.swing.GroupLayout.PREFERRED_SIZE, 1585, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(botonGuardar)
+                .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -1168,154 +1159,87 @@ public class panelCargaProducto extends javax.swing.JPanel {
 
     private void botonGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonGuardarActionPerformed
         try {
-            int validar=validarCampos();
-            if(validar==0){
-                try {
-                    
-                    ProductoAlimenticio producto = crearyCargarPA();
-                    
-                    boolean result = producto.guardar();
-                    if (result == true) {
-                        JOptionPane.showMessageDialog(null, "correcto.");
-                    } else {
-                        JOptionPane.showMessageDialog(null, "error");
-                    }
-                    
-                } catch (SQLException | InstantiationException | IllegalAccessException ex) {
-                    Logger.getLogger(panelCargaProducto.class.getName()).log(Level.SEVERE, null, ex);
-                }
+            ProductoAlimenticio producto = new ProductoAlimenticio();
+            Composicion composicion = new Composicion();
+            Descripcion descripcion = new Descripcion();
+            RNPA rnpa = new RNPA();
+            Envase envase_aux;
+            MuestraLaboratorio muestra_lab = new MuestraLaboratorio();
+            MateriaPrima mp_aux;
+
+            producto.setNro_factura(Integer.valueOf(textFieldNroFactura.getText()));
+            producto.setRotulo(textAreaRotulo.getText());
+
+            composicion.setCAA(textFieldComp_CAA.getText());
+            composicion.setContenido(textFieldComp_Contenido.getText());
+            composicion.setDenominacion(textFieldComp_Denominacion.getText());
+            composicion.setFecha_duracion(textFieldComp_FechaDuracion.getText());
+            composicion.setMarca(textFieldComp_Marca.getText());
+            composicion.setNombre_comercial(textFieldComp_Nombre.getText());
+            composicion.setNroytipo_registro_marca(textFieldComp_NroTipoMarca.getText());
+            producto.setComposicion(composicion);
+            composicion.setM_ProductoAlimenticio(producto);
+
+            descripcion.setControlesycuidados(textFieldDesc_ControlesEspeciales.getText());
+            descripcion.setDestino_producto(textFieldDesc_AQuienDirigido.getText());
+            descripcion.setForma_uso_producto(textFieldDesc_FormaUso.getText());
+            descripcion.setInformacion_adicional(textFieldDesc_InfoAdicional.getText());
+            descripcion.setIntrucciones_preparacion(textFieldDesc_InstruccionPrep.getText());
+            descripcion.setLugar_venta(textFieldDesc_DondeVendido.getText());
+            descripcion.setModo_conservacion(textFieldDesc_ModoConservacion.getText());
+            descripcion.setPeriodo_aptitud(textFieldDesc_PeriodoAptitud.getText());
+            producto.setDescripcion(descripcion);
+            descripcion.setM_ProductoAlimenticio(producto);
+
+            rnpa.setNumero(Integer.valueOf(textFieldRNPA.getText()));
+            rnpa.setFecha_vencimiento(textFieldFechaVencimiento.getText());
+            producto.setRnpa(rnpa);
+            rnpa.setM_ProductoAlimenticio(producto);
+
+            for (panelCargaEnvase pCE : vectorpanelesCargaEnvase) {
+                envase_aux = new Envase();
+                JTextField cap = (JTextField) pCE.getComponentByName("textFieldCapacidad");
+                JComboBox<String> material = (JComboBox<String>) pCE.getComponentByName("comboBoxMaterial");
+                JComboBox<String> unidad = (JComboBox<String>) pCE.getComponentByName("comboBoxUnidad");
+                envase_aux.setCapacidad(cap.getText());
+                envase_aux.setMaterial((String) material.getSelectedItem());
+                envase_aux.setUnidad((String) unidad.getSelectedItem());
+                producto.addEnvase(envase_aux);
             }
-            else if(validar==1){
-                JOptionPane.showMessageDialog(null, "falta rellenar algún campo");
+
+            for (panelCargaMateriaPrima pMP : vectorpanelesCargaMP) {
+                mp_aux = new MateriaPrima();
+                JComboBox<String> nombre = (JComboBox<String>) pMP.getComponentByName("comboBoxNombre");
+                JTextField cantidad = (JTextField) pMP.getComponentByName("textFieldCantidad");
+                mp_aux.setNombre((String) nombre.getSelectedItem());
+                mp_aux.setCantidad(cantidad.getText());
+                producto.agregarMP(mp_aux);
             }
-            else if(validar==2)
-                {
-                JOptionPane.showMessageDialog(null, "el RNE ingresado no existe");
+
+            muestra_lab.setNumActa(Integer.valueOf(textFieldNroActa.getText()));
+            muestra_lab.setNumProtocolo(Integer.valueOf(textFieldNroProtocolo.getText()));
+            producto.setMuestraLaboratorio(muestra_lab);
+            muestra_lab.setM_ProductoAlimenticio(producto);
+
+            //fecha de hoy
+            producto.setFecha_carga_solicitud(Calendar.getInstance());
+            //if estab_aCargar es null no tiene que dejar cargar
+            producto.setEstablecimiento(estab_aCargar);
+
+            boolean result = producto.guardar();
+            if (result == true) {
+                JOptionPane.showMessageDialog(null, "correcto.");
+            } else {
+                JOptionPane.showMessageDialog(null, "error");
             }
-        } catch (SQLException ex) {
-            Logger.getLogger(panelCargaProducto.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            Logger.getLogger(panelCargaProducto.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
+
+        } catch (SQLException | InstantiationException | IllegalAccessException ex) {
             Logger.getLogger(panelCargaProducto.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_botonGuardarActionPerformed
 
-    private ProductoAlimenticio crearyCargarPA() {
-        ProductoAlimenticio producto = new ProductoAlimenticio();
-
-        Composicion composicion = new Composicion();
-        Descripcion descripcion = new Descripcion();
-        RNPA rnpa = new RNPA();
-        Envase envase_aux;
-        MuestraLaboratorio muestra_lab = new MuestraLaboratorio();
-        MateriaPrima mp_aux;
-
-        producto.setNro_factura(Integer.valueOf(textFieldNroFactura.getText()));
-        producto.setRotulo(textAreaRotulo.getText());
-
-        composicion.setCAA(textFieldComp_CAA.getText());
-        composicion.setContenido(textFieldComp_Contenido.getText());
-        composicion.setDenominacion(textFieldComp_Denominacion.getText());
-        composicion.setFecha_duracion(textFieldComp_FechaDuracion.getText());
-        composicion.setMarca(textFieldComp_Marca.getText());
-        composicion.setNombre_comercial(textFieldComp_Nombre.getText());
-        composicion.setNroytipo_registro_marca(textFieldComp_NroTipoMarca.getText());
-        producto.setComposicion(composicion);
-        composicion.setM_ProductoAlimenticio(producto);
-
-        descripcion.setControlesycuidados(textFieldDesc_ControlesEspeciales.getText());
-        descripcion.setDestino_producto(textFieldDesc_AQuienDirigido.getText());
-        descripcion.setForma_uso_producto(textFieldDesc_FormaUso.getText());
-        descripcion.setInformacion_adicional(textFieldDesc_InfoAdicional.getText());
-        descripcion.setIntrucciones_preparacion(textFieldDesc_InstruccionPrep.getText());
-        descripcion.setLugar_venta(textFieldDesc_DondeVendido.getText());
-        descripcion.setModo_conservacion(textFieldDesc_ModoConservacion.getText());
-        descripcion.setPeriodo_aptitud(textFieldDesc_PeriodoAptitud.getText());
-        producto.setDescripcion(descripcion);
-        descripcion.setM_ProductoAlimenticio(producto);
-
-        rnpa.setNumero(Integer.valueOf(textFieldRNPA.getText()));
-        rnpa.setFecha_vencimiento(textFieldFechaVencimiento.getText());
-        producto.setRnpa(rnpa);
-        rnpa.setM_ProductoAlimenticio(producto);
-
-        for (panelCargaEnvase pCE : vectorpanelesCargaEnvase) {
-            envase_aux = new Envase();
-            JTextField cap = (JTextField) pCE.getComponentByName("textFieldCapacidad");
-            JComboBox<String> material = (JComboBox<String>) pCE.getComponentByName("comboBoxMaterial");
-            JComboBox<String> unidad = (JComboBox<String>) pCE.getComponentByName("comboBoxUnidad");
-            envase_aux.setCapacidad(cap.getText());
-            envase_aux.setMaterial((String) material.getSelectedItem());
-            envase_aux.setUnidad((String) unidad.getSelectedItem());
-            producto.addEnvase(envase_aux);
-        }
-
-        for (panelCargaMateriaPrima pMP : vectorpanelesCargaMP) {
-            mp_aux = new MateriaPrima();
-            JComboBox<String> nombre = (JComboBox<String>) pMP.getComponentByName("comboBoxNombre");
-            JTextField cantidad = (JTextField) pMP.getComponentByName("textFieldCantidad");
-            mp_aux.setNombre((String) nombre.getSelectedItem());
-            mp_aux.setCantidad(cantidad.getText());
-            producto.agregarMP(mp_aux);
-        }
-
-        muestra_lab.setNumActa(Integer.valueOf(textFieldNroActa.getText()));
-        muestra_lab.setNumProtocolo(Integer.valueOf(textFieldNroProtocolo.getText()));
-        producto.setMuestraLaboratorio(muestra_lab);
-        muestra_lab.setM_ProductoAlimenticio(producto);
-
-        //fecha de hoy
-        producto.setFecha_carga_solicitud(Calendar.getInstance());
-        //if estab_aCargar es null no tiene que dejar cargar
-        producto.setEstablecimiento(estab_aCargar);
-
-        return producto;
-    }
-
-    private int validarCampos() throws SQLException, InstantiationException, IllegalAccessException {
-        textFieldComp_CAA.setBorder(BorderFactory.createLineBorder(new Color(206,201,200), 1));
-        textFieldComp_Marca.setBorder(BorderFactory.createLineBorder(new Color(206,201,200), 1));
-        textFieldComp_Denominacion.setBorder(BorderFactory.createLineBorder(new Color(206,201,200), 1));
-        textFieldRNE.setBorder(BorderFactory.createLineBorder(new Color(206,201,200), 1));
-        labelComp_CAA.setForeground(new Color(0,0,0));
-        labelComp_Marca.setForeground(new Color(0,0,0));
-        labelNumRNE.setForeground(new Color(0,0,0));
-        labelComp_Denominacion.setForeground(new Color(0,0,0));
-        
-        Establecimiento e = new Establecimiento();
-        int result=0;
-        if(textFieldComp_CAA.getText().equals("")){
-            labelComp_CAA.setForeground(new Color(255,0,0));
-            textFieldComp_CAA.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
-            result=1;
-        }
-        if(textFieldComp_Marca.getText().equals("")){
-            labelComp_Marca.setForeground(new Color(255,0,0));
-            textFieldComp_Marca.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
-            
-            result=1;
-        }
-        if(textFieldComp_Denominacion.getText().equals("")){
-            labelComp_Denominacion.setForeground(new Color(255,0,0));
-            textFieldComp_Denominacion.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
-            result=1;
-        }
-        if(textFieldRNE.getText().equals("")){
-            labelNumRNE.setForeground(new Color(255,0,0));
-            textFieldRNE.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
-            result=1;
-        }
-        else{
-        if(!e.existe_RNE(textFieldRNE.getText())){
-             labelNumRNE.setForeground(new Color(255,0,0));
-             textFieldRNE.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
-            result=2;
-        }
-        }
-        
-        return result;
-        
+    private boolean validarCampos() {
+        return false;
     }
 
     //NO ANDA EL CAMBIO DINAMICO DEL PANEL PREGUNTAR
@@ -1452,18 +1376,6 @@ public class panelCargaProducto extends javax.swing.JPanel {
         buttonRemoveEnvase.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/menos_pressed.png")));
     }//GEN-LAST:event_buttonRemoveEnvaseMousePressed
 
-    private void BuscarRNEMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BuscarRNEMouseEntered
-        BuscarRNE.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/Search_24px.png")));
-    }//GEN-LAST:event_BuscarRNEMouseEntered
-
-    private void BuscarRNEMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BuscarRNEMouseExited
-        BuscarRNE.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/Search_sombrapx.png")));
-    }//GEN-LAST:event_BuscarRNEMouseExited
-
-    private void BuscarRNEMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BuscarRNEMousePressed
-        BuscarRNE.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/Search_24px.png")));
-    }//GEN-LAST:event_BuscarRNEMousePressed
-
     private Empresa recuperarDatosEmpresa(String nro_rne) throws SQLException, InstantiationException, IllegalAccessException {
         Empresa empresa_salida = null;
         try {
@@ -1498,7 +1410,6 @@ public class panelCargaProducto extends javax.swing.JPanel {
     private javax.swing.JButton buttonRemoveEnvase;
     private javax.swing.JButton buttonRemoveMP;
     private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
