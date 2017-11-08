@@ -1,13 +1,13 @@
-/**
- * @author Francisco Herrero, Franco Morero y Mauricio Vazquez
- * @version 1.0
- */
 package Logica;
 
 import Persistencia.ConexionBD;
 import java.sql.SQLException;
 import java.util.Vector;
 
+/**
+ * @author Francisco Herrero, Franco Morero y Mauricio Vazquez
+ * @version 1.0
+ */
 public class Empresa {
 
     private int CUIT;
@@ -125,6 +125,16 @@ public class Empresa {
 
     }
 
+    /**
+     * Recupera los establecimientos asociados a una empresa
+     *
+     * @param CUIT CUIT de la empresa
+     * @return {@code Vector<Establecimiento>}con todas los establecimientos
+     * asociados
+     * @throws java.sql.SQLException
+     * @throws java.lang.InstantiationException
+     * @throws java.lang.IllegalAccessException
+     */
     public static Vector<Establecimiento> recuperarEstablecimientosAsociados(String CUIT) throws SQLException, InstantiationException, IllegalAccessException {
 
         Vector<Establecimiento> establecimientos = new Vector<>();
@@ -201,13 +211,23 @@ public class Empresa {
         return establecimientos;
     }
 
+    /**
+     * Recupera los productos alimenticios asociados a una empresa
+     *
+     * @param CUIT CUIT de la empresa
+     * @return {@code Vector<ProductoAlimenticio>}con todos los productos
+     * alimenticios asociados
+     * @throws java.sql.SQLException
+     * @throws java.lang.InstantiationException
+     * @throws java.lang.IllegalAccessException
+     */
     public static Vector<ProductoAlimenticio> recuperarPAAsociados(String CUIT) throws SQLException, InstantiationException, IllegalAccessException {
 
         Vector<ProductoAlimenticio> productosAlimenticios = new Vector<>();
-        
+
         //recupero los establecimientos asociados para poder obtener los Productos asociados a cada Establecimiento.
         Vector<Establecimiento> establecimientosAsociados = Empresa.recuperarEstablecimientosAsociados(CUIT);
-        
+
         ProductoAlimenticio auxiliar;
         RNPA RNPAaux;
         Composicion compAux;
@@ -217,10 +237,10 @@ public class Empresa {
         ConexionBD con = ConexionBD.getConexion();
 
         for (Establecimiento e : establecimientosAsociados) {
-            
+
             valores = new String[20][22];
             valores = con.recuperar(valores, "select * from Producto_Alimenticio where Establecimiento_idEstablecimiento=" + e.getId() + ";", 22);
-            
+
             //para cada PA recuperado se va guardando en el vector productos alimenticios
             for (String[] PA : valores) {
                 auxiliar = new ProductoAlimenticio();

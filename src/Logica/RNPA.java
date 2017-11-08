@@ -1,13 +1,14 @@
-/**
- * @author Francisco Herrero, Franco Morero y Mauricio Vazquez
- * @version 1.0
- */
 package Logica;
+
 import Persistencia.ConexionBD;
 import java.sql.SQLException;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
+/**
+ * @author Francisco Herrero, Franco Morero y Mauricio Vazquez
+ * @version 1.0
+ */
 public class RNPA {
 
     private Calendar fecha_vencimiento;
@@ -29,7 +30,7 @@ public class RNPA {
     public void setFecha_vencimiento(Calendar fecha_vencimiento) {
         this.fecha_vencimiento = fecha_vencimiento;
     }
-    
+
     /**
      * Set fecha_vencimiento
      *
@@ -57,8 +58,9 @@ public class RNPA {
         this.m_ProductoAlimenticio = m_ProductoAlimenticio;
     }
 
-     /**
-     * Metodo que actualiza RNPA en la BD. Require que el producto alimenticio halla sido cargado
+    /**
+     * Metodo que actualiza RNPA en la BD. Require que el producto alimenticio
+     * halla sido cargado
      *
      * @throws java.sql.SQLException
      * @throws java.lang.InstantiationException
@@ -68,14 +70,14 @@ public class RNPA {
 
         ConexionBD con = ConexionBD.getConexion();
         String update;
-        if(m_ProductoAlimenticio != null){
+        if (m_ProductoAlimenticio != null) {
             update = "UPDATE `producto_alimenticio` SET ";
-            update += "`nro_RNPA`='" + numero ;
+            update += "`nro_RNPA`='" + numero;
             //update += "`Vencimiento_RNPA`='" + fecha_vencimiento;
             update += "' WHERE id='" + m_ProductoAlimenticio.getId() + "';";
-            
+
             con.update(update);
         }
-        
+
     }
 }//end RNPA

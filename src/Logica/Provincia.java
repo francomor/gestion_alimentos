@@ -1,12 +1,12 @@
-/**
- * @author Francisco Herrero, Franco Morero y Mauricio Vazquez
- * @version 1.0
- */
 package Logica;
 
 import Persistencia.ConexionBD;
 import java.sql.SQLException;
 
+/**
+ * @author Francisco Herrero, Franco Morero y Mauricio Vazquez
+ * @version 1.0
+ */
 class Provincia {
 
     private int id;
@@ -31,6 +31,15 @@ class Provincia {
         this.nombre = nombre;
     }
 
+    /**
+     * Recupera una provincia por su id
+     *
+     * @param id id de la localidad
+     * @return Provincia con su nombre
+     * @throws java.sql.SQLException
+     * @throws java.lang.InstantiationException
+     * @throws java.lang.IllegalAccessException
+     */
     static Provincia recuperarProvinciaporID(String id) throws SQLException, InstantiationException, IllegalAccessException {
 
         Provincia salida = new Provincia();
