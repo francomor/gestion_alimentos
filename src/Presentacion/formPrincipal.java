@@ -5,6 +5,8 @@
 package Presentacion;
 
 import java.awt.CardLayout;
+import java.awt.Font;
+import javax.swing.ImageIcon;
 
 public class formPrincipal extends javax.swing.JFrame {
 
@@ -13,6 +15,8 @@ public class formPrincipal extends javax.swing.JFrame {
      */
     public formPrincipal() {
         initComponents();
+
+        setIconImage(new ImageIcon(getClass().getResource("/resources/logomarcarn.png")).getImage());
         this.setLocationRelativeTo(null);
         CardLayout card = (CardLayout) panelCard.getLayout();
         card.show(panelCard, "bienvenido");
@@ -38,12 +42,15 @@ public class formPrincipal extends javax.swing.JFrame {
         panelBienvenida = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        ScrollPanelConsultaCUIT = new javax.swing.JScrollPane();
+        ScrollPanelConsultaCUIT.getVerticalScrollBar().setUnitIncrement(16);
         consultaPorCuit1 = new Presentacion.ConsultaPorCuit();
         scrollPanelCargaPA = new javax.swing.JScrollPane();
         scrollPanelCargaPA.getVerticalScrollBar().setUnitIncrement(16);
         panelCargaProducto1 = new Presentacion.panelCargaProducto();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Sistema de gestion de alimentos - URESA Andina");
         setMinimumSize(new java.awt.Dimension(700, 500));
         setPreferredSize(new java.awt.Dimension(1000, 500));
 
@@ -85,6 +92,15 @@ public class formPrincipal extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 label_ConsultaCUITMouseClicked(evt);
             }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                label_ConsultaCUITMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                label_ConsultaCUITMouseExited(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                label_ConsultaCUITMouseReleased(evt);
+            }
         });
         panelMenu.add(label_ConsultaCUIT, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 40, -1, -1));
 
@@ -96,6 +112,12 @@ public class formPrincipal extends javax.swing.JFrame {
         label_CargaPA.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 label_CargaPAMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                label_CargaPAMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                label_CargaPAMouseExited(evt);
             }
         });
         panelMenu.add(label_CargaPA, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 40, -1, -1));
@@ -124,15 +146,18 @@ public class formPrincipal extends javax.swing.JFrame {
         panelBienvenidaLayout.setVerticalGroup(
             panelBienvenidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelBienvenidaLayout.createSequentialGroup()
-                .addContainerGap(87, Short.MAX_VALUE)
+                .addContainerGap(206, Short.MAX_VALUE)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2)
-                .addContainerGap(158, Short.MAX_VALUE))
+                .addContainerGap(276, Short.MAX_VALUE))
         );
 
         panelCard.add(panelBienvenida, "bienvenida");
-        panelCard.add(consultaPorCuit1, "consultaCUIT");
+
+        ScrollPanelConsultaCUIT.setViewportView(consultaPorCuit1);
+
+        panelCard.add(ScrollPanelConsultaCUIT, "consultaCUIT");
 
         scrollPanelCargaPA.setBorder(null);
         scrollPanelCargaPA.setViewportView(panelCargaProducto1);
@@ -154,6 +179,26 @@ public class formPrincipal extends javax.swing.JFrame {
         CardLayout card = (CardLayout) panelCard.getLayout();
         card.show(panelCard, "consultaCUIT");
     }//GEN-LAST:event_label_ConsultaCUITMouseClicked
+
+    private void label_CargaPAMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_label_CargaPAMouseEntered
+        label_CargaPA.setFont(new Font("Roboto", Font.BOLD, 13));
+    }//GEN-LAST:event_label_CargaPAMouseEntered
+
+    private void label_CargaPAMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_label_CargaPAMouseExited
+        label_CargaPA.setFont(new Font("Roboto", Font.BOLD, 12));
+    }//GEN-LAST:event_label_CargaPAMouseExited
+
+    private void label_ConsultaCUITMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_label_ConsultaCUITMouseEntered
+        label_ConsultaCUIT.setFont(new Font("Roboto", Font.BOLD, 13));
+    }//GEN-LAST:event_label_ConsultaCUITMouseEntered
+
+    private void label_ConsultaCUITMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_label_ConsultaCUITMouseReleased
+        // TODO add your handling code here:
+    }//GEN-LAST:event_label_ConsultaCUITMouseReleased
+
+    private void label_ConsultaCUITMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_label_ConsultaCUITMouseExited
+        label_ConsultaCUIT.setFont(new Font("Roboto", Font.BOLD, 12));
+    }//GEN-LAST:event_label_ConsultaCUITMouseExited
 
     /**
      * @param args the command line arguments
@@ -190,6 +235,7 @@ public class formPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JScrollPane ScrollPanelConsultaCUIT;
     private Presentacion.ConsultaPorCuit consultaPorCuit1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

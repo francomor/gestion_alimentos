@@ -7,6 +7,7 @@ package Presentacion;
 import Logica.*;
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.event.KeyEvent;
 import java.sql.SQLException;
 import java.util.Calendar;
 import java.util.Vector;
@@ -170,6 +171,11 @@ public class panelCargaProducto extends javax.swing.JPanel {
         textFieldRNE.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 textFieldRNEActionPerformed(evt);
+            }
+        });
+        textFieldRNE.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                textFieldRNEKeyPressed(evt);
             }
         });
 
@@ -850,7 +856,7 @@ public class panelCargaProducto extends javax.swing.JPanel {
                                     .addComponent(labelDesc_InfoAdicional)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(textFieldDesc_InfoAdicional, javax.swing.GroupLayout.PREFERRED_SIZE, 391, javax.swing.GroupLayout.PREFERRED_SIZE))))))
-                .addContainerGap(28, Short.MAX_VALUE))
+                .addContainerGap(24, Short.MAX_VALUE))
         );
         panelDescDatosLayout.setVerticalGroup(
             panelDescDatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -894,7 +900,7 @@ public class panelCargaProducto extends javax.swing.JPanel {
                 .addGroup(panelDescDatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(labelDesc_InfoAdicional, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(textFieldDesc_InfoAdicional, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(29, Short.MAX_VALUE))
+                .addContainerGap(32, Short.MAX_VALUE))
         );
 
         panelDescCarEnvase.setBackground(new java.awt.Color(255, 255, 255));
@@ -1132,7 +1138,20 @@ public class panelCargaProducto extends javax.swing.JPanel {
     }//GEN-LAST:event_textFieldRNEActionPerformed
 
     private void BuscarRNEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BuscarRNEActionPerformed
-        try {
+        buscarRNE();
+    }//GEN-LAST:event_BuscarRNEActionPerformed
+
+    private void textFieldComp_NombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldComp_NombreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textFieldComp_NombreActionPerformed
+
+    private void textFieldDesc_FormaUsoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldDesc_FormaUsoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textFieldDesc_FormaUsoActionPerformed
+    
+    private void buscarRNE()
+    {
+         try {
             Empresa empresa = this.recuperarDatosEmpresa(textFieldRNE.getText());
             if (empresa != null) {
                 label_CUIL.setText(String.valueOf(empresa.getCUIT()));
@@ -1146,16 +1165,9 @@ public class panelCargaProducto extends javax.swing.JPanel {
         } catch (SQLException | InstantiationException | IllegalAccessException ex) {
             Logger.getLogger(panelCargaProducto.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }//GEN-LAST:event_BuscarRNEActionPerformed
-
-    private void textFieldComp_NombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldComp_NombreActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textFieldComp_NombreActionPerformed
-
-    private void textFieldDesc_FormaUsoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldDesc_FormaUsoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textFieldDesc_FormaUsoActionPerformed
-
+        
+    }
+    
     private void botonGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonGuardarActionPerformed
         try {
     int validar=validarCampos();
@@ -1452,6 +1464,14 @@ public class panelCargaProducto extends javax.swing.JPanel {
     private void BuscarRNEMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BuscarRNEMousePressed
         BuscarRNE.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/Search_24px.png")));
     }//GEN-LAST:event_BuscarRNEMousePressed
+
+    private void textFieldRNEKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_textFieldRNEKeyPressed
+        
+        if(KeyEvent.VK_ENTER == evt.getKeyCode())
+        {
+            buscarRNE();
+        }
+    }//GEN-LAST:event_textFieldRNEKeyPressed
 
     private Empresa recuperarDatosEmpresa(String nro_rne) throws SQLException, InstantiationException, IllegalAccessException {
         Empresa empresa_salida = null;

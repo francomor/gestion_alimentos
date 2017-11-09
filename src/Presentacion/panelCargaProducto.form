@@ -140,6 +140,7 @@
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textFieldRNEActionPerformed"/>
+                <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="textFieldRNEKeyPressed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JButton" name="BuscarRNE">
@@ -1259,7 +1260,7 @@
                                       </Group>
                                   </Group>
                               </Group>
-                              <EmptySpace pref="28" max="32767" attributes="0"/>
+                              <EmptySpace pref="24" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -1314,7 +1315,7 @@
                                   <Component id="labelDesc_InfoAdicional" min="-2" pref="20" max="-2" attributes="0"/>
                                   <Component id="textFieldDesc_InfoAdicional" min="-2" pref="20" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="29" max="32767" attributes="0"/>
+                              <EmptySpace pref="32" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>

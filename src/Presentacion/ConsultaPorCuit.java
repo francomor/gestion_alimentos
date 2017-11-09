@@ -11,7 +11,11 @@ import java.awt.event.KeyEvent;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.Vector;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 
 public class ConsultaPorCuit extends javax.swing.JPanel {
@@ -32,6 +36,10 @@ public class ConsultaPorCuit extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPopupMenu1 = new javax.swing.JPopupMenu();
+        InfoAdicional = new javax.swing.JMenuItem();
+        LimpiarTablas = new javax.swing.JMenuItem();
+        jSeparator1 = new javax.swing.JSeparator();
         EtiquetaConsultaPorCUIT = new javax.swing.JLabel();
         CampoCUIT = new javax.swing.JTextField();
         SeparadorDatosEmpresa = new javax.swing.JSeparator();
@@ -48,6 +56,22 @@ public class ConsultaPorCuit extends javax.swing.JPanel {
         TablaPAAsociado = new javax.swing.JTable();
         botonBuscar = new javax.swing.JButton();
         EtiquetaNumerCuil = new javax.swing.JLabel();
+
+        InfoAdicional.setText("Informacion Adicional");
+        InfoAdicional.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                InfoAdicionalActionPerformed(evt);
+            }
+        });
+        jPopupMenu1.add(InfoAdicional);
+
+        LimpiarTablas.setText("Limpiar Tablas");
+        LimpiarTablas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LimpiarTablasActionPerformed(evt);
+            }
+        });
+        jPopupMenu1.add(LimpiarTablas);
 
         setBackground(new java.awt.Color(255, 255, 255));
 
@@ -133,7 +157,13 @@ public class ConsultaPorCuit extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
+        TablaEstablecimientoAsociado.setComponentPopupMenu(jPopupMenu1);
         TablaEstablecimientoAsociado.setSelectionBackground(new java.awt.Color(76, 140, 74));
+        TablaEstablecimientoAsociado.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                TablaEstablecimientoAsociadoMouseClicked(evt);
+            }
+        });
         ScrollpanelEstablecimientoAsociado.setViewportView(TablaEstablecimientoAsociado);
         if (TablaEstablecimientoAsociado.getColumnModel().getColumnCount() > 0) {
             TablaEstablecimientoAsociado.getColumnModel().getColumn(0).setResizable(false);
@@ -167,6 +197,7 @@ public class ConsultaPorCuit extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
+        TablaPAAsociado.setComponentPopupMenu(jPopupMenu1);
         TablaPAAsociado.setSelectionBackground(new java.awt.Color(76, 140, 74));
         ScrollpanelPAAsociado.setViewportView(TablaPAAsociado);
         if (TablaPAAsociado.getColumnModel().getColumnCount() > 0) {
@@ -309,6 +340,35 @@ public class ConsultaPorCuit extends javax.swing.JPanel {
             consultaCuit(CampoCUIT.getText());
         }
     }//GEN-LAST:event_CampoCUITKeyPressed
+
+    private void InfoAdicionalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InfoAdicionalActionPerformed
+        if(TablaEstablecimientoAsociado.getSelectedRowCount() == 1 ){
+        
+                DefaultTableModel tm = (DefaultTableModel) TablaEstablecimientoAsociado.getModel();
+                String dato=String.valueOf(tm.getValueAt(TablaEstablecimientoAsociado.getSelectedRow(),0));
+                
+            try {
+                Establecimiento est = Establecimiento.recuperarPorNroRNE(dato);
+                JFrame jf= new InformacionAdicional(est);
+                jf.setVisible(true);
+            }
+            catch (SQLException | InstantiationException | IllegalAccessException ex) {
+                
+                Logger.getLogger(ConsultaPorCuit.class.getName()).log(Level.SEVERE, null, ex);
+            }
+               
+                
+           
+        }
+    }//GEN-LAST:event_InfoAdicionalActionPerformed
+
+    private void TablaEstablecimientoAsociadoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TablaEstablecimientoAsociadoMouseClicked
+    
+    }//GEN-LAST:event_TablaEstablecimientoAsociadoMouseClicked
+
+    private void LimpiarTablasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LimpiarTablasActionPerformed
+       clearPanel();
+    }//GEN-LAST:event_LimpiarTablasActionPerformed
     
     public void cargarTablas(Empresa empresa, Vector<Establecimiento> establecimientos, Vector<ProductoAlimenticio> ProductosAlimenticios) 
     {
@@ -537,6 +597,8 @@ public class ConsultaPorCuit extends javax.swing.JPanel {
     private javax.swing.JLabel EtiquetaEstablecimientoAsociado;
     private javax.swing.JLabel EtiquetaNumerCuil;
     private javax.swing.JLabel EtiquetaPAAsociado;
+    private javax.swing.JMenuItem InfoAdicional;
+    private javax.swing.JMenuItem LimpiarTablas;
     private javax.swing.JScrollPane ScrollPanelDatosEmpresa;
     private javax.swing.JScrollPane ScrollpanelEstablecimientoAsociado;
     private javax.swing.JScrollPane ScrollpanelPAAsociado;
@@ -547,5 +609,7 @@ public class ConsultaPorCuit extends javax.swing.JPanel {
     private javax.swing.JTable TablaEstablecimientoAsociado;
     private javax.swing.JTable TablaPAAsociado;
     private javax.swing.JButton botonBuscar;
+    private javax.swing.JPopupMenu jPopupMenu1;
+    private javax.swing.JSeparator jSeparator1;
     // End of variables declaration//GEN-END:variables
 }
