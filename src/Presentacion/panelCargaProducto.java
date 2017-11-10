@@ -1321,7 +1321,11 @@ public class panelCargaProducto extends javax.swing.JPanel {
         MuestraLaboratorio muestra_lab = new MuestraLaboratorio();
         MateriaPrima mp_aux;
 
-        producto.setNro_factura(Integer.valueOf(textFieldNroFactura.getText()));
+        if (textFieldNroFactura.getText().equals("")) {
+            producto.setNro_factura(Integer.valueOf(textFieldNroFactura.getText()));
+        } else {
+            producto.setNro_factura(0);
+        }
         producto.setRotulo(textAreaRotulo.getText());
 
         composicion.setCAA(textFieldComp_CAA.getText());
@@ -1345,7 +1349,11 @@ public class panelCargaProducto extends javax.swing.JPanel {
         producto.setDescripcion(descripcion);
         descripcion.setM_ProductoAlimenticio(producto);
 
-        rnpa.setNumero(Integer.valueOf(textFieldRNPA.getText()));
+        if (textFieldRNPA.getText().equals("")) {
+            rnpa.setNumero(Integer.valueOf(textFieldRNPA.getText()));
+        } else {
+            rnpa.setNumero(0);
+        }
         rnpa.setFecha_vencimiento(textFieldFechaVencimiento.getText());
         producto.setRnpa(rnpa);
         rnpa.setM_ProductoAlimenticio(producto);
@@ -1370,8 +1378,16 @@ public class panelCargaProducto extends javax.swing.JPanel {
             producto.agregarMP(mp_aux);
         }
 
-        muestra_lab.setNumActa(Integer.valueOf(textFieldNroActa.getText()));
-        muestra_lab.setNumProtocolo(Integer.valueOf(textFieldNroProtocolo.getText()));
+        if (textFieldNroActa.getText().equals("")) {
+            muestra_lab.setNumActa(Integer.valueOf(textFieldNroActa.getText()));
+        } else {
+            muestra_lab.setNumActa(0);
+        }
+        if (textFieldNroProtocolo.getText().equals("")) {
+            muestra_lab.setNumProtocolo(Integer.valueOf(textFieldNroProtocolo.getText()));
+        } else {
+            muestra_lab.setNumProtocolo(0);
+        }
         producto.setMuestraLaboratorio(muestra_lab);
         muestra_lab.setM_ProductoAlimenticio(producto);
 

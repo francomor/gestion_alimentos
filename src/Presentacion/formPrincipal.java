@@ -13,7 +13,7 @@ public class formPrincipal extends javax.swing.JFrame {
     /**
      * Creates new form Principal
      */
-    public formPrincipal() {
+    public formPrincipal() {       
         initComponents();
 
         setIconImage(new ImageIcon(getClass().getResource("/resources/icono.png")).getImage());
