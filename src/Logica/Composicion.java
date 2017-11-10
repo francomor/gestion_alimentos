@@ -63,7 +63,7 @@ public class Composicion {
      */
     public void setFecha_duracion(String fecha) {
         Calendar cal_aux = GregorianCalendar.getInstance();
-        cal_aux.set(Integer.parseInt(fecha.substring(0, 4)), Integer.parseInt(fecha.substring(5, 7)), Integer.parseInt(fecha.substring(8, 10)));
+        cal_aux.set(Integer.parseInt(fecha.substring(0, 4)), Integer.parseInt(fecha.substring(5, 7))-1, Integer.parseInt(fecha.substring(8, 10)));
         this.fecha_duracion = cal_aux;
     }
 

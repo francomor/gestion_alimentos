@@ -239,7 +239,7 @@ public class Empresa {
 
         for (Establecimiento e : establecimientosAsociados) {
 
-            valores = new String[20][22];
+            valores = new String[100][22];
             valores = con.recuperar(valores, "select * from Producto_Alimenticio where Establecimiento_idEstablecimiento=" + e.getId() + ";", 22);
 
             //para cada PA recuperado se va guardando en el vector productos alimenticios

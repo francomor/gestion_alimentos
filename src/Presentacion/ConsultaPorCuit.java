@@ -7,16 +7,17 @@ package Presentacion;
 import Logica.Empresa;
 import Logica.Establecimiento;
 import Logica.ProductoAlimenticio;
+import java.awt.Color;
 import java.awt.event.KeyEvent;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.Vector;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.BorderFactory;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
-
 
 public class ConsultaPorCuit extends javax.swing.JPanel {
 
@@ -335,259 +336,237 @@ public class ConsultaPorCuit extends javax.swing.JPanel {
     }//GEN-LAST:event_botonBuscarMousePressed
 
     private void CampoCUITKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_CampoCUITKeyPressed
-        if(KeyEvent.VK_ENTER == evt.getKeyCode())
-        {
+        if (KeyEvent.VK_ENTER == evt.getKeyCode()) {
             consultaCuit(CampoCUIT.getText());
         }
     }//GEN-LAST:event_CampoCUITKeyPressed
 
     private void InfoAdicionalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InfoAdicionalActionPerformed
-        if(TablaEstablecimientoAsociado.getSelectedRowCount() == 1 ){
-        
-                DefaultTableModel tm = (DefaultTableModel) TablaEstablecimientoAsociado.getModel();
-                String dato=String.valueOf(tm.getValueAt(TablaEstablecimientoAsociado.getSelectedRow(),0));
-                
+        if (TablaEstablecimientoAsociado.getSelectedRowCount() == 1) {
+
+            DefaultTableModel tm = (DefaultTableModel) TablaEstablecimientoAsociado.getModel();
+            String dato = String.valueOf(tm.getValueAt(TablaEstablecimientoAsociado.getSelectedRow(), 0));
+
             try {
                 Establecimiento est = Establecimiento.recuperarPorNroRNE(dato);
-                JFrame jf= new InformacionAdicional(est);
+                JFrame jf = new InformacionAdicional(est);
                 jf.setVisible(true);
-            }
-            catch (SQLException | InstantiationException | IllegalAccessException ex) {
-                
+            } catch (SQLException | InstantiationException | IllegalAccessException ex) {
+
                 Logger.getLogger(ConsultaPorCuit.class.getName()).log(Level.SEVERE, null, ex);
             }
-               
-                
-           
+
         }
     }//GEN-LAST:event_InfoAdicionalActionPerformed
 
     private void TablaEstablecimientoAsociadoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TablaEstablecimientoAsociadoMouseClicked
-    
+
     }//GEN-LAST:event_TablaEstablecimientoAsociadoMouseClicked
 
     private void LimpiarTablasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LimpiarTablasActionPerformed
-       clearPanel();
+        clearPanel();
     }//GEN-LAST:event_LimpiarTablasActionPerformed
-    
-    public void cargarTablas(Empresa empresa, Vector<Establecimiento> establecimientos, Vector<ProductoAlimenticio> ProductosAlimenticios) 
-    {
 
-        
-            TablaDatosEmpresa.setModel(new javax.swing.table.DefaultTableModel(
-                    new Object[][]{
-                        {empresa.getNombre(),
-                            empresa.getRazon_social(),
-                            empresa.getDireccion(),
-                            empresa.getEmail(),
-                            empresa.getTelefono()}
-                    },
-                    new String[]{
-                        "Nombre", "Razon Social", "Direccion", "Email", "Telefono"
-                    }) {
-                Class[] types = new Class[]{
-                    java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
-                };
-                boolean[] canEdit = new boolean[]{
-                    false, false, false, false, false
-                };
+    public void cargarTablas(Empresa empresa, Vector<Establecimiento> establecimientos, Vector<ProductoAlimenticio> ProductosAlimenticios) {
 
-                public Class getColumnClass(int columnIndex) {
-                    return types[columnIndex];
-                }
-
-                public boolean isCellEditable(int rowIndex, int columnIndex) {
-                    return canEdit[columnIndex];
-                }
-            });
-
-            SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-
-            //cargo tabla con datos de establecimiento
-            
-            Object[][] datosDeEstablecimientos = new Object[establecimientos.size()][5];
-
-            for (int i = 0; i < establecimientos.size(); i++) {
-
-                datosDeEstablecimientos[i][0] = establecimientos.elementAt(i).getRne().getNumero();
-                datosDeEstablecimientos[i][1] = establecimientos.elementAt(i).getNombre();
-                datosDeEstablecimientos[i][2] = establecimientos.elementAt(i).getTelefono();
-                if (establecimientos.elementAt(i).getRne().getFecha_vencimiento() != null) {
-                    datosDeEstablecimientos[i][3] = sdf.format(establecimientos.elementAt(i).getRne().getFecha_vencimiento().getTime());
-                } else {
-                    datosDeEstablecimientos[i][3] = "";
-                }
-                datosDeEstablecimientos[i][4] = establecimientos.elementAt(i).getDireccion();
-
-            }
-
-            //seteo modelo de tabla
-            TablaEstablecimientoAsociado.setModel(new javax.swing.table.DefaultTableModel(
-                    datosDeEstablecimientos,
-                    new String[]{
-                        "Numero RNE", "Nombre establecimiento", "Telefono", "Vencimiento RNE", "Direccion"
-                    }
-            ) {
-                Class[] types = new Class[]{
-                    java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
-                };
-                boolean[] canEdit = new boolean[]{
-                    false, false, false, false, false
-                };
-
-                public Class getColumnClass(int columnIndex) {
-                    return types[columnIndex];
-                }
-
-                public boolean isCellEditable(int rowIndex, int columnIndex) {
-                    return canEdit[columnIndex];
-                }
-            });
-
-            Object[][] datosDePAAsociados = new Object[ProductosAlimenticios.size()][5];
-
-            //System.out.println(ProductosAlimenticios.size());
-            for (int i = 0; i < ProductosAlimenticios.size(); i++) {
-                datosDePAAsociados[i][0] = ProductosAlimenticios.elementAt(i).getRnpa().getNumero();
-                datosDePAAsociados[i][1] = ProductosAlimenticios.elementAt(i).getEstablecimiento().getRne().getNumero();
-                datosDePAAsociados[i][2] = ProductosAlimenticios.elementAt(i).getComposicion().getNombre_comercial();
-                datosDePAAsociados[i][3] = sdf.format(ProductosAlimenticios.elementAt(i).getRnpa().getFecha_vencimiento().getTime());
-                datosDePAAsociados[i][4] = ProductosAlimenticios.elementAt(i).getComposicion().getMarca();
-            }
-
-            TablaPAAsociado.setModel(new javax.swing.table.DefaultTableModel(
-                    datosDePAAsociados,
-                    new String[]{
-                        "Numero RNPA", "Numero RNE", "Nombre Producto", "Vencimiento RNPA", "Marca"
-                    }
-            ) {
-                boolean[] canEdit = new boolean[]{
-                    false, false, false, false, false
-                };
-
-                public boolean isCellEditable(int rowIndex, int columnIndex) {
-                    return canEdit[columnIndex];
-                }
-            });
-           
-
-        
-
-    }
-    
-    public void clearPanel()
-    {
-        CampoCUIT.setText("");
-        
-        //reseteo las tablas
-        
         TablaDatosEmpresa.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null, null}
-            },
-            new String [] {
-                "Nombre", "Razon Social", "Direccion", "Email", "Telefono"
-            }
-        ) {
-            Class[] types = new Class [] {
+                new Object[][]{
+                    {empresa.getNombre(),
+                        empresa.getRazon_social(),
+                        empresa.getDireccion(),
+                        empresa.getEmail(),
+                        empresa.getTelefono()}
+                },
+                new String[]{
+                    "Nombre", "Razon Social", "Direccion", "Email", "Telefono"
+                }) {
+            Class[] types = new Class[]{
                 java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
-            boolean[] canEdit = new boolean [] {
+            boolean[] canEdit = new boolean[]{
                 false, false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
+                return types[columnIndex];
             }
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
+                return canEdit[columnIndex];
             }
         });
-        
-        TablaEstablecimientoAsociado.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null, null}
-            },
-            new String [] {
-                "Numero RNE", "Nombre establecimiento", "Telefono", "Vencimiento RNE", "Direccion"
+
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+
+        //cargo tabla con datos de establecimiento
+        Object[][] datosDeEstablecimientos = new Object[establecimientos.size()][5];
+
+        for (int i = 0; i < establecimientos.size(); i++) {
+
+            datosDeEstablecimientos[i][0] = establecimientos.elementAt(i).getRne().getNumero();
+            datosDeEstablecimientos[i][1] = establecimientos.elementAt(i).getNombre();
+            datosDeEstablecimientos[i][2] = establecimientos.elementAt(i).getTelefono();
+            if (establecimientos.elementAt(i).getRne().getFecha_vencimiento() != null) {
+                datosDeEstablecimientos[i][3] = sdf.format(establecimientos.elementAt(i).getRne().getFecha_vencimiento().getTime());
+            } else {
+                datosDeEstablecimientos[i][3] = "";
             }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
-            };
-            boolean[] canEdit = new boolean [] {
-                false, false, false, false, false
-            };
+            datosDeEstablecimientos[i][4] = establecimientos.elementAt(i).getDireccion();
 
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        
-
-        
-        TablaPAAsociado.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null, null},
-
-            },
-            new String [] {
-                "Numero RNPA", "Numero RNE", "Nombre Producto", "Vencimiento RNPA", "Marca"
-            }
-        ) {
-            boolean[] canEdit = new boolean [] {
-                false, false, false, false, false
-            };
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        
-        
-        
-        
-    
-    
-    }
-    
-    public void consultaCuit(String cuit)
-    {
-    
-         
-        Vector<Establecimiento> establecimientos;
-        Vector<ProductoAlimenticio> ProductosAlimenticios;
-
-        try {
-
-            Empresa empresa;
-            empresa = Empresa.recuperarPorCuit(cuit);
-
-            //CARGA DE TABLAS
-            if (empresa != null) 
-            {
-
-                establecimientos = Empresa.recuperarEstablecimientosAsociados(cuit);
-                ProductosAlimenticios = Empresa.recuperarPAAsociados(cuit);
-
-                cargarTablas(empresa, establecimientos, ProductosAlimenticios);
-                
-
-            } 
-            else 
-            {
-                JOptionPane.showMessageDialog(null, "CUIT no encontrado.");
-                clearPanel();
-            }
-        } catch (SQLException | InstantiationException | IllegalAccessException ex) {
         }
-    
-    
+
+        //seteo modelo de tabla
+        TablaEstablecimientoAsociado.setModel(new javax.swing.table.DefaultTableModel(
+                datosDeEstablecimientos,
+                new String[]{
+                    "Numero RNE", "Nombre establecimiento", "Telefono", "Vencimiento RNE", "Direccion"
+                }
+        ) {
+            Class[] types = new Class[]{
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
+            boolean[] canEdit = new boolean[]{
+                false, false, false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types[columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit[columnIndex];
+            }
+        });
+
+        Object[][] datosDePAAsociados = new Object[ProductosAlimenticios.size()][5];
+
+        //System.out.println(ProductosAlimenticios.size());
+        for (int i = 0; i < ProductosAlimenticios.size(); i++) {
+            datosDePAAsociados[i][0] = ProductosAlimenticios.elementAt(i).getRnpa().getNumero();
+            datosDePAAsociados[i][1] = ProductosAlimenticios.elementAt(i).getEstablecimiento().getRne().getNumero();
+            datosDePAAsociados[i][2] = ProductosAlimenticios.elementAt(i).getComposicion().getNombre_comercial();
+            datosDePAAsociados[i][3] = sdf.format(ProductosAlimenticios.elementAt(i).getRnpa().getFecha_vencimiento().getTime());
+            datosDePAAsociados[i][4] = ProductosAlimenticios.elementAt(i).getComposicion().getMarca();
+        }
+
+        TablaPAAsociado.setModel(new javax.swing.table.DefaultTableModel(
+                datosDePAAsociados,
+                new String[]{
+                    "Numero RNPA", "Numero RNE", "Nombre Producto", "Vencimiento RNPA", "Marca"
+                }
+        ) {
+            boolean[] canEdit = new boolean[]{
+                false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit[columnIndex];
+            }
+        });
+
+    }
+
+    public void clearPanel() {
+        CampoCUIT.setText("");
+
+        //reseteo las tablas
+        TablaDatosEmpresa.setModel(new javax.swing.table.DefaultTableModel(
+                new Object[][]{
+                    {null, null, null, null, null}
+                },
+                new String[]{
+                    "Nombre", "Razon Social", "Direccion", "Email", "Telefono"
+                }
+        ) {
+            Class[] types = new Class[]{
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
+            boolean[] canEdit = new boolean[]{
+                false, false, false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types[columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit[columnIndex];
+            }
+        });
+
+        TablaEstablecimientoAsociado.setModel(new javax.swing.table.DefaultTableModel(
+                new Object[][]{
+                    {null, null, null, null, null}
+                },
+                new String[]{
+                    "Numero RNE", "Nombre establecimiento", "Telefono", "Vencimiento RNE", "Direccion"
+                }
+        ) {
+            Class[] types = new Class[]{
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
+            boolean[] canEdit = new boolean[]{
+                false, false, false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types[columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit[columnIndex];
+            }
+        });
+
+        TablaPAAsociado.setModel(new javax.swing.table.DefaultTableModel(
+                new Object[][]{
+                    {null, null, null, null, null},},
+                new String[]{
+                    "Numero RNPA", "Numero RNE", "Nombre Producto", "Vencimiento RNPA", "Marca"
+                }
+        ) {
+            boolean[] canEdit = new boolean[]{
+                false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit[columnIndex];
+            }
+        });
+
+    }
+
+    public void consultaCuit(String cuit) {
+
+        if (!cuit.equals("")) {
+            Vector<Establecimiento> establecimientos;
+            Vector<ProductoAlimenticio> ProductosAlimenticios;
+
+            try {
+
+                Empresa empresa;
+                empresa = Empresa.recuperarPorCuit(cuit);
+
+                //CARGA DE TABLAS
+                if (empresa != null) {
+
+                    establecimientos = Empresa.recuperarEstablecimientosAsociados(cuit);
+                    ProductosAlimenticios = Empresa.recuperarPAAsociados(cuit);
+
+                    cargarTablas(empresa, establecimientos, ProductosAlimenticios);
+                    CampoCUIT.setBorder(BorderFactory.createLineBorder(new Color(204, 204, 204), 1));
+                } else {
+                    CampoCUIT.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+                    JOptionPane.showMessageDialog(null, "CUIT no encontrado.");
+                    clearPanel();
+                }
+            } catch (SQLException | InstantiationException | IllegalAccessException ex) {
+            }
+
+        } else {
+            CampoCUIT.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+            JOptionPane.showMessageDialog(null, "Escriba un CUIT.");
+        }
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -41,14 +41,14 @@ public class ProductoAlimenticio {
     /**
      * Set fecha_carga_solicitud
      *
-     * @param fecha String con formato 2017-11-31
+     * @param fecha String con formato 2017-12-31
      */
     public void setFecha_carga_solicitud(String fecha) {
         Calendar cal_aux = GregorianCalendar.getInstance();
-        cal_aux.set(Integer.parseInt(fecha.substring(0, 4)), Integer.parseInt(fecha.substring(5, 7)), Integer.parseInt(fecha.substring(8, 10)));
+        cal_aux.set(Integer.parseInt(fecha.substring(0, 4)), Integer.parseInt(fecha.substring(5, 7))-1, Integer.parseInt(fecha.substring(8, 10)));
         this.fecha_carga_solicitud = cal_aux;
-    }
-
+    }    
+    
     public int getId() {
         return id;
     }
@@ -218,7 +218,7 @@ public class ProductoAlimenticio {
     private boolean guardarEnvasexProducto() throws SQLException, InstantiationException, IllegalAccessException {
         int e_id;
         ConexionBD con = ConexionBD.getConexion();
-        boolean result = false;
+        boolean result = true;
         for (Envase e : Envases) {
             if (!e.existe_envase(e.getCapacidad(), e.getMaterial(), e.getUnidad())) {
                 e.guardar_envase(e.getCapacidad(), e.getMaterial(), e.getUnidad());
@@ -230,6 +230,7 @@ public class ProductoAlimenticio {
 
             //si hay un error salir
             if (result == false) {
+                System.out.println ("Error en envase");
                 break;
             }
         }
@@ -247,7 +248,7 @@ public class ProductoAlimenticio {
     private boolean guardarMateriaPrimaxProducto() throws InstantiationException, IllegalAccessException, SQLException {
         int mp_id;
         ConexionBD con = ConexionBD.getConexion();
-        boolean result = false;
+        boolean result = true;
 
         for (MateriaPrima mp : materiasPrimas) {
             mp_id = mp.getId();
@@ -255,6 +256,7 @@ public class ProductoAlimenticio {
 
             //si hay un error salir
             if (result == false) {
+                System.out.println ("Error en mp");
                 break;
             }
         }

@@ -51,6 +51,7 @@ public class panelCargaEnvase extends javax.swing.JPanel {
         labelCapacidad.setText("Capacidad:");
         labelCapacidad.setName("labelCapacidad"); // NOI18N
 
+        textFieldCapacidad.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         textFieldCapacidad.setName("textFieldCapacidad"); // NOI18N
         textFieldCapacidad.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -87,6 +88,9 @@ public class panelCargaEnvase extends javax.swing.JPanel {
         buttonAddCapacidad.setBorderPainted(false);
         buttonAddCapacidad.setContentAreaFilled(false);
         buttonAddCapacidad.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                buttonAddCapacidadMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 buttonAddCapacidadMouseEntered(evt);
             }
@@ -97,17 +101,15 @@ public class panelCargaEnvase extends javax.swing.JPanel {
                 buttonAddCapacidadMousePressed(evt);
             }
         });
-        buttonAddCapacidad.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonAddCapacidadActionPerformed(evt);
-            }
-        });
 
         buttonAddUnidad.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/mas.png"))); // NOI18N
         buttonAddUnidad.setBorder(null);
         buttonAddUnidad.setBorderPainted(false);
         buttonAddUnidad.setContentAreaFilled(false);
         buttonAddUnidad.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                buttonAddUnidadMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 buttonAddUnidadMouseEntered(evt);
             }
@@ -116,11 +118,6 @@ public class panelCargaEnvase extends javax.swing.JPanel {
             }
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 buttonAddUnidadMousePressed(evt);
-            }
-        });
-        buttonAddUnidad.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonAddUnidadActionPerformed(evt);
             }
         });
 
@@ -161,12 +158,13 @@ public class panelCargaEnvase extends javax.swing.JPanel {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(buttonAddUnidad, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(labelCapacidad, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(textFieldCapacidad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(labelMaterial, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(labelUnidad, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(comboBoxUnidad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addComponent(comboBoxUnidad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(textFieldCapacidad, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(labelCapacidad, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 20, Short.MAX_VALUE))))
                         .addContainerGap(14, Short.MAX_VALUE))))
         );
     }// </editor-fold>//GEN-END:initComponents
@@ -187,29 +185,29 @@ public class panelCargaEnvase extends javax.swing.JPanel {
         buttonAddCapacidad.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/mas.png")));
     }//GEN-LAST:event_buttonAddCapacidadMouseExited
 
+    private void buttonAddUnidadMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttonAddUnidadMouseEntered
+        buttonAddUnidad.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/mas_entered.png")));
+    }//GEN-LAST:event_buttonAddUnidadMouseEntered
+
+    private void buttonAddUnidadMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttonAddUnidadMouseExited
+        buttonAddUnidad.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/mas.png")));
+    }//GEN-LAST:event_buttonAddUnidadMouseExited
+
+    private void buttonAddCapacidadMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttonAddCapacidadMouseClicked
+        buttonAddCapacidad.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/mas_entered.png")));
+    }//GEN-LAST:event_buttonAddCapacidadMouseClicked
+
+    private void buttonAddUnidadMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttonAddUnidadMouseClicked
+        buttonAddUnidad.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/mas_entered.png")));
+    }//GEN-LAST:event_buttonAddUnidadMouseClicked
+
     private void buttonAddCapacidadMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttonAddCapacidadMousePressed
         buttonAddCapacidad.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/mas_pressed.png")));
     }//GEN-LAST:event_buttonAddCapacidadMousePressed
 
-    private void buttonAddCapacidadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAddCapacidadActionPerformed
-        
-    }//GEN-LAST:event_buttonAddCapacidadActionPerformed
-
-    private void buttonAddUnidadMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttonAddUnidadMouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_buttonAddUnidadMouseEntered
-
-    private void buttonAddUnidadMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttonAddUnidadMouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_buttonAddUnidadMouseExited
-
     private void buttonAddUnidadMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttonAddUnidadMousePressed
-        // TODO add your handling code here:
+        buttonAddUnidad.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/mas_pressed.png")));
     }//GEN-LAST:event_buttonAddUnidadMousePressed
-
-    private void buttonAddUnidadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAddUnidadActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_buttonAddUnidadActionPerformed
 
     private void createComponentMap() {
         componentMap = new HashMap<>();

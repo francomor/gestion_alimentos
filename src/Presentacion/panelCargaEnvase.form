@@ -67,12 +67,14 @@
                       <Group type="103" groupAlignment="1" max="-2" attributes="0">
                           <Component id="buttonAddUnidad" alignment="0" pref="0" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="labelCapacidad" min="-2" pref="20" max="-2" attributes="0"/>
-                              <Component id="textFieldCapacidad" min="-2" max="-2" attributes="0"/>
                               <Component id="labelMaterial" min="-2" pref="20" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="labelUnidad" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
                                   <Component id="comboBoxUnidad" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                  <Component id="textFieldCapacidad" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="labelCapacidad" alignment="0" pref="20" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -95,6 +97,13 @@
     </Component>
     <Component class="javax.swing.JTextField" name="textFieldCapacidad">
       <Properties>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+            <LineBorder>
+              <Color PropertyName="color" blue="cc" green="cc" red="cc" type="rgb"/>
+            </LineBorder>
+          </Border>
+        </Property>
         <Property name="name" type="java.lang.String" value="textFieldCapacidad" noResource="true"/>
       </Properties>
       <Events>
@@ -173,10 +182,10 @@
         <Property name="contentAreaFilled" type="boolean" value="false"/>
       </Properties>
       <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="buttonAddCapacidadMouseClicked"/>
         <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="buttonAddCapacidadMouseEntered"/>
         <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="buttonAddCapacidadMouseExited"/>
         <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="buttonAddCapacidadMousePressed"/>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonAddCapacidadActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="buttonAddUnidad">
@@ -191,10 +200,10 @@
         <Property name="contentAreaFilled" type="boolean" value="false"/>
       </Properties>
       <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="buttonAddUnidadMouseClicked"/>
         <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="buttonAddUnidadMouseEntered"/>
         <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="buttonAddUnidadMouseExited"/>
         <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="buttonAddUnidadMousePressed"/>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonAddUnidadActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

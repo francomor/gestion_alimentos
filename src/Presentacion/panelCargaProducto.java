@@ -27,19 +27,11 @@ public class panelCargaProducto extends javax.swing.JPanel {
      */
     public panelCargaProducto() {
         initComponents();
-        panelCargaEnvase pCEnv = new panelCargaEnvase();
-        pCEnv.setPreferredSize(new Dimension(520, 30));
+
         vectorpanelesCargaEnvase = new Vector();
-        vectorpanelesCargaEnvase.add(pCEnv);
-        panelDescEnvase.add(pCEnv);
         panelDescEnvase.revalidate();
         panelDescEnvase.repaint();
-
-        panelCargaMateriaPrima pCMP = new panelCargaMateriaPrima();
-        pCEnv.setPreferredSize(new Dimension(520, 30));
         vectorpanelesCargaMP = new Vector();
-        vectorpanelesCargaMP.add(pCMP);
-        panelCompMP.add(pCMP);
         panelCompMP.revalidate();
         panelCompMP.repaint();
     }
@@ -77,8 +69,9 @@ public class panelCargaProducto extends javax.swing.JPanel {
         labelRegistroRNPA = new javax.swing.JLabel();
         labelRNPA = new javax.swing.JLabel();
         textFieldRNPA = new javax.swing.JTextField();
-        textFieldFechaVencimiento = new javax.swing.JFormattedTextField();
         labelFechaVencimiento = new javax.swing.JLabel();
+        textFieldFechaVencimiento = new javax.swing.JTextField();
+        labelFechaVencimiento_formato = new javax.swing.JLabel();
         panelDatosProducto = new javax.swing.JPanel();
         panelDatosProdAdentro = new javax.swing.JPanel();
         labelDatosPA = new javax.swing.JLabel();
@@ -105,6 +98,7 @@ public class panelCargaProducto extends javax.swing.JPanel {
         labelComp_Denominacion = new javax.swing.JLabel();
         labelComp_Contenido = new javax.swing.JLabel();
         labelComp_FechaDuracion = new javax.swing.JLabel();
+        labelFecha_duracion_Formato = new javax.swing.JLabel();
         panelCompCarMP = new javax.swing.JPanel();
         labelComp_MateriasPrimas = new javax.swing.JLabel();
         buttonAddMP = new javax.swing.JButton();
@@ -214,15 +208,18 @@ public class panelCargaProducto extends javax.swing.JPanel {
         panelBuscaRNELayout.setHorizontalGroup(
             panelBuscaRNELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelBuscaRNELayout.createSequentialGroup()
-                .addGap(5, 5, 5)
-                .addComponent(labelCargaProdAlimenticio))
-            .addGroup(panelBuscaRNELayout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addComponent(labelNumRNE, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(34, 34, 34)
-                .addComponent(textFieldRNE, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(6, 6, 6)
-                .addComponent(BuscarRNE, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(panelBuscaRNELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelBuscaRNELayout.createSequentialGroup()
+                        .addGap(5, 5, 5)
+                        .addComponent(labelCargaProdAlimenticio))
+                    .addGroup(panelBuscaRNELayout.createSequentialGroup()
+                        .addGap(25, 25, 25)
+                        .addComponent(labelNumRNE, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(textFieldRNE, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(BuscarRNE, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(350, Short.MAX_VALUE))
         );
         panelBuscaRNELayout.setVerticalGroup(
             panelBuscaRNELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -233,10 +230,9 @@ public class panelCargaProducto extends javax.swing.JPanel {
                 .addGroup(panelBuscaRNELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelBuscaRNELayout.createSequentialGroup()
                         .addGap(9, 9, 9)
-                        .addComponent(labelNumRNE, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(panelBuscaRNELayout.createSequentialGroup()
-                        .addGap(11, 11, 11)
-                        .addComponent(textFieldRNE, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(panelBuscaRNELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(labelNumRNE, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(textFieldRNE, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(BuscarRNE, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
 
@@ -271,14 +267,19 @@ public class panelCargaProducto extends javax.swing.JPanel {
         labelEmp_Email.setText("Email: ");
 
         label_CUIL.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        label_CUIL.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
 
         label_Nombre.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        label_Nombre.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
 
         label_RazonSocial.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        label_RazonSocial.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
 
         label_Email.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        label_Email.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
 
         label_Telefono.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        label_Telefono.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
 
         javax.swing.GroupLayout panelDatosEmpresaLayout = new javax.swing.GroupLayout(panelDatosEmpresa);
         panelDatosEmpresa.setLayout(panelDatosEmpresaLayout);
@@ -294,23 +295,21 @@ public class panelCargaProducto extends javax.swing.JPanel {
                             .addComponent(labelEmp_NombreEmpresa))
                         .addGap(18, 18, 18)
                         .addGroup(panelDatosEmpresaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(label_CUIL, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(label_Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(label_RazonSocial, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(215, 215, 215)
-                        .addGroup(panelDatosEmpresaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(panelDatosEmpresaLayout.createSequentialGroup()
-                                .addComponent(labelEmp_Telefono)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(label_Telefono, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(panelDatosEmpresaLayout.createSequentialGroup()
-                                .addComponent(labelEmp_Email, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(label_Email, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(label_Nombre, javax.swing.GroupLayout.DEFAULT_SIZE, 225, Short.MAX_VALUE)
+                            .addComponent(label_RazonSocial, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(label_CUIL, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(120, 120, 120)
+                        .addGroup(panelDatosEmpresaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(labelEmp_Telefono, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(labelEmp_Email, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(28, 28, 28)
+                        .addGroup(panelDatosEmpresaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(label_Telefono, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(label_Email, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(panelDatosEmpresaLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(labelDatoEmpresa)))
-                .addContainerGap(1357, Short.MAX_VALUE))
+                .addContainerGap(1234, Short.MAX_VALUE))
         );
         panelDatosEmpresaLayout.setVerticalGroup(
             panelDatosEmpresaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -352,15 +351,18 @@ public class panelCargaProducto extends javax.swing.JPanel {
         labelRNPA.setText("RNPA: ");
 
         textFieldRNPA.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        textFieldRNPA.setText("123456");
         textFieldRNPA.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
-
-        textFieldFechaVencimiento.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
-        textFieldFechaVencimiento.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(java.text.DateFormat.getDateInstance(java.text.DateFormat.SHORT))));
-        textFieldFechaVencimiento.setText("2017-11-31");
+        textFieldRNPA.setEnabled(false);
 
         labelFechaVencimiento.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         labelFechaVencimiento.setText("Fecha Vencimiento: ");
+
+        textFieldFechaVencimiento.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        textFieldFechaVencimiento.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
+        textFieldFechaVencimiento.setEnabled(false);
+
+        labelFechaVencimiento_formato.setFont(new java.awt.Font("Roboto", 0, 9)); // NOI18N
+        labelFechaVencimiento_formato.setText("Formato: 2017-12-31");
 
         javax.swing.GroupLayout panelRegistroRNPALayout = new javax.swing.GroupLayout(panelRegistroRNPA);
         panelRegistroRNPA.setLayout(panelRegistroRNPALayout);
@@ -374,12 +376,14 @@ public class panelCargaProducto extends javax.swing.JPanel {
                         .addGap(20, 20, 20)
                         .addComponent(labelRNPA, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(10, 10, 10)
-                        .addComponent(textFieldRNPA, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(textFieldRNPA, javax.swing.GroupLayout.DEFAULT_SIZE, 108, Short.MAX_VALUE)
                         .addGap(70, 70, 70)
                         .addComponent(labelFechaVencimiento)
-                        .addGap(4, 4, 4)
-                        .addComponent(textFieldFechaVencimiento, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(1484, Short.MAX_VALUE))
+                        .addGap(18, 18, 18)
+                        .addComponent(textFieldFechaVencimiento, javax.swing.GroupLayout.DEFAULT_SIZE, 109, Short.MAX_VALUE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(labelFechaVencimiento_formato)
+                .addContainerGap(1409, Short.MAX_VALUE))
         );
         panelRegistroRNPALayout.setVerticalGroup(
             panelRegistroRNPALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -389,10 +393,12 @@ public class panelCargaProducto extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(panelRegistroRNPALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(labelRNPA, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(labelFechaVencimiento, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(textFieldFechaVencimiento, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(textFieldRNPA, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(20, 20, 20))
+                    .addGroup(panelRegistroRNPALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(labelFechaVencimiento, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(textFieldFechaVencimiento, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(labelFechaVencimiento_formato, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(textFieldRNPA))
+                .addGap(15, 15, 15))
         );
 
         CargaBasica.add(panelRegistroRNPA, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 272, 2000, 77));
@@ -413,8 +419,8 @@ public class panelCargaProducto extends javax.swing.JPanel {
         labelNroFactura.setText("Nro factura: ");
 
         textFieldNroFactura.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        textFieldNroFactura.setText("123");
         textFieldNroFactura.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
+        textFieldNroFactura.setEnabled(false);
 
         labelRotulo.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         labelRotulo.setText("Rotulo: ");
@@ -423,6 +429,7 @@ public class panelCargaProducto extends javax.swing.JPanel {
         textAreaRotulo.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         textAreaRotulo.setRows(5);
         textAreaRotulo.setText("rotulo");
+        textAreaRotulo.setEnabled(false);
         jScrollPane1.setViewportView(textAreaRotulo);
 
         javax.swing.GroupLayout panelDatosProdAdentroLayout = new javax.swing.GroupLayout(panelDatosProdAdentro);
@@ -467,13 +474,13 @@ public class panelCargaProducto extends javax.swing.JPanel {
         panelCompDatos.setBackground(new java.awt.Color(255, 255, 255));
 
         textFieldComp_CAA.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        textFieldComp_CAA.setText("caa");
         textFieldComp_CAA.setToolTipText("");
         textFieldComp_CAA.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
+        textFieldComp_CAA.setEnabled(false);
 
         textFieldComp_NroTipoMarca.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        textFieldComp_NroTipoMarca.setText("tipomarca");
         textFieldComp_NroTipoMarca.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
+        textFieldComp_NroTipoMarca.setEnabled(false);
 
         labelComp_NroTipoMarca.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         labelComp_NroTipoMarca.setText("N° y tipo de registro de marca:");
@@ -482,8 +489,8 @@ public class panelCargaProducto extends javax.swing.JPanel {
         labelComp_CAA.setText("CAA Articulo N°:");
 
         textFieldComp_Denominacion.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        textFieldComp_Denominacion.setText("denominacion");
         textFieldComp_Denominacion.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
+        textFieldComp_Denominacion.setEnabled(false);
         textFieldComp_Denominacion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 textFieldComp_DenominacionActionPerformed(evt);
@@ -491,20 +498,20 @@ public class panelCargaProducto extends javax.swing.JPanel {
         });
 
         textFieldComp_Contenido.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        textFieldComp_Contenido.setText("contenido");
         textFieldComp_Contenido.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
+        textFieldComp_Contenido.setEnabled(false);
 
         textFieldComp_FechaDuracion.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        textFieldComp_FechaDuracion.setText("2017-11-31");
         textFieldComp_FechaDuracion.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
+        textFieldComp_FechaDuracion.setEnabled(false);
 
         textFieldComp_Marca.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        textFieldComp_Marca.setText("marca");
         textFieldComp_Marca.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
+        textFieldComp_Marca.setEnabled(false);
 
         textFieldComp_Nombre.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        textFieldComp_Nombre.setText("nombre");
         textFieldComp_Nombre.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
+        textFieldComp_Nombre.setEnabled(false);
         textFieldComp_Nombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 textFieldComp_NombreActionPerformed(evt);
@@ -535,6 +542,9 @@ public class panelCargaProducto extends javax.swing.JPanel {
         labelComp_FechaDuracion.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         labelComp_FechaDuracion.setText("Fecha de duracion:");
 
+        labelFecha_duracion_Formato.setFont(new java.awt.Font("Roboto", 0, 9)); // NOI18N
+        labelFecha_duracion_Formato.setText("Formato: 2017-12-31");
+
         javax.swing.GroupLayout panelCompDatosLayout = new javax.swing.GroupLayout(panelCompDatos);
         panelCompDatos.setLayout(panelCompDatosLayout);
         panelCompDatosLayout.setHorizontalGroup(
@@ -550,7 +560,10 @@ public class panelCargaProducto extends javax.swing.JPanel {
                             .addComponent(labelComp_Marca, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(panelCompDatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(textFieldComp_FechaDuracion, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(panelCompDatosLayout.createSequentialGroup()
+                                .addComponent(textFieldComp_FechaDuracion, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(labelFecha_duracion_Formato))
                             .addGroup(panelCompDatosLayout.createSequentialGroup()
                                 .addGroup(panelCompDatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(textFieldComp_Nombre)
@@ -619,7 +632,8 @@ public class panelCargaProducto extends javax.swing.JPanel {
                 .addGap(13, 13, 13)
                 .addGroup(panelCompDatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(textFieldComp_FechaDuracion, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(labelComp_FechaDuracion, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(labelComp_FechaDuracion, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(labelFecha_duracion_Formato, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
 
         panelCompCarMP.setBackground(new java.awt.Color(255, 255, 255));
@@ -634,6 +648,9 @@ public class panelCargaProducto extends javax.swing.JPanel {
         buttonAddMP.setBorderPainted(false);
         buttonAddMP.setContentAreaFilled(false);
         buttonAddMP.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                buttonAddMPMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 buttonAddMPMouseEntered(evt);
             }
@@ -740,8 +757,8 @@ public class panelCargaProducto extends javax.swing.JPanel {
         labelDesc_FormaUso.setText("Forma de uso del producto:");
 
         textFieldDesc_FormaUso.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        textFieldDesc_FormaUso.setText("formauso");
         textFieldDesc_FormaUso.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
+        textFieldDesc_FormaUso.setEnabled(false);
         textFieldDesc_FormaUso.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 textFieldDesc_FormaUsoActionPerformed(evt);
@@ -773,32 +790,32 @@ public class panelCargaProducto extends javax.swing.JPanel {
         labelDesc_InfoAdicional.setText("Información adicional:");
 
         textFieldDesc_InfoAdicional.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        textFieldDesc_InfoAdicional.setText("infoad");
         textFieldDesc_InfoAdicional.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
+        textFieldDesc_InfoAdicional.setEnabled(false);
 
         textFieldDesc_AQuienDirigido.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        textFieldDesc_AQuienDirigido.setText("aquein");
         textFieldDesc_AQuienDirigido.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
+        textFieldDesc_AQuienDirigido.setEnabled(false);
 
         textFieldDesc_ControlesEspeciales.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        textFieldDesc_ControlesEspeciales.setText("cuidado");
         textFieldDesc_ControlesEspeciales.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
+        textFieldDesc_ControlesEspeciales.setEnabled(false);
 
         textFieldDesc_InstruccionPrep.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        textFieldDesc_InstruccionPrep.setText("prepa");
         textFieldDesc_InstruccionPrep.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
+        textFieldDesc_InstruccionPrep.setEnabled(false);
 
         textFieldDesc_DondeVendido.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        textFieldDesc_DondeVendido.setText("donde");
         textFieldDesc_DondeVendido.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
+        textFieldDesc_DondeVendido.setEnabled(false);
 
         textFieldDesc_ModoConservacion.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        textFieldDesc_ModoConservacion.setText("conservacion");
         textFieldDesc_ModoConservacion.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
+        textFieldDesc_ModoConservacion.setEnabled(false);
 
         textFieldDesc_PeriodoAptitud.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        textFieldDesc_PeriodoAptitud.setText("aptitud");
         textFieldDesc_PeriodoAptitud.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
+        textFieldDesc_PeriodoAptitud.setEnabled(false);
 
         SeparadorDatosProducto3.setBackground(new java.awt.Color(27, 94, 32));
         SeparadorDatosProducto3.setForeground(new java.awt.Color(27, 94, 32));
@@ -856,7 +873,7 @@ public class panelCargaProducto extends javax.swing.JPanel {
                                     .addComponent(labelDesc_InfoAdicional)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(textFieldDesc_InfoAdicional, javax.swing.GroupLayout.PREFERRED_SIZE, 391, javax.swing.GroupLayout.PREFERRED_SIZE))))))
-                .addContainerGap(24, Short.MAX_VALUE))
+                .addContainerGap(28, Short.MAX_VALUE))
         );
         panelDescDatosLayout.setVerticalGroup(
             panelDescDatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -900,7 +917,7 @@ public class panelCargaProducto extends javax.swing.JPanel {
                 .addGroup(panelDescDatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(labelDesc_InfoAdicional, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(textFieldDesc_InfoAdicional, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(32, Short.MAX_VALUE))
+                .addContainerGap(29, Short.MAX_VALUE))
         );
 
         panelDescCarEnvase.setBackground(new java.awt.Color(255, 255, 255));
@@ -915,6 +932,9 @@ public class panelCargaProducto extends javax.swing.JPanel {
         buttonAddEnvase.setBorderPainted(false);
         buttonAddEnvase.setContentAreaFilled(false);
         buttonAddEnvase.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                buttonAddEnvaseMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 buttonAddEnvaseMouseEntered(evt);
             }
@@ -936,6 +956,9 @@ public class panelCargaProducto extends javax.swing.JPanel {
         buttonRemoveEnvase.setBorderPainted(false);
         buttonRemoveEnvase.setContentAreaFilled(false);
         buttonRemoveEnvase.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                buttonRemoveEnvaseMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 buttonRemoveEnvaseMouseEntered(evt);
             }
@@ -1061,12 +1084,12 @@ public class panelCargaProducto extends javax.swing.JPanel {
         labelNumProtocolo.setText("Numero Protocolo: ");
 
         textFieldNroProtocolo.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        textFieldNroProtocolo.setText("123456");
         textFieldNroProtocolo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
+        textFieldNroProtocolo.setEnabled(false);
 
         textFieldNroActa.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        textFieldNroActa.setText("654321");
         textFieldNroActa.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
+        textFieldNroActa.setEnabled(false);
 
         labelNroActa.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         labelNroActa.setText("Numero de Acta: ");
@@ -1107,6 +1130,7 @@ public class panelCargaProducto extends javax.swing.JPanel {
         CargaBasica.add(panelDatosMuestraLab, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 1520, -1, 193));
 
         botonGuardar.setText("Guardar");
+        botonGuardar.setEnabled(false);
         botonGuardar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botonGuardarActionPerformed(evt);
@@ -1138,6 +1162,7 @@ public class panelCargaProducto extends javax.swing.JPanel {
     }//GEN-LAST:event_textFieldRNEActionPerformed
 
     private void BuscarRNEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BuscarRNEActionPerformed
+
         buscarRNE();
     }//GEN-LAST:event_BuscarRNEActionPerformed
 
@@ -1148,50 +1173,134 @@ public class panelCargaProducto extends javax.swing.JPanel {
     private void textFieldDesc_FormaUsoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldDesc_FormaUsoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_textFieldDesc_FormaUsoActionPerformed
-    
-    private void buscarRNE()
-    {
-         try {
-            Empresa empresa = this.recuperarDatosEmpresa(textFieldRNE.getText());
-            if (empresa != null) {
-                label_CUIL.setText(String.valueOf(empresa.getCUIT()));
-                label_Nombre.setText(empresa.getNombre());
-                label_RazonSocial.setText(empresa.getRazon_social());
-                label_Email.setText(empresa.getEmail());
-                label_Telefono.setText(String.valueOf(empresa.getTelefono()));
-            } else {
-                JOptionPane.showMessageDialog(null, "Numero RNE no encontrado.");
+
+    private void buscarRNE() {
+        if (!textFieldRNE.getText().equals("")) {
+            try {
+
+                Empresa empresa = this.recuperarDatosEmpresa(textFieldRNE.getText());
+                if (empresa != null) {
+                    label_CUIL.setText(String.valueOf(empresa.getCUIT()));
+                    label_Nombre.setText(empresa.getNombre());
+                    label_RazonSocial.setText(empresa.getRazon_social());
+                    label_Email.setText(empresa.getEmail());
+                    label_Telefono.setText(String.valueOf(empresa.getTelefono()));
+                    textFieldRNE.setBorder(BorderFactory.createLineBorder(new Color(204, 204, 204), 1));
+                    habilitarCampos(true);
+                } else {
+                    habilitarCampos(false);
+                    resetearDatosParteEmpresa();
+                    textFieldRNE.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+                    JOptionPane.showMessageDialog(null, "Numero RNE no encontrado.");
+                }
+            } catch (SQLException | InstantiationException | IllegalAccessException ex) {
+                Logger.getLogger(panelCargaProducto.class.getName()).log(Level.SEVERE, null, ex);
             }
-        } catch (SQLException | InstantiationException | IllegalAccessException ex) {
-            Logger.getLogger(panelCargaProducto.class.getName()).log(Level.SEVERE, null, ex);
+        } else {
+            habilitarCampos(false);
+            resetearDatosParteEmpresa();
+            textFieldRNE.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+            JOptionPane.showMessageDialog(null, "Escriba un numero de RNE.");
         }
-        
+
     }
-    
+
+    /**
+     * Metodo que habilita/desabilita los campos del formulario
+     */
+    private void habilitarCampos(boolean enabled) {
+        textAreaRotulo.setEnabled(enabled);
+        textFieldComp_CAA.setEnabled(enabled);
+        textFieldComp_Contenido.setEnabled(enabled);
+        textFieldComp_Denominacion.setEnabled(enabled);
+        textFieldComp_FechaDuracion.setEnabled(enabled);
+        textFieldComp_Marca.setEnabled(enabled);
+        textFieldComp_Nombre.setEnabled(enabled);
+        textFieldComp_NroTipoMarca.setEnabled(enabled);
+        textFieldDesc_AQuienDirigido.setEnabled(enabled);
+        textFieldDesc_ControlesEspeciales.setEnabled(enabled);
+        textFieldDesc_DondeVendido.setEnabled(enabled);
+        textFieldDesc_FormaUso.setEnabled(enabled);
+        textFieldDesc_InfoAdicional.setEnabled(enabled);
+        textFieldDesc_InstruccionPrep.setEnabled(enabled);
+        textFieldDesc_ModoConservacion.setEnabled(enabled);
+        textFieldDesc_PeriodoAptitud.setEnabled(enabled);
+        textFieldFechaVencimiento.setEnabled(enabled);
+        textFieldNroActa.setEnabled(enabled);
+        textFieldNroFactura.setEnabled(enabled);
+        textFieldNroProtocolo.setEnabled(enabled);
+        textFieldRNPA.setEnabled(enabled);
+        botonGuardar.setEnabled(enabled);
+    }
+
+    /**
+     * Metodo que resetea los campos del panel
+     */
+    private void resetearPanel() {
+        textAreaRotulo.setText("");
+        textFieldComp_CAA.setText("");
+        textFieldComp_Contenido.setText("");
+        textFieldComp_Denominacion.setText("");
+        textFieldComp_FechaDuracion.setText("");
+        textFieldComp_Marca.setText("");
+        textFieldComp_Nombre.setText("");
+        textFieldComp_NroTipoMarca.setText("");
+        textFieldDesc_AQuienDirigido.setText("");
+        textFieldDesc_ControlesEspeciales.setText("");
+        textFieldDesc_DondeVendido.setText("");
+        textFieldDesc_FormaUso.setText("");
+        textFieldDesc_InfoAdicional.setText("");
+        textFieldDesc_InstruccionPrep.setText("");
+        textFieldDesc_ModoConservacion.setText("");
+        textFieldDesc_PeriodoAptitud.setText("");
+        textFieldFechaVencimiento.setText("");
+        textFieldNroActa.setText("");
+        textFieldNroFactura.setText("");
+        textFieldNroProtocolo.setText("");
+        textFieldRNPA.setText("");
+        textFieldRNE.setText("");
+        resetearDatosParteEmpresa();
+        habilitarCampos(false);
+    }
+
+    /**
+     * Metodo que resetea los campos de la parte de datos de la empresa
+     */
+    private void resetearDatosParteEmpresa() {
+        estab_aCargar = null;
+        label_CUIL.setText("");
+        label_Nombre.setText("");
+        label_RazonSocial.setText("");
+        label_Email.setText("");
+        label_Telefono.setText("");
+    }
+
     private void botonGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonGuardarActionPerformed
         try {
-    int validar=validarCampos();
+            int validar = validarCampos();
             switch (validar) {
                 case 0:
                     try {
-                        
+
                         ProductoAlimenticio producto = crearyCargarPA();
-                        
+
                         boolean result = producto.guardar();
                         if (result == true) {
-                            JOptionPane.showMessageDialog(null, "correcto.");
+                            JOptionPane.showMessageDialog(null, "Producto alimenticio cargado correctamente.");
+                            resetearPanel();
                         } else {
-                            JOptionPane.showMessageDialog(null, "error");
+                            JOptionPane.showMessageDialog(null, "Hubo un error al cargar.");
                         }
-                        
+
                     } catch (SQLException | InstantiationException | IllegalAccessException ex) {
                         Logger.getLogger(panelCargaProducto.class.getName()).log(Level.SEVERE, null, ex);
-                    }   break;
+                    }
+                    break;
                 case 1:
-                    JOptionPane.showMessageDialog(null, "falta rellenar algún campo");
+                    JOptionPane.showMessageDialog(null, "Falta rellenar algún campo.");
                     break;
                 case 2:
-                    JOptionPane.showMessageDialog(null, "el RNE ingresado no existe");
+                    JOptionPane.showMessageDialog(null, "El RNE ingresado no es valido.");
                     break;
                 default:
                     break;
@@ -1199,6 +1308,7 @@ public class panelCargaProducto extends javax.swing.JPanel {
         } catch (SQLException | InstantiationException | IllegalAccessException ex) {
             Logger.getLogger(panelCargaProducto.class.getName()).log(Level.SEVERE, null, ex);
         }
+
     }//GEN-LAST:event_botonGuardarActionPerformed
 
     private ProductoAlimenticio crearyCargarPA() {
@@ -1274,126 +1384,104 @@ public class panelCargaProducto extends javax.swing.JPanel {
     }
 
     private int validarCampos() throws SQLException, InstantiationException, IllegalAccessException {
-        textFieldComp_CAA.setBorder(BorderFactory.createLineBorder(new Color(206,201,200), 1));
-        textFieldComp_Marca.setBorder(BorderFactory.createLineBorder(new Color(206,201,200), 1));
-        textFieldComp_Denominacion.setBorder(BorderFactory.createLineBorder(new Color(206,201,200), 1));
-        textFieldRNE.setBorder(BorderFactory.createLineBorder(new Color(206,201,200), 1));
-        labelComp_CAA.setForeground(new Color(0,0,0));
-        labelComp_Marca.setForeground(new Color(0,0,0));
-        labelNumRNE.setForeground(new Color(0,0,0));
-        labelComp_Denominacion.setForeground(new Color(0,0,0));
-        
+        textFieldComp_CAA.setBorder(BorderFactory.createLineBorder(new Color(206, 201, 200), 1));
+        textFieldComp_Marca.setBorder(BorderFactory.createLineBorder(new Color(206, 201, 200), 1));
+        textFieldComp_Denominacion.setBorder(BorderFactory.createLineBorder(new Color(206, 201, 200), 1));
+        textFieldRNE.setBorder(BorderFactory.createLineBorder(new Color(206, 201, 200), 1));
+        labelComp_CAA.setForeground(new Color(0, 0, 0));
+        labelComp_Marca.setForeground(new Color(0, 0, 0));
+        labelNumRNE.setForeground(new Color(0, 0, 0));
+        labelComp_Denominacion.setForeground(new Color(0, 0, 0));
+
         Establecimiento e = new Establecimiento();
-        int result=0;
-        if(textFieldComp_CAA.getText().equals("")){
-            labelComp_CAA.setForeground(new Color(255,0,0));
+        int result = 0;
+        if (textFieldComp_CAA.getText().equals("")) {
+            labelComp_CAA.setForeground(new Color(255, 0, 0));
             textFieldComp_CAA.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
-            result=1;
+            result = 1;
         }
-        if(textFieldComp_Marca.getText().equals("")){
-            labelComp_Marca.setForeground(new Color(255,0,0));
+        if (textFieldComp_Marca.getText().equals("")) {
+            labelComp_Marca.setForeground(new Color(255, 0, 0));
             textFieldComp_Marca.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
-            
-            result=1;
+
+            result = 1;
         }
-        if(textFieldComp_Denominacion.getText().equals("")){
-            labelComp_Denominacion.setForeground(new Color(255,0,0));
+        if (textFieldComp_Denominacion.getText().equals("")) {
+            labelComp_Denominacion.setForeground(new Color(255, 0, 0));
             textFieldComp_Denominacion.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
-            result=1;
+            result = 1;
         }
-        if(textFieldRNE.getText().equals("")){
-            labelNumRNE.setForeground(new Color(255,0,0));
+        if (textFieldRNE.getText().equals("")) {
+            labelNumRNE.setForeground(new Color(255, 0, 0));
             textFieldRNE.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
-            result=1;
+            result = 1;
+        } else {
+            if (estab_aCargar == null) {
+                labelNumRNE.setForeground(new Color(255, 0, 0));
+                textFieldRNE.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+                result = 2;
+            }
         }
-        else{
-        if(!e.existe_RNE(textFieldRNE.getText())){
-             labelNumRNE.setForeground(new Color(255,0,0));
-             textFieldRNE.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
-            result=2;
-        }
-        }
-        
+
         return result;
-        
-     
+
     }
 
-    //NO ANDA EL CAMBIO DINAMICO DEL PANEL PREGUNTAR
     private void buttonAddEnvaseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAddEnvaseActionPerformed
-        panelCargaEnvase pCEnv = new panelCargaEnvase();
-        double height, width;
-        Dimension dimensionPanel;
-        pCEnv.setPreferredSize(new Dimension(520, 30));
-        vectorpanelesCargaEnvase.add(pCEnv);
-        panelDescEnvase.add(pCEnv);
+        if (estab_aCargar != null) {
 
-//        dimensionPanel = panelEnvase.getPreferredSize();
-//        height = dimensionPanel.getHeight();
-//        width = dimensionPanel.getWidth();
-//        height += 30;
-//        width += 520;
-        //panelEnvase.setPreferredSize(new Dimension((int)width,(int) height));
-        panelDescEnvase.revalidate();
-        panelDescEnvase.repaint();
+            panelCargaEnvase pCEnv = new panelCargaEnvase();
+            double height, width;
+            Dimension dimensionPanel;
+            pCEnv.setPreferredSize(new Dimension(520, 30));
+            vectorpanelesCargaEnvase.add(pCEnv);
+            panelDescEnvase.add(pCEnv);
+            panelDescEnvase.revalidate();
+            panelDescEnvase.repaint();
+            panelDatosProducto.revalidate();
+            panelDatosProducto.repaint();
 
-//        dimensionPanel = panelDatosProducto.getPreferredSize();
-//        height = dimensionPanel.getHeight();
-//        width = dimensionPanel.getWidth();
-//        height += 30;
-//        width += 520;
-        //panelDatosProducto.setPreferredSize(new Dimension((int)width,(int) height));
-        panelDatosProducto.revalidate();
-        panelDatosProducto.repaint();
-
-        this.revalidate();
-        this.repaint();
+            this.revalidate();
+            this.repaint();
+        }
     }//GEN-LAST:event_buttonAddEnvaseActionPerformed
 
     private void buttonRemoveEnvaseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonRemoveEnvaseActionPerformed
-        panelCargaEnvase pCEnv = vectorpanelesCargaEnvase.lastElement();
-        panelDescEnvase.remove(pCEnv);
-        vectorpanelesCargaEnvase.remove(pCEnv);
-        panelDescEnvase.revalidate();
-        panelDescEnvase.repaint();
+        if (!vectorpanelesCargaEnvase.isEmpty()) {
+            panelCargaEnvase pCEnv = vectorpanelesCargaEnvase.lastElement();
+            panelDescEnvase.remove(pCEnv);
+            vectorpanelesCargaEnvase.remove(pCEnv);
+            panelDescEnvase.revalidate();
+            panelDescEnvase.repaint();
+        }
     }//GEN-LAST:event_buttonRemoveEnvaseActionPerformed
 
     private void buttonAddMPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAddMPActionPerformed
-        panelCargaMateriaPrima pCMP = new panelCargaMateriaPrima();
-        double height, width;
-        Dimension dimensionPanel;
-        pCMP.setPreferredSize(new Dimension(520, 30));
-        vectorpanelesCargaMP.add(pCMP);
-        panelCompMP.add(pCMP);
+        if (estab_aCargar != null) {
+            panelCargaMateriaPrima pCMP = new panelCargaMateriaPrima();
+            double height, width;
+            Dimension dimensionPanel;
+            pCMP.setPreferredSize(new Dimension(520, 30));
+            vectorpanelesCargaMP.add(pCMP);
+            panelCompMP.add(pCMP);
+            panelCompMP.revalidate();
+            panelCompMP.repaint();
+            panelDatosProducto.revalidate();
+            panelDatosProducto.repaint();
 
-//        dimensionPanel = panelEnvase.getPreferredSize();
-//        height = dimensionPanel.getHeight();
-//        width = dimensionPanel.getWidth();
-//        height += 30;
-//        width += 520;
-        //panelEnvase.setPreferredSize(new Dimension((int)width,(int) height));
-        panelCompMP.revalidate();
-        panelCompMP.repaint();
-
-//        dimensionPanel = panelDatosProducto.getPreferredSize();
-//        height = dimensionPanel.getHeight();
-//        width = dimensionPanel.getWidth();
-//        height += 30;
-//        width += 520;
-        //panelDatosProducto.setPreferredSize(new Dimension((int)width,(int) height));
-        panelDatosProducto.revalidate();
-        panelDatosProducto.repaint();
-
-        this.revalidate();
-        this.repaint();
+            this.revalidate();
+            this.repaint();
+        }
     }//GEN-LAST:event_buttonAddMPActionPerformed
 
     private void buttonRemoveMPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonRemoveMPActionPerformed
-        panelCargaMateriaPrima pCMP = vectorpanelesCargaMP.lastElement();
-        panelCompMP.remove(pCMP);
-        vectorpanelesCargaMP.remove(pCMP);
-        panelCompMP.revalidate();
-        panelCompMP.repaint();
+        if (!vectorpanelesCargaMP.isEmpty()) {
+            panelCargaMateriaPrima pCMP = vectorpanelesCargaMP.lastElement();
+            panelCompMP.remove(pCMP);
+            vectorpanelesCargaMP.remove(pCMP);
+            panelCompMP.revalidate();
+            panelCompMP.repaint();
+        }
 
     }//GEN-LAST:event_buttonRemoveMPActionPerformed
 
@@ -1409,25 +1497,17 @@ public class panelCargaProducto extends javax.swing.JPanel {
         buttonAddMP.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/mas.png")));
     }//GEN-LAST:event_buttonAddMPMouseExited
 
-    private void buttonAddMPMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttonAddMPMousePressed
-        buttonAddMP.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/mas_pressed.png")));
-    }//GEN-LAST:event_buttonAddMPMousePressed
-
     private void buttonRemoveMPMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttonRemoveMPMouseEntered
         buttonRemoveMP.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/menos_entered.png")));
     }//GEN-LAST:event_buttonRemoveMPMouseEntered
 
     private void buttonRemoveMPMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttonRemoveMPMouseClicked
-
+        buttonRemoveMP.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/menos_entered.png")));
     }//GEN-LAST:event_buttonRemoveMPMouseClicked
 
     private void buttonRemoveMPMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttonRemoveMPMouseExited
         buttonRemoveMP.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/menos.png")));
     }//GEN-LAST:event_buttonRemoveMPMouseExited
-
-    private void buttonRemoveMPMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttonRemoveMPMousePressed
-        buttonRemoveMP.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/menos_pressed.png")));
-    }//GEN-LAST:event_buttonRemoveMPMousePressed
 
     private void buttonAddEnvaseMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttonAddEnvaseMouseEntered
         buttonAddEnvase.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/mas_entered.png")));
@@ -1449,10 +1529,6 @@ public class panelCargaProducto extends javax.swing.JPanel {
         buttonRemoveEnvase.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/menos.png")));
     }//GEN-LAST:event_buttonRemoveEnvaseMouseExited
 
-    private void buttonRemoveEnvaseMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttonRemoveEnvaseMousePressed
-        buttonRemoveEnvase.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/menos_pressed.png")));
-    }//GEN-LAST:event_buttonRemoveEnvaseMousePressed
-
     private void BuscarRNEMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BuscarRNEMouseEntered
         BuscarRNE.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/Search_24px.png")));
     }//GEN-LAST:event_BuscarRNEMouseEntered
@@ -1466,12 +1542,34 @@ public class panelCargaProducto extends javax.swing.JPanel {
     }//GEN-LAST:event_BuscarRNEMousePressed
 
     private void textFieldRNEKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_textFieldRNEKeyPressed
-        
-        if(KeyEvent.VK_ENTER == evt.getKeyCode())
-        {
+        if (KeyEvent.VK_ENTER == evt.getKeyCode()) {
             buscarRNE();
         }
     }//GEN-LAST:event_textFieldRNEKeyPressed
+
+    private void buttonRemoveEnvaseMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttonRemoveEnvaseMousePressed
+        buttonRemoveEnvase.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/menos_pressed.png")));
+    }//GEN-LAST:event_buttonRemoveEnvaseMousePressed
+
+    private void buttonRemoveEnvaseMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttonRemoveEnvaseMouseClicked
+        buttonRemoveEnvase.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/menos_entered.png")));
+    }//GEN-LAST:event_buttonRemoveEnvaseMouseClicked
+
+    private void buttonAddEnvaseMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttonAddEnvaseMouseClicked
+        buttonAddEnvase.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/mas_entered.png")));
+    }//GEN-LAST:event_buttonAddEnvaseMouseClicked
+
+    private void buttonAddMPMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttonAddMPMouseClicked
+        buttonAddMP.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/mas_entered.png")));
+    }//GEN-LAST:event_buttonAddMPMouseClicked
+
+    private void buttonRemoveMPMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttonRemoveMPMousePressed
+        buttonRemoveMP.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/menos_pressed.png")));
+    }//GEN-LAST:event_buttonRemoveMPMousePressed
+
+    private void buttonAddMPMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttonAddMPMousePressed
+        buttonAddMP.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/mas_pressed.png")));
+    }//GEN-LAST:event_buttonAddMPMousePressed
 
     private Empresa recuperarDatosEmpresa(String nro_rne) throws SQLException, InstantiationException, IllegalAccessException {
         Empresa empresa_salida = null;
@@ -1540,6 +1638,8 @@ public class panelCargaProducto extends javax.swing.JPanel {
     private javax.swing.JLabel labelEmp_RazonSocial;
     private javax.swing.JLabel labelEmp_Telefono;
     private javax.swing.JLabel labelFechaVencimiento;
+    private javax.swing.JLabel labelFechaVencimiento_formato;
+    private javax.swing.JLabel labelFecha_duracion_Formato;
     private javax.swing.JLabel labelNroActa;
     private javax.swing.JLabel labelNroFactura;
     private javax.swing.JLabel labelNumProtocolo;
@@ -1582,7 +1682,7 @@ public class panelCargaProducto extends javax.swing.JPanel {
     private javax.swing.JTextField textFieldDesc_InstruccionPrep;
     private javax.swing.JTextField textFieldDesc_ModoConservacion;
     private javax.swing.JTextField textFieldDesc_PeriodoAptitud;
-    private javax.swing.JFormattedTextField textFieldFechaVencimiento;
+    private javax.swing.JTextField textFieldFechaVencimiento;
     private javax.swing.JTextField textFieldNroActa;
     private javax.swing.JTextField textFieldNroFactura;
     private javax.swing.JTextField textFieldNroProtocolo;

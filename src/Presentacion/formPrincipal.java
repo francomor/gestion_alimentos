@@ -16,7 +16,7 @@ public class formPrincipal extends javax.swing.JFrame {
     public formPrincipal() {
         initComponents();
 
-        setIconImage(new ImageIcon(getClass().getResource("/resources/logomarcarn.png")).getImage());
+        setIconImage(new ImageIcon(getClass().getResource("/resources/icono.png")).getImage());
         this.setLocationRelativeTo(null);
         CardLayout card = (CardLayout) panelCard.getLayout();
         card.show(panelCard, "bienvenido");

@@ -17,28 +17,26 @@ import javax.swing.JOptionPane;
  *
  * @author Windows
  */
-public
-        class InformacionAdicional extends javax.swing.JFrame {
+public class InformacionAdicional extends javax.swing.JFrame {
 
     /**
      * Creates new form InformacionAdicional
+     *
      * @param obj
      */
     public InformacionAdicional(Object obj) {
         initComponents();
-        setIconImage(new ImageIcon(getClass().getResource("/resources/logomarcarn.png")).getImage());
+        this.setIconImage(new ImageIcon(getClass().getResource("/resources/logomarcarn.png")).getImage());
         this.setLocationRelativeTo(null);
         CardLayout card = (CardLayout) panelCard.getLayout();
-        
-        
-        if(obj instanceof Establecimiento){
-            cargarCamposEstablecimiento((Establecimiento)obj);
+
+        if (obj instanceof Establecimiento) {
+            cargarCamposEstablecimiento((Establecimiento) obj);
             card.show(panelCard, "establecimiento");
-        
+
         }
-        if(obj instanceof ProductoAlimenticio){
-        
-        
+        if (obj instanceof ProductoAlimenticio) {
+
         }
     }
 
@@ -339,54 +337,53 @@ public
     }//GEN-LAST:event_textFieldNroFacturaActionPerformed
 
     private void formWindowClosed(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosed
- 
+
     }//GEN-LAST:event_formWindowClosed
 
-    private
-     void cargarCamposEstablecimiento(Establecimiento est){
-        
+    private void cargarCamposEstablecimiento(Establecimiento est) {
+
         if (est == null) {
-                JOptionPane.showMessageDialog(null, "RNE no encontrado.");
+            JOptionPane.showMessageDialog(null, "RNE no encontrado.");
+        } else {
+            RNE rne = est.getRne();
+            //textFieldFechaCarga.setText(est.g());
+
+            SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+
+            if (est.getFechaDeCarga() != null) {
+                textFieldFechaCarga.setText(sdf.format(est.getFechaDeCarga().getTime()));
             } else {
-                RNE rne = est.getRne();
-                //textFieldFechaCarga.setText(est.g());
+                textFieldFechaCarga.setText("");
+            }
+            textFieldId_Categoria.setText(String.valueOf(est.getId_Categoria()));
+            textFieldId_Empresa.setText(String.valueOf(est.getCUIT_Empresa()));
+            textFieldId_Localidad.setText(String.valueOf(est.getId_Localidad()));
+            textFieldNombre.setText(est.getNombre());
+            textFieldDireccion.setText(est.getDireccion());
 
-                SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-
-                if (est.getFechaDeCarga() != null) {
-                    textFieldFechaCarga.setText(sdf.format(est.getFechaDeCarga().getTime()));
+            if (rne != null) {
+                textFieldNroRNE.setText(String.valueOf(rne.getNumero()));
+                if (rne.getFecha_vencimiento() != null) {
+                    textFieldFVencimientoRNE.setText(sdf.format(rne.getFecha_vencimiento().getTime()));
                 } else {
-                    textFieldFechaCarga.setText("");
-                }
-                textFieldId_Categoria.setText(String.valueOf(est.getId_Categoria()));
-                textFieldId_Empresa.setText(String.valueOf(est.getCUIT_Empresa()));
-                textFieldId_Localidad.setText(String.valueOf(est.getId_Localidad()));
-                textFieldNombre.setText(est.getNombre());
-                textFieldDireccion.setText(est.getDireccion());
-
-                if (rne != null) {
-                    textFieldNroRNE.setText(String.valueOf(rne.getNumero()));
-                    if (rne.getFecha_vencimiento() != null) {
-                        textFieldFVencimientoRNE.setText(sdf.format(rne.getFecha_vencimiento().getTime()));
-                    } else {
-                        textFieldFVencimientoRNE.setText("");
-                    }
-                }
-                if (est.getTelefono() != 0) {
-                    textFieldTelefono.setText(String.valueOf(est.getTelefono()));
-                } else {
-                    textFieldTelefono.setText("");
-                }
-
-                if (est.getTelefono() != 0) {
-                    textFieldNroFactura.setText(String.valueOf(est.getNro_factura()));
-                } else {
-                    textFieldNroFactura.setText("");
+                    textFieldFVencimientoRNE.setText("");
                 }
             }
-    
+            if (est.getTelefono() != 0) {
+                textFieldTelefono.setText(String.valueOf(est.getTelefono()));
+            } else {
+                textFieldTelefono.setText("");
+            }
+
+            if (est.getTelefono() != 0) {
+                textFieldNroFactura.setText(String.valueOf(est.getNro_factura()));
+            } else {
+                textFieldNroFactura.setText("");
+            }
+        }
+
     }
-    
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel jPanelBanner;
