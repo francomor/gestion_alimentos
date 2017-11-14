@@ -39,6 +39,7 @@ public class formPrincipal extends javax.swing.JFrame {
         label_ConsultaCUIT = new javax.swing.JLabel();
         label_CargaPA = new javax.swing.JLabel();
         label_ConsultaRNE = new javax.swing.JLabel();
+        label_EstadisticaPorcentajexRubro = new javax.swing.JLabel();
         panelCard = new javax.swing.JPanel();
         panelBienvenida = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -52,6 +53,8 @@ public class formPrincipal extends javax.swing.JFrame {
         scrollPanelConsultaRNE = new javax.swing.JScrollPane();
         scrollPanelConsultaRNE.getVerticalScrollBar().setUnitIncrement(16);
         consultaPorRNE1 = new Presentacion.ConsultaPorRNE();
+        scrollPanelEstadisticaPorcentajexRubro = new javax.swing.JScrollPane();
+        panelEstadisticasPorcentajexRubro1 = new Presentacion.panelEstadisticasPorcentajexRubro();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Sistema de gestion de alimentos - URESA Andina");
@@ -147,6 +150,24 @@ public class formPrincipal extends javax.swing.JFrame {
         });
         panelMenu.add(label_ConsultaRNE, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 70, -1, -1));
 
+        label_EstadisticaPorcentajexRubro.setBackground(new java.awt.Color(255, 255, 255));
+        label_EstadisticaPorcentajexRubro.setFont(new java.awt.Font("Roboto", 1, 12)); // NOI18N
+        label_EstadisticaPorcentajexRubro.setForeground(new java.awt.Color(255, 255, 255));
+        label_EstadisticaPorcentajexRubro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/atras.png"))); // NOI18N
+        label_EstadisticaPorcentajexRubro.setText("Porcentaje por rubro");
+        label_EstadisticaPorcentajexRubro.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                label_EstadisticaPorcentajexRubroMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                label_EstadisticaPorcentajexRubroMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                label_EstadisticaPorcentajexRubroMouseExited(evt);
+            }
+        });
+        panelMenu.add(label_EstadisticaPorcentajexRubro, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 40, -1, -1));
+
         getContentPane().add(panelMenu, java.awt.BorderLayout.PAGE_START);
 
         panelCard.setLayout(new java.awt.CardLayout());
@@ -166,16 +187,16 @@ public class formPrincipal extends javax.swing.JFrame {
         panelBienvenidaLayout.setHorizontalGroup(
             panelBienvenidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 917, Short.MAX_VALUE)
+            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 870, Short.MAX_VALUE)
         );
         panelBienvenidaLayout.setVerticalGroup(
             panelBienvenidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelBienvenidaLayout.createSequentialGroup()
-                .addContainerGap(206, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2)
-                .addContainerGap(276, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         panelCard.add(panelBienvenida, "bienvenida");
@@ -193,6 +214,10 @@ public class formPrincipal extends javax.swing.JFrame {
 
         panelCard.add(scrollPanelConsultaRNE, "consultaRNE");
 
+        scrollPanelEstadisticaPorcentajexRubro.setViewportView(panelEstadisticasPorcentajexRubro1);
+
+        panelCard.add(scrollPanelEstadisticaPorcentajexRubro, "porcentajexRubro");
+
         getContentPane().add(panelCard, java.awt.BorderLayout.CENTER);
 
         pack();
@@ -200,7 +225,7 @@ public class formPrincipal extends javax.swing.JFrame {
 
     private void label_CargaPAMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_label_CargaPAMouseClicked
         CardLayout card = (CardLayout) panelCard.getLayout();
-        card.show(panelCard, "cargaPA");
+        card.show(panelCard, "porcentajexRubro");
 
     }//GEN-LAST:event_label_CargaPAMouseClicked
 
@@ -246,6 +271,19 @@ public class formPrincipal extends javax.swing.JFrame {
     private void label_ConsultaRNEMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_label_ConsultaRNEMouseReleased
         // TODO add your handling code here:
     }//GEN-LAST:event_label_ConsultaRNEMouseReleased
+
+    private void label_EstadisticaPorcentajexRubroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_label_EstadisticaPorcentajexRubroMouseClicked
+        CardLayout card = (CardLayout) panelCard.getLayout();
+        card.show(panelCard, "porcentajexRubro");
+    }//GEN-LAST:event_label_EstadisticaPorcentajexRubroMouseClicked
+
+    private void label_EstadisticaPorcentajexRubroMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_label_EstadisticaPorcentajexRubroMouseEntered
+        label_EstadisticaPorcentajexRubro.setFont(new Font("Roboto", Font.BOLD, 13));
+    }//GEN-LAST:event_label_EstadisticaPorcentajexRubroMouseEntered
+
+    private void label_EstadisticaPorcentajexRubroMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_label_EstadisticaPorcentajexRubroMouseExited
+        label_EstadisticaPorcentajexRubro.setFont(new Font("Roboto", Font.BOLD, 12));
+    }//GEN-LAST:event_label_EstadisticaPorcentajexRubroMouseExited
 
     /**
      * @param args the command line arguments
@@ -293,12 +331,15 @@ public class formPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel label_ConsultaCUIT;
     private javax.swing.JLabel label_ConsultaRNE;
     private javax.swing.JLabel label_ESTADISTICAS;
+    private javax.swing.JLabel label_EstadisticaPorcentajexRubro;
     private javax.swing.JLabel label_TRAMITES;
     private javax.swing.JPanel panelBienvenida;
     private javax.swing.JPanel panelCard;
     private Presentacion.panelCargaProducto panelCargaProducto1;
+    private Presentacion.panelEstadisticasPorcentajexRubro panelEstadisticasPorcentajexRubro1;
     private javax.swing.JPanel panelMenu;
     private javax.swing.JScrollPane scrollPanelCargaPA;
     private javax.swing.JScrollPane scrollPanelConsultaRNE;
+    private javax.swing.JScrollPane scrollPanelEstadisticaPorcentajexRubro;
     // End of variables declaration//GEN-END:variables
 }
