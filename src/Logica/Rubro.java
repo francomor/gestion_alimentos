@@ -3,6 +3,8 @@ package Logica;
 import Persistencia.ConexionBD;
 import java.sql.SQLException;
 import java.util.Vector;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @author Francisco Herrero, Franco Morero y Mauricio Vazquez
@@ -158,4 +160,45 @@ public class Rubro {
 
         return salida;
     }
+    
+    
+    /**
+     * Obtiene la cantidad de veces que aparece el nombre de un rubro en la base
+     * de datos.
+     *
+     * @return Map con par [nombre,cantidad]
+     * @throws java.sql.SQLException
+     * @throws java.lang.InstantiationException
+     * @throws java.lang.IllegalAccessException
+     */
+    public static Map<String,String> getCantxNombre() throws SQLException, InstantiationException, IllegalAccessException {
+
+        
+        ConexionBD con = ConexionBD.getConexion();
+        Map<String,String> salida;
+
+        String consulta;
+        String[][] valores;
+        valores = new String[10][2];
+
+        //esta cnsulta nos devuelve los rubros usados, hay que hacer otra para los rubros que son 0
+        consulta = "select rubro.nombre, count(rubro.nombre) as cant";
+        consulta += " from rubro ";
+        consulta += " INNER JOIN establecimiento_has_rubro ON establecimiento_has_rubro.Rubro_id=rubro.id ";
+        consulta += " group by rubro.nombre;";
+
+        valores = con.recuperar(valores, consulta, 2);
+
+        salida = new HashMap<>();
+        
+        for (String[] valore : valores) {
+            if (valore[0] == null) {
+                break;
+            }
+            salida.put(valore[0],valore[1]);
+        }
+
+        return salida;
+    }
+
 }//end Rubro
