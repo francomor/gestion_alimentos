@@ -13,7 +13,6 @@ import java.util.Vector;
 public class Establecimiento {
 
     private int id;
-    private String categoria;
     private String direccion;
     private Calendar fechaDeCarga;
     private String nombre;
@@ -37,14 +36,6 @@ public class Establecimiento {
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public String getCategoria() {
-        return categoria;
-    }
-
-    public void setCategoria(String categoria) {
-        this.categoria = categoria;
     }
 
     public String getDireccion() {
@@ -329,4 +320,139 @@ public class Establecimiento {
         return result;
     }
 
+    public
+    Vector<ProductoAlimenticio> getProductosAsociados() throws SQLException, InstantiationException, IllegalAccessException 
+    {
+             Vector<ProductoAlimenticio> productosAlimenticios = new Vector<>();
+
+        //recupero los establecimientos asociados para poder obtener los Productos asociados a cada Establecimiento.
+        
+
+        ProductoAlimenticio auxiliar;
+        RNPA RNPAaux;
+        Composicion compAux;
+        Descripcion descAux;
+        boolean bandera = false;
+        String[][] valores;
+        ConexionBD con = ConexionBD.getConexion();
+
+ 
+
+            valores = new String[100][22];
+            valores = con.recuperar(valores, "select * from Producto_Alimenticio where Establecimiento_idEstablecimiento=" + this.getId() + ";", 22);
+
+            //para cada PA recuperado se va guardando en el vector productos alimenticios
+            for (String[] PA : valores) {
+                auxiliar = new ProductoAlimenticio();
+                RNPAaux = new RNPA();
+                compAux = new Composicion();
+                descAux = new Descripcion();
+
+                if (PA != null) {
+
+                    if (PA[0] != null) {
+                        auxiliar.setId(Integer.parseInt(PA[0]));
+                        bandera = true;
+                    }
+                    if (PA[1] != null) {
+                        auxiliar.setNro_factura(Integer.parseInt(PA[1]));
+                    }
+                    if (PA[2] != null) {
+                        RNPAaux.setNumero(Integer.parseInt(PA[2]));
+                    }
+                    if (PA[3] != null) {
+                        auxiliar.setRotulo(PA[3]);
+                    }
+                    if (PA[4] != null) {
+                        compAux.setCAA(PA[4]);
+                    }
+                    if (PA[5] != null) {
+                        compAux.setContenido(PA[5]);
+                    }
+                    if (PA[6] != null) {
+                        compAux.setDenominacion(PA[6]);
+                    }
+                    if (PA[7] != null) {
+                        compAux.setFecha_duracion(PA[7]);
+                    }
+                    if (PA[8] != null) {
+                        compAux.setMarca(PA[8]);
+                    }
+                    if (PA[9] != null) {
+                        compAux.setNombre_comercial(PA[9]);
+                    }
+                    if (PA[10] != null) {
+                        compAux.setNroytipo_registro_marca(PA[10]);
+                    }
+                    auxiliar.setComposicion(compAux);
+                    if (PA[11] != null) {
+                        auxiliar.setFecha_carga_solicitud(PA[0]);
+                    }
+                    if (PA[12] != null) {
+                        descAux.setControlesycuidados(PA[12]);
+                    }
+                    if (PA[13] != null) {
+                        descAux.setDestino_producto(PA[13]);
+                    }
+                    if (PA[14] != null) {
+                        descAux.setForma_uso_producto(PA[14]);
+                    }
+                    if (PA[15] != null) {
+                        descAux.setInformacion_adicional(PA[15]);
+                    }
+                    if (PA[16] != null) {
+                        descAux.setIntrucciones_preparacion(PA[16]);
+                    }
+                    if (PA[17] != null) {
+                        descAux.setLugar_venta(PA[17]);
+                    }
+                    if (PA[18] != null) {
+                        descAux.setModo_conservacion(PA[18]);
+                    }
+                    if (PA[19] != null) {
+                        descAux.setPeriodo_aptitud(PA[19]);
+                    }
+                    auxiliar.setDescripcion(descAux);
+                    if (PA[20] != null) {
+                        RNPAaux.setFecha_vencimiento(PA[20]);
+                    }
+                    auxiliar.setRnpa(RNPAaux);
+
+                    auxiliar.setEstablecimiento(this);
+                }
+                if (bandera) {
+                    productosAlimenticios.add(auxiliar);
+                    bandera = false;
+                }
+
+            }
+       
+        return productosAlimenticios;
+    }
+    
+    public String getNombreCategoria() throws SQLException, InstantiationException, IllegalAccessException
+    {
+ 
+        String[][] valores;
+        ConexionBD con = ConexionBD.getConexion();
+       
+        valores = new String[1][2];
+        valores = con.recuperar(valores, "select * from categoria where id=" + this.getId_Categoria()+ ";", 2);
+        
+    
+        return valores[0][1];
+    }
+    
+    public String getNombreLocalidad()throws SQLException, InstantiationException, IllegalAccessException
+    {
+        String[][] valores;
+        ConexionBD con = ConexionBD.getConexion();
+       
+        valores = new String[1][3];
+        valores = con.recuperar(valores, "select * from localidad where id=" + this.getId_Localidad()+ ";", 3);
+        
+    
+        return valores[0][1];
+    
+    }
 }//end Establecimiento
