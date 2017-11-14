@@ -36,10 +36,9 @@ public class formPrincipal extends javax.swing.JFrame {
         label_CONSULTAS = new javax.swing.JLabel();
         label_ESTADISTICAS = new javax.swing.JLabel();
         labelLogo = new javax.swing.JLabel();
-        label_PorcentajexRubro = new javax.swing.JLabel();
+        label_ConsultaCUIT = new javax.swing.JLabel();
         label_CargaPA = new javax.swing.JLabel();
         label_ConsultaRNE = new javax.swing.JLabel();
-        label_ConsultaCUIT1 = new javax.swing.JLabel();
         panelCard = new javax.swing.JPanel();
         panelBienvenida = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -49,12 +48,10 @@ public class formPrincipal extends javax.swing.JFrame {
         consultaPorCuit1 = new Presentacion.ConsultaPorCuit();
         scrollPanelCargaPA = new javax.swing.JScrollPane();
         scrollPanelCargaPA.getVerticalScrollBar().setUnitIncrement(16);
-        panelCargaProducto1 = new Presentacion.panelEstadisticasPorcentajexRubro();
+        panelCargaProducto1 = new Presentacion.panelCargaProducto();
         scrollPanelConsultaRNE = new javax.swing.JScrollPane();
         scrollPanelConsultaRNE.getVerticalScrollBar().setUnitIncrement(16);
         consultaPorRNE1 = new Presentacion.ConsultaPorRNE();
-        scrollPanelEstadisticaPorcentajexRubro = new javax.swing.JScrollPane();
-        panelEstadisticasPorcentajexRubro1 = new Presentacion.panelEstadisticasPorcentajexRubro();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Sistema de gestion de alimentos - URESA Andina");
@@ -90,26 +87,26 @@ public class formPrincipal extends javax.swing.JFrame {
         labelLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/logomarcarn.png"))); // NOI18N
         panelMenu.add(labelLogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 140, 110));
 
-        label_PorcentajexRubro.setBackground(new java.awt.Color(255, 255, 255));
-        label_PorcentajexRubro.setFont(new java.awt.Font("Roboto", 1, 12)); // NOI18N
-        label_PorcentajexRubro.setForeground(new java.awt.Color(255, 255, 255));
-        label_PorcentajexRubro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/atras.png"))); // NOI18N
-        label_PorcentajexRubro.setText("Porcentaje por rubro");
-        label_PorcentajexRubro.addMouseListener(new java.awt.event.MouseAdapter() {
+        label_ConsultaCUIT.setBackground(new java.awt.Color(255, 255, 255));
+        label_ConsultaCUIT.setFont(new java.awt.Font("Roboto", 1, 12)); // NOI18N
+        label_ConsultaCUIT.setForeground(new java.awt.Color(255, 255, 255));
+        label_ConsultaCUIT.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/atras.png"))); // NOI18N
+        label_ConsultaCUIT.setText("Consulta por CUIT");
+        label_ConsultaCUIT.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                label_PorcentajexRubroMouseClicked(evt);
+                label_ConsultaCUITMouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                label_PorcentajexRubroMouseEntered(evt);
+                label_ConsultaCUITMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                label_PorcentajexRubroMouseExited(evt);
+                label_ConsultaCUITMouseExited(evt);
             }
             public void mouseReleased(java.awt.event.MouseEvent evt) {
-                label_PorcentajexRubroMouseReleased(evt);
+                label_ConsultaCUITMouseReleased(evt);
             }
         });
-        panelMenu.add(label_PorcentajexRubro, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 40, -1, -1));
+        panelMenu.add(label_ConsultaCUIT, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 40, -1, -1));
 
         label_CargaPA.setBackground(new java.awt.Color(255, 255, 255));
         label_CargaPA.setFont(new java.awt.Font("Roboto", 1, 12)); // NOI18N
@@ -149,27 +146,6 @@ public class formPrincipal extends javax.swing.JFrame {
             }
         });
         panelMenu.add(label_ConsultaRNE, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 70, -1, -1));
-
-        label_ConsultaCUIT1.setBackground(new java.awt.Color(255, 255, 255));
-        label_ConsultaCUIT1.setFont(new java.awt.Font("Roboto", 1, 12)); // NOI18N
-        label_ConsultaCUIT1.setForeground(new java.awt.Color(255, 255, 255));
-        label_ConsultaCUIT1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/atras.png"))); // NOI18N
-        label_ConsultaCUIT1.setText("Consulta por CUIT");
-        label_ConsultaCUIT1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                label_ConsultaCUIT1MouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                label_ConsultaCUIT1MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                label_ConsultaCUIT1MouseExited(evt);
-            }
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                label_ConsultaCUIT1MouseReleased(evt);
-            }
-        });
-        panelMenu.add(label_ConsultaCUIT1, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 40, -1, -1));
 
         getContentPane().add(panelMenu, java.awt.BorderLayout.PAGE_START);
 
@@ -217,10 +193,6 @@ public class formPrincipal extends javax.swing.JFrame {
 
         panelCard.add(scrollPanelConsultaRNE, "consultaRNE");
 
-        scrollPanelEstadisticaPorcentajexRubro.setViewportView(panelEstadisticasPorcentajexRubro1);
-
-        panelCard.add(scrollPanelEstadisticaPorcentajexRubro, "estadisticaPorcentajexRubro");
-
         getContentPane().add(panelCard, java.awt.BorderLayout.CENTER);
 
         pack();
@@ -232,10 +204,10 @@ public class formPrincipal extends javax.swing.JFrame {
 
     }//GEN-LAST:event_label_CargaPAMouseClicked
 
-    private void label_PorcentajexRubroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_label_PorcentajexRubroMouseClicked
+    private void label_ConsultaCUITMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_label_ConsultaCUITMouseClicked
         CardLayout card = (CardLayout) panelCard.getLayout();
-        card.show(panelCard, "estadisticaPorcentajexRubro");
-    }//GEN-LAST:event_label_PorcentajexRubroMouseClicked
+        card.show(panelCard, "consultaCUIT");
+    }//GEN-LAST:event_label_ConsultaCUITMouseClicked
 
     private void label_CargaPAMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_label_CargaPAMouseEntered
         label_CargaPA.setFont(new Font("Roboto", Font.BOLD, 13));
@@ -245,17 +217,17 @@ public class formPrincipal extends javax.swing.JFrame {
         label_CargaPA.setFont(new Font("Roboto", Font.BOLD, 12));
     }//GEN-LAST:event_label_CargaPAMouseExited
 
-    private void label_PorcentajexRubroMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_label_PorcentajexRubroMouseEntered
-        label_PorcentajexRubro.setFont(new Font("Roboto", Font.BOLD, 13));
-    }//GEN-LAST:event_label_PorcentajexRubroMouseEntered
+    private void label_ConsultaCUITMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_label_ConsultaCUITMouseEntered
+        label_ConsultaCUIT.setFont(new Font("Roboto", Font.BOLD, 13));
+    }//GEN-LAST:event_label_ConsultaCUITMouseEntered
 
-    private void label_PorcentajexRubroMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_label_PorcentajexRubroMouseReleased
+    private void label_ConsultaCUITMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_label_ConsultaCUITMouseReleased
         // TODO add your handling code here:
-    }//GEN-LAST:event_label_PorcentajexRubroMouseReleased
+    }//GEN-LAST:event_label_ConsultaCUITMouseReleased
 
-    private void label_PorcentajexRubroMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_label_PorcentajexRubroMouseExited
-        label_PorcentajexRubro.setFont(new Font("Roboto", Font.BOLD, 12));
-    }//GEN-LAST:event_label_PorcentajexRubroMouseExited
+    private void label_ConsultaCUITMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_label_ConsultaCUITMouseExited
+        label_ConsultaCUIT.setFont(new Font("Roboto", Font.BOLD, 12));
+    }//GEN-LAST:event_label_ConsultaCUITMouseExited
 
     private void label_ConsultaRNEMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_label_ConsultaRNEMouseClicked
         
@@ -274,22 +246,6 @@ public class formPrincipal extends javax.swing.JFrame {
     private void label_ConsultaRNEMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_label_ConsultaRNEMouseReleased
         // TODO add your handling code here:
     }//GEN-LAST:event_label_ConsultaRNEMouseReleased
-
-    private void label_ConsultaCUIT1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_label_ConsultaCUIT1MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_label_ConsultaCUIT1MouseClicked
-
-    private void label_ConsultaCUIT1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_label_ConsultaCUIT1MouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_label_ConsultaCUIT1MouseEntered
-
-    private void label_ConsultaCUIT1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_label_ConsultaCUIT1MouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_label_ConsultaCUIT1MouseExited
-
-    private void label_ConsultaCUIT1MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_label_ConsultaCUIT1MouseReleased
-        // TODO add your handling code here:
-    }//GEN-LAST:event_label_ConsultaCUIT1MouseReleased
 
     /**
      * @param args the command line arguments
@@ -334,18 +290,15 @@ public class formPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel labelLogo;
     private javax.swing.JLabel label_CONSULTAS;
     private javax.swing.JLabel label_CargaPA;
-    private javax.swing.JLabel label_ConsultaCUIT1;
+    private javax.swing.JLabel label_ConsultaCUIT;
     private javax.swing.JLabel label_ConsultaRNE;
     private javax.swing.JLabel label_ESTADISTICAS;
-    private javax.swing.JLabel label_PorcentajexRubro;
     private javax.swing.JLabel label_TRAMITES;
     private javax.swing.JPanel panelBienvenida;
     private javax.swing.JPanel panelCard;
-    private Presentacion.panelEstadisticasPorcentajexRubro panelCargaProducto1;
-    private Presentacion.panelEstadisticasPorcentajexRubro panelEstadisticasPorcentajexRubro1;
+    private Presentacion.panelCargaProducto panelCargaProducto1;
     private javax.swing.JPanel panelMenu;
     private javax.swing.JScrollPane scrollPanelCargaPA;
     private javax.swing.JScrollPane scrollPanelConsultaRNE;
-    private javax.swing.JScrollPane scrollPanelEstadisticaPorcentajexRubro;
     // End of variables declaration//GEN-END:variables
 }
