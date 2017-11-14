@@ -131,7 +131,7 @@
                       <Component id="EtiquetaEstablecimientoAsociado" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="ScrollpanelEstablecimientoAsociado" min="-2" pref="99" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                       <Component id="SeparadorPAAsociado" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="EtiquetaPAAsociado" min="-2" max="-2" attributes="0"/>

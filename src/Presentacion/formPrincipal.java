@@ -38,7 +38,6 @@ public class formPrincipal extends javax.swing.JFrame {
         labelLogo = new javax.swing.JLabel();
         label_ConsultaCUIT = new javax.swing.JLabel();
         label_CargaPA = new javax.swing.JLabel();
-        label_ConsultaRNE = new javax.swing.JLabel();
         panelCard = new javax.swing.JPanel();
         panelBienvenida = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -49,9 +48,6 @@ public class formPrincipal extends javax.swing.JFrame {
         scrollPanelCargaPA = new javax.swing.JScrollPane();
         scrollPanelCargaPA.getVerticalScrollBar().setUnitIncrement(16);
         panelCargaProducto1 = new Presentacion.panelCargaProducto();
-        scrollPanelConsultaRNE = new javax.swing.JScrollPane();
-        scrollPanelConsultaRNE.getVerticalScrollBar().setUnitIncrement(16);
-        consultaPorRNE1 = new Presentacion.ConsultaPorRNE();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Sistema de gestion de alimentos - URESA Andina");
@@ -126,27 +122,6 @@ public class formPrincipal extends javax.swing.JFrame {
         });
         panelMenu.add(label_CargaPA, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 40, -1, -1));
 
-        label_ConsultaRNE.setBackground(new java.awt.Color(255, 255, 255));
-        label_ConsultaRNE.setFont(new java.awt.Font("Roboto", 1, 12)); // NOI18N
-        label_ConsultaRNE.setForeground(new java.awt.Color(255, 255, 255));
-        label_ConsultaRNE.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/atras.png"))); // NOI18N
-        label_ConsultaRNE.setText("Consulta por RNE");
-        label_ConsultaRNE.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                label_ConsultaRNEMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                label_ConsultaRNEMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                label_ConsultaRNEMouseExited(evt);
-            }
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                label_ConsultaRNEMouseReleased(evt);
-            }
-        });
-        panelMenu.add(label_ConsultaRNE, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 70, -1, -1));
-
         getContentPane().add(panelMenu, java.awt.BorderLayout.PAGE_START);
 
         panelCard.setLayout(new java.awt.CardLayout());
@@ -189,10 +164,6 @@ public class formPrincipal extends javax.swing.JFrame {
 
         panelCard.add(scrollPanelCargaPA, "cargaPA");
 
-        scrollPanelConsultaRNE.setViewportView(consultaPorRNE1);
-
-        panelCard.add(scrollPanelConsultaRNE, "consultaRNE");
-
         getContentPane().add(panelCard, java.awt.BorderLayout.CENTER);
 
         pack();
@@ -228,24 +199,6 @@ public class formPrincipal extends javax.swing.JFrame {
     private void label_ConsultaCUITMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_label_ConsultaCUITMouseExited
         label_ConsultaCUIT.setFont(new Font("Roboto", Font.BOLD, 12));
     }//GEN-LAST:event_label_ConsultaCUITMouseExited
-
-    private void label_ConsultaRNEMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_label_ConsultaRNEMouseClicked
-        
-        CardLayout card = (CardLayout) panelCard.getLayout();
-        card.show(panelCard, "consultaRNE");
-    }//GEN-LAST:event_label_ConsultaRNEMouseClicked
-
-    private void label_ConsultaRNEMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_label_ConsultaRNEMouseEntered
-       label_ConsultaRNE.setFont(new Font("Roboto", Font.BOLD, 13));
-    }//GEN-LAST:event_label_ConsultaRNEMouseEntered
-
-    private void label_ConsultaRNEMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_label_ConsultaRNEMouseExited
-        label_ConsultaRNE.setFont(new Font("Roboto", Font.BOLD, 12));
-    }//GEN-LAST:event_label_ConsultaRNEMouseExited
-
-    private void label_ConsultaRNEMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_label_ConsultaRNEMouseReleased
-        // TODO add your handling code here:
-    }//GEN-LAST:event_label_ConsultaRNEMouseReleased
 
     /**
      * @param args the command line arguments
@@ -284,14 +237,12 @@ public class formPrincipal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JScrollPane ScrollPanelConsultaCUIT;
     private Presentacion.ConsultaPorCuit consultaPorCuit1;
-    private Presentacion.ConsultaPorRNE consultaPorRNE1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel labelLogo;
     private javax.swing.JLabel label_CONSULTAS;
     private javax.swing.JLabel label_CargaPA;
     private javax.swing.JLabel label_ConsultaCUIT;
-    private javax.swing.JLabel label_ConsultaRNE;
     private javax.swing.JLabel label_ESTADISTICAS;
     private javax.swing.JLabel label_TRAMITES;
     private javax.swing.JPanel panelBienvenida;
@@ -299,6 +250,5 @@ public class formPrincipal extends javax.swing.JFrame {
     private Presentacion.panelCargaProducto panelCargaProducto1;
     private javax.swing.JPanel panelMenu;
     private javax.swing.JScrollPane scrollPanelCargaPA;
-    private javax.swing.JScrollPane scrollPanelConsultaRNE;
     // End of variables declaration//GEN-END:variables
 }

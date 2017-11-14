@@ -304,7 +304,7 @@ public class ConsultaPorCuit extends javax.swing.JPanel {
                         .addComponent(EtiquetaEstablecimientoAsociado)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(ScrollpanelEstablecimientoAsociado, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(24, 24, 24)
+                        .addGap(39, 39, 39)
                         .addComponent(SeparadorPAAsociado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(EtiquetaPAAsociado)
