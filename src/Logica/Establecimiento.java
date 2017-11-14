@@ -146,7 +146,7 @@ public class Establecimiento {
     }
 
     /**
-     * Recupera una empresa por su id
+     * Recupera una Establecimiento por su id
      *
      * @param id id de la empresa
      * @return Establecimiento con todos sus valores cargados, en caso que no se
@@ -216,7 +216,7 @@ public class Establecimiento {
     }
 
     /**
-     * Recupera una empresa por su numero de RNE
+     * Recupera una Establecimiento por su numero de RNE
      *
      * @param nro_rne nro_rne de la empresa
      * @return Establecimiento con todos sus valores cargados, en caso que no se

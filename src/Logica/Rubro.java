@@ -14,7 +14,7 @@ public class Rubro {
 
     private int id;
     private String nombre;
-    public Establecimiento m_Establecimiento;
+    private Establecimiento m_Establecimiento;
 
     public Rubro() {
 

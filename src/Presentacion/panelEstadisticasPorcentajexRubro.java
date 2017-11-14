@@ -56,7 +56,7 @@ public class panelEstadisticasPorcentajexRubro extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        PorcentajexRubro observado;
+
         try {
             observado = new PorcentajexRubro();
             observado.addObserver(graficoBarra);
@@ -68,7 +68,7 @@ public class panelEstadisticasPorcentajexRubro extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
-
+    PorcentajexRubro observado;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private Presentacion.GraficoBarra graficoBarra;
     private Presentacion.GraficoTorta graficoTorta;

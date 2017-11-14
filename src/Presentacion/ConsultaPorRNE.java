@@ -499,7 +499,7 @@ public
                 Establecimiento est = Establecimiento.recuperarPorNroRNE(textFieldRNE.getText());
                  
                 if (est != null){
-                    Empresa empresa = this.recuperarDatosEmpresa(textFieldRNE.getText());
+                    Empresa empresa = est.getM_Empresa();
                     
                     label_CUIL.setText(String.valueOf(empresa.getCUIT()));
                     label_Nombre.setText(empresa.getNombre());
@@ -572,19 +572,7 @@ public
 
     }
     
-    private Empresa recuperarDatosEmpresa(String nro_rne) throws SQLException, InstantiationException, IllegalAccessException {
-        Empresa empresa_salida = null;
-        try {
-             Establecimiento estab_aCargar = Establecimiento.recuperarPorNroRNE(nro_rne);
-            if (estab_aCargar != null) {
-                empresa_salida = estab_aCargar.getM_Empresa();
-            }
 
-        } catch (SQLException | InstantiationException | IllegalAccessException ex) {
-            Logger.getLogger(Establecimiento.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        return empresa_salida;
-    }
     
 
     
