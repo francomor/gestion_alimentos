@@ -225,7 +225,7 @@ public class formPrincipal extends javax.swing.JFrame {
 
     private void label_CargaPAMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_label_CargaPAMouseClicked
         CardLayout card = (CardLayout) panelCard.getLayout();
-        card.show(panelCard, "porcentajexRubro");
+        card.show(panelCard, "cargaPA");
 
     }//GEN-LAST:event_label_CargaPAMouseClicked
 

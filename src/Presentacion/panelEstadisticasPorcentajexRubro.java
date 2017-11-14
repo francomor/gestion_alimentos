@@ -33,6 +33,8 @@ public class panelEstadisticasPorcentajexRubro extends javax.swing.JPanel {
 
         labelPorcentajexRubro = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        graficoBarra = new Presentacion.GraficoBarra();
+        graficoTorta = new Presentacion.GraficoTorta();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -49,19 +51,18 @@ public class panelEstadisticasPorcentajexRubro extends javax.swing.JPanel {
             }
         });
         add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(77, 57, -1, -1));
+        add(graficoBarra, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, 330, 320));
+        add(graficoTorta, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 120, 360, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         PorcentajexRubro observado;
         try {
             observado = new PorcentajexRubro();
-            GraficoTorta observador;
-            observador = new GraficoTorta();
-
-            observado.addObserver(observador);
-
+            observado.addObserver(graficoBarra);
+            observado.addObserver(graficoTorta);
             observado.actualizarEstado();
-            observado.actualizarEstado();
+            
         } catch (SQLException | IllegalAccessException | InstantiationException ex) {
             Logger.getLogger(panelEstadisticasPorcentajexRubro.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -69,6 +70,8 @@ public class panelEstadisticasPorcentajexRubro extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private Presentacion.GraficoBarra graficoBarra;
+    private Presentacion.GraficoTorta graficoTorta;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel labelPorcentajexRubro;
     // End of variables declaration//GEN-END:variables

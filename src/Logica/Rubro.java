@@ -3,7 +3,7 @@ package Logica;
 import Persistencia.ConexionBD;
 import java.sql.SQLException;
 import java.util.Vector;
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
@@ -185,11 +185,12 @@ public class Rubro {
         consulta = "select rubro.nombre, count(rubro.nombre) as cant";
         consulta += " from rubro ";
         consulta += " INNER JOIN establecimiento_has_rubro ON establecimiento_has_rubro.Rubro_id=rubro.id ";
-        consulta += " group by rubro.nombre;";
+        consulta += " group by rubro.nombre";
+        consulta += " order by rubro.nombre asc;";
 
         valores = con.recuperar(valores, consulta, 2);
 
-        salida = new HashMap<>();
+        salida = new LinkedHashMap<>();
         
         for (String[] valore : valores) {
             if (valore[0] == null) {

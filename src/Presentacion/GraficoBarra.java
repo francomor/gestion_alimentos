@@ -13,22 +13,23 @@ import java.util.Observer;
 import javax.swing.ImageIcon;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.JFreeChart;
-import org.jfree.data.general.DefaultPieDataset;
+import org.jfree.chart.plot.PlotOrientation;
+import org.jfree.data.category.DefaultCategoryDataset;
 
 /**
  *
  * @author Franco
  */
-public class GraficoTorta extends javax.swing.JPanel implements Observer {
+public class GraficoBarra extends javax.swing.JPanel implements Observer {
 
     private BufferedImage image;
-    private final int IMG_WIDTH = 200;
+    private final int IMG_WIDTH = 400;
     private final int IMG_HEIGHT = 300;
 
     /**
      * Creates new form GraficoBarra
      */
-    public GraficoTorta() {
+    public GraficoBarra() {
         initComponents();
     }
 
@@ -57,19 +58,19 @@ public class GraficoTorta extends javax.swing.JPanel implements Observer {
 
             System.out.println("Nueva Actualizacion: " + o + " -> " + arg);
             // Fuente de Datos
-            DefaultPieDataset data = new DefaultPieDataset();
+            DefaultCategoryDataset data = new DefaultCategoryDataset();
 
             //Iterando sobre el mapa
             Iterator it = ((Map) arg).entrySet().iterator();
             while (it.hasNext()) {
                 Map.Entry pair = (Map.Entry) it.next();
                 //System.out.println(pair.getKey() + " = " + pair.getValue());
-                data.setValue((Comparable) pair.getKey(), Double.parseDouble((String) pair.getValue()));
+                data.setValue(Double.parseDouble((String) pair.getValue()),"cantidad",(Comparable) pair.getKey());
                 //it.remove(); // avoids a ConcurrentModificationException
             }
 
             // Creando el Grafico
-            JFreeChart chart = ChartFactory.createPieChart(null, data, true, false, false);
+            JFreeChart chart = ChartFactory.createBarChart(null,null,null, data,PlotOrientation.VERTICAL, true, false, false);
 
             // Setear imagen en el label
             image = chart.createBufferedImage(IMG_WIDTH, IMG_HEIGHT);
