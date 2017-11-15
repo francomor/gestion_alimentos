@@ -46,13 +46,8 @@ public
         labelEmp_CUIL = new javax.swing.JLabel();
         labelEmp_NombreEmpresa = new javax.swing.JLabel();
         labelEmp_RazonSocial = new javax.swing.JLabel();
-        label_RazonSocial = new javax.swing.JLabel();
-        label_Nombre = new javax.swing.JLabel();
-        label_CUIL = new javax.swing.JLabel();
         labelEmp_Telefono = new javax.swing.JLabel();
         labelEmp_Email = new javax.swing.JLabel();
-        label_Email = new javax.swing.JLabel();
-        label_Telefono = new javax.swing.JLabel();
         labelNumRNE = new javax.swing.JLabel();
         textFieldRNE = new javax.swing.JTextField();
         BuscarRNE = new javax.swing.JButton();
@@ -78,6 +73,11 @@ public
         textFieldTelefono = new javax.swing.JTextField();
         textFieldDireccion = new javax.swing.JTextField();
         labelDireccion = new javax.swing.JLabel();
+        textFieldCUIT = new javax.swing.JTextField();
+        textFieldNombreEmpresa = new javax.swing.JTextField();
+        textFieldRazonSocial = new javax.swing.JTextField();
+        textFieldTelefonoEmpresa = new javax.swing.JTextField();
+        textFieldEmailEmpresa = new javax.swing.JTextField();
 
         setBackground(new java.awt.Color(255, 255, 255));
 
@@ -98,26 +98,11 @@ public
         labelEmp_RazonSocial.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         labelEmp_RazonSocial.setText("Razon Social: ");
 
-        label_RazonSocial.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        label_RazonSocial.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
-
-        label_Nombre.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        label_Nombre.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
-
-        label_CUIL.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        label_CUIL.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
-
         labelEmp_Telefono.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         labelEmp_Telefono.setText("Telefono: ");
 
         labelEmp_Email.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         labelEmp_Email.setText("Email: ");
-
-        label_Email.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        label_Email.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
-
-        label_Telefono.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        label_Telefono.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
 
         labelNumRNE.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         labelNumRNE.setText("Numero RNE: ");
@@ -127,11 +112,6 @@ public
         textFieldRNE.setText("32132132");
         textFieldRNE.setToolTipText("");
         textFieldRNE.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
-        textFieldRNE.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textFieldRNEActionPerformed(evt);
-            }
-        });
         textFieldRNE.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 textFieldRNEKeyPressed(evt);
@@ -205,11 +185,6 @@ public
         textFieldFechaCarga.setEditable(false);
         textFieldFechaCarga.setBackground(new java.awt.Color(255, 255, 255));
         textFieldFechaCarga.setEnabled(false);
-        textFieldFechaCarga.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textFieldFechaCargaActionPerformed(evt);
-            }
-        });
 
         labelNroFactura.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         labelNroFactura.setText("Nro Factura:");
@@ -217,11 +192,6 @@ public
         textFieldNroFactura.setEditable(false);
         textFieldNroFactura.setBackground(new java.awt.Color(255, 255, 255));
         textFieldNroFactura.setEnabled(false);
-        textFieldNroFactura.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textFieldNroFacturaActionPerformed(evt);
-            }
-        });
 
         lavelCategoria.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         lavelCategoria.setText("Categoria:");
@@ -240,11 +210,6 @@ public
         textFieldFVencimientoRNE.setEditable(false);
         textFieldFVencimientoRNE.setBackground(new java.awt.Color(255, 255, 255));
         textFieldFVencimientoRNE.setEnabled(false);
-        textFieldFVencimientoRNE.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textFieldFVencimientoRNEActionPerformed(evt);
-            }
-        });
 
         labelFVencimientoRNE.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         labelFVencimientoRNE.setText("Fecha vencimiento RNE:");
@@ -255,23 +220,33 @@ public
         textFieldTelefono.setEditable(false);
         textFieldTelefono.setBackground(new java.awt.Color(255, 255, 255));
         textFieldTelefono.setEnabled(false);
-        textFieldTelefono.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textFieldTelefonoActionPerformed(evt);
-            }
-        });
 
         textFieldDireccion.setEditable(false);
         textFieldDireccion.setBackground(new java.awt.Color(255, 255, 255));
         textFieldDireccion.setEnabled(false);
-        textFieldDireccion.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textFieldDireccionActionPerformed(evt);
-            }
-        });
 
         labelDireccion.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         labelDireccion.setText("Direccion:");
+
+        textFieldCUIT.setEditable(false);
+        textFieldCUIT.setBackground(new java.awt.Color(255, 255, 255));
+        textFieldCUIT.setEnabled(false);
+
+        textFieldNombreEmpresa.setEditable(false);
+        textFieldNombreEmpresa.setBackground(new java.awt.Color(255, 255, 255));
+        textFieldNombreEmpresa.setEnabled(false);
+
+        textFieldRazonSocial.setEditable(false);
+        textFieldRazonSocial.setBackground(new java.awt.Color(255, 255, 255));
+        textFieldRazonSocial.setEnabled(false);
+
+        textFieldTelefonoEmpresa.setEditable(false);
+        textFieldTelefonoEmpresa.setBackground(new java.awt.Color(255, 255, 255));
+        textFieldTelefonoEmpresa.setEnabled(false);
+
+        textFieldEmailEmpresa.setEditable(false);
+        textFieldEmailEmpresa.setBackground(new java.awt.Color(255, 255, 255));
+        textFieldEmailEmpresa.setEnabled(false);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -283,81 +258,84 @@ public
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGap(54, 54, 54)
-                                    .addComponent(EtiquetaDatosEmpresa, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGap(39, 39, 39)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(layout.createSequentialGroup()
-                                            .addGap(12, 12, 12)
-                                            .addComponent(labelNumRNE, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGap(18, 18, 18)
-                                            .addComponent(textFieldRNE, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                            .addComponent(BuscarRNE, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addComponent(EtiquetaConsultaPorRNE)))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGap(54, 54, 54)
-                                    .addComponent(EtiquetaPAAsociado))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addContainerGap()
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(labelEmp_RazonSocial)
-                                        .addComponent(labelEmp_CUIL)
-                                        .addComponent(labelEmp_NombreEmpresa))
-                                    .addGap(18, 18, 18)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(label_Nombre, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(label_CUIL, javax.swing.GroupLayout.DEFAULT_SIZE, 225, Short.MAX_VALUE)
-                                        .addComponent(label_RazonSocial, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                    .addGap(120, 120, 120)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(labelEmp_Telefono, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(labelEmp_Email, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGap(28, 28, 28)
-                                    .addComponent(label_Email, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                    .addGap(49, 49, 49)
-                                    .addComponent(label_Telefono, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(labelFechaCarga)
-                                    .addComponent(labelNroFactura)
-                                    .addComponent(lavelCategoria)
-                                    .addComponent(labelNombre))
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(textFieldNroFactura, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(textFieldNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(textFieldFechaCarga, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(textFieldCategoria, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(52, 52, 52)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(labelFVencimientoRNE)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(66, 66, 66)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(labelLocalidad)
-                                            .addComponent(labelDireccion)
-                                            .addComponent(labelTelefono))))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(textFieldLocalidad, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(textFieldTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(textFieldFVencimientoRNE, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(textFieldDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(54, 54, 54)
-                                .addComponent(labelTitulo)))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(12, 12, 12)
-                        .addComponent(ScrollpanelPAAsociado, javax.swing.GroupLayout.PREFERRED_SIZE, 834, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap())
+                        .addComponent(ScrollpanelPAAsociado, javax.swing.GroupLayout.PREFERRED_SIZE, 834, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(54, 54, 54)
+                        .addComponent(EtiquetaDatosEmpresa, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(39, 39, 39)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(12, 12, 12)
+                                .addComponent(labelNumRNE, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(textFieldRNE, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(BuscarRNE, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(EtiquetaConsultaPorRNE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(54, 54, 54)
+                        .addComponent(EtiquetaPAAsociado))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(labelFechaCarga)
+                            .addComponent(labelNroFactura)
+                            .addComponent(lavelCategoria)
+                            .addComponent(labelNombre))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(textFieldNroFactura, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(textFieldNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(textFieldFechaCarga, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(textFieldCategoria, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(118, 118, 118)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(labelDireccion)
+                                        .addGap(3, 3, 3))
+                                    .addComponent(labelTelefono, javax.swing.GroupLayout.DEFAULT_SIZE, 62, Short.MAX_VALUE)))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(labelFVencimientoRNE, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(labelLocalidad, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(21, 21, 21)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(textFieldLocalidad, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(textFieldTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(textFieldFVencimientoRNE, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(textFieldDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(54, 54, 54)
+                        .addComponent(labelTitulo))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(labelEmp_NombreEmpresa)
+                                    .addComponent(labelEmp_CUIL))
+                                .addGap(38, 38, 38)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(textFieldNombreEmpresa, javax.swing.GroupLayout.DEFAULT_SIZE, 225, Short.MAX_VALUE)
+                                    .addComponent(textFieldCUIT)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(labelEmp_RazonSocial)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(textFieldRazonSocial)))
+                        .addGap(119, 119, 119)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(labelEmp_Telefono, javax.swing.GroupLayout.DEFAULT_SIZE, 72, Short.MAX_VALUE)
+                            .addComponent(labelEmp_Email, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(textFieldTelefonoEmpresa, javax.swing.GroupLayout.DEFAULT_SIZE, 225, Short.MAX_VALUE)
+                            .addComponent(textFieldEmailEmpresa))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -377,24 +355,23 @@ public
                 .addGap(18, 18, 18)
                 .addComponent(EtiquetaDatosEmpresa, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(label_Email, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(labelEmp_CUIL)
-                    .addComponent(labelEmp_Email, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(label_CUIL, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(labelEmp_Email, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(textFieldCUIT, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(textFieldEmailEmpresa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(15, 15, 15)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(labelEmp_NombreEmpresa, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(labelEmp_Telefono, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(label_Telefono, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(15, 15, 15)
-                        .addComponent(labelEmp_RazonSocial, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(label_Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(label_RazonSocial, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(labelEmp_NombreEmpresa, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(labelEmp_Telefono, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(textFieldNombreEmpresa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(textFieldTelefonoEmpresa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(15, 15, 15)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(labelEmp_RazonSocial, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textFieldRazonSocial, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(SeparadorDatosEstablecimiento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -413,10 +390,14 @@ public
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(textFieldNroFactura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(labelNroFactura))
-                        .addGap(15, 15, 15)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(textFieldCategoria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lavelCategoria)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(15, 15, 15)
+                                .addComponent(textFieldCategoria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(lavelCategoria)
+                                .addGap(2, 2, 2))))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(labelDireccion)
@@ -430,9 +411,9 @@ public
                             .addComponent(textFieldFVencimientoRNE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(labelFVencimientoRNE))
                         .addGap(15, 15, 15)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(textFieldLocalidad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(labelLocalidad))))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(textFieldLocalidad)
+                            .addComponent(labelLocalidad, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(SeparadorPAAsociado, javax.swing.GroupLayout.PREFERRED_SIZE, 3, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -442,10 +423,6 @@ public
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
-
-    private void textFieldRNEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldRNEActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textFieldRNEActionPerformed
 
     private void textFieldRNEKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_textFieldRNEKeyPressed
         if (KeyEvent.VK_ENTER == evt.getKeyCode()) {
@@ -469,26 +446,6 @@ public
 
         buscarRNE();
     }//GEN-LAST:event_BuscarRNEActionPerformed
-
-    private void textFieldFechaCargaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldFechaCargaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textFieldFechaCargaActionPerformed
-
-    private void textFieldNroFacturaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldNroFacturaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textFieldNroFacturaActionPerformed
-
-    private void textFieldDireccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldDireccionActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textFieldDireccionActionPerformed
-
-    private void textFieldFVencimientoRNEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldFVencimientoRNEActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textFieldFVencimientoRNEActionPerformed
-
-    private void textFieldTelefonoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldTelefonoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textFieldTelefonoActionPerformed
     
     private void buscarRNE() {
             
@@ -501,11 +458,11 @@ public
                 if (est != null){
                     Empresa empresa = est.getM_Empresa();
                     
-                    label_CUIL.setText(String.valueOf(empresa.getCUIT()));
-                    label_Nombre.setText(empresa.getNombre());
-                    label_RazonSocial.setText(empresa.getRazon_social());
-                    label_Email.setText(empresa.getEmail());
-                    label_Telefono.setText(String.valueOf(empresa.getTelefono()));
+                    textFieldCUIT.setText(String.valueOf(empresa.getCUIT()));
+                    textFieldNombreEmpresa.setText(empresa.getNombre());
+                    textFieldRazonSocial.setText(empresa.getRazon_social());
+                    textFieldEmailEmpresa.setText(empresa.getEmail());
+                    textFieldTelefonoEmpresa.setText(String.valueOf(empresa.getTelefono()));
                     textFieldRNE.setBorder(BorderFactory.createLineBorder(new Color(204, 204, 204), 1));
                     
             
@@ -579,11 +536,11 @@ public
     private
            void resetearCampos() {
             
-            label_CUIL.setText("");
-            label_Nombre.setText("");
-            label_RazonSocial.setText("");
-            label_Email.setText("");
-            label_Telefono.setText("");
+            textFieldCUIT.setText("");
+            textFieldNombreEmpresa.setText("");
+            textFieldRazonSocial.setText("");
+            textFieldEmailEmpresa.setText("");
+            textFieldTelefonoEmpresa.setText("");
             
             textFieldDireccion.setText("");
             textFieldFVencimientoRNE.setText("");
@@ -604,7 +561,7 @@ public
         Object[][] datosDePAAsociados = new Object[ProductosAlimenticios.size()][5];
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
         
-        //System.out.println(ProductosAlimenticios.size());
+        
         for (int i = 0; i < ProductosAlimenticios.size(); i++) {
             datosDePAAsociados[i][0] = ProductosAlimenticios.elementAt(i).getRnpa().getNumero();
             datosDePAAsociados[i][1] = ProductosAlimenticios.elementAt(i).getEstablecimiento().getRne().getNumero();
@@ -676,21 +633,21 @@ public
     private javax.swing.JLabel labelNumRNE;
     private javax.swing.JLabel labelTelefono;
     private javax.swing.JLabel labelTitulo;
-    private javax.swing.JLabel label_CUIL;
-    private javax.swing.JLabel label_Email;
-    private javax.swing.JLabel label_Nombre;
-    private javax.swing.JLabel label_RazonSocial;
-    private javax.swing.JLabel label_Telefono;
     private javax.swing.JLabel lavelCategoria;
+    private javax.swing.JTextField textFieldCUIT;
     private javax.swing.JTextField textFieldCategoria;
     private javax.swing.JTextField textFieldDireccion;
+    private javax.swing.JTextField textFieldEmailEmpresa;
     private javax.swing.JTextField textFieldFVencimientoRNE;
     private javax.swing.JTextField textFieldFechaCarga;
     private javax.swing.JTextField textFieldLocalidad;
     private javax.swing.JTextField textFieldNombre;
+    private javax.swing.JTextField textFieldNombreEmpresa;
     private javax.swing.JTextField textFieldNroFactura;
     private javax.swing.JTextField textFieldRNE;
+    private javax.swing.JTextField textFieldRazonSocial;
     private javax.swing.JTextField textFieldTelefono;
+    private javax.swing.JTextField textFieldTelefonoEmpresa;
     // End of variables declaration//GEN-END:variables
 
    

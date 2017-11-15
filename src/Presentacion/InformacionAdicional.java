@@ -9,6 +9,7 @@ import Logica.Establecimiento;
 import Logica.ProductoAlimenticio;
 import Logica.RNE;
 import java.awt.CardLayout;
+import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
@@ -23,8 +24,11 @@ public class InformacionAdicional extends javax.swing.JFrame {
      * Creates new form InformacionAdicional
      *
      * @param obj
+     * @throws java.sql.SQLException
+     * @throws java.lang.InstantiationException
+     * @throws java.lang.IllegalAccessException
      */
-    public InformacionAdicional(Object obj) {
+    public InformacionAdicional(Object obj) throws SQLException, InstantiationException, IllegalAccessException {
         initComponents();
         this.setIconImage(new ImageIcon(getClass().getResource("/resources/logomarcarn.png")).getImage());
         this.setLocationRelativeTo(null);
@@ -66,8 +70,6 @@ public class InformacionAdicional extends javax.swing.JFrame {
         textFieldNroRNE = new javax.swing.JTextField();
         labelFVencimientoRNE = new javax.swing.JLabel();
         textFieldFVencimientoRNE = new javax.swing.JTextField();
-        labelNroRNE1 = new javax.swing.JLabel();
-        textFieldId_Empresa = new javax.swing.JTextField();
         labelFVencimientoRNE1 = new javax.swing.JLabel();
         textFieldId_Localidad = new javax.swing.JTextField();
         labelNroFactura = new javax.swing.JLabel();
@@ -123,20 +125,10 @@ public class InformacionAdicional extends javax.swing.JFrame {
         labelFechaCarga.setText("Fecha Carga:");
 
         textFieldFechaCarga.setEnabled(false);
-        textFieldFechaCarga.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textFieldFechaCargaActionPerformed(evt);
-            }
-        });
 
         labelDireccion.setText("Direccion:");
 
         textFieldDireccion.setEnabled(false);
-        textFieldDireccion.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textFieldDireccionActionPerformed(evt);
-            }
-        });
 
         labelTelefono.setText("Telefono: ");
 
@@ -145,39 +137,20 @@ public class InformacionAdicional extends javax.swing.JFrame {
         labelNroRNE.setText("Nro RNE:");
 
         textFieldNroRNE.setEnabled(false);
-        textFieldNroRNE.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textFieldNroRNEActionPerformed(evt);
-            }
-        });
 
         labelFVencimientoRNE.setText("Fecha vencimiento RNE:");
 
         textFieldFVencimientoRNE.setEnabled(false);
 
-        labelNroRNE1.setText("id_Empresa:");
-
-        textFieldId_Empresa.setEnabled(false);
-        textFieldId_Empresa.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textFieldId_EmpresaActionPerformed(evt);
-            }
-        });
-
-        labelFVencimientoRNE1.setText("id_Localidad:");
+        labelFVencimientoRNE1.setText("Localidad:");
 
         textFieldId_Localidad.setEnabled(false);
 
         labelNroFactura.setText("Nro Factura:");
 
         textFieldNroFactura.setEnabled(false);
-        textFieldNroFactura.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textFieldNroFacturaActionPerformed(evt);
-            }
-        });
 
-        labelFVencimientoRNE2.setText("id_Categoria:");
+        labelFVencimientoRNE2.setText("Categoria:");
 
         textFieldId_Categoria.setEnabled(false);
 
@@ -194,19 +167,25 @@ public class InformacionAdicional extends javax.swing.JFrame {
                             .addGap(40, 40, 40)
                             .addComponent(textFieldNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(panelEstablecimientoLayout.createSequentialGroup()
-                            .addGroup(panelEstablecimientoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(panelEstablecimientoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                 .addGroup(panelEstablecimientoLayout.createSequentialGroup()
+                                    .addComponent(labelFVencimientoRNE2)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(textFieldId_Categoria, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(panelEstablecimientoLayout.createSequentialGroup()
+                                    .addGroup(panelEstablecimientoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addGroup(panelEstablecimientoLayout.createSequentialGroup()
+                                            .addGroup(panelEstablecimientoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(labelFechaCarga)
+                                                .addComponent(labelNroFactura))
+                                            .addGap(18, 18, 18))
+                                        .addGroup(panelEstablecimientoLayout.createSequentialGroup()
+                                            .addComponent(labelNroRNE)
+                                            .addGap(39, 39, 39)))
                                     .addGroup(panelEstablecimientoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(labelFechaCarga)
-                                        .addComponent(labelNroFactura))
-                                    .addGap(18, 18, 18))
-                                .addGroup(panelEstablecimientoLayout.createSequentialGroup()
-                                    .addComponent(labelNroRNE)
-                                    .addGap(39, 39, 39)))
-                            .addGroup(panelEstablecimientoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(textFieldNroFactura, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(textFieldFechaCarga, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(textFieldNroRNE, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(textFieldNroFactura, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(textFieldFechaCarga, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(textFieldNroRNE, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))))
                             .addGap(473, 473, 473)))
                     .addGroup(panelEstablecimientoLayout.createSequentialGroup()
                         .addGroup(panelEstablecimientoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -214,16 +193,7 @@ public class InformacionAdicional extends javax.swing.JFrame {
                                 .addGap(176, 176, 176)
                                 .addComponent(labelTitulo))
                             .addGroup(panelEstablecimientoLayout.createSequentialGroup()
-                                .addGroup(panelEstablecimientoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panelEstablecimientoLayout.createSequentialGroup()
-                                        .addComponent(labelNroRNE1)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(textFieldId_Empresa, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panelEstablecimientoLayout.createSequentialGroup()
-                                        .addComponent(labelFVencimientoRNE2)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(textFieldId_Categoria, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(138, 138, 138)
+                                .addGap(343, 343, 343)
                                 .addGroup(panelEstablecimientoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(labelFVencimientoRNE1)
                                     .addComponent(labelDireccion)
@@ -268,16 +238,12 @@ public class InformacionAdicional extends javax.swing.JFrame {
                     .addComponent(labelNroRNE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(panelEstablecimientoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panelEstablecimientoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(labelNroRNE1)
-                        .addComponent(textFieldId_Empresa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(textFieldId_Localidad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(labelFVencimientoRNE1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(panelEstablecimientoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(labelFVencimientoRNE2)
-                    .addComponent(textFieldId_Categoria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(64, Short.MAX_VALUE))
+                    .addGroup(panelEstablecimientoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(labelFVencimientoRNE1)
+                        .addComponent(textFieldId_Categoria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(labelFVencimientoRNE2)))
+                .addContainerGap(95, Short.MAX_VALUE))
         );
 
         panelCard.add(panelEstablecimiento, "establecimiento");
@@ -309,38 +275,17 @@ public class InformacionAdicional extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanelBanner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
-                .addComponent(panelCard, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0))
+                .addComponent(panelCard, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void textFieldFechaCargaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldFechaCargaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textFieldFechaCargaActionPerformed
-
-    private void textFieldDireccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldDireccionActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textFieldDireccionActionPerformed
-
-    private void textFieldNroRNEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldNroRNEActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textFieldNroRNEActionPerformed
-
-    private void textFieldId_EmpresaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldId_EmpresaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textFieldId_EmpresaActionPerformed
-
-    private void textFieldNroFacturaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldNroFacturaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textFieldNroFacturaActionPerformed
-
     private void formWindowClosed(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosed
 
     }//GEN-LAST:event_formWindowClosed
 
-    private void cargarCamposEstablecimiento(Establecimiento est) {
+    private void cargarCamposEstablecimiento(Establecimiento est) throws SQLException, IllegalAccessException, InstantiationException {
 
         if (est == null) {
             JOptionPane.showMessageDialog(null, "RNE no encontrado.");
@@ -355,9 +300,8 @@ public class InformacionAdicional extends javax.swing.JFrame {
             } else {
                 textFieldFechaCarga.setText("");
             }
-            textFieldId_Categoria.setText(String.valueOf(est.getId_Categoria()));
-            textFieldId_Empresa.setText(String.valueOf(est.getCUIT_Empresa()));
-            textFieldId_Localidad.setText(String.valueOf(est.getId_Localidad()));
+            textFieldId_Categoria.setText(est.getNombreCategoria());
+            textFieldId_Localidad.setText(est.getNombreLocalidad());
             textFieldNombre.setText(est.getNombre());
             textFieldDireccion.setText(est.getDireccion());
 
@@ -395,7 +339,6 @@ public class InformacionAdicional extends javax.swing.JFrame {
     private javax.swing.JLabel labelNombre;
     private javax.swing.JLabel labelNroFactura;
     private javax.swing.JLabel labelNroRNE;
-    private javax.swing.JLabel labelNroRNE1;
     private javax.swing.JLabel labelTelefono;
     private javax.swing.JLabel labelTitulo;
     private javax.swing.JLabel label_INFOADICIONAL;
@@ -406,7 +349,6 @@ public class InformacionAdicional extends javax.swing.JFrame {
     private javax.swing.JTextField textFieldFVencimientoRNE;
     private javax.swing.JTextField textFieldFechaCarga;
     private javax.swing.JTextField textFieldId_Categoria;
-    private javax.swing.JTextField textFieldId_Empresa;
     private javax.swing.JTextField textFieldId_Localidad;
     private javax.swing.JTextField textFieldNombre;
     private javax.swing.JTextField textFieldNroFactura;

@@ -162,11 +162,6 @@ public class panelCargaProducto extends javax.swing.JPanel {
         textFieldRNE.setText("32132132");
         textFieldRNE.setToolTipText("");
         textFieldRNE.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
-        textFieldRNE.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textFieldRNEActionPerformed(evt);
-            }
-        });
         textFieldRNE.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 textFieldRNEKeyPressed(evt);
@@ -491,11 +486,6 @@ public class panelCargaProducto extends javax.swing.JPanel {
         textFieldComp_Denominacion.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         textFieldComp_Denominacion.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         textFieldComp_Denominacion.setEnabled(false);
-        textFieldComp_Denominacion.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textFieldComp_DenominacionActionPerformed(evt);
-            }
-        });
 
         textFieldComp_Contenido.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         textFieldComp_Contenido.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
@@ -512,11 +502,6 @@ public class panelCargaProducto extends javax.swing.JPanel {
         textFieldComp_Nombre.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         textFieldComp_Nombre.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         textFieldComp_Nombre.setEnabled(false);
-        textFieldComp_Nombre.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textFieldComp_NombreActionPerformed(evt);
-            }
-        });
 
         SeparadorDatosProducto.setBackground(new java.awt.Color(27, 94, 32));
         SeparadorDatosProducto.setForeground(new java.awt.Color(27, 94, 32));
@@ -759,11 +744,6 @@ public class panelCargaProducto extends javax.swing.JPanel {
         textFieldDesc_FormaUso.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         textFieldDesc_FormaUso.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         textFieldDesc_FormaUso.setEnabled(false);
-        textFieldDesc_FormaUso.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textFieldDesc_FormaUsoActionPerformed(evt);
-            }
-        });
 
         labelDesc_PeridoAptitud.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         labelDesc_PeridoAptitud.setText("Periodo de aptitud:");
@@ -917,7 +897,7 @@ public class panelCargaProducto extends javax.swing.JPanel {
                 .addGroup(panelDescDatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(labelDesc_InfoAdicional, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(textFieldDesc_InfoAdicional, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(29, Short.MAX_VALUE))
+                .addContainerGap(27, Short.MAX_VALUE))
         );
 
         panelDescCarEnvase.setBackground(new java.awt.Color(255, 255, 255));
@@ -1157,22 +1137,9 @@ public class panelCargaProducto extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void textFieldRNEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldRNEActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textFieldRNEActionPerformed
-
     private void BuscarRNEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BuscarRNEActionPerformed
-
-        buscarRNE();
+          buscarRNE();
     }//GEN-LAST:event_BuscarRNEActionPerformed
-
-    private void textFieldComp_NombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldComp_NombreActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textFieldComp_NombreActionPerformed
-
-    private void textFieldDesc_FormaUsoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldDesc_FormaUsoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textFieldDesc_FormaUsoActionPerformed
 
     private void buscarRNE() {
         if (!textFieldRNE.getText().equals("")) {
@@ -1400,6 +1367,7 @@ public class panelCargaProducto extends javax.swing.JPanel {
     }
 
     private int validarCampos() throws SQLException, InstantiationException, IllegalAccessException {
+        
         textFieldComp_CAA.setBorder(BorderFactory.createLineBorder(new Color(206, 201, 200), 1));
         textFieldComp_Marca.setBorder(BorderFactory.createLineBorder(new Color(206, 201, 200), 1));
         textFieldComp_Denominacion.setBorder(BorderFactory.createLineBorder(new Color(206, 201, 200), 1));
@@ -1500,10 +1468,6 @@ public class panelCargaProducto extends javax.swing.JPanel {
         }
 
     }//GEN-LAST:event_buttonRemoveMPActionPerformed
-
-    private void textFieldComp_DenominacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldComp_DenominacionActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textFieldComp_DenominacionActionPerformed
 
     private void buttonAddMPMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttonAddMPMouseEntered
         buttonAddMP.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/mas_entered.png")));
