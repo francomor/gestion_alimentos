@@ -446,127 +446,123 @@ public
 
         buscarRNE();
     }//GEN-LAST:event_BuscarRNEActionPerformed
-    
-    private void buscarRNE() 
-    {
-            try {
 
-                Establecimiento est = Establecimiento.recuperarPorNroRNE(textFieldRNE.getText());
-                 
-                if (est != null){
-                        cargarCampos(est);
-                    }
-                    else {
-
-                        resetearCampos();
-                        
-
-                        JOptionPane.showMessageDialog(null, "No se a encontrado ningun establecimiento con ese numero de RNE");
-                    }
- 
-                    
-                 } 
-            catch (SQLException | InstantiationException | IllegalAccessException ex) {
-                Logger.getLogger(panelCargaProducto.class.getName()).log(Level.SEVERE, null, ex);
-            }
-         
-       
-
-    }
-    
-    private void cargarCampos(Establecimiento est)
-    {
-         try{
-            Empresa empresa = est.getM_Empresa();
-                    
-                    textFieldCUIT.setText(String.valueOf(empresa.getCUIT()));
-                    textFieldNombreEmpresa.setText(empresa.getNombre());
-                    textFieldRazonSocial.setText(empresa.getRazon_social());
-                    textFieldEmailEmpresa.setText(empresa.getEmail());
-                    textFieldTelefonoEmpresa.setText(String.valueOf(empresa.getTelefono()));
-                    textFieldRNE.setBorder(BorderFactory.createLineBorder(new Color(204, 204, 204), 1));
-                    
-                    
-
-                    SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-
-                    if (est.getFechaDeCarga() != null) {
-                        textFieldFechaCarga.setText(sdf.format(est.getFechaDeCarga().getTime()));
-                    } else {
-                        textFieldFechaCarga.setText("");
-                    }
-                    textFieldCategoria.setText(est.getNombreCategoria());
-                    textFieldLocalidad.setText(est.getNombreLocalidad());
-                    textFieldNombre.setText(est.getNombre());
-                    textFieldDireccion.setText(est.getDireccion());
-
-                    if (est.getRne() != null) {
-
-                        if (est.getRne().getFecha_vencimiento() != null)
-                            textFieldFVencimientoRNE.setText(sdf.format(est.getRne().getFecha_vencimiento().getTime()));
-                         else 
-                            textFieldFVencimientoRNE.setText("");
-                        
-                    }
-                    
-                    if (est.getTelefono() != 0) 
-                        textFieldTelefono.setText(String.valueOf(est.getTelefono()));
-                     else 
-                        textFieldTelefono.setText("");
-                    
-
-                    if (est.getNro_factura() != 0) 
-                        textFieldNroFactura.setText(String.valueOf(est.getNro_factura()));
-                     else {
-                        textFieldNroFactura.setText("");
-                    }
-                    
-                     // recupero producto alimenticio Asociado al establecimiento encontrado.
-                        
-                        Vector<ProductoAlimenticio> paAsociados = est.getProductosAsociados();
-                        
-                     // cargo la tabla de Productos alimenticios Asociados.
-                     
-                        cargarTabla(paAsociados);
-                    
-         }
-         catch (SQLException | InstantiationException | IllegalAccessException ex) {
-                Logger.getLogger(panelCargaProducto.class.getName()).log(Level.SEVERE, null, ex);
-            }
-    
-    }
-    
-
-    
     private
-           void resetearCampos() {
-            
-            textFieldCUIT.setText("");
-            textFieldNombreEmpresa.setText("");
-            textFieldRazonSocial.setText("");
-            textFieldEmailEmpresa.setText("");
-            textFieldTelefonoEmpresa.setText("");
-            
-            textFieldDireccion.setText("");
-            textFieldFVencimientoRNE.setText("");
-            textFieldFechaCarga.setText("");
-            textFieldCategoria.setText("");
-            textFieldLocalidad.setText("");
-            textFieldNombre.setText("");
-            textFieldNroFactura.setText("");
-            textFieldTelefono.setText("");
-            
-            LimpiarTabla();
-            
+            void buscarRNE() {
+        try {
+
+            Establecimiento est = Establecimiento.recuperarPorNroRNE(textFieldRNE.getText());
+
+            if (est != null) {
+                Empresa empresa = est.getM_Empresa();
+                
+             // recupero producto alimenticio Asociado al establecimiento encontrado.
+                Vector<ProductoAlimenticio> paAsociados = est.getProductosAsociados();
+                
+                cargarCampos(est,empresa,paAsociados);
+            }
+            else {
+
+                resetearCampos();
+
+                JOptionPane.showMessageDialog(null, "No se a encontrado ningun establecimiento con ese numero de RNE");
+            }
+
+        }
+        catch (SQLException | InstantiationException | IllegalAccessException ex) {
+            Logger.getLogger(panelCargaProducto.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
     }
-           
+
     private
-    void cargarTabla(Vector<ProductoAlimenticio> ProductosAlimenticios) {
-        
+            void cargarCampos(Establecimiento est,Empresa empresa,Vector<ProductoAlimenticio> paAsociados){
+        try {
+
+
+            textFieldCUIT.setText(String.valueOf(empresa.getCUIT()));
+            textFieldNombreEmpresa.setText(empresa.getNombre());
+            textFieldRazonSocial.setText(empresa.getRazon_social());
+            textFieldEmailEmpresa.setText(empresa.getEmail());
+            textFieldTelefonoEmpresa.setText(String.valueOf(empresa.getTelefono()));
+            textFieldRNE.setBorder(BorderFactory.createLineBorder(new Color(204, 204, 204), 1));
+
+            SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+
+            if (est.getFechaDeCarga() != null) {
+                textFieldFechaCarga.setText(sdf.format(est.getFechaDeCarga().getTime()));
+            }
+            else {
+                textFieldFechaCarga.setText("");
+            }
+            textFieldCategoria.setText(est.getNombreCategoria());
+            textFieldLocalidad.setText(est.getNombreLocalidad());
+            textFieldNombre.setText(est.getNombre());
+            textFieldDireccion.setText(est.getDireccion());
+
+            if (est.getRne() != null) {
+
+                if (est.getRne().getFecha_vencimiento() != null)
+                    textFieldFVencimientoRNE.setText(sdf.format(est.getRne().getFecha_vencimiento().getTime()));
+                else
+                    textFieldFVencimientoRNE.setText("");
+
+            }
+
+            if (est.getTelefono() != 0)
+                textFieldTelefono.setText(String.valueOf(est.getTelefono()));
+            else
+                textFieldTelefono.setText("");
+
+            if (est.getNro_factura() != 0)
+                textFieldNroFactura.setText(String.valueOf(est.getNro_factura()));
+            else {
+                textFieldNroFactura.setText("");
+            }
+            
+            // cargo la tabla de Productos alimenticios Asociados.
+            cargarTabla(paAsociados);
+
+        }
+        catch (SQLException | InstantiationException | IllegalAccessException ex) {
+            Logger.getLogger(panelCargaProducto.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+    }
+
+    private
+            void resetearCampos() {
+
+        textFieldCUIT.setText("");
+        textFieldNombreEmpresa.setText("");
+        textFieldRazonSocial.setText("");
+        textFieldEmailEmpresa.setText("");
+        textFieldTelefonoEmpresa.setText("");
+
+        textFieldDireccion.setText("");
+        textFieldFVencimientoRNE.setText("");
+        textFieldFechaCarga.setText("");
+        textFieldCategoria.setText("");
+        textFieldLocalidad.setText("");
+        textFieldNombre.setText("");
+        textFieldNroFactura.setText("");
+        textFieldTelefono.setText("");
+
+        LimpiarTabla();
+
+    }
+      
+    /**
+     * esta funcion carga una tabla con los datos de los productos alimenticios.
+     *
+     * @param ProductosAlimenticios vector de Productos Alimenticios
+     */           
+    private
+            void cargarTabla(Vector<ProductoAlimenticio> ProductosAlimenticios) {
+
         Object[][] datosDePAAsociados = new Object[ProductosAlimenticios.size()][5];
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-        
-        
+
         for (int i = 0; i < ProductosAlimenticios.size(); i++) {
             datosDePAAsociados[i][0] = ProductosAlimenticios.elementAt(i).getRnpa().getNumero();
             datosDePAAsociados[i][1] = ProductosAlimenticios.elementAt(i).getEstablecimiento().getRne().getNumero();
@@ -585,16 +581,20 @@ public
                 false, false, false, false, false
             };
 
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
+            public
+                    boolean isCellEditable(int rowIndex, int columnIndex) {
                 return canEdit[columnIndex];
             }
         });
-        
+
     }
-    
-    private void LimpiarTabla(){
-    
-           TablaPAAsociado.setModel(new javax.swing.table.DefaultTableModel(
+   /**
+     * esta funcion limpia la tabla que contiene el panel.
+     */
+    private
+            void LimpiarTabla() {
+
+        TablaPAAsociado.setModel(new javax.swing.table.DefaultTableModel(
                 new Object[][]{
                     {null, null, null, null, null},},
                 new String[]{
@@ -605,15 +605,15 @@ public
                 false, false, false, false, false
             };
 
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
+            public
+                    boolean isCellEditable(int rowIndex, int columnIndex) {
                 return canEdit[columnIndex];
             }
         });
-    
-    
+
     }
-            
-            
+
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BuscarRNE;
     private javax.swing.JLabel EtiquetaConsultaPorRNE;
@@ -655,5 +655,4 @@ public
     private javax.swing.JTextField textFieldTelefonoEmpresa;
     // End of variables declaration//GEN-END:variables
 
-   
 }

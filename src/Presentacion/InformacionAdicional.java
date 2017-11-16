@@ -18,7 +18,8 @@ import javax.swing.JOptionPane;
  *
  * @author Windows
  */
-public class InformacionAdicional extends javax.swing.JFrame {
+public
+        class InformacionAdicional extends javax.swing.JFrame {
 
     /**
      * Creates new form InformacionAdicional
@@ -28,10 +29,14 @@ public class InformacionAdicional extends javax.swing.JFrame {
      * @throws java.lang.InstantiationException
      * @throws java.lang.IllegalAccessException
      */
-    public InformacionAdicional(Object obj) throws SQLException, InstantiationException, IllegalAccessException {
+    public
+            InformacionAdicional(Object obj) throws SQLException, InstantiationException, IllegalAccessException {
+
         initComponents();
+
         this.setIconImage(new ImageIcon(getClass().getResource("/resources/logomarcarn.png")).getImage());
         this.setLocationRelativeTo(null);
+
         CardLayout card = (CardLayout) panelCard.getLayout();
 
         if (obj instanceof Establecimiento) {
@@ -40,6 +45,9 @@ public class InformacionAdicional extends javax.swing.JFrame {
 
         }
         if (obj instanceof ProductoAlimenticio) {
+
+            cargarCamposProducto((ProductoAlimenticio) obj);
+            card.show(panelCard, "productoAlimenticio");
 
         }
     }
@@ -285,21 +293,26 @@ public class InformacionAdicional extends javax.swing.JFrame {
 
     }//GEN-LAST:event_formWindowClosed
 
-    private void cargarCamposEstablecimiento(Establecimiento est) throws SQLException, IllegalAccessException, InstantiationException {
+    private
+            void cargarCamposEstablecimiento(Establecimiento est) throws SQLException, IllegalAccessException, InstantiationException {
 
         if (est == null) {
             JOptionPane.showMessageDialog(null, "RNE no encontrado.");
-        } else {
+        }
+        else {
+            
             RNE rne = est.getRne();
-            //textFieldFechaCarga.setText(est.g());
 
             SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 
             if (est.getFechaDeCarga() != null) {
                 textFieldFechaCarga.setText(sdf.format(est.getFechaDeCarga().getTime()));
-            } else {
+            }
+
+            else {
                 textFieldFechaCarga.setText("");
             }
+
             textFieldId_Categoria.setText(est.getNombreCategoria());
             textFieldId_Localidad.setText(est.getNombreLocalidad());
             textFieldNombre.setText(est.getNombre());
@@ -309,25 +322,32 @@ public class InformacionAdicional extends javax.swing.JFrame {
                 textFieldNroRNE.setText(String.valueOf(rne.getNumero()));
                 if (rne.getFecha_vencimiento() != null) {
                     textFieldFVencimientoRNE.setText(sdf.format(rne.getFecha_vencimiento().getTime()));
-                } else {
+                }
+                else {
                     textFieldFVencimientoRNE.setText("");
                 }
             }
             if (est.getTelefono() != 0) {
                 textFieldTelefono.setText(String.valueOf(est.getTelefono()));
-            } else {
+            }
+            else {
                 textFieldTelefono.setText("");
             }
 
             if (est.getTelefono() != 0) {
                 textFieldNroFactura.setText(String.valueOf(est.getNro_factura()));
-            } else {
+            }
+            else {
                 textFieldNroFactura.setText("");
             }
         }
 
     }
 
+    private
+            void cargarCamposProducto(ProductoAlimenticio par) {
+        throw new UnsupportedOperationException("No implementado todavia"); 
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel jPanelBanner;
@@ -355,4 +375,5 @@ public class InformacionAdicional extends javax.swing.JFrame {
     private javax.swing.JTextField textFieldNroRNE;
     private javax.swing.JTextField textFieldTelefono;
     // End of variables declaration//GEN-END:variables
+
 }

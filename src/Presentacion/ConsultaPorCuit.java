@@ -19,12 +19,20 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
-public class ConsultaPorCuit extends javax.swing.JPanel {
+/**
+ * Este panel es el encargado de mostrar una consulta por numero de CUIT
+ *
+ * @author Mauricio
+ *
+ */
+public
+        class ConsultaPorCuit extends javax.swing.JPanel {
 
     /**
      * Creates new form ConsultaPorCuit
      */
-    public ConsultaPorCuit() {
+    public
+            ConsultaPorCuit() {
         initComponents();
     }
 
@@ -351,7 +359,8 @@ public class ConsultaPorCuit extends javax.swing.JPanel {
                 Establecimiento est = Establecimiento.recuperarPorNroRNE(dato);
                 JFrame jf = new InformacionAdicional(est);
                 jf.setVisible(true);
-            } catch (SQLException | InstantiationException | IllegalAccessException ex) {
+            }
+            catch (SQLException | InstantiationException | IllegalAccessException ex) {
 
                 Logger.getLogger(ConsultaPorCuit.class.getName()).log(Level.SEVERE, null, ex);
             }
@@ -367,7 +376,17 @@ public class ConsultaPorCuit extends javax.swing.JPanel {
         clearPanel();
     }//GEN-LAST:event_LimpiarTablasActionPerformed
 
-    public void cargarTablas(Empresa empresa, Vector<Establecimiento> establecimientos, Vector<ProductoAlimenticio> ProductosAlimenticios) {
+    /**
+     * esta funcion carga informacion a los campos que sean necesarios del panel
+     *
+     * @param empresa parametro que trae informacion sobre una Empresa
+     * @param establecimientos parametro que contiene todos los establecimientos
+     * asociados a una empresa
+     * @param ProductosAlimenticios parametro que trae todos los productos
+     * alimenticios asociados a una empresa
+     */
+    public
+            void cargarTablas(Empresa empresa, Vector<Establecimiento> establecimientos, Vector<ProductoAlimenticio> ProductosAlimenticios) {
 
         TablaDatosEmpresa.setModel(new javax.swing.table.DefaultTableModel(
                 new Object[][]{
@@ -387,11 +406,13 @@ public class ConsultaPorCuit extends javax.swing.JPanel {
                 false, false, false, false, false
             };
 
-            public Class getColumnClass(int columnIndex) {
+            public
+                    Class getColumnClass(int columnIndex) {
                 return types[columnIndex];
             }
 
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
+            public
+                    boolean isCellEditable(int rowIndex, int columnIndex) {
                 return canEdit[columnIndex];
             }
         });
@@ -408,7 +429,8 @@ public class ConsultaPorCuit extends javax.swing.JPanel {
             datosDeEstablecimientos[i][2] = establecimientos.elementAt(i).getTelefono();
             if (establecimientos.elementAt(i).getRne().getFecha_vencimiento() != null) {
                 datosDeEstablecimientos[i][3] = sdf.format(establecimientos.elementAt(i).getRne().getFecha_vencimiento().getTime());
-            } else {
+            }
+            else {
                 datosDeEstablecimientos[i][3] = "";
             }
             datosDeEstablecimientos[i][4] = establecimientos.elementAt(i).getDireccion();
@@ -429,11 +451,13 @@ public class ConsultaPorCuit extends javax.swing.JPanel {
                 false, false, false, false, false
             };
 
-            public Class getColumnClass(int columnIndex) {
+            public
+                    Class getColumnClass(int columnIndex) {
                 return types[columnIndex];
             }
 
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
+            public
+                    boolean isCellEditable(int rowIndex, int columnIndex) {
                 return canEdit[columnIndex];
             }
         });
@@ -459,14 +483,19 @@ public class ConsultaPorCuit extends javax.swing.JPanel {
                 false, false, false, false, false
             };
 
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
+            public
+                    boolean isCellEditable(int rowIndex, int columnIndex) {
                 return canEdit[columnIndex];
             }
         });
 
     }
 
-    public void clearPanel() {
+    /**
+     * esta funcion limpia todos los campos del panel ConsultaPorCuit.
+     */
+    public
+            void clearPanel() {
         CampoCUIT.setText("");
 
         //reseteo las tablas
@@ -485,11 +514,13 @@ public class ConsultaPorCuit extends javax.swing.JPanel {
                 false, false, false, false, false
             };
 
-            public Class getColumnClass(int columnIndex) {
+            public
+                    Class getColumnClass(int columnIndex) {
                 return types[columnIndex];
             }
 
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
+            public
+                    boolean isCellEditable(int rowIndex, int columnIndex) {
                 return canEdit[columnIndex];
             }
         });
@@ -509,11 +540,13 @@ public class ConsultaPorCuit extends javax.swing.JPanel {
                 false, false, false, false, false
             };
 
-            public Class getColumnClass(int columnIndex) {
+            public
+                    Class getColumnClass(int columnIndex) {
                 return types[columnIndex];
             }
 
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
+            public
+                    boolean isCellEditable(int rowIndex, int columnIndex) {
                 return canEdit[columnIndex];
             }
         });
@@ -529,14 +562,22 @@ public class ConsultaPorCuit extends javax.swing.JPanel {
                 false, false, false, false, false
             };
 
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
+            public
+                    boolean isCellEditable(int rowIndex, int columnIndex) {
                 return canEdit[columnIndex];
             }
         });
 
     }
 
-    public void consultaCuit(String cuit) {
+    /**
+     * esta funcion realiza todo el procedimiento de busqueda para que sea
+     * mostrado por pantalla
+     *
+     * @param cuit parametro que se usara para buscar en la base de datos
+     */
+    public
+            void consultaCuit(String cuit) {
 
         if (!cuit.equals("")) {
             Vector<Establecimiento> establecimientos;
@@ -555,15 +596,18 @@ public class ConsultaPorCuit extends javax.swing.JPanel {
 
                     cargarTablas(empresa, establecimientos, ProductosAlimenticios);
                     CampoCUIT.setBorder(BorderFactory.createLineBorder(new Color(204, 204, 204), 1));
-                } else {
+                }
+                else {
                     CampoCUIT.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
                     JOptionPane.showMessageDialog(null, "CUIT no encontrado.");
                     clearPanel();
                 }
-            } catch (SQLException | InstantiationException | IllegalAccessException ex) {
+            }
+            catch (SQLException | InstantiationException | IllegalAccessException ex) {
             }
 
-        } else {
+        }
+        else {
             CampoCUIT.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
             JOptionPane.showMessageDialog(null, "Escriba un CUIT.");
         }

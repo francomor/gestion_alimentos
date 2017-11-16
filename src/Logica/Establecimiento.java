@@ -226,6 +226,7 @@ public class Establecimiento {
      * @throws java.lang.IllegalAccessException
      */
     public static Establecimiento recuperarPorNroRNE(String nro_rne) throws SQLException, InstantiationException, IllegalAccessException {
+        
         ConexionBD con = ConexionBD.getConexion();
         String[][] valores;
 
