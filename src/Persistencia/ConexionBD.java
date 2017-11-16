@@ -13,7 +13,7 @@ public final class ConexionBD {
 
     private static ConexionBD instanciaBD = null;
 
-    public ConexionBD() throws InstantiationException, IllegalAccessException {
+    private ConexionBD() throws InstantiationException, IllegalAccessException {
         crearConexion();
     }
 

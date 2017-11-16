@@ -18,7 +18,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author Windows
+ * @author Mauricio Franco Franciscio
  */
 public
         class ConsultaPorRNE extends javax.swing.JPanel {
@@ -447,16 +447,37 @@ public
         buscarRNE();
     }//GEN-LAST:event_BuscarRNEActionPerformed
     
-    private void buscarRNE() {
-            
-        
-        
+    private void buscarRNE() 
+    {
             try {
 
                 Establecimiento est = Establecimiento.recuperarPorNroRNE(textFieldRNE.getText());
                  
                 if (est != null){
-                    Empresa empresa = est.getM_Empresa();
+                        cargarCampos(est);
+                    }
+                    else {
+
+                        resetearCampos();
+                        
+
+                        JOptionPane.showMessageDialog(null, "No se a encontrado ningun establecimiento con ese numero de RNE");
+                    }
+ 
+                    
+                 } 
+            catch (SQLException | InstantiationException | IllegalAccessException ex) {
+                Logger.getLogger(panelCargaProducto.class.getName()).log(Level.SEVERE, null, ex);
+            }
+         
+       
+
+    }
+    
+    private void cargarCampos(Establecimiento est)
+    {
+         try{
+            Empresa empresa = est.getM_Empresa();
                     
                     textFieldCUIT.setText(String.valueOf(empresa.getCUIT()));
                     textFieldNombreEmpresa.setText(empresa.getNombre());
@@ -465,9 +486,7 @@ public
                     textFieldTelefonoEmpresa.setText(String.valueOf(empresa.getTelefono()));
                     textFieldRNE.setBorder(BorderFactory.createLineBorder(new Color(204, 204, 204), 1));
                     
-            
-                    RNE rne = est.getRne();
-                    //textFieldFechaCarga.setText(est.g());
+                    
 
                     SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 
@@ -481,10 +500,10 @@ public
                     textFieldNombre.setText(est.getNombre());
                     textFieldDireccion.setText(est.getDireccion());
 
-                    if (rne != null) {
+                    if (est.getRne() != null) {
 
-                        if (rne.getFecha_vencimiento() != null)
-                            textFieldFVencimientoRNE.setText(sdf.format(rne.getFecha_vencimiento().getTime()));
+                        if (est.getRne().getFecha_vencimiento() != null)
+                            textFieldFVencimientoRNE.setText(sdf.format(est.getRne().getFecha_vencimiento().getTime()));
                          else 
                             textFieldFVencimientoRNE.setText("");
                         
@@ -510,26 +529,12 @@ public
                      
                         cargarTabla(paAsociados);
                     
-                    }
-                    else {
-
-                        resetearCampos();
-                        
-
-                        JOptionPane.showMessageDialog(null, "No se a encontrado ningun establecimiento con ese numero de RNE");
-                    }
- 
-                    
-                 } 
-            catch (SQLException | InstantiationException | IllegalAccessException ex) {
+         }
+         catch (SQLException | InstantiationException | IllegalAccessException ex) {
                 Logger.getLogger(panelCargaProducto.class.getName()).log(Level.SEVERE, null, ex);
             }
-         
-       
-
-    }
     
-
+    }
     
 
     
