@@ -20,6 +20,7 @@ public class panelEstadisticasPorcentajexRubro extends javax.swing.JPanel {
      */
     public panelEstadisticasPorcentajexRubro() {
         initComponents();
+        cargarObservadores();
     }
 
     /**
@@ -32,33 +33,84 @@ public class panelEstadisticasPorcentajexRubro extends javax.swing.JPanel {
     private void initComponents() {
 
         labelPorcentajexRubro = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        buttonActualizarGrafico = new javax.swing.JButton();
+        panelGraficos = new javax.swing.JPanel();
         graficoBarra = new Presentacion.GraficoBarra();
         graficoTorta = new Presentacion.GraficoTorta();
 
         setBackground(new java.awt.Color(255, 255, 255));
-        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         labelPorcentajexRubro.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
         labelPorcentajexRubro.setForeground(new java.awt.Color(0, 51, 0));
         labelPorcentajexRubro.setText("Porcentaje por rubro");
-        add(labelPorcentajexRubro, new org.netbeans.lib.awtextra.AbsoluteConstraints(107, 20, -1, -1));
 
-        jButton1.setText("jButton1");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        buttonActualizarGrafico.setText("Actualizar Graficos");
+        buttonActualizarGrafico.setToolTipText("");
+        buttonActualizarGrafico.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                buttonActualizarGraficoActionPerformed(evt);
             }
         });
-        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(77, 57, -1, -1));
-        add(graficoBarra, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, 330, 320));
-        add(graficoTorta, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 120, 360, -1));
+
+        panelGraficos.setBackground(new java.awt.Color(255, 255, 255));
+
+        javax.swing.GroupLayout panelGraficosLayout = new javax.swing.GroupLayout(panelGraficos);
+        panelGraficos.setLayout(panelGraficosLayout);
+        panelGraficosLayout.setHorizontalGroup(
+            panelGraficosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelGraficosLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(graficoBarra, javax.swing.GroupLayout.PREFERRED_SIZE, 497, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addComponent(graficoTorta, javax.swing.GroupLayout.PREFERRED_SIZE, 515, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        panelGraficosLayout.setVerticalGroup(
+            panelGraficosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelGraficosLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(panelGraficosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(graficoBarra, javax.swing.GroupLayout.PREFERRED_SIZE, 401, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(graficoTorta, javax.swing.GroupLayout.PREFERRED_SIZE, 390, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(107, 107, 107)
+                .addComponent(labelPorcentajexRubro)
+                .addGap(54, 54, 54)
+                .addComponent(buttonActualizarGrafico)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(panelGraficos, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelPorcentajexRubro)
+                    .addComponent(buttonActualizarGrafico))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(panelGraficos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-
+    private void buttonActualizarGraficoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonActualizarGraficoActionPerformed
         try {
-            observado = new PorcentajexRubro();
+            observado.actualizarEstado();
+        } catch (SQLException | IllegalAccessException | InstantiationException ex) {
+            Logger.getLogger(panelEstadisticasPorcentajexRubro.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+    }//GEN-LAST:event_buttonActualizarGraficoActionPerformed
+
+    private void cargarObservadores(){
+        try {
+            observado = new PorcentajexRubro();          
             observado.addObserver(graficoBarra);
             observado.addObserver(graficoTorta);
             observado.actualizarEstado();
@@ -66,13 +118,14 @@ public class panelEstadisticasPorcentajexRubro extends javax.swing.JPanel {
         } catch (SQLException | IllegalAccessException | InstantiationException ex) {
             Logger.getLogger(panelEstadisticasPorcentajexRubro.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }//GEN-LAST:event_jButton1ActionPerformed
-
+    }
+    
     PorcentajexRubro observado;
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton buttonActualizarGrafico;
     private Presentacion.GraficoBarra graficoBarra;
     private Presentacion.GraficoTorta graficoTorta;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel labelPorcentajexRubro;
+    private javax.swing.JPanel panelGraficos;
     // End of variables declaration//GEN-END:variables
 }

@@ -181,12 +181,35 @@ public class Rubro {
         String[][] valores;
         valores = new String[10][2];
 
-        //esta cnsulta nos devuelve los rubros usados, hay que hacer otra para los rubros que son 0
-        consulta = "select rubro.nombre, count(rubro.nombre) as cant";
-        consulta += " from rubro ";
-        consulta += " INNER JOIN establecimiento_has_rubro ON establecimiento_has_rubro.Rubro_id=rubro.id ";
-        consulta += " group by rubro.nombre";
-        consulta += " order by rubro.nombre asc;";
+        /*  Consulta que nos devuelve todos los nombres de los rubros con la cantidad de cada uno relacionada con los establecimientos
+        
+                (select rubro.nombre as nombre, count(rubro.nombre) as cant 
+                from rubro INNER JOIN establecimiento_has_rubro ON establecimiento_has_rubro.Rubro_id=rubro.id  
+                group by rubro.nombre)
+
+            UNION
+
+                (select R.nombre as nombre, 0 as cant 
+                FROM   rubro R
+                WHERE  NOT EXISTS (SELECT 1
+                                   FROM   establecimiento_has_rubro e
+                                   WHERE  r.id = e.Rubro_id) )
+
+            order by nombre asc;
+        
+        */
+        
+        
+        consulta = "(select rubro.nombre as nombre, count(rubro.nombre) as cant";
+        consulta += " from rubro INNER JOIN establecimiento_has_rubro ON establecimiento_has_rubro.Rubro_id=rubro.id";
+        consulta += " group by rubro.nombre)";
+        consulta += " UNION";
+        consulta += " (select R.nombre as nombre, 0 as cant";
+        consulta += " FROM rubro R";
+        consulta += " WHERE NOT EXISTS (SELECT 1";
+        consulta += " FROM establecimiento_has_rubro e";
+        consulta += " WHERE r.id = e.Rubro_id))";
+        consulta += " order by nombre asc;";
 
         valores = con.recuperar(valores, consulta, 2);
 

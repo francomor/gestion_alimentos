@@ -37,17 +37,4 @@ public class PorcentajexRubro extends Observable {
             Logger.getLogger(PorcentajexRubro.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-
-//    public Map<String, String> obtenerEstado() throws SQLException, IllegalAccessException, InstantiationException {
-//        return mapaValores;
-//    }
-
-//    public void cambiarMensaje(String m) {
-//        mensaje = m;
-//        //Marcamos el objeto observable como objeto que ha cambiado
-//        setChanged();
-//        //Notificamos a los observadores y le enviamos el nuevo valor
-//        notifyObservers(mensaje);
-//        //notifyObservers(); Este metodo solo notifica que hubo cambios en el objeto
-//    }
 }

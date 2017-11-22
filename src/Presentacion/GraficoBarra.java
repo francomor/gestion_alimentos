@@ -23,7 +23,7 @@ import org.jfree.data.category.DefaultCategoryDataset;
 public class GraficoBarra extends javax.swing.JPanel implements Observer {
 
     private BufferedImage image;
-    private final int IMG_WIDTH = 400;
+    private final int IMG_WIDTH = 500;
     private final int IMG_HEIGHT = 300;
 
     /**
@@ -48,7 +48,7 @@ public class GraficoBarra extends javax.swing.JPanel implements Observer {
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         label_Imagen.setBackground(new java.awt.Color(255, 255, 255));
-        add(label_Imagen, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 310));
+        add(label_Imagen, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 300));
     }// </editor-fold>//GEN-END:initComponents
 
     @Override
