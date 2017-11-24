@@ -10,9 +10,13 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Observable;
 import java.util.Observer;
+import javafx.scene.chart.CategoryAxis;
 import javax.swing.ImageIcon;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.JFreeChart;
+import org.jfree.chart.axis.CategoryLabelPositions;
+import org.jfree.chart.axis.NumberAxis;
+import org.jfree.chart.plot.CategoryPlot;
 import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.data.category.DefaultCategoryDataset;
 
@@ -56,7 +60,7 @@ public class GraficoBarra extends javax.swing.JPanel implements Observer {
         //Funciona con un mapa del tipo Map<String,String> con el primer valor el nombre y el segundo la cantidad
         if (arg instanceof Map) {
 
-            System.out.println("Nueva Actualizacion: " + o + " -> " + arg);
+            //System.out.println("Nueva Actualizacion: " + o + " -> " + arg);
             // Fuente de Datos
             DefaultCategoryDataset data = new DefaultCategoryDataset();
 
@@ -70,8 +74,12 @@ public class GraficoBarra extends javax.swing.JPanel implements Observer {
             }
 
             // Creando el Grafico
-            JFreeChart chart = ChartFactory.createBarChart(null,null,null, data,PlotOrientation.VERTICAL, true, false, false);
-
+            JFreeChart chart = ChartFactory.createBarChart(null,"Rubros","Cantidad", data,PlotOrientation.HORIZONTAL, false, false, false);
+            
+            //Setear labels de valores para que solo muestre decimales
+            CategoryPlot plot = chart.getCategoryPlot();
+            NumberAxis numberAxis = (NumberAxis)plot.getRangeAxis();
+            numberAxis.setStandardTickUnits(NumberAxis.createIntegerTickUnits());
             // Setear imagen en el label
             image = chart.createBufferedImage(IMG_WIDTH, IMG_HEIGHT);
             label_Imagen.setIcon(new ImageIcon(image));

@@ -179,7 +179,7 @@ public class Rubro {
 
         String consulta;
         String[][] valores;
-        valores = new String[10][2];
+        valores = new String[50][2];
 
         /*  Consulta que nos devuelve todos los nombres de los rubros con la cantidad de cada uno relacionada con los establecimientos
         

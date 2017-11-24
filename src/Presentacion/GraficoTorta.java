@@ -55,7 +55,7 @@ public class GraficoTorta extends javax.swing.JPanel implements Observer {
         //Funciona con un mapa del tipo Map<String,String> con el primer valor el nombre y el segundo la cantidad
         if (arg instanceof Map) {
 
-            System.out.println("Nueva Actualizacion: " + o + " -> " + arg);
+            //System.out.println("Nueva Actualizacion: " + o + " -> " + arg);
             // Fuente de Datos
             DefaultPieDataset data = new DefaultPieDataset();
 
