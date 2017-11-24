@@ -95,8 +95,8 @@ public class Empresa {
         String[][] valores;
         Empresa salida = new Empresa();
         Localidad locaux = new Localidad();
-        valores = new String[1][7];
-        valores = con.recuperar(valores, "select * from Empresa where CUIT=" + CUIT + ";", 7);
+        valores = new String[1][8];
+        valores = con.recuperar(valores, "select * from Empresa where CUIT=" + CUIT + ";", 6);
 
         if (valores[0][0] == null) {
             salida = null;

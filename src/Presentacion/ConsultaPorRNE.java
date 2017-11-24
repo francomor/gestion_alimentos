@@ -109,7 +109,6 @@ public
 
         textFieldRNE.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         textFieldRNE.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        textFieldRNE.setText("32132132");
         textFieldRNE.setToolTipText("");
         textFieldRNE.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         textFieldRNE.addKeyListener(new java.awt.event.KeyAdapter() {
