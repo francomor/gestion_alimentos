@@ -1,8 +1,0 @@
-PARA SUBIR CAMBIOS
-/gestion_alimentos$ git push origin master
-NOMBRE DE CAMBIOS CUANDO QUIERA SUBIR
-/gestion_alimentos$ git commit -a -m 'cualquiercosa'
-BAJAR CAMBIOS DE LOS DEMAS
-/gestion_alimentos$ git pull
-URL DEL REPOSITORIO
-https://github.com/francomor/gestion_alimentos
