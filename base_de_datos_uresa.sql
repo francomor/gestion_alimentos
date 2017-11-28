@@ -54,6 +54,7 @@ ENGINE = InnoDB;
 
 SHOW WARNINGS;
 
+
 -- -----------------------------------------------------
 -- Table `uresa`.`Empresa`
 -- -----------------------------------------------------
@@ -340,6 +341,94 @@ CREATE TABLE IF NOT EXISTS `uresa`.`Producto_Alimenticio_has_materia_prima` (
 ENGINE = InnoDB;
 
 SHOW WARNINGS;
+
+
+INSERT INTO `categoria` (`id`, `nombre`) VALUES
+(1, 'a'),
+(3, 'b'),
+(4, 'c'),
+(5, 'd');
+
+INSERT INTO `empresa` (`CUIT`, `email`, `nombre`, `razon_social`, `telefono`, `Localidad_id`) VALUES
+(1, 'empresa@gmail.com', 'empresa s.a', 'rs', 15121212, 1),
+(2, 'empresa2@gmail.com', 'empresa2 s.r.l', 'acbc', 1523212, 2);
+
+INSERT INTO `envase` (`id`, `capacidad`, `Material_id`, `Unidad_id`) VALUES
+(18, 123, 50, 44),
+(19, 433, 51, 45),
+(20, 66, 52, 46),
+(21, 66, 52, 46),
+(22, 123, 53, 47),
+(23, 123, 53, 44),
+(24, 1324, 54, 45),
+(25, 1324, 53, 48),
+(26, 5665, 53, 48),
+(27, 141, 50, 45),
+(28, 34, 52, 45),
+(29, 34, 53, 45),
+(30, 12, 50, 44),
+(31, 122, 54, 45),
+(32, 1234, 50, 44);
+
+INSERT INTO `establecimiento` (`id`, `direccion`, `fecha_carga`, `nombre`, `telefono`, `archivos_adjuntos`, `nro_RNE`, `vencimiento_RNE`, `nro_factura`, `Empresa_CUIT`, `Localidad_id`, `Categoria_id`) VALUES
+(2, 'domicilio1', '2017-11-16', 'establecimiento 1', 155023212, NULL, '101', '2017-11-11', 1, 1, 1, 3),
+(4, 'dom', '2017-11-16', 'establecimiento 2', 152322122, NULL, '100', '2017-11-11', 1, 1, 1, 3);
+
+
+INSERT INTO `localidad` (`id`, `nombre`, `provincia_id`) VALUES
+(1, 'bariloche', 1),
+(2, 'el bolson', 1);
+
+INSERT INTO `material` (`id`, `nombre`) VALUES
+(50, 'aa'),
+(51, 'aac'),
+(52, 'null'),
+(53, '544'),
+(54, '353');
+
+INSERT INTO `materia_prima` (`id`, `nombre`) VALUES
+(9, 'aaa'),
+(11, 'asdasd'),
+(12, 'aaaa'),
+(13, 'caca'),
+(14, 'agag'),
+(15, 'aa'),
+(16, 'afa'),
+(17, 'ff'),
+(18, 'fff'),
+(19, 'fazz');
+
+
+INSERT INTO `producto_alimenticio` (`id`, `nro_factura`, `nro_RNPA`, `rotulo`, `CAA`, `contenido`, `denominacion`, `fecha_duracion`, `marca`, `nombre_comercial`, `num_y_tipo_reg_marca`, `fecha_carga_solicitud`, `Controles_y_cuidados`, `destino_prod`, `forma_uso`, `info_adicional`, `instrucciones_preparacion`, `lugar_venta`, `modo_conservacion`, `periodo_aptitud`, `Vencimiento_RNPA`, `Establecimiento_idEstablecimiento`) VALUES
+(0000000002, 1, 1, 'rotulo', 'caa', 'contenido', 'denominacion', '2017-11-11', 'marca', 'nombre_com', 'num_y_tipo', '2017-11-12', 'control', 'destino', 'form_uso', 'info_ad', 'inst', 'lugar', 'modo', 'periodo', '2022-12-12', 2),
+(0000000003, 1, 2, 'rotulo', 'caa', 'contenido', 'denominacion', '2017-11-11', 'marca', 'nombre_com', 'num_y_tipo', '2017-11-12', 'control', 'destino', 'form_uso', 'info_ad', 'inst', 'lugar', 'modo', 'periodo', '2022-12-12', 4),
+(0000000004, 1, 3, 'rotulo', 'caa', 'contenido', 'denominacion', '2017-11-11', 'marca', 'nombre_com', 'num_y_tipo', '2017-11-12', 'control', 'destino', 'form_uso', 'info_ad', 'inst', 'lugar', 'modo', 'periodo', '2022-12-12', 2);
+
+INSERT INTO `provincia` (`id`, `nombre`) VALUES
+(1, 'Rio negro');
+
+INSERT INTO `rubro` (`id`, `nombre`) VALUES
+(1, 'Panadería'),
+(2, 'Carnes'),
+(3, 'Congelados'),
+(4, 'Heladería'),
+(5, 'Ahumados'),
+(6, 'Pescaderia'),
+(7, 'Pastelería'),
+(8, 'Lacteos');
+
+
+INSERT INTO `unidad` (`id`, `nombre`) VALUES
+(44, 'aa'),
+(45, 'aac'),
+(46, 'null'),
+(47, '777'),
+(48, '75');
+
+
+
+
+
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
