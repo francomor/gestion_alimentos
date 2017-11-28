@@ -16,11 +16,11 @@ Estas instrucciones son para tener una copia del sistema funcionando en local.
 * [Java JDK](http://www.oracle.com/technetwork/es/java/javase/downloads/index.html)
 
 ### Ejecutando
-Descargar el ultimo Release
+Descargar el ultimo Release: [2.Iteracion.zip](https://github.com/francomor/gestion_alimentos/releases/download/v0.2/2.Iteracion.zip)
 
 Importar la base de datos. Se encuentra en el script base_de_datos_uresa.sql
-Para esto de puede usar [phpMyAdmin](https://www.phpmyadmin.net/).
 
+Para realizar este paso puede usar [phpMyAdmin](https://www.phpmyadmin.net/).
 
 Luego situarse en el directorio donde se descargo el programa y ejecutar:
 ```
@@ -39,7 +39,8 @@ Estas instrucciones son para tener una copia del codigo fuente en local y poder 
 Clonar la ultima version del repositorio en local.
 
 Importar la base de datos. Se encuentra en el script base_de_datos_uresa.sql
-Para esto de puede usar [phpMyAdmin](https://www.phpmyadmin.net/).
+
+Para realizar este paso puede usar [phpMyAdmin](https://www.phpmyadmin.net/).
 
 Luego abrir con NetBeans la carpeta del proyecto y compilar.
 
